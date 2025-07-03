@@ -623,7 +623,9 @@ export default function HomePage() {
                 >
                   <item.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
+                <h3 className="text-xl text-black font-semibold mb-3">
+                  {item.title}
+                </h3>
                 <p className="text-gray-700 leading-relaxed text-shadow-md">
                   {item.description}
                 </p>
