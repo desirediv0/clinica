@@ -72,10 +72,10 @@ export default function ContactPage() {
             <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">
               Contact Us
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mt-2 mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mt-2 mb-6 text-shadow-lg">
               Let's Talk About Your Skin or Smile
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto text-shadow-md">
               Ready to start your transformation? Contact us today to schedule
               your consultation or learn more about our services.
             </p>
@@ -106,7 +106,7 @@ export default function ContactPage() {
                   <h3 className="text-2xl font-semibold text-gray-900 mb-4">
                     Message Sent Successfully!
                   </h3>
-                  <p className="text-lg text-gray-600">
+                  <p className="text-lg text-gray-600 text-shadow-md">
                     Thank you for contacting CLINICA. We'll get back to you
                     within 24 hours.
                   </p>
@@ -266,7 +266,7 @@ export default function ContactPage() {
                     <h3 className="font-semibold text-gray-900 mb-1">
                       Address
                     </h3>
-                    <p className="text-lg text-gray-600">
+                    <p className="text-lg text-gray-600 text-shadow-md">
                       123 Medical Center Dr, Suite 100
                       <br />
                       City, State 12345
@@ -280,7 +280,9 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
-                    <p className="text-lg text-gray-600">(555) 123-4567</p>
+                    <p className="text-lg text-gray-600 text-shadow-md">
+                      (555) 123-4567
+                    </p>
                   </div>
                 </div>
 
@@ -290,7 +292,9 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                    <p className="text-lg text-gray-600">info@clinica.com</p>
+                    <p className="text-lg text-gray-600 text-shadow-md">
+                      info@clinica.com
+                    </p>
                   </div>
                 </div>
 
@@ -302,7 +306,7 @@ export default function ContactPage() {
                     <h3 className="font-semibold text-gray-900 mb-1">
                       Emergency
                     </h3>
-                    <p className="text-lg text-gray-600">
+                    <p className="text-lg text-gray-600 text-shadow-md">
                       24/7 Emergency Care Available
                     </p>
                   </div>
@@ -357,7 +361,7 @@ export default function ContactPage() {
           <h2 className="text-3xl font-bold mb-6">
             Ready to Start Your Journey?
           </h2>
-          <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
+          <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto text-shadow-md">
             Don't wait to achieve the results you deserve. Contact us today and
             take the first step towards your transformation with CLINICA.
           </p>

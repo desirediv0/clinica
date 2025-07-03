@@ -310,10 +310,10 @@ export default function DentalPage() {
               </div>
             </motion.div>
 
-            <h1 className="heading-xl mb-6 text-white">
+            <h1 className="heading-xl text-shadow-lg mb-6 text-white">
               Smile Beautifully, Chew Confidently
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-shadow-md text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto leading-relaxed">
               Advanced dental care treatments designed to restore your smile and
               improve your oral health with personalized care.
             </p>
@@ -369,7 +369,7 @@ export default function DentalPage() {
             <h2 className="heading-lg mt-2 text-gray-900 mb-6">
               Comprehensive Dental Care Solutions
             </h2>
-            <p className="text-body max-w-3xl mx-auto">
+            <p className="text-shadow-md text-body max-w-3xl mx-auto">
               From routine checkups to advanced cosmetic procedures, we provide
               complete dental solutions for a healthy, beautiful smile.
             </p>
@@ -409,7 +409,9 @@ export default function DentalPage() {
                   <h3 className="font-semibold text-gray-900 mb-2 text-lg">
                     {treatment.title}
                   </h3>
-                  <p className="text-caption mb-4">{treatment.description}</p>
+                  <p className="text-shadow-md text-caption mb-4">
+                    {treatment.description}
+                  </p>
 
                   <div className="space-y-2 mb-4">
                     <div className="flex items-center space-x-2">
@@ -478,7 +480,7 @@ export default function DentalPage() {
             <h2 className="heading-lg mt-2 text-gray-900 mb-6">
               Smile Makeover Journey
             </h2>
-            <p className="text-body max-w-3xl mx-auto">
+            <p className="text-shadow-md text-body max-w-3xl mx-auto">
               Follow our comprehensive process designed to transform your smile
               and restore your confidence with expert care.
             </p>
@@ -512,7 +514,9 @@ export default function DentalPage() {
                   <h3 className="font-semibold text-gray-900 mb-2">
                     {step.title}
                   </h3>
-                  <p className="text-caption">{step.description}</p>
+                  <p className="text-shadow-md text-caption">
+                    {step.description}
+                  </p>
                 </div>
                 {index < smileJourney.length - 1 && (
                   <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">
@@ -541,7 +545,7 @@ export default function DentalPage() {
             <h2 className="heading-lg mt-2 text-gray-900 mb-6">
               What Our Patients Say
             </h2>
-            <p className="text-body max-w-3xl mx-auto">
+            <p className="text-shadow-md text-body max-w-3xl mx-auto">
               Don't just take our word for it. Here's what our satisfied
               patients have to say about their dental care experience at
               CLINICA.
@@ -570,7 +574,9 @@ export default function DentalPage() {
                     />
                   ))}
                 </div>
-                <p className="text-body mb-6 italic">"{testimonial.text}"</p>
+                <p className="text-shadow-md text-body mb-6 italic">
+                  "{testimonial.text}"
+                </p>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold mr-4">
@@ -580,7 +586,7 @@ export default function DentalPage() {
                       <h4 className="font-semibold text-gray-900">
                         {testimonial.name}
                       </h4>
-                      <p className="text-caption text-blue-600">
+                      <p className="text-shadow-md text-caption text-blue-600">
                         {testimonial.treatment}
                       </p>
                     </div>
@@ -608,7 +614,7 @@ export default function DentalPage() {
             <h2 className="heading-lg mt-2 text-gray-900 mb-6">
               Frequently Asked Questions
             </h2>
-            <p className="text-body max-w-3xl mx-auto">
+            <p className="text-shadow-md text-body max-w-3xl mx-auto">
               Get answers to common questions about our dental treatments and
               procedures.
             </p>
@@ -652,7 +658,9 @@ export default function DentalPage() {
                   className="overflow-hidden"
                 >
                   <div className="px-6 pb-4">
-                    <p className="text-body text-gray-600">{faq.answer}</p>
+                    <p className="text-shadow-md text-body text-gray-600">
+                      {faq.answer}
+                    </p>
                   </div>
                 </motion.div>
               </motion.div>
@@ -671,7 +679,7 @@ export default function DentalPage() {
             variants={fadeInUp}
           >
             <h2 className="heading-lg mb-6">Ready to Transform Your Smile?</h2>
-            <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
+            <p className="text-shadow-md text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
               Join thousands of satisfied patients who have experienced the
               CLINICA difference. Book your consultation today and take the
               first step towards a beautiful, healthy smile.
@@ -712,7 +720,7 @@ export default function DentalPage() {
             <h2 className="heading-lg mb-6 text-gray-900">
               Experience the CLINICA Difference
             </h2>
-            <p className="text-body mb-8 max-w-3xl mx-auto">
+            <p className="text-shadow-md text-body mb-8 max-w-3xl mx-auto">
               Our team of experienced professionals is dedicated to providing
               you with the highest quality dental care and exceptional results.
               Start your journey to a beautiful smile today.

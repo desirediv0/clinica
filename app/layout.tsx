@@ -99,76 +99,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
-      <head>
-        {/* Preconnect to external domains for performance */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-
-        {/* Favicon and app icons */}
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/manifest.json" />
-
-        {/* Structured Data for SEO */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "MedicalBusiness",
-              name: "CLINICA",
-              description:
-                "Premium dental and skin care clinic providing world-class treatments",
-              url: "https://clinica.com",
-              logo: "https://clinica.com/images/company logo.jpg",
-              image: "https://clinica.com/images/company logo.jpg",
-              telephone: "+1-555-123-4567",
-              email: "info@clinica.com",
-              address: {
-                "@type": "PostalAddress",
-                streetAddress: "123 Medical Center Dr, Suite 100",
-                addressLocality: "City",
-                addressRegion: "State",
-                postalCode: "12345",
-                addressCountry: "US",
-              },
-              geo: {
-                "@type": "GeoCoordinates",
-                latitude: "40.7128",
-                longitude: "-74.0060",
-              },
-              openingHours: ["Mo-Fr 08:00-18:00", "Sa 09:00-15:00"],
-              priceRange: "$$",
-              medicalSpecialty: ["Dentistry", "Dermatology"],
-              availableService: [
-                {
-                  "@type": "MedicalProcedure",
-                  name: "Dental Implants",
-                  description:
-                    "Permanent tooth replacement with natural-looking results",
-                },
-                {
-                  "@type": "MedicalProcedure",
-                  name: "Skin Treatments",
-                  description:
-                    "Advanced skin care treatments for natural beauty",
-                },
-              ],
-              sameAs: [
-                "https://facebook.com/clinica",
-                "https://instagram.com/clinica",
-                "https://twitter.com/clinica",
-              ],
-            }),
-          }}
-        />
-      </head>
-      <body className={`${inter.className} antialiased bg-white text-gray-900`}>
+      <body
+        className={`${inter.className} antialiased bg-white text-gray-900 overflow-x-hidden`}
+      >
         {/* Skip to main content for accessibility */}
         <a
           href="#main-content"

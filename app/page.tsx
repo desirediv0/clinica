@@ -262,13 +262,13 @@ export default function HomePage() {
               </div>
             </motion.div>
 
-            <h1 className="heading-xl mb-6 text-white">
+            <h1 className="heading-xl mb-6 text-white text-shadow-lg">
               Look Naturally Beautiful with{" "}
-              <span className="gradient-text bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text text-transparent">
+              <span className="gradient-text bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text text-transparent text-shadow-lg">
                 CLINICA
               </span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto leading-relaxed text-shadow-lg">
               Advanced Skin & Dental Care with Personalized Treatments
             </p>
 
@@ -598,7 +598,7 @@ export default function HomePage() {
             <h2 className="heading-lg mt-2 mb-6">
               Experience the CLINICA Difference
             </h2>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            <p className="text-gray-700 leading-relaxed text-shadow-md">
               We combine medical expertise with cutting-edge technology to
               deliver exceptional results that exceed your expectations.
             </p>
@@ -624,7 +624,7 @@ export default function HomePage() {
                   <item.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-                <p className="text-blue-100 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed text-shadow-md">
                   {item.description}
                 </p>
               </motion.div>

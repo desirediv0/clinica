@@ -93,10 +93,10 @@ export default function AboutPage() {
             <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">
               About CLINICA
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mt-2 mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mt-2 mb-6 heading-xl text-shadow-lg">
               Excellence in Esthetics & Dentistry
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto text-shadow-md">
               Discover the story behind CLINICA's commitment to providing
               world-class skin and dental care with personalized treatments and
               exceptional results.
@@ -118,7 +118,7 @@ export default function AboutPage() {
                   Transforming Lives Through Advanced Care
                 </h2>
               </div>
-              <div className="space-y-6 text-lg text-gray-600">
+              <div className="space-y-6 text-lg text-gray-600 text-shadow-md">
                 <p>
                   At CLINICA, our mission is to enhance your natural beauty and
                   restore your confidence through advanced medical procedures
@@ -145,7 +145,7 @@ export default function AboutPage() {
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   Our Commitment
                 </h3>
-                <p className="text-lg text-gray-600 mb-6">
+                <p className="text-lg text-gray-600 mb-6 text-shadow-md">
                   To provide the highest quality care with the most advanced
                   technology in a comfortable, welcoming environment.
                 </p>
@@ -179,7 +179,7 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold text-gray-900 mt-2 mb-6">
               The Foundation of Our Excellence
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto text-shadow-md">
               Our core values guide everything we do, ensuring that every
               patient receives the highest quality care and exceptional results.
             </p>
@@ -199,7 +199,9 @@ export default function AboutPage() {
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">
                   {value.title}
                 </h3>
-                <p className="text-lg text-gray-600">{value.description}</p>
+                <p className="text-lg text-gray-600 text-shadow-md">
+                  {value.description}
+                </p>
               </div>
             ))}
           </div>
@@ -216,7 +218,7 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold text-gray-900 mt-2 mb-6">
               Your Journey to Transformation
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto text-shadow-md">
               We follow a comprehensive approach to ensure the best possible
               outcomes for every patient, from initial consultation to follow-up
               care.
@@ -237,7 +239,9 @@ export default function AboutPage() {
                 <h3 className="text-2xl font-semibold text-gray-900 mb-3">
                   {item.title}
                 </h3>
-                <p className="text-lg text-gray-600">{item.description}</p>
+                <p className="text-lg text-gray-600 text-shadow-md">
+                  {item.description}
+                </p>
               </div>
             ))}
           </div>
@@ -254,7 +258,7 @@ export default function AboutPage() {
                   <stat.icon className="w-8 h-8 text-white" />
                 </div>
                 <div className="text-4xl font-bold mb-2">{stat.number}</div>
-                <div className="text-blue-100">{stat.label}</div>
+                <div className="text-blue-100 text-shadow-md">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -267,7 +271,7 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold mb-6">
             Ready to Start Your Transformation?
           </h2>
-          <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
+          <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto text-shadow-md">
             Join thousands of satisfied patients who have experienced the
             CLINICA difference. Book your consultation today and take the first
             step towards your transformation.
@@ -302,7 +306,7 @@ export default function AboutPage() {
               <h3 className="text-2xl font-semibold text-gray-900 mb-3">
                 Visit Us
               </h3>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-gray-600 text-shadow-md">
                 123 Medical Center Dr, Suite 100
                 <br />
                 City, State 12345
@@ -316,7 +320,7 @@ export default function AboutPage() {
               <h3 className="text-2xl font-semibold text-gray-900 mb-3">
                 Call Us
               </h3>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-gray-600 text-shadow-md">
                 (555) 123-4567
                 <br />
                 Available 24/7 for emergencies
@@ -330,7 +334,7 @@ export default function AboutPage() {
               <h3 className="text-2xl font-semibold text-gray-900 mb-3">
                 Email Us
               </h3>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-gray-600 text-shadow-md">
                 info@clinica.com
                 <br />
                 We respond within 24 hours

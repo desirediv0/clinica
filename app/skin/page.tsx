@@ -245,10 +245,10 @@ export default function SkinPage() {
               </div>
             </motion.div>
 
-            <h1 className="heading-xl mb-6 text-white">
+            <h1 className="heading-xl text-shadow-lg mb-6 text-white">
               Glow Starts Here – Premium Skin Treatments
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-shadow-md text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto leading-relaxed">
               Advanced skin care treatments designed to enhance your natural
               beauty and address your specific concerns with personalized care.
             </p>
@@ -304,7 +304,7 @@ export default function SkinPage() {
             <h2 className="heading-lg mt-2 text-gray-900 mb-6">
               Advanced Skin Care Solutions
             </h2>
-            <p className="text-body max-w-3xl mx-auto">
+            <p className="text-shadow-md text-body max-w-3xl mx-auto">
               Discover our comprehensive range of skin care treatments designed
               to address your specific concerns and enhance your natural beauty.
             </p>
@@ -344,7 +344,9 @@ export default function SkinPage() {
                   <h3 className="heading-md text-gray-900 mb-3">
                     {treatment.title}
                   </h3>
-                  <p className="text-body mb-4">{treatment.description}</p>
+                  <p className="text-shadow-md text-body mb-4">
+                    {treatment.description}
+                  </p>
 
                   <div className="space-y-3 mb-6">
                     <div className="flex items-center space-x-2">
@@ -413,7 +415,7 @@ export default function SkinPage() {
             <h2 className="heading-lg mt-2 text-gray-900 mb-6">
               What Our Patients Say
             </h2>
-            <p className="text-body max-w-3xl mx-auto">
+            <p className="text-shadow-md text-body max-w-3xl mx-auto">
               Don't just take our word for it. Here's what our satisfied
               patients have to say about their skin care experience at CLINICA.
             </p>
@@ -441,7 +443,9 @@ export default function SkinPage() {
                     />
                   ))}
                 </div>
-                <p className="text-body mb-6 italic">"{testimonial.text}"</p>
+                <p className="text-shadow-md text-body mb-6 italic">
+                  "{testimonial.text}"
+                </p>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold mr-4">
@@ -451,7 +455,7 @@ export default function SkinPage() {
                       <h4 className="font-semibold text-gray-900">
                         {testimonial.name}
                       </h4>
-                      <p className="text-caption text-blue-600">
+                      <p className="text-shadow-md text-caption text-blue-600">
                         {testimonial.treatment}
                       </p>
                     </div>
@@ -479,7 +483,7 @@ export default function SkinPage() {
             <h2 className="heading-lg mt-2 text-gray-900 mb-6">
               Frequently Asked Questions
             </h2>
-            <p className="text-body max-w-3xl mx-auto">
+            <p className="text-shadow-md text-body max-w-3xl mx-auto">
               Get answers to common questions about our skin care treatments and
               procedures.
             </p>
@@ -523,7 +527,9 @@ export default function SkinPage() {
                   className="overflow-hidden"
                 >
                   <div className="px-6 pb-4">
-                    <p className="text-body text-gray-600">{faq.answer}</p>
+                    <p className="text-shadow-md text-body text-gray-600">
+                      {faq.answer}
+                    </p>
                   </div>
                 </motion.div>
               </motion.div>
@@ -544,7 +550,7 @@ export default function SkinPage() {
             <h2 className="heading-lg mb-6">
               Find the Best Skin Treatment For You
             </h2>
-            <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
+            <p className="text-shadow-md text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
               Not sure which treatment is right for you? Take our quick skin
               assessment quiz and get personalized recommendations from our
               experts.
@@ -585,7 +591,7 @@ export default function SkinPage() {
             <h2 className="heading-lg mb-6 text-gray-900">
               Ready to Transform Your Skin?
             </h2>
-            <p className="text-body mb-8 max-w-3xl mx-auto">
+            <p className="text-shadow-md text-body mb-8 max-w-3xl mx-auto">
               Join thousands of satisfied patients who have experienced the
               CLINICA difference. Book your consultation today and take the
               first step towards radiant, healthy skin.
