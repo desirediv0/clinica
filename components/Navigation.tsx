@@ -105,29 +105,32 @@ export default function Navigation() {
       >
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            {/* Enhanced Logo */}
+            {/* Enhanced Logo - Responsive */}
             <motion.div
               className="flex-shrink-0 flex items-center"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.2 }}
             >
-              <Link href="/" className="flex items-center space-x-4 group">
+              <Link
+                href="/"
+                className="flex items-center space-x-2 lg:space-x-4 group"
+              >
                 <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#00326D] to-[#B12EBC] rounded-xl blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#00326D] to-[#B12EBC] rounded-lg lg:rounded-xl blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
                   <Image
                     src="/images/logo.jpg"
                     alt="CLINICA Logo"
-                    width={60}
-                    height={60}
-                    className="relative rounded-xl object-cover shadow-lg group-hover:shadow-xl transition-all duration-300 border-2 border-white"
+                    width={80}
+                    height={80}
+                    className="relative rounded-lg lg:rounded-xl object-cover shadow-lg group-hover:shadow-xl transition-all duration-300 border-2 border-white w-14 h-14 lg:w-[60px] lg:h-[60px]"
                     priority
                   />
-                  <div className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-r from-[#00326D] to-[#B12EBC] rounded-full animate-pulse shadow-lg">
+                  <div className="absolute -top-1 -right-1 w-3 h-3 lg:w-4 lg:h-4 bg-gradient-to-r from-[#00326D] to-[#B12EBC] rounded-full animate-pulse shadow-lg">
                     <div className="absolute inset-0 bg-gradient-to-r from-[#00326D] to-[#B12EBC] rounded-full animate-ping opacity-75"></div>
                   </div>
                 </div>
                 <div className="hidden sm:block">
-                  <h1 className="text-2xl font-bold bg-gradient-to-r from-[#00326D] via-[#B12EBC] to-[#00326D] bg-clip-text text-transparent">
+                  <h1 className="text-lg lg:text-2xl font-bold bg-gradient-to-r from-[#00326D] via-[#B12EBC] to-[#00326D] bg-clip-text text-transparent">
                     CLINICA
                   </h1>
                   <p className="text-xs text-gray-500 -mt-1 font-medium">
@@ -270,21 +273,21 @@ export default function Navigation() {
             </div>
 
             {/* Mobile Menu Button */}
-            <div className="flex lg:hidden items-center space-x-3">
+            <div className="flex lg:hidden items-center space-x-2">
               <motion.a
                 href="tel:+15551234567"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="hidden sm:flex items-center space-x-2 bg-gradient-to-r from-[#00326D] to-[#B12EBC] text-white px-4 py-2 rounded-xl text-sm font-semibold shadow-lg"
+                className="flex items-center space-x-1 bg-gradient-to-r from-[#00326D] to-[#B12EBC] text-white px-3 py-2 rounded-lg text-xs font-semibold shadow-lg"
               >
-                <Phone className="w-4 h-4" />
+                <Phone className="w-3 h-3" />
                 <span className="hidden xs:inline">Call</span>
               </motion.a>
 
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="p-3 rounded-xl bg-gray-100 hover:bg-gray-200 transition-colors duration-300 mobile-menu shadow-md"
+                className="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors duration-300 mobile-menu shadow-md"
                 onClick={() => setIsOpen(!isOpen)}
               >
                 <AnimatePresence mode="wait">
@@ -296,7 +299,7 @@ export default function Navigation() {
                       exit={{ rotate: 90, opacity: 0 }}
                       transition={{ duration: 0.2 }}
                     >
-                      <X className="w-6 h-6 text-gray-700" />
+                      <X className="w-5 h-5 text-gray-700" />
                     </motion.div>
                   ) : (
                     <motion.div
@@ -306,7 +309,7 @@ export default function Navigation() {
                       exit={{ rotate: -90, opacity: 0 }}
                       transition={{ duration: 0.2 }}
                     >
-                      <Menu className="w-6 h-6 text-gray-700" />
+                      <Menu className="w-5 h-5 text-gray-700" />
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -324,10 +327,10 @@ export default function Navigation() {
                 transition={{ duration: 0.4, ease: "easeInOut" }}
                 className="lg:hidden border-t border-gray-100 bg-white/98 backdrop-blur-lg mobile-menu rounded-b-2xl shadow-2xl"
               >
-                <div className="py-8 space-y-8">
+                <div className="py-6 space-y-6">
                   {/* Main Navigation */}
-                  <div className="space-y-3 px-6">
-                    <h4 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-4">
+                  <div className="space-y-2 px-4">
+                    <h4 className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-3">
                       Navigation
                     </h4>
                     {navItems.map((item, index) => (
@@ -342,13 +345,13 @@ export default function Navigation() {
                       >
                         <Link
                           href={item.href}
-                          className={`flex items-center justify-between px-6 py-4 rounded-xl transition-all duration-300 group ${
+                          className={`flex items-center justify-between px-4 py-3 rounded-xl transition-all duration-300 group ${
                             pathname === item.href
                               ? "text-[#00326D] bg-[#B12EBC]/10 font-bold shadow-md"
                               : "text-gray-700 hover:text-[#00326D] hover:bg-gray-50"
                           }`}
                         >
-                          <span>{item.name}</span>
+                          <span className="text-sm">{item.name}</span>
                           <ChevronDown className="w-4 h-4 transform rotate-[-90deg] group-hover:translate-x-1 transition-transform duration-300" />
                         </Link>
                       </motion.div>
@@ -356,11 +359,11 @@ export default function Navigation() {
                   </div>
 
                   {/* Services Section */}
-                  <div className="px-6">
-                    <h4 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-4">
+                  <div className="px-4">
+                    <h4 className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-3">
                       Our Services
                     </h4>
-                    <div className="space-y-4">
+                    <div className="space-y-3">
                       {servicesItems.map((item, index) => (
                         <motion.div
                           key={item.name}
@@ -375,20 +378,20 @@ export default function Navigation() {
                         >
                           <Link
                             href={item.href}
-                            className={`flex items-center space-x-4 p-4 rounded-xl transition-all duration-300 group ${
+                            className={`flex items-center space-x-3 p-3 rounded-xl transition-all duration-300 group ${
                               pathname === item.href
                                 ? "text-[#00326D] bg-[#B12EBC]/10 font-bold shadow-md"
                                 : "text-gray-700 hover:text-[#00326D] hover:bg-gray-50"
                             }`}
                           >
                             <div
-                              className={`w-12 h-12 bg-gradient-to-r from-[#B12EBC] to-[#00326D] rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300`}
+                              className={`w-10 h-10 bg-gradient-to-r from-[#B12EBC] to-[#00326D] rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300`}
                             >
-                              <item.icon className="w-6 h-6 text-white" />
+                              <item.icon className="w-5 h-5 text-white" />
                             </div>
                             <div className="flex-1">
-                              <h3 className="font-bold">{item.name}</h3>
-                              <p className="text-sm text-gray-500">
+                              <h3 className="font-bold text-sm">{item.name}</h3>
+                              <p className="text-xs text-gray-500">
                                 {item.description}
                               </p>
                             </div>
@@ -396,6 +399,22 @@ export default function Navigation() {
                         </motion.div>
                       ))}
                     </div>
+                  </div>
+
+                  {/* Book Now Button for Mobile */}
+                  <div className="px-4">
+                    <motion.div
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      <Link
+                        href="/contact"
+                        className="w-full flex items-center justify-center space-x-2 bg-gradient-to-r from-[#00326D] to-[#B12EBC] text-white px-6 py-3 rounded-xl text-sm font-bold shadow-lg hover:shadow-xl transition-all duration-300"
+                      >
+                        <Calendar className="w-4 h-4" />
+                        <span>Book Appointment</span>
+                      </Link>
+                    </motion.div>
                   </div>
                 </div>
               </motion.div>
@@ -405,7 +424,7 @@ export default function Navigation() {
       </nav>
 
       {/* Spacer to prevent content from hiding behind fixed nav */}
-      <div className="h-20"></div>
+      <div className="h-16 lg:h-20"></div>
     </>
   );
 }
