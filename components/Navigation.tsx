@@ -104,7 +104,7 @@ export default function Navigation() {
         }`}
       >
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-24">
             {/* Enhanced Logo - Responsive */}
             <motion.div
               className="flex-shrink-0 flex items-center"
@@ -116,26 +116,22 @@ export default function Navigation() {
                 className="flex items-center space-x-2 lg:space-x-4 group"
               >
                 <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#00326D] to-[#B12EBC] rounded-lg lg:rounded-xl blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
                   <Image
-                    src="/images/logo.jpg"
+                    src="/images/logo.png"
                     alt="CLINICA Logo"
-                    width={80}
-                    height={80}
-                    className="relative rounded-lg lg:rounded-xl object-cover shadow-lg group-hover:shadow-xl transition-all duration-300 border-2 border-white w-14 h-14 lg:w-[60px] lg:h-[60px]"
+                    width={200}
+                    height={200}
+                    className="relative object-cover transition-all duration-300 hidden md:block "
                     priority
                   />
-                  <div className="absolute -top-1 -right-1 w-3 h-3 lg:w-4 lg:h-4 bg-gradient-to-r from-[#00326D] to-[#B12EBC] rounded-full animate-pulse shadow-lg">
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#00326D] to-[#B12EBC] rounded-full animate-ping opacity-75"></div>
-                  </div>
-                </div>
-                <div className="hidden sm:block">
-                  <h1 className="text-lg lg:text-2xl font-bold bg-gradient-to-r from-[#00326D] via-[#B12EBC] to-[#00326D] bg-clip-text text-transparent">
-                    CLINICA
-                  </h1>
-                  <p className="text-xs text-gray-500 -mt-1 font-medium">
-                    Dental & Skin Excellence
-                  </p>
+                  <Image
+                    src="/images/logo.png"
+                    alt="CLINICA Logo"
+                    width={180}
+                    height={180}
+                    className="relative object-cover transition-all duration-300  block md:hidden "
+                    priority
+                  />
                 </div>
               </Link>
             </motion.div>

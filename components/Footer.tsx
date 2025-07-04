@@ -139,25 +139,14 @@ export default function Footer() {
               className="flex items-center space-x-4 mb-8"
             >
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-[#B12EBC] to-[#00326D] rounded-xl blur-lg opacity-30"></div>
+                {/* <div className="absolute inset-0 bg-gradient-to-r from-[#B12EBC] to-[#00326D] rounded-xl blur-lg opacity-30"></div> */}
                 <Image
-                  src="/images/logo.jpg"
+                  src="/images/logo.png"
                   alt="CLINICA Logo"
-                  width={60}
-                  height={60}
-                  className="relative rounded-xl object-cover shadow-xl border-2 border-white/20"
+                  width={200}
+                  height={200}
+                  className="relative  px-3  rounded object-cover bg-white"
                 />
-                <div className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-r from-[#B12EBC] to-[#00326D] rounded-full animate-pulse shadow-lg">
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#B12EBC] to-[#00326D] rounded-full animate-ping opacity-75"></div>
-                </div>
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold bg-gradient-to-r from-white to-[#B12EBC] bg-clip-text text-transparent">
-                  CLINICA
-                </h3>
-                <p className="text-sm text-purple-200 -mt-1 font-medium">
-                  Dental & Skin Excellence
-                </p>
               </div>
             </motion.div>
 
@@ -201,7 +190,7 @@ export default function Footer() {
                 Follow Us
               </h4>
               <div className="flex space-x-4">
-                {socialLinks.map((social, index) => (
+                {socialLinks.map((social) => (
                   <motion.a
                     key={social.name}
                     href={social.href}
