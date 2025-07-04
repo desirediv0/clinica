@@ -1,6 +1,4 @@
 "use client";
-
-import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -14,25 +12,32 @@ import {
   Heart,
   CheckCircle,
   Star,
-  Plus,
-  Minus,
   Clock,
   Users,
   Zap,
   Eye,
+  Phone,
+  Play,
+  MapPin,
+  Mail,
 } from "lucide-react";
+import Cta from "@/components/Cta";
+import Faq from "@/components/Faq";
+import Testimonials from "@/components/Testimonials";
+import Hero from "@/components/Hero";
+import ContactForm from "@/components/ContactForm";
 
-// Animation variants
+// Enhanced Animation variants
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.8, ease: "easeOut" },
+  transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] },
 };
 
 const staggerContainer = {
   animate: {
     transition: {
-      staggerChildren: 0.15,
+      staggerChildren: 0.1,
     },
   },
 };
@@ -40,152 +45,136 @@ const staggerContainer = {
 const scaleIn = {
   initial: { opacity: 0, scale: 0.8 },
   animate: { opacity: 1, scale: 1 },
-  transition: { duration: 0.6, ease: "easeOut" },
+  transition: { duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] },
 };
 
 const slideInLeft = {
   initial: { opacity: 0, x: -60 },
   animate: { opacity: 1, x: 0 },
-  transition: { duration: 0.8, ease: "easeOut" },
+  transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] },
 };
 
 const slideInRight = {
   initial: { opacity: 0, x: 60 },
   animate: { opacity: 1, x: 0 },
-  transition: { duration: 0.8, ease: "easeOut" },
+  transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] },
 };
 
 export default function DentalPage() {
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
-
   const dentalTreatments = [
     {
       title: "Dental Implants",
       description:
-        "Permanent tooth replacement with natural-looking results that restore function and confidence.",
+        "Permanent tooth replacement with natural-looking results that restore function and confidence for a lifetime.",
       benefits: [
         "Permanent solution",
         "Natural appearance",
-        "Restores function",
+        "Restores full function",
         "Prevents bone loss",
+        "Improves oral health",
+        "Boosts confidence",
       ],
       duration: "2-3 hours",
       recovery: "3-6 months",
-      image: "/images/tooth.webp",
+
+      image: "/placeholder.svg?height=300&width=400",
       icon: Smile,
-      color: "from-blue-500 to-cyan-500",
+      color: "from-[#00326D] to-[#B12EBC]",
     },
     {
       title: "Full Mouth Rehabilitation",
       description:
-        "Complete smile transformation and restoration for optimal oral health and aesthetics.",
+        "Complete smile transformation and restoration for optimal oral health, function, and stunning aesthetics.",
       benefits: [
         "Complete restoration",
         "Improved function",
         "Enhanced aesthetics",
         "Long-term solution",
+        "Better oral health",
+        "Renewed confidence",
       ],
       duration: "Multiple visits",
-      recovery: "Varies",
-      image: "/images/teethbanner.jpg",
+      recovery: "Varies by case",
+
+      image: "/placeholder.svg?height=300&width=400",
       icon: Award,
-      color: "from-cyan-500 to-blue-600",
+      color: "from-[#B12EBC] to-[#00326D]",
     },
     {
       title: "Orthodontics",
       description:
-        "Braces and aligners for perfect smile alignment and optimal oral health.",
+        "Advanced braces and clear aligners for perfect smile alignment and optimal oral health improvement.",
       benefits: [
         "Straightens teeth",
         "Improves bite",
         "Enhances appearance",
-        "Prevents issues",
+        "Prevents future issues",
+        "Boosts self-esteem",
+        "Better oral hygiene",
       ],
       duration: "18-24 months",
       recovery: "No downtime",
-      image: "/images/tooth.webp",
+
+      image: "/placeholder.svg?height=300&width=400",
       icon: Shield,
-      color: "from-blue-600 to-indigo-600",
+      color: "from-[#00326D] to-[#B12EBC]",
     },
     {
       title: "Teeth Whitening",
       description:
-        "Professional whitening for a brighter, more confident smile.",
+        "Professional whitening treatments for a brighter, more confident smile with immediate visible results.",
       benefits: [
         "Immediate results",
         "Safe procedure",
-        "Long-lasting",
+        "Long-lasting effects",
         "Boosts confidence",
+        "Professional grade",
+        "Customized treatment",
       ],
       duration: "1 hour",
       recovery: "No downtime",
-      image: "/images/teethbanner.jpg",
+
+      image: "/placeholder.svg?height=300&width=400",
       icon: Sparkles,
-      color: "from-indigo-600 to-purple-600",
+      color: "from-[#B12EBC] to-[#00326D]",
     },
     {
       title: "Smile Makeovers",
       description:
-        "Comprehensive cosmetic dentistry transformations for your dream smile.",
+        "Comprehensive cosmetic dentistry transformations combining multiple procedures for your dream smile.",
       benefits: [
         "Customized plan",
         "Multiple procedures",
         "Dramatic results",
         "Enhanced confidence",
+        "Personalized approach",
+        "Life-changing results",
       ],
       duration: "Multiple visits",
-      recovery: "Varies",
-      image: "/images/tooth.webp",
+      recovery: "Varies by treatment",
+
+      image: "/placeholder.svg?height=300&width=400",
       icon: Heart,
-      color: "from-purple-600 to-pink-600",
+      color: "from-[#00326D] to-[#B12EBC]",
     },
     {
       title: "Painless Root Canal",
       description:
-        "Advanced endodontic treatment with minimal discomfort and maximum comfort.",
+        "Advanced endodontic treatment with minimal discomfort using the latest technology and techniques.",
       benefits: [
         "Pain-free procedure",
         "Saves natural tooth",
         "Quick recovery",
         "Advanced technology",
+        "Preserves function",
+        "Cost-effective solution",
       ],
       duration: "1-2 hours",
       recovery: "1-2 days",
-      image: "/images/teethbanner.jpg",
+
+      image: "/placeholder.svg?height=300&width=400",
       icon: CheckCircle,
-      color: "from-pink-600 to-red-500",
-    },
-    {
-      title: "Pediatric Dentistry",
-      description:
-        "Gentle dental care for children of all ages in a comfortable environment.",
-      benefits: [
-        "Child-friendly",
-        "Preventive care",
-        "Early detection",
-        "Comfortable experience",
-      ],
-      duration: "30-60 minutes",
-      recovery: "No downtime",
-      image: "/images/tooth.webp",
-      icon: Users,
-      color: "from-red-500 to-orange-500",
-    },
-    {
-      title: "Preventive Dentistry",
-      description:
-        "Comprehensive care to maintain optimal oral health and prevent future issues.",
-      benefits: [
-        "Preventive care",
-        "Early detection",
-        "Education",
-        "Long-term health",
-      ],
-      duration: "30-60 minutes",
-      recovery: "No downtime",
-      image: "/images/teethbanner.jpg",
-      icon: Shield,
-      color: "from-orange-500 to-yellow-500",
+      color: "from-[#B12EBC] to-[#00326D]",
     },
   ];
 
@@ -194,167 +183,127 @@ export default function DentalPage() {
       step: "01",
       title: "Initial Consultation",
       description:
-        "Comprehensive oral examination and digital imaging to assess your current dental health.",
+        "Comprehensive oral examination, digital imaging, and discussion of your goals and concerns.",
       icon: Eye,
+      duration: "60 minutes",
+      color: "from-[#00326D] to-[#B12EBC]",
     },
     {
       step: "02",
       title: "Treatment Planning",
       description:
-        "Personalized treatment plan created based on your goals and dental needs.",
+        "Personalized treatment plan created based on your specific needs, goals, and budget.",
       icon: Shield,
+      duration: "30 minutes",
+      color: "from-[#B12EBC] to-[#00326D]",
     },
     {
       step: "03",
       title: "Treatment Execution",
       description:
-        "Expert care with advanced technology and techniques for optimal results.",
+        "Expert care with advanced technology and techniques for optimal, comfortable results.",
       icon: CheckCircle,
+      duration: "Varies",
+      color: "from-[#00326D] to-[#B12EBC]",
     },
     {
       step: "04",
       title: "Follow-up Care",
       description:
-        "Ongoing maintenance and support to ensure lasting results and oral health.",
+        "Ongoing maintenance, support, and monitoring to ensure lasting results and oral health.",
       icon: Heart,
+      duration: "Lifetime",
+      color: "from-[#B12EBC] to-[#00326D]",
     },
   ];
 
-  const faqs = [
+  const dentalFaqs = [
     {
       question: "How long do dental implants last?",
       answer:
-        "With proper care and maintenance, dental implants can last a lifetime. They have a success rate of over 95% and are designed to be a permanent solution.",
+        "With proper care and maintenance, dental implants can last a lifetime. They have a success rate of over 95% and are designed to be a permanent solution. Regular dental checkups and good oral hygiene are essential for longevity.",
     },
     {
-      question: "Is teeth whitening safe?",
+      question: "Is teeth whitening safe for my teeth?",
       answer:
-        "Yes, professional teeth whitening is safe when performed by trained professionals. We use advanced techniques and monitor the process to ensure optimal results without damage.",
+        "Yes, professional teeth whitening is completely safe when performed by trained dental professionals. We use advanced techniques and monitor the process to ensure optimal results without damage to your tooth enamel.",
     },
     {
-      question: "How long does orthodontic treatment take?",
+      question: "How long does orthodontic treatment typically take?",
       answer:
-        "Treatment duration varies depending on the complexity of your case. Most patients complete treatment in 18-24 months, but some cases may take longer.",
+        "Treatment duration varies depending on the complexity of your case and the type of orthodontic treatment chosen. Most patients complete treatment in 18-24 months, but some cases may take longer for optimal results.",
     },
     {
-      question: "Are root canals painful?",
+      question: "Are root canal procedures painful?",
       answer:
-        "Modern root canal procedures are virtually painless. We use advanced anesthesia and techniques to ensure your comfort throughout the procedure.",
+        "Modern root canal procedures are virtually painless. We use advanced anesthesia techniques and the latest technology to ensure your comfort throughout the procedure. Most patients experience minimal discomfort.",
     },
     {
-      question: "When should my child first visit the dentist?",
+      question: "What's included in a smile makeover?",
       answer:
-        "Children should have their first dental visit by age 1 or within 6 months of their first tooth appearing. Early visits help establish good oral health habits.",
+        "A smile makeover is customized to your specific needs and may include teeth whitening, veneers, crowns, orthodontics, or other cosmetic procedures. We create a comprehensive plan based on your goals and budget.",
     },
     {
-      question: "How often should I have a dental checkup?",
+      question: "How do I maintain my dental work?",
       answer:
-        "Most patients should have a dental checkup and cleaning every 6 months. However, some patients may need more frequent visits based on their oral health needs.",
+        "Maintaining your dental work involves regular brushing, flossing, and professional cleanings. We provide detailed aftercare instructions and recommend regular checkups to ensure the longevity of your treatment.",
     },
   ];
 
-  const testimonials = [
+  const dentalTestimonials = [
     {
       name: "Maria Garcia",
-      text: "The dental implant procedure was incredible! I can't believe how natural it looks and feels. The team made the entire process comfortable and stress-free.",
+      text: "The dental implant procedure was incredible! I can't believe how natural it looks and feels. The team made the entire process comfortable and stress-free. I'm so happy with my new smile!",
       rating: 5,
       treatment: "Dental Implants",
+      image: "/placeholder.svg?height=60&width=60",
+      location: "New York",
     },
     {
       name: "James Wilson",
-      text: "My smile makeover exceeded all expectations. The transformation is amazing and I feel so much more confident. Highly recommend CLINICA!",
+      text: "My smile makeover exceeded all expectations. The transformation is amazing and I feel so much more confident. The attention to detail and care was exceptional throughout.",
       rating: 5,
       treatment: "Smile Makeover",
+      image: "/placeholder.svg?height=60&width=60",
+      location: "California",
     },
     {
       name: "Lisa Thompson",
-      text: "The teeth whitening treatment was quick and painless. My smile is now several shades brighter and I couldn't be happier with the results.",
+      text: "The teeth whitening treatment was quick and painless. My smile is now several shades brighter and I couldn't be happier with the results. Highly recommend CLINICA!",
       rating: 5,
       treatment: "Teeth Whitening",
+      image: "/placeholder.svg?height=60&width=60",
+      location: "Texas",
     },
   ];
 
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/teethbanner.jpg"
-            alt="Dental Care Hero"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/85 via-blue-800/80 to-cyan-900/85"></div>
-        </div>
-        <div className="relative container mx-auto px-4 lg:px-8 text-center text-white">
-          <motion.div
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            variants={fadeInUp}
-            className="max-w-4xl mx-auto"
-          >
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="mb-8"
-            >
-              <div className="inline-flex items-center space-x-3 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20 mb-8">
-                <Smile className="w-5 h-5 text-cyan-300" />
-                <span className="text-sm font-medium text-cyan-100">
-                  Premium Dental Care
-                </span>
-              </div>
-            </motion.div>
+      <Hero
+        title="Smile Beautifully,"
+        subtitle="Chew Confidently"
+        description="Advanced dental care treatments designed to restore your smile and improve your oral health with personalized, expert care."
+        backgroundImage="/images/dental.jpg"
+        tagText="Premium Dental Care"
+        tagIcon={Smile}
+        primaryButtonText="View Treatments"
+        primaryButtonIcon={Calendar}
+        primaryButtonLink="#treatments"
+        secondaryButtonText="Book Consultation"
+        secondaryButtonIcon={Play}
+        secondaryButtonLink="/contact"
+        stats={[
+          { number: "5000+", label: "Successful Treatments" },
+          { number: "99%", label: "Patient Satisfaction" },
+          { number: "15+", label: "Years Experience" },
+          { number: "24/7", label: "Emergency Care" },
+        ]}
+        subtitleColor="text-[#B12EBC]"
+      />
 
-            <h1 className="heading-xl text-shadow-lg mb-6 text-white">
-              Smile Beautifully, Chew Confidently
-            </h1>
-            <p className="text-shadow-md text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto leading-relaxed">
-              Advanced dental care treatments designed to restore your smile and
-              improve your oral health with personalized care.
-            </p>
-
-            <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Link
-                  href="#treatments"
-                  className="btn-primary inline-flex items-center space-x-3"
-                >
-                  <Calendar className="w-6 h-6" />
-                  <span>View Treatments</span>
-                </Link>
-              </motion.div>
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Link
-                  href="/contact"
-                  className="btn-secondary inline-flex items-center space-x-3"
-                >
-                  <ArrowRight className="w-6 h-6" />
-                  <span>Book Consultation</span>
-                </Link>
-              </motion.div>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Treatments Overview */}
-      <section id="treatments" className="section-padding bg-white">
+      {/* Enhanced Treatments Overview */}
+      <section id="treatments" className="py-20 lg:py-32 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial="initial"
@@ -363,15 +312,19 @@ export default function DentalPage() {
             variants={fadeInUp}
             className="text-center mb-16"
           >
-            <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">
-              Our Treatments
+            <span className="inline-block bg-gradient-to-r from-[#00326D]/10 to-[#B12EBC]/10 text-[#00326D] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4">
+              Our Dental Treatments
             </span>
-            <h2 className="heading-lg mt-2 text-gray-900 mb-6">
-              Comprehensive Dental Care Solutions
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              Comprehensive{" "}
+              <span className="bg-gradient-to-r from-[#00326D] to-[#B12EBC] bg-clip-text text-transparent">
+                Dental Care Solutions
+              </span>
             </h2>
-            <p className="text-shadow-md text-body max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               From routine checkups to advanced cosmetic procedures, we provide
-              complete dental solutions for a healthy, beautiful smile.
+              complete dental solutions for a healthy, beautiful smile that
+              lasts a lifetime.
             </p>
           </motion.div>
 
@@ -380,69 +333,69 @@ export default function DentalPage() {
             whileInView="animate"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {dentalTreatments.map((treatment, index) => (
               <motion.div
                 key={treatment.title}
                 variants={scaleIn}
-                whileHover={{ y: -8, scale: 1.02 }}
-                className="card-premium group overflow-hidden"
+                whileHover={{ y: -10, scale: 1.02 }}
+                className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100"
               >
-                <div className="relative overflow-hidden h-32">
+                <div className="relative overflow-hidden h-56">
                   <Image
-                    src={treatment.image}
+                    src={treatment.image || "/placeholder.svg"}
                     alt={treatment.title}
                     fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent"></div>
-                  <div className="absolute top-3 right-3">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                  <div className="absolute top-4 right-4">
                     <div
-                      className={`w-10 h-10 bg-gradient-to-r ${treatment.color} rounded-full flex items-center justify-center shadow-lg`}
+                      className={`w-12 h-12 bg-gradient-to-r ${treatment.color} rounded-full flex items-center justify-center shadow-lg border border-white/30`}
                     >
-                      <treatment.icon className="w-5 h-5 text-white" />
+                      <treatment.icon className="w-6 h-6 text-white" />
                     </div>
                   </div>
                 </div>
-                <div className="p-4">
-                  <h3 className="font-semibold text-gray-900 mb-2 text-lg">
+
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
                     {treatment.title}
                   </h3>
-                  <p className="text-shadow-md text-caption mb-4">
+                  <p className="text-gray-600 mb-6 leading-relaxed">
                     {treatment.description}
                   </p>
 
-                  <div className="space-y-2 mb-4">
+                  <div className="grid grid-cols-2 gap-4 mb-6">
                     <div className="flex items-center space-x-2">
-                      <Clock className="w-3 h-3 text-blue-600" />
-                      <span className="text-xs text-gray-600">
+                      <Clock className="w-4 h-4 text-[#00326D]" />
+                      <span className="text-sm text-gray-600">
                         {treatment.duration}
                       </span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <Award className="w-3 h-3 text-blue-600" />
-                      <span className="text-xs text-gray-600">
+                      <Award className="w-4 h-4 text-[#00326D]" />
+                      <span className="text-sm text-gray-600">
                         {treatment.recovery}
                       </span>
                     </div>
                   </div>
 
-                  <div className="mb-4">
-                    <h4 className="font-semibold text-gray-900 mb-2 text-sm">
-                      Benefits:
+                  <div className="mb-6">
+                    <h4 className="font-semibold text-gray-900 mb-3">
+                      Key Benefits:
                     </h4>
-                    <ul className="space-y-1">
-                      {treatment.benefits.slice(0, 2).map((benefit, idx) => (
-                        <li
-                          key={idx}
-                          className="flex items-center space-x-2 text-xs text-gray-600"
-                        >
-                          <CheckCircle className="w-3 h-3 text-green-500" />
-                          <span>{benefit}</span>
-                        </li>
+                    <div className="grid grid-cols-1 gap-2">
+                      {treatment.benefits.slice(0, 4).map((benefit, idx) => (
+                        <div key={idx} className="flex items-center space-x-2">
+                          <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                          <span className="text-sm text-gray-600">
+                            {benefit}
+                          </span>
+                        </div>
                       ))}
-                    </ul>
+                    </div>
                   </div>
 
                   <motion.div
@@ -451,7 +404,7 @@ export default function DentalPage() {
                   >
                     <Link
                       href="/contact"
-                      className="btn-primary w-full inline-flex items-center justify-center space-x-2 text-sm py-2"
+                      className="w-full inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-[#00326D] to-[#B12EBC] hover:from-[#00326D]/80 hover:to-[#B12EBC]/80 text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                     >
                       <Calendar className="w-4 h-4" />
                       <span>Book Treatment</span>
@@ -464,8 +417,8 @@ export default function DentalPage() {
         </div>
       </section>
 
-      {/* Smile Journey Timeline */}
-      <section className="section-padding bg-gradient-to-br from-blue-50 to-cyan-50">
+      {/* Enhanced Smile Journey Timeline */}
+      <section className="py-20 lg:py-32 bg-gradient-to-br from-[#00326D]/5 to-[#B12EBC]/5">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial="initial"
@@ -474,15 +427,19 @@ export default function DentalPage() {
             variants={fadeInUp}
             className="text-center mb-16"
           >
-            <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">
-              Your Journey
+            <span className="inline-block bg-gradient-to-r from-[#B12EBC]/10 to-[#00326D]/10 text-[#B12EBC] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4">
+              Your Dental Journey
             </span>
-            <h2 className="heading-lg mt-2 text-gray-900 mb-6">
-              Smile Makeover Journey
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              Your Path to a{" "}
+              <span className="bg-gradient-to-r from-[#B12EBC] to-[#00326D] bg-clip-text text-transparent">
+                Perfect Smile
+              </span>
             </h2>
-            <p className="text-shadow-md text-body max-w-3xl mx-auto">
-              Follow our comprehensive process designed to transform your smile
-              and restore your confidence with expert care.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Follow our comprehensive, patient-centered process designed to
+              transform your smile and restore your confidence with expert care
+              at every step.
             </p>
           </motion.div>
 
@@ -498,31 +455,38 @@ export default function DentalPage() {
                 key={step.step}
                 variants={scaleIn}
                 whileHover={{ y: -5, scale: 1.02 }}
-                className="relative"
+                className="relative group"
               >
-                <div className="card-premium p-6 text-center">
+                {/* Connection line for desktop */}
+                {index < smileJourney.length - 1 && (
+                  <div className="hidden lg:block absolute top-16 left-full w-full h-0.5 bg-gradient-to-r from-[#B12EBC]/20 to-[#00326D]/20 transform translate-x-4 z-0"></div>
+                )}
+
+                <div className="relative z-10 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 p-8 text-center border border-gray-100">
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                    <div className="w-10 h-10 bg-gradient-to-r from-[#B12EBC] to-[#00326D] rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg">
                       {step.step}
                     </div>
                   </div>
-                  <div className="mt-4 mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-100 to-cyan-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                      <step.icon className="w-6 h-6 text-blue-600" />
+
+                  <div className="mt-4 mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-r from-[#00326D] to-[#B12EBC] rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                      <step.icon className="w-8 h-8 text-white" />
                     </div>
                   </div>
-                  <h3 className="font-semibold text-gray-900 mb-2">
+
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
                     {step.title}
                   </h3>
-                  <p className="text-shadow-md text-caption">
+                  <p className="text-gray-600 leading-relaxed mb-4">
                     {step.description}
                   </p>
-                </div>
-                {index < smileJourney.length - 1 && (
-                  <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">
-                    <ArrowRight className="w-6 h-6 text-blue-300" />
+
+                  <div className="inline-flex items-center space-x-2 bg-[#B12EBC]/10 text-[#B12EBC] px-4 py-2 rounded-full text-sm font-medium">
+                    <Clock className="w-4 h-4" />
+                    <span>{step.duration}</span>
                   </div>
-                )}
+                </div>
               </motion.div>
             ))}
           </motion.div>
@@ -530,213 +494,121 @@ export default function DentalPage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="section-padding bg-white">
-        <div className="container mx-auto px-4 lg:px-8">
-          <motion.div
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={fadeInUp}
-            className="text-center mb-16"
-          >
-            <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">
-              Testimonials
-            </span>
-            <h2 className="heading-lg mt-2 text-gray-900 mb-6">
-              What Our Patients Say
-            </h2>
-            <p className="text-shadow-md text-body max-w-3xl mx-auto">
-              Don't just take our word for it. Here's what our satisfied
-              patients have to say about their dental care experience at
-              CLINICA.
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={staggerContainer}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-          >
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={testimonial.name}
-                variants={scaleIn}
-                whileHover={{ y: -5, scale: 1.02 }}
-                className="card-premium p-8"
-              >
-                <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-5 h-5 text-yellow-400 fill-current"
-                    />
-                  ))}
-                </div>
-                <p className="text-shadow-md text-body mb-6 italic">
-                  "{testimonial.text}"
-                </p>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold mr-4">
-                      {testimonial.name.charAt(0)}
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900">
-                        {testimonial.name}
-                      </h4>
-                      <p className="text-shadow-md text-caption text-blue-600">
-                        {testimonial.treatment}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+      <Testimonials
+        testimonials={dentalTestimonials}
+        title="What Our Patients Say"
+        subtitle="Don't just take our word for it. Here's what our satisfied patients have to say about their life-changing dental care experience at CLINICA."
+        tagText="Patient Stories"
+        tagColor="from-[#00326D]/10 to-[#B12EBC]/10 text-[#00326D]"
+        titleGradientFrom="from-[#00326D]"
+        titleGradientTo="to-[#B12EBC]"
+        backgroundClass="bg-white"
+      />
 
       {/* FAQ Section */}
-      <section className="section-padding bg-gradient-to-br from-gray-50 to-blue-50">
+      <Faq
+        faqs={dentalFaqs}
+        title="Got Questions?"
+        subtitle="Get answers to common questions about our dental treatments, procedures, and what to expect during your visit."
+        tagText="Frequently Asked Questions"
+        tagColor="from-[#B12EBC]/10 to-[#00326D]/10 text-[#B12EBC]"
+        titleGradientFrom="from-[#B12EBC]"
+        titleGradientTo="to-[#00326D]"
+      />
+
+      {/* Contact Form Section */}
+      <section className="py-20 lg:py-32 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial="initial"
             whileInView="animate"
             viewport={{ once: true, margin: "-100px" }}
-            variants={fadeInUp}
-            className="text-center mb-16"
-          >
-            <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">
-              FAQ
-            </span>
-            <h2 className="heading-lg mt-2 text-gray-900 mb-6">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-shadow-md text-body max-w-3xl mx-auto">
-              Get answers to common questions about our dental treatments and
-              procedures.
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
-            className="max-w-4xl mx-auto space-y-4"
+            className="grid lg:grid-cols-2 gap-16 lg:gap-20"
           >
-            {faqs.map((faq, index) => (
-              <motion.div
-                key={index}
-                variants={scaleIn}
-                className="card-premium overflow-hidden"
-              >
-                <button
-                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-300"
-                >
-                  <h3 className="font-semibold text-gray-900">
-                    {faq.question}
-                  </h3>
+            {/* Contact Form */}
+            <motion.div variants={slideInLeft}>
+              <ContactForm
+                title="Ready to Transform Your"
+                subtitle="Smile?"
+                tagText="Book Consultation"
+                tagColor="from-[#00326D]/10 to-[#B12EBC]/10 text-[#00326D]"
+                titleGradientFrom="from-[#00326D]"
+                titleGradientTo="to-[#B12EBC]"
+                buttonText="Book Consultation"
+                successMessage="Consultation Booked Successfully!"
+                successSubtitle="Thank you for booking your dental consultation with CLINICA. We'll contact you within 24 hours to confirm your appointment."
+              />
+            </motion.div>
+
+            {/* Contact Information */}
+            <motion.div variants={slideInRight}>
+              <div className="mb-8">
+                <span className="inline-block bg-gradient-to-r from-blue-100 to-cyan-100 text-blue-600 font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4">
+                  Contact Information
+                </span>
+                <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                  Get in{" "}
+                  <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+                    Touch
+                  </span>
+                </h2>
+              </div>
+
+              <div className="space-y-6 mb-12">
+                {[
+                  {
+                    icon: MapPin,
+                    title: "Visit Our Clinic",
+                    content:
+                      "123 Medical Center Dr, Suite 100\nCity, State 12345",
+                    subtext: "Modern facility with ample parking",
+                    color: "from-[#00326D] to-[#B12EBC]",
+                  },
+                  {
+                    icon: Phone,
+                    title: "Call Us",
+                    content: "(555) 123-4567\nAvailable 24/7 for emergencies",
+                    subtext: "Immediate response guaranteed",
+                    color: "from-[#B12EBC] to-[#00326D]",
+                  },
+                  {
+                    icon: Mail,
+                    title: "Email Us",
+                    content: "info@clinica.com\nWe respond within 24 hours",
+                    subtext: "Professional consultation via email",
+                    color: "from-[#00326D] to-[#B12EBC]",
+                  },
+                ].map((contact, index) => (
                   <motion.div
-                    animate={{ rotate: openFaq === index ? 180 : 0 }}
-                    transition={{ duration: 0.3 }}
+                    key={index}
+                    whileHover={{ scale: 1.02, x: 10 }}
+                    className="flex items-start space-x-6 p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
                   >
-                    {openFaq === index ? (
-                      <Minus className="w-5 h-5 text-blue-600" />
-                    ) : (
-                      <Plus className="w-5 h-5 text-blue-600" />
-                    )}
+                    <div
+                      className={`w-14 h-14 bg-gradient-to-r ${contact.color} rounded-2xl flex items-center justify-center shadow-lg flex-shrink-0`}
+                    >
+                      <contact.icon className="w-7 h-7 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-gray-900 text-lg mb-2">
+                        {contact.title}
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed whitespace-pre-line mb-1">
+                        {contact.content}
+                      </p>
+                      <p className="text-sm text-gray-500">{contact.subtext}</p>
+                    </div>
                   </motion.div>
-                </button>
-                <motion.div
-                  initial={false}
-                  animate={{ height: openFaq === index ? "auto" : 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="overflow-hidden"
-                >
-                  <div className="px-6 pb-4">
-                    <p className="text-shadow-md text-body text-gray-600">
-                      {faq.answer}
-                    </p>
-                  </div>
-                </motion.div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="section-padding gradient-bg text-white">
-        <div className="container mx-auto px-4 lg:px-8 text-center">
-          <motion.div
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={fadeInUp}
-          >
-            <h2 className="heading-lg mb-6">Ready to Transform Your Smile?</h2>
-            <p className="text-shadow-md text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
-              Join thousands of satisfied patients who have experienced the
-              CLINICA difference. Book your consultation today and take the
-              first step towards a beautiful, healthy smile.
-            </p>
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-            >
-              <Link
-                href="/contact"
-                className="btn-secondary inline-flex items-center space-x-3"
-              >
-                <Calendar className="w-6 h-6" />
-                <span>Book Consultation</span>
-              </Link>
-              <Link
-                href="tel:+15551234567"
-                className="btn-ghost text-white hover:text-blue-100 inline-flex items-center space-x-3"
-              >
-                <Zap className="w-6 h-6" />
-                <span>Call Us Today</span>
-              </Link>
+                ))}
+              </div>
             </motion.div>
           </motion.div>
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="section-padding bg-white">
-        <div className="container mx-auto px-4 lg:px-8 text-center">
-          <motion.div
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={fadeInUp}
-          >
-            <h2 className="heading-lg mb-6 text-gray-900">
-              Experience the CLINICA Difference
-            </h2>
-            <p className="text-shadow-md text-body mb-8 max-w-3xl mx-auto">
-              Our team of experienced professionals is dedicated to providing
-              you with the highest quality dental care and exceptional results.
-              Start your journey to a beautiful smile today.
-            </p>
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Link
-                href="/contact"
-                className="btn-primary inline-flex items-center space-x-3"
-              >
-                <Calendar className="w-6 h-6" />
-                <span>Book Your Appointment</span>
-              </Link>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
+      {/* Enhanced CTA Section */}
+      <Cta />
     </div>
   );
 }

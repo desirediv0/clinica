@@ -1,6 +1,4 @@
 "use client";
-
-import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
@@ -15,14 +13,16 @@ import {
   Linkedin,
   Youtube,
   ArrowRight,
-  CheckCircle,
-  Send,
+  Heart,
+  Award,
+  Shield,
+  Sparkles,
+  Calendar,
+  Star,
+  ChevronUp,
 } from "lucide-react";
 
 export default function Footer() {
-  const [email, setEmail] = useState("");
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
@@ -34,186 +34,285 @@ export default function Footer() {
   ];
 
   const services = [
-    { name: "Dental Implants", href: "/dental" },
-    { name: "Smile Makeovers", href: "/dental" },
-    { name: "Chemical Peels", href: "/skin" },
-    { name: "HydraFacial", href: "/skin" },
-    { name: "Teeth Whitening", href: "/dental" },
+    { name: "Dental Implants", href: "/dental", icon: "🦷" },
+    { name: "Smile Makeovers", href: "/dental", icon: "😊" },
+    { name: "Chemical Peels", href: "/skin", icon: "✨" },
+    { name: "HydraFacial", href: "/skin", icon: "💧" },
+    { name: "Teeth Whitening", href: "/dental", icon: "⚡" },
+    { name: "Laser Hair Removal", href: "/skin", icon: "🔥" },
   ];
 
   const socialLinks = [
-    { name: "Facebook", href: "#", icon: Facebook, color: "hover:bg-blue-600" },
+    {
+      name: "Facebook",
+      href: "#",
+      icon: Facebook,
+      color: "hover:bg-blue-600",
+      followers: "12K",
+    },
     {
       name: "Instagram",
       href: "#",
       icon: Instagram,
       color: "hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600",
+      followers: "25K",
     },
-    { name: "Twitter", href: "#", icon: Twitter, color: "hover:bg-blue-400" },
-    { name: "LinkedIn", href: "#", icon: Linkedin, color: "hover:bg-blue-700" },
-    { name: "YouTube", href: "#", icon: Youtube, color: "hover:bg-red-600" },
+    {
+      name: "Twitter",
+      href: "#",
+      icon: Twitter,
+      color: "hover:bg-blue-400",
+      followers: "8K",
+    },
+    {
+      name: "LinkedIn",
+      href: "#",
+      icon: Linkedin,
+      color: "hover:bg-blue-700",
+      followers: "5K",
+    },
+    {
+      name: "YouTube",
+      href: "#",
+      icon: Youtube,
+      color: "hover:bg-red-600",
+      followers: "15K",
+    },
   ];
 
-  const handleSubscribe = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email || isLoading) return;
+  const achievements = [
+    { icon: Award, text: "Best Medical Clinic 2023" },
+    { icon: Shield, text: "FDA Approved Procedures" },
+    { icon: Star, text: "5-Star Patient Rating" },
+    { icon: Heart, text: "Patient Safety Excellence" },
+  ];
 
-    setIsLoading(true);
-
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubscribed(true);
-      setIsLoading(false);
-      setEmail("");
-
-      // Reset after 3 seconds
-      setTimeout(() => setIsSubscribed(false), 3000);
-    }, 1000);
-  };
+  const workingHours = [
+    { day: "Monday - Friday", hours: "8:00 AM - 6:00 PM" },
+    { day: "Saturday", hours: "9:00 AM - 3:00 PM" },
+    { day: "Sunday", hours: "Emergency Only" },
+  ];
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <footer className="bg-gray-900 text-white relative">
+    <footer className="bg-gradient-to-bl from-[#00326D] via-[#00326D]/95 to-[#B12EBC] text-white relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-[url('/placeholder.svg?height=1080&width=1920')] bg-cover bg-center"></div>
+      </div>
+
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <motion.div
+          animate={{
+            rotate: 360,
+            scale: [1, 1.1, 1],
+          }}
+          transition={{
+            duration: 30,
+            repeat: Number.POSITIVE_INFINITY,
+            ease: "linear",
+          }}
+          className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-r from-[#B12EBC]/10 to-[#00326D]/10 rounded-full blur-3xl"
+        />
+        <motion.div
+          animate={{
+            rotate: -360,
+            scale: [1, 1.2, 1],
+          }}
+          transition={{
+            duration: 40,
+            repeat: Number.POSITIVE_INFINITY,
+            ease: "linear",
+          }}
+          className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-r from-[#00326D]/10 to-[#B12EBC]/10 rounded-full blur-3xl"
+        />
+      </div>
+
       {/* Main Footer Content */}
-      <div className="container mx-auto px-4 lg:px-8 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
+      <div className="relative z-10 container mx-auto px-4 lg:px-8 py-20">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+          {/* Enhanced Company Info */}
           <div className="lg:col-span-1">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="flex items-center space-x-3 mb-6"
+              className="flex items-center space-x-4 mb-8"
             >
               <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-[#B12EBC] to-[#00326D] rounded-xl blur-lg opacity-30"></div>
                 <Image
-                  src="/images/company logo.jpg"
+                  src="/images/logo.jpg"
                   alt="CLINICA Logo"
-                  width={50}
-                  height={50}
-                  className="rounded-xl object-cover shadow-lg"
+                  width={60}
+                  height={60}
+                  className="relative rounded-xl object-cover shadow-xl border-2 border-white/20"
                 />
-                <div className="absolute -top-1 -right-1 w-3 h-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full animate-pulse"></div>
+                <div className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-r from-[#B12EBC] to-[#00326D] rounded-full animate-pulse shadow-lg">
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#B12EBC] to-[#00326D] rounded-full animate-ping opacity-75"></div>
+                </div>
               </div>
               <div>
-                <h3 className="text-xl font-bold gradient-text">CLINICA</h3>
-                <p className="text-xs text-gray-400 -mt-1">
+                <h3 className="text-2xl font-bold bg-gradient-to-r from-white to-[#B12EBC] bg-clip-text text-transparent">
+                  CLINICA
+                </h3>
+                <p className="text-sm text-purple-200 -mt-1 font-medium">
                   Dental & Skin Excellence
                 </p>
               </div>
             </motion.div>
+
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-gray-300 mb-6 leading-relaxed"
+              className="text-purple-100 mb-8 leading-relaxed text-lg"
             >
               Providing world-class skin and dental care with personalized
               treatments and exceptional results. Your journey to natural beauty
               starts here.
             </motion.p>
 
-            {/* Social Links */}
+            {/* Achievements */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="flex space-x-4"
+              className="space-y-3 mb-8"
             >
-              {socialLinks.map((social, index) => (
-                <motion.a
-                  key={social.name}
-                  href={social.href}
-                  whileHover={{ scale: 1.1, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                  className={`w-10 h-10 bg-gray-800 ${social.color} rounded-full flex items-center justify-center transition-all duration-300 text-white`}
-                  title={social.name}
+              {achievements.map((achievement, index) => (
+                <motion.div
+                  key={index}
+                  whileHover={{ x: 5 }}
+                  className="flex items-center space-x-3 text-blue-200 hover:text-white transition-colors duration-300"
                 >
-                  <social.icon className="w-5 h-5" />
-                </motion.a>
+                  <achievement.icon className="w-5 h-5 text-[#B12EBC]" />
+                  <span className="text-sm">{achievement.text}</span>
+                </motion.div>
               ))}
+            </motion.div>
+
+            {/* Enhanced Social Links */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              <h4 className="text-lg font-semibold mb-4 text-white">
+                Follow Us
+              </h4>
+              <div className="flex space-x-4">
+                {socialLinks.map((social, index) => (
+                  <motion.a
+                    key={social.name}
+                    href={social.href}
+                    whileHover={{ scale: 1.1, y: -2 }}
+                    whileTap={{ scale: 0.95 }}
+                    className={`group relative w-12 h-12 bg-white/10 backdrop-blur-md ${social.color} rounded-xl flex items-center justify-center transition-all duration-300 text-white border border-white/20 hover:border-white/40`}
+                    title={`${social.name} - ${social.followers} followers`}
+                  >
+                    <social.icon className="w-6 h-6" />
+                    <div className="absolute -top-2 -right-2 bg-cyan-500 text-white text-xs px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                      {social.followers}
+                    </div>
+                  </motion.a>
+                ))}
+              </div>
             </motion.div>
           </div>
 
-          {/* Quick Links */}
+          {/* Enhanced Quick Links */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <h4 className="text-lg font-semibold mb-6 text-white">
-              Quick Links
+            <h4 className="text-xl font-bold mb-8 text-white flex items-center space-x-2">
+              <ArrowRight className="w-5 h-5 text-cyan-400" />
+              <span>Quick Links</span>
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-4">
               {quickLinks.map((link, index) => (
                 <motion.li
                   key={link.name}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
+                  whileHover={{ x: 5 }}
                 >
                   <Link
                     href={link.href}
-                    className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 group"
+                    className="flex items-center space-x-3 text-blue-200 hover:text-white transition-all duration-300 group"
                   >
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                    <span>{link.name}</span>
+                    <div className="w-2 h-2 bg-cyan-400 rounded-full group-hover:scale-125 transition-transform duration-300"></div>
+                    <span className="group-hover:underline">{link.name}</span>
                   </Link>
                 </motion.li>
               ))}
             </ul>
           </motion.div>
 
-          {/* Services */}
+          {/* Enhanced Services */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
           >
-            <h4 className="text-lg font-semibold mb-6 text-white">
-              Our Services
+            <h4 className="text-xl font-bold mb-8 text-white flex items-center space-x-2">
+              <Sparkles className="w-5 h-5 text-cyan-400" />
+              <span>Our Services</span>
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-4">
               {services.map((service, index) => (
                 <motion.li
                   key={service.name}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
+                  whileHover={{ x: 5 }}
                 >
                   <Link
                     href={service.href}
-                    className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 group"
+                    className="flex items-center space-x-3 text-blue-200 hover:text-white transition-all duration-300 group"
                   >
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                    <span>{service.name}</span>
+                    <span className="text-lg group-hover:scale-110 transition-transform duration-300">
+                      {service.icon}
+                    </span>
+                    <span className="group-hover:underline">
+                      {service.name}
+                    </span>
                   </Link>
                 </motion.li>
               ))}
             </ul>
           </motion.div>
 
-          {/* Contact Info */}
+          {/* Enhanced Contact Info */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
           >
-            <h4 className="text-lg font-semibold mb-6 text-white">
-              Contact Info
+            <h4 className="text-xl font-bold mb-8 text-white flex items-center space-x-2">
+              <Phone className="w-5 h-5 text-cyan-400" />
+              <span>Contact Info</span>
             </h4>
-            <div className="space-y-4">
+
+            <div className="space-y-6">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                className="flex items-start space-x-3"
+                whileHover={{ scale: 1.02 }}
+                className="flex items-start space-x-4 p-4 bg-white/5 backdrop-blur-md rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300"
               >
-                <MapPin className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
+                <MapPin className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-gray-300 text-sm leading-relaxed">
+                  <p className="text-white font-semibold mb-1">
+                    Visit Our Clinic
+                  </p>
+                  <p className="text-blue-200 text-sm leading-relaxed">
                     123 Medical Center Dr, Suite 100
                     <br />
                     City, State 12345
@@ -222,150 +321,117 @@ export default function Footer() {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}
-                className="flex items-center space-x-3"
+                whileHover={{ scale: 1.02 }}
+                className="flex items-start space-x-4 p-4 bg-white/5 backdrop-blur-md rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300"
               >
-                <Phone className="w-5 h-5 text-blue-400 flex-shrink-0" />
+                <Phone className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-gray-300 text-sm">(555) 123-4567</p>
-                  <p className="text-gray-400 text-xs">24/7 Emergency Care</p>
+                  <p className="text-white font-semibold mb-1">Call Us</p>
+                  <p className="text-blue-200 text-sm">(555) 123-4567</p>
+                  <p className="text-blue-300 text-xs">24/7 Emergency Care</p>
                 </div>
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                className="flex items-center space-x-3"
+                whileHover={{ scale: 1.02 }}
+                className="flex items-start space-x-4 p-4 bg-white/5 backdrop-blur-md rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300"
               >
-                <Mail className="w-5 h-5 text-blue-400 flex-shrink-0" />
+                <Mail className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-gray-300 text-sm">info@clinica.com</p>
-                  <p className="text-gray-400 text-xs">We respond within 24h</p>
+                  <p className="text-white font-semibold mb-1">Email Us</p>
+                  <p className="text-blue-200 text-sm">info@clinica.com</p>
+                  <p className="text-blue-300 text-xs">We respond within 24h</p>
                 </div>
               </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-                className="flex items-center space-x-3"
-              >
-                <Clock className="w-5 h-5 text-blue-400 flex-shrink-0" />
-                <div>
-                  <p className="text-gray-300 text-sm">Mon-Fri: 8AM-6PM</p>
-                  <p className="text-gray-400 text-xs">Sat: 9AM-3PM</p>
+              {/* Working Hours */}
+              <div className="p-4 bg-white/5 backdrop-blur-md rounded-xl border border-white/10">
+                <div className="flex items-center space-x-2 mb-4">
+                  <Clock className="w-5 h-5 text-cyan-400" />
+                  <h5 className="text-white font-semibold">Working Hours</h5>
                 </div>
-              </motion.div>
+                <div className="space-y-2">
+                  {workingHours.map((schedule, index) => (
+                    <div
+                      key={index}
+                      className="flex justify-between items-center text-sm"
+                    >
+                      <span className="text-blue-200">{schedule.day}</span>
+                      <span className="text-white font-medium">
+                        {schedule.hours}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
       </div>
 
-      {/* Newsletter Section */}
-      <div className="border-t border-gray-800 py-8">
+      {/* Enhanced Bottom Footer */}
+      <div className="relative z-10 border-t border-white/10 py-8">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0"
+            className="flex flex-col lg:flex-row items-center justify-between space-y-6 lg:space-y-0"
           >
-            <div>
-              <h4 className="text-lg font-semibold mb-2">Stay Updated</h4>
-              <p className="text-gray-400 text-sm">
-                Subscribe to our newsletter for the latest updates and special
-                offers.
-              </p>
-            </div>
-            <form
-              onSubmit={handleSubscribe}
-              className="flex space-x-4 w-full lg:w-auto"
-            >
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email"
-                className="flex-1 lg:w-64 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400 transition-all duration-300"
-                required
-              />
-              <motion.button
-                type="submit"
-                disabled={isLoading || isSubscribed}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center space-x-2 ${
-                  isSubscribed
-                    ? "bg-green-600 text-white"
-                    : "bg-gradient-to-r from-blue-600 to-cyan-500 text-white hover:from-blue-700 hover:to-cyan-600"
-                }`}
-              >
-                {isLoading ? (
-                  <>
-                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                    <span>Subscribing...</span>
-                  </>
-                ) : isSubscribed ? (
-                  <>
-                    <CheckCircle className="w-4 h-4" />
-                    <span>Subscribed!</span>
-                  </>
-                ) : (
-                  <>
-                    <Send className="w-4 h-4" />
-                    <span>Subscribe</span>
-                  </>
-                )}
-              </motion.button>
-            </form>
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Bottom Footer */}
-      <div className="border-t border-gray-800 py-6">
-        <div className="container mx-auto px-4 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0"
-          >
-            <div className="text-gray-400 text-sm">
-              © {currentYear} CLINICA. All rights reserved. |
+            <div className="text-purple-200 text-sm text-center lg:text-left">
+              © {currentYear} CLINICA. All rights reserved. |{" "}
               <Link
                 href="/privacy"
-                className="hover:text-white transition-colors duration-300 ml-1"
+                className="hover:text-white transition-colors duration-300 underline"
               >
                 Privacy Policy
               </Link>{" "}
-              |
+              |{" "}
               <Link
                 href="/terms"
-                className="hover:text-white transition-colors duration-300 ml-1"
+                className="hover:text-white transition-colors duration-300 underline"
               >
                 Terms of Service
               </Link>
             </div>
-            <div className="text-gray-400 text-sm">
-              Designed with ❤️ for your health and beauty
+
+            <div className="flex items-center space-x-2 text-purple-200 text-sm">
+              <span>Designed with</span>
+              <motion.div
+                animate={{ scale: [1, 1.2, 1] }}
+                transition={{ duration: 1, repeat: Number.POSITIVE_INFINITY }}
+              >
+                <Heart className="w-4 h-4 text-[#B12EBC] fill-current" />
+              </motion.div>
+              <span>for your health and beauty</span>
+            </div>
+
+            <div className="flex items-center space-x-4">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-[#B12EBC] to-[#00326D] hover:from-[#B12EBC]/80 hover:to-[#00326D]/80 px-6 py-2 rounded-full text-white font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                <Link href="/contact" className="flex items-center space-x-2">
+                  <Calendar className="w-4 h-4" />
+                  <span>Book Now</span>
+                </Link>
+              </motion.button>
             </div>
           </motion.div>
         </div>
       </div>
 
-      {/* Back to Top Button */}
+      {/* Enhanced Back to Top Button */}
       <motion.button
         onClick={scrollToTop}
-        whileHover={{ scale: 1.1 }}
+        whileHover={{ scale: 1.1, y: -2 }}
         whileTap={{ scale: 0.9 }}
-        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 flex items-center justify-center group"
+        className="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-r from-[#B12EBC] to-[#00326D] text-white rounded-full shadow-2xl hover:shadow-[#B12EBC]/25 transition-all duration-300 z-50 flex items-center justify-center group border-2 border-white/20"
         title="Back to top"
       >
-        <ArrowRight className="w-5 h-5 transform rotate-[-90deg] group-hover:-translate-y-0.5 transition-transform duration-300" />
+        <ChevronUp className="w-6 h-6 group-hover:-translate-y-1 transition-transform duration-300" />
+        <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></div>
       </motion.button>
     </footer>
   );
