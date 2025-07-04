@@ -4,16 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   Calendar,
-  ArrowRight,
   Smile,
   Award,
   Shield,
   Sparkles,
   Heart,
   CheckCircle,
-  Star,
   Clock,
-  Users,
   Zap,
   Eye,
   Phone,
@@ -23,8 +20,6 @@ import {
   Baby,
   Scissors,
   Droplets,
-  Microscope,
-  Target,
   Sparkle,
   Activity,
 } from "lucide-react";
@@ -83,7 +78,7 @@ export default function DentalPage() {
       ],
       duration: "2-3 hours",
       recovery: "3-6 months",
-      image: "/images/teethbanner.jpg",
+      image: "/images/dental-implant.jpg",
       icon: Smile,
       color: "from-[#00326D] to-[#B12EBC]",
       details:
@@ -103,7 +98,7 @@ export default function DentalPage() {
       ],
       duration: "Multiple visits",
       recovery: "Varies by case",
-      image: "/images/teethbanner.jpg",
+      image: "/images/full-mouth-rehabilitation.jpg",
       icon: Award,
       color: "from-[#B12EBC] to-[#00326D]",
       details:
@@ -123,7 +118,7 @@ export default function DentalPage() {
       ],
       duration: "6-24 months",
       recovery: "No downtime",
-      image: "/images/teethbanner.jpg",
+      image: "/images/orthodonics.jpg",
       icon: Shield,
       color: "from-[#00326D] to-[#B12EBC]",
       details:
@@ -143,7 +138,7 @@ export default function DentalPage() {
       ],
       duration: "45 minutes",
       recovery: "No downtime",
-      image: "/images/teethbanner.jpg",
+      image: "/images/laser-teeth-whitening.jpg",
       icon: Sparkles,
       color: "from-[#B12EBC] to-[#00326D]",
       details:
@@ -163,7 +158,7 @@ export default function DentalPage() {
       ],
       duration: "30 minutes",
       recovery: "1-2 days",
-      image: "/images/teethbanner.jpg",
+      image: "/images/dantkriti-root-canel.jpg",
       icon: CheckCircle,
       color: "from-[#00326D] to-[#B12EBC]",
       details:
@@ -183,7 +178,7 @@ export default function DentalPage() {
       ],
       duration: "90 minutes",
       recovery: "No downtime",
-      image: "/images/teethbanner.jpg",
+      image: "/images/cosmetic-dentist.jpg",
       icon: Heart,
       color: "from-[#B12EBC] to-[#00326D]",
       details:
