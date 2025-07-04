@@ -114,7 +114,7 @@ export default function RootLayout({
         <Navigation />
 
         {/* Main content */}
-        <main id="main-content" className="min-h-screen">
+        <main id="main-content" className="min-h-screen overflow-x-hidden">
           {children}
         </main>
 
