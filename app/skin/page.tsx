@@ -60,123 +60,6 @@ const slideInRight = {
 };
 
 export default function SkinPage() {
-  const skinTreatments = [
-    {
-      title: "Chemical Peels",
-      description:
-        "Advanced exfoliation treatments that remove damaged skin layers to reveal smoother, more radiant skin underneath with professional-grade solutions.",
-      benefits: [
-        "Improves skin texture",
-        "Reduces fine lines",
-        "Fades dark spots",
-        "Unclogs pores",
-        "Stimulates collagen",
-        "Evens skin tone",
-      ],
-      duration: "30-60 minutes",
-      recovery: "3-7 days",
-
-      image: "/placeholder.svg?height=300&width=400",
-      icon: Sparkles,
-      color: "from-[#00326D] to-[#B12EBC]",
-    },
-    {
-      title: "HydraFacial",
-      description:
-        "A multi-step treatment that cleanses, exfoliates, extracts, and hydrates the skin using advanced vortex technology for immediate results.",
-      benefits: [
-        "Deep cleansing",
-        "Hydration boost",
-        "Immediate results",
-        "No downtime",
-        "Suitable for all skin types",
-        "Customizable treatment",
-      ],
-      duration: "45 minutes",
-      recovery: "No downtime",
-
-      image: "/placeholder.svg?height=300&width=400",
-      icon: Heart,
-      color: "from-[#B12EBC] to-[#00326D]",
-    },
-    {
-      title: "Carbon Peel",
-      description:
-        "Laser treatment that uses carbon lotion and laser energy to rejuvenate skin, refine pores, and control oil production effectively.",
-      benefits: [
-        "Pore refinement",
-        "Skin rejuvenation",
-        "Oil control",
-        "Even skin tone",
-        "Reduces blackheads",
-        "Minimal downtime",
-      ],
-      duration: "30 minutes",
-      recovery: "1-2 days",
-
-      image: "/placeholder.svg?height=300&width=400",
-      icon: Zap,
-      color: "from-[#00326D] to-[#B12EBC]",
-    },
-    {
-      title: "Microneedling",
-      description:
-        "Collagen induction therapy that uses tiny needles to stimulate natural collagen production and improve skin texture significantly.",
-      benefits: [
-        "Collagen stimulation",
-        "Scar reduction",
-        "Texture improvement",
-        "Natural results",
-        "Reduces wrinkles",
-        "Improves elasticity",
-      ],
-      duration: "60 minutes",
-      recovery: "3-5 days",
-
-      image: "/placeholder.svg?height=300&width=400",
-      icon: Eye,
-      color: "from-[#B12EBC] to-[#00326D]",
-    },
-    {
-      title: "Skin Tag Removal",
-      description:
-        "Safe and effective removal of skin tags using advanced techniques for minimal scarring and optimal healing results.",
-      benefits: [
-        "Quick procedure",
-        "Minimal scarring",
-        "Immediate results",
-        "Safe removal",
-        "Professional technique",
-        "Fast healing",
-      ],
-      duration: "15-30 minutes",
-      recovery: "1-2 weeks",
-
-      image: "/placeholder.svg?height=300&width=400",
-      icon: CheckCircle,
-      color: "from-[#00326D] to-[#B12EBC]",
-    },
-    {
-      title: "Laser Hair Reduction",
-      description:
-        "Permanent hair reduction using advanced laser technology for smooth, hair-free skin with long-lasting results on all areas.",
-      benefits: [
-        "Permanent reduction",
-        "All skin types",
-        "Large areas treatable",
-        "Long-lasting results",
-        "Precision targeting",
-        "Comfortable treatment",
-      ],
-      duration: "15-60 minutes",
-      recovery: "No downtime",
-
-      image: "/placeholder.svg?height=300&width=400",
-      icon: Zap,
-      color: "from-[#B12EBC] to-[#00326D]",
-    },
-  ];
-
   const skinJourney = [
     {
       step: "01",
@@ -273,33 +156,6 @@ export default function SkinPage() {
       treatment: "Chemical Peel",
       image: "/placeholder.svg?height=60&width=60",
       location: "Texas",
-    },
-  ];
-
-  const skinBenefits = [
-    {
-      icon: Sparkles,
-      title: "Radiant Glow",
-      description: "Achieve luminous, healthy-looking skin",
-      color: "from-yellow-500 to-orange-500",
-    },
-    {
-      icon: Heart,
-      title: "Anti-Aging",
-      description: "Reduce fine lines and wrinkles",
-      color: "from-pink-500 to-red-500",
-    },
-    {
-      icon: Shield,
-      title: "Skin Protection",
-      description: "Strengthen skin barrier function",
-      color: "from-green-500 to-teal-500",
-    },
-    {
-      icon: Zap,
-      title: "Quick Results",
-      description: "See improvements in just one session",
-      color: "from-blue-500 to-purple-500",
     },
   ];
 
@@ -559,7 +415,7 @@ export default function SkinPage() {
                 </div>
                 <div className="relative h-64 lg:h-auto">
                   <Image
-                    src="/images/skin.png"
+                    src="/images/chemical-peel.jpg"
                     alt="Chemical Peels"
                     fill
                     className="object-cover"
@@ -576,7 +432,7 @@ export default function SkinPage() {
               <div className="lg:grid lg:grid-cols-2">
                 <div className="relative h-64 lg:h-auto order-2 lg:order-1">
                   <Image
-                    src="/images/skinbanner.png"
+                    src="/images/hydrafacial.jpg"
                     alt="HydraFacial"
                     fill
                     className="object-cover"
@@ -722,7 +578,7 @@ export default function SkinPage() {
                 </div>
                 <div className="relative h-64 lg:h-auto">
                   <Image
-                    src="/images/skin.png"
+                    src="/images/cardon-peel.jpg"
                     alt="Carbon Peel"
                     fill
                     className="object-cover"
@@ -739,7 +595,7 @@ export default function SkinPage() {
               <div className="lg:grid lg:grid-cols-2">
                 <div className="relative h-64 lg:h-auto order-2 lg:order-1">
                   <Image
-                    src="/images/skinbanner.png"
+                    src="/images/microneedeing.jpg"
                     alt="Microneedling"
                     fill
                     className="object-cover"
@@ -831,7 +687,7 @@ export default function SkinPage() {
                 </div>
                 <div className="relative h-64 lg:h-auto">
                   <Image
-                    src="/images/skin.png"
+                    src="/images/skin-tag-removal.jpg"
                     alt="Skin Tag Removal"
                     fill
                     className="object-cover"
@@ -848,7 +704,7 @@ export default function SkinPage() {
               <div className="lg:grid lg:grid-cols-2">
                 <div className="relative h-64 lg:h-auto order-2 lg:order-1">
                   <Image
-                    src="/images/skinbanner.png"
+                    src="/images/lazer-hair-reduction.jpg"
                     alt="Laser Hair Reduction"
                     fill
                     className="object-cover"
