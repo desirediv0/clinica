@@ -497,11 +497,6 @@ export default function AboutPage() {
                 whileHover={{ y: -5, scale: 1.02 }}
                 className="relative text-center group"
               >
-                {/* Connection line for desktop */}
-                {index < timeline.length - 1 && (
-                  <div className="hidden lg:block absolute top-16 left-full w-full h-0.5 bg-gradient-to-r from-indigo-200 to-purple-200 transform translate-x-4 z-0"></div>
-                )}
-
                 <div className="relative z-10">
                   <div className="bg-gradient-to-r from-[#00326D]/10 to-[#B12EBC]/10 text-[#00326D] rounded-full w-16 h-16 flex items-center justify-center font-bold text-xl mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300">
                     {item.step}

@@ -48,35 +48,30 @@ export default function Footer() {
       href: "#",
       icon: Facebook,
       color: "hover:bg-blue-600",
-      followers: "12K",
     },
     {
       name: "Instagram",
       href: "#",
       icon: Instagram,
       color: "hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600",
-      followers: "25K",
     },
     {
       name: "Twitter",
       href: "#",
       icon: Twitter,
       color: "hover:bg-blue-400",
-      followers: "8K",
     },
     {
       name: "LinkedIn",
       href: "#",
       icon: Linkedin,
       color: "hover:bg-blue-700",
-      followers: "5K",
     },
     {
       name: "YouTube",
       href: "#",
       icon: Youtube,
       color: "hover:bg-red-600",
-      followers: "15K",
     },
   ];
 
@@ -213,12 +208,8 @@ export default function Footer() {
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.95 }}
                     className={`group relative w-12 h-12 bg-white/10 backdrop-blur-md ${social.color} rounded-xl flex items-center justify-center transition-all duration-300 text-white border border-white/20 hover:border-white/40`}
-                    title={`${social.name} - ${social.followers} followers`}
                   >
                     <social.icon className="w-6 h-6" />
-                    <div className="absolute -top-2 -right-2 bg-cyan-500 text-white text-xs px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-                      {social.followers}
-                    </div>
                   </motion.a>
                 ))}
               </div>
