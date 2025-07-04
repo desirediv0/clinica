@@ -93,7 +93,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gradient-to-bl from-[#00326D] via-[#00326D]/95 to-[#B12EBC] text-white relative overflow-hidden">
+    <footer className="bg-gradient-to-bl from-[#00326D] via-[#00326D]/95 to-[#B12EBC] text-white  overflow-hidden relative">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-[url('/placeholder.svg?height=1080&width=1920')] bg-cover bg-center"></div>
@@ -401,18 +401,6 @@ export default function Footer() {
           </motion.div>
         </div>
       </div>
-
-      {/* Enhanced Back to Top Button */}
-      <motion.button
-        onClick={scrollToTop}
-        whileHover={{ scale: 1.1, y: -2 }}
-        whileTap={{ scale: 0.9 }}
-        className="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-r from-[#B12EBC] to-[#00326D] text-white rounded-full shadow-2xl hover:shadow-[#B12EBC]/25 transition-all duration-300 z-50 flex items-center justify-center group border-2 border-white/20"
-        title="Back to top"
-      >
-        <ChevronUp className="w-6 h-6 group-hover:-translate-y-1 transition-transform duration-300" />
-        <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></div>
-      </motion.button>
     </footer>
   );
 }

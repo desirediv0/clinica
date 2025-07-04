@@ -258,34 +258,6 @@ export default function HomePage() {
     <div className="min-h-screen bg-white">
       {/* Enhanced Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Animated background elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <motion.div
-            animate={{
-              rotate: 360,
-              scale: [1, 1.1, 1],
-            }}
-            transition={{
-              duration: 20,
-              repeat: Number.POSITIVE_INFINITY,
-              ease: "linear",
-            }}
-            className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-r from-[#B12EBC]/20 to-[#00326D]/20 rounded-full blur-3xl"
-          />
-          <motion.div
-            animate={{
-              rotate: -360,
-              scale: [1, 1.2, 1],
-            }}
-            transition={{
-              duration: 25,
-              repeat: Number.POSITIVE_INFINITY,
-              ease: "linear",
-            }}
-            className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-r from-[#00326D]/20 to-[#B12EBC]/20 rounded-full blur-3xl"
-          />
-        </div>
-
         <div className="relative z-10 container mx-auto  text-center text-white">
           <Hero
             title="Transform Your"
