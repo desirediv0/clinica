@@ -105,9 +105,7 @@ const Cta: React.FC<CtaProps> = ({
           </motion.div>
 
           <div className="text-cyan-200">
-            <p className="text-lg">
-              📞 Available 24/7 • 🏆 Award Winning • ✨ 15+ Years Experience
-            </p>
+            <p className="text-lg">📞 Available 24/7 </p>
           </div>
         </motion.div>
       </div>

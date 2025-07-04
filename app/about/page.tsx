@@ -1,9 +1,7 @@
 "use client";
-import Link from "next/link";
-import Image from "next/image";
+
 import { motion } from "framer-motion";
 import {
-  Calendar,
   Award,
   Users,
   Shield,
@@ -23,6 +21,7 @@ import {
   Play,
 } from "lucide-react";
 import Hero from "@/components/Hero";
+import Testimonials from "@/components/Testimonials";
 
 // Enhanced Animation variants
 const fadeInUp = {
@@ -182,14 +181,32 @@ export default function AboutPage() {
     },
   ];
 
-  const testimonialHighlight = {
-    text: "CLINICA didn't just transform my smile - they transformed my entire confidence. The level of care, expertise, and attention to detail is unmatched. I finally feel like the best version of myself.",
-    author: "Sarah Mitchell",
-    role: "Marketing Executive",
-    image: "/placeholder.svg?height=80&width=80",
-    rating: 5,
-  };
-
+  const homeTestimonials = [
+    {
+      name: "Maria Garcia",
+      text: "CLINICA transformed my smile completely. The team is professional, caring, and the results exceeded my expectations. I can't stop smiling!",
+      rating: 5,
+      service: "Dental Implants",
+      image: "/images/expert1.jpg",
+      location: "New York",
+    },
+    {
+      name: "James Wilson",
+      text: "Best skin treatment I've ever had. My skin looks 10 years younger and the HydraFacial was incredibly relaxing and effective!",
+      rating: 5,
+      service: "HydraFacial",
+      image: "/images/expert2.jpg.avif",
+      location: "California",
+    },
+    {
+      name: "Lisa Thompson",
+      text: "Painless dental work and amazing results. The staff made me feel comfortable throughout the entire process. Highly recommended!",
+      rating: 5,
+      service: "Smile Makeover",
+      image: "/images/expert3.jpeg",
+      location: "Texas",
+    },
+  ];
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -203,7 +220,7 @@ export default function AboutPage() {
         primaryButtonText="Our Mission"
         primaryButtonIcon={Target}
         primaryButtonLink="#mission"
-        secondaryButtonText="Watch Our Story"
+        secondaryButtonText="About Us"
         secondaryButtonIcon={Play}
         secondaryButtonLink="#story"
         subtitleColor="text-[#B12EBC]"
@@ -596,59 +613,16 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Featured Testimonial */}
-      <section className="py-20 lg:py-32 bg-gradient-to-br from-yellow-50 to-orange-50">
-        <div className="container mx-auto px-4 lg:px-8">
-          <motion.div
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={fadeInUp}
-            className="max-w-4xl mx-auto"
-          >
-            <div className="bg-white rounded-3xl shadow-2xl p-8 lg:p-12 border border-gray-100 relative overflow-hidden">
-              <div className="absolute top-8 right-8">
-                <Quote className="w-16 h-16 text-orange-200" />
-              </div>
-
-              <div className="relative z-10">
-                <div className="flex mb-6">
-                  {[...Array(testimonialHighlight.rating)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-6 h-6 text-[#B12EBC] fill-current"
-                    />
-                  ))}
-                </div>
-
-                <blockquote className="text-2xl lg:text-3xl font-light text-gray-700 italic leading-relaxed mb-8">
-                  "{testimonialHighlight.text}"
-                </blockquote>
-
-                <div className="flex items-center">
-                  <div className="w-16 h-16 rounded-full overflow-hidden mr-6 border-3 border-[#B12EBC]/20">
-                    <Image
-                      src={testimonialHighlight.image || "/placeholder.svg"}
-                      alt={testimonialHighlight.author}
-                      width={64}
-                      height={64}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-bold text-gray-900">
-                      {testimonialHighlight.author}
-                    </h4>
-                    <p className="text-[#B12EBC] font-medium">
-                      {testimonialHighlight.role}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      <Testimonials
+        testimonials={homeTestimonials}
+        title="What Our Patients Say"
+        subtitle="Don't just take our word for it. Here's what our satisfied patients have to say about their transformative experience."
+        tagText="Patient Stories"
+        tagColor="from-yellow-100 to-orange-100 text-orange-600"
+        titleGradientFrom="from-yellow-600"
+        titleGradientTo="to-orange-600"
+        backgroundClass="bg-white"
+      />
 
       {/* Enhanced Contact Info Section */}
       <section className="py-20 lg:py-32 bg-gradient-to-br from-gray-50 to-white">
