@@ -21,22 +21,32 @@ const poppins = Poppins({
 // Metadata configuration
 export const metadata: Metadata = {
   title: {
-    default: "CLINICA - Premium Dental & Skin Care Excellence",
+    default: "CLINICA - Top Dental & Skin Care Excellence",
     template: "%s | CLINICA",
   },
   description:
-    "Experience world-class dental and skin care treatments at CLINICA. Advanced technology, expert professionals, and personalized care for your natural beauty and oral health.",
+    "Discover the best dental and skin care treatments at CLINICA. Leading-edge technology, expert doctors, and personalized care for your smile and beauty. Book your consultation today.",
   keywords: [
-    "dental care",
-    "skin treatments",
+    "best dental clinic",
+    "top skin treatments",
     "cosmetic dentistry",
     "dental implants",
-    "skin care",
-    "medical clinic",
+    "skin care clinic",
+    "medical spa",
     "beauty treatments",
     "oral health",
     "dermatology",
     "esthetic dentistry",
+    "dental surgery",
+    "skin rejuvenation",
+    "teeth whitening",
+    "acne treatment",
+    "anti-aging",
+    "dental hygiene",
+    "facial treatments",
+    "orthodontics",
+    "pediatric dentistry",
+    "emergency dental care",
   ],
   authors: [{ name: "CLINICA Team" }],
   creator: "CLINICA",
@@ -46,21 +56,21 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://clinica.com"),
+  metadataBase: new URL("https://clinicadentalandskin.com"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://clinica.com",
-    title: "CLINICA - Premium Dental & Skin Care Excellence",
+    url: "https://clinicadentalandskin.com",
+    title: "CLINICA - Top Dental & Skin Care Excellence",
     description:
-      "Experience world-class dental and skin care treatments at CLINICA. Advanced technology, expert professionals, and personalized care.",
+      "Discover the best dental and skin care treatments at CLINICA. Leading-edge technology, expert doctors, and personalized care for your smile and beauty.",
     siteName: "CLINICA",
     images: [
       {
-        url: "/images/company logo.jpg",
+        url: "/images/logo.jpg",
         width: 1200,
         height: 630,
         alt: "CLINICA - Dental and Skin Care Excellence",
@@ -69,10 +79,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "CLINICA - Premium Dental & Skin Care Excellence",
+    title: "CLINICA - Top Dental & Skin Care Excellence",
     description:
-      "Experience world-class dental and skin care treatments at CLINICA.",
-    images: ["/images/company logo.jpg"],
+      "Discover the best dental and skin care treatments at CLINICA. Leading-edge technology and expert care.",
+    images: ["/images/logo.jpg"],
   },
   robots: {
     index: true,
@@ -84,11 +94,6 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },
-  verification: {
-    google: "your-google-verification-code",
-    yandex: "your-yandex-verification-code",
-    yahoo: "your-yahoo-verification-code",
   },
 };
 
