@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     siteName: "CLINICA",
     images: [
       {
-        url: "/images/logo.jpg",
+        url: "/images/logo2.jpeg",
         width: 1200,
         height: 630,
         alt: "CLINICA - Premier Dental Care Excellence",
@@ -82,7 +82,7 @@ export const metadata: Metadata = {
     title: "CLINICA - Premier Dental Care & Skin Treatments",
     description:
       "Discover the best dental care and skin treatments at CLINICA. Leading-edge dental technology and expert care.",
-    images: ["/images/logo.jpg"],
+    images: ["/images/logo2.jpeg"],
   },
   robots: {
     index: true,
