@@ -260,7 +260,7 @@ export default function SkinPage() {
             </motion.div>
 
             <motion.div variants={slideInRight} className="relative">
-              <div className="bg-gradient-to-br from-[#B12EBC]/5 via-[#00326D]/5 to-[#B12EBC]/10 rounded-3xl p-8 lg:p-12 shadow-2xl border border-gray-100">
+              <div className="bg-gradient-to-br from-[#815A93]/5 via-[#e3c19d]/5 to-[#815A93]/10 rounded-3xl p-8 lg:p-12 shadow-2xl border border-gray-100">
                 <div className="text-center mb-8">
                   <h3 className="text-3xl font-bold text-gray-900 mb-4">
                     Our Commitment
@@ -273,7 +273,7 @@ export default function SkinPage() {
 
                 <div className="grid grid-cols-2 gap-6 mb-8">
                   <div className="text-center p-4 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg">
-                    <div className="text-4xl font-bold bg-gradient-to-r from-[#B12EBC] to-[#00326D] bg-clip-text text-transparent mb-2">
+                    <div className="text-4xl font-bold bg-gradient-to-r from-[#815A93] to-[#e3c19d] bg-clip-text text-transparent mb-2">
                       98%
                     </div>
                     <div className="text-sm text-gray-600 font-medium">
@@ -281,7 +281,7 @@ export default function SkinPage() {
                     </div>
                   </div>
                   <div className="text-center p-4 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg">
-                    <div className="text-4xl font-bold bg-gradient-to-r from-[#B12EBC] to-[#00326D] bg-clip-text text-transparent mb-2">
+                    <div className="text-4xl font-bold bg-gradient-to-r from-[#815A93] to-[#e3c19d] bg-clip-text text-transparent mb-2">
                       6
                     </div>
                     <div className="text-sm text-gray-600 font-medium">
@@ -293,14 +293,14 @@ export default function SkinPage() {
                 {/* Testimonial highlight */}
                 <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-100">
                   <div className="flex items-start space-x-4">
-                    <Quote className="w-8 h-8 text-[#B12EBC] flex-shrink-0 mt-1" />
+                    <Quote className="w-8 h-8 text-[#815A93] flex-shrink-0 mt-1" />
                     <div>
                       <p className="text-gray-700 italic mb-4 leading-relaxed">
                         "The level of professionalism and care at CLINICA is
                         unmatched. They truly care about their patients."
                       </p>
                       <div className="flex items-center space-x-3">
-                        <div className="w-10 h-10 bg-gradient-to-r from-[#B12EBC] to-[#00326D] rounded-full flex items-center justify-center text-white font-semibold">
+                        <div className="w-10 h-10 bg-gradient-to-r from-[#815A93] to-[#e3c19d] rounded-full flex items-center justify-center text-white font-semibold">
                           S
                         </div>
                         <div>
@@ -324,7 +324,7 @@ export default function SkinPage() {
       {/* Enhanced Treatments Overview */}
       <section
         id="treatments"
-        className="py-20 lg:py-32 bg-gradient-to-br from-[#B12EBC]/5 to-[#00326D]/5"
+        className="py-20 lg:py-32 bg-gradient-to-br from-[#815A93]/5 to-[#e3c19d]/5"
       >
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
@@ -334,12 +334,12 @@ export default function SkinPage() {
             variants={fadeInUp}
             className="text-center mb-16"
           >
-            <span className="inline-block bg-gradient-to-r from-[#B12EBC]/10 to-[#00326D]/10 text-[#B12EBC] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4">
+            <span className="inline-block bg-gradient-to-r from-[#815A93]/10 to-[#e3c19d]/10 text-[#815A93] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4">
               Our Advanced Treatments
             </span>
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Comprehensive{" "}
-              <span className="bg-gradient-to-r from-[#B12EBC] to-[#00326D] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#815A93] to-[#e3c19d] bg-clip-text text-transparent">
                 Skin Care Solutions
               </span>
             </h2>
@@ -364,7 +364,7 @@ export default function SkinPage() {
               <div className="lg:grid lg:grid-cols-2">
                 <div className="p-8 lg:p-12">
                   <div className="flex items-center space-x-3 mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-r from-[#00326D] to-[#B12EBC] rounded-xl flex items-center justify-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-[#815A93] to-[#e3c19d] rounded-xl flex items-center justify-center">
                       <Sparkles className="w-6 h-6 text-white" />
                     </div>
                     <h3 className="text-3xl font-bold text-gray-900">
@@ -406,7 +406,7 @@ export default function SkinPage() {
                         "Looking for maintenance of skin in good condition",
                       ].map((item, index) => (
                         <li key={index} className="flex items-start space-x-2">
-                          <div className="w-2 h-2 bg-[#B12EBC] rounded-full mt-2 flex-shrink-0"></div>
+                          <div className="w-2 h-2 bg-[#815A93] rounded-full mt-2 flex-shrink-0"></div>
                           <span>{item}</span>
                         </li>
                       ))}
@@ -445,7 +445,7 @@ export default function SkinPage() {
                 </div>
                 <div className="p-8 lg:p-12 order-1 lg:order-2">
                   <div className="flex items-center space-x-3 mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-r from-[#B12EBC] to-[#00326D] rounded-xl flex items-center justify-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-[#815A93] to-[#e3c19d] rounded-xl flex items-center justify-center">
                       <Heart className="w-6 h-6 text-white" />
                     </div>
                     <h3 className="text-3xl font-bold text-gray-900">
@@ -482,7 +482,7 @@ export default function SkinPage() {
                         "Enlarged Pores",
                       ].map((item, index) => (
                         <li key={index} className="flex items-start space-x-2">
-                          <div className="w-2 h-2 bg-[#B12EBC] rounded-full mt-2 flex-shrink-0"></div>
+                          <div className="w-2 h-2 bg-[#815A93] rounded-full mt-2 flex-shrink-0"></div>
                           <span>{item}</span>
                         </li>
                       ))}
@@ -507,7 +507,7 @@ export default function SkinPage() {
               <div className="lg:grid lg:grid-cols-2">
                 <div className="p-8 lg:p-12">
                   <div className="flex items-center space-x-3 mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-r from-[#00326D] to-[#B12EBC] rounded-xl flex items-center justify-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-[#815A93] to-[#e3c19d] rounded-xl flex items-center justify-center">
                       <Zap className="w-6 h-6 text-white" />
                     </div>
                     <h3 className="text-3xl font-bold text-gray-900">
@@ -543,7 +543,7 @@ export default function SkinPage() {
                               key={index}
                               className="flex items-start space-x-2"
                             >
-                              <div className="w-2 h-2 bg-[#B12EBC] rounded-full mt-2 flex-shrink-0"></div>
+                              <div className="w-2 h-2 bg-[#815A93] rounded-full mt-2 flex-shrink-0"></div>
                               <span className="text-sm">{item}</span>
                             </li>
                           ))}
@@ -565,7 +565,7 @@ export default function SkinPage() {
                               key={index}
                               className="flex items-start space-x-2"
                             >
-                              <div className="w-2 h-2 bg-[#B12EBC] rounded-full mt-2 flex-shrink-0"></div>
+                              <div className="w-2 h-2 bg-[#815A93] rounded-full mt-2 flex-shrink-0"></div>
                               <span className="text-sm">{item}</span>
                             </li>
                           ))}
@@ -608,7 +608,7 @@ export default function SkinPage() {
                 </div>
                 <div className="p-8 lg:p-12 order-1 lg:order-2">
                   <div className="flex items-center space-x-3 mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-r from-[#B12EBC] to-[#00326D] rounded-xl flex items-center justify-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-[#815A93] to-[#e3c19d] rounded-xl flex items-center justify-center">
                       <Eye className="w-6 h-6 text-white" />
                     </div>
                     <h3 className="text-3xl font-bold text-gray-900">
@@ -646,7 +646,7 @@ export default function SkinPage() {
                         "Skin rejuvenation of face, neck, upper lip, decollete, arms, legs, abdomen and buttocks",
                       ].map((item, index) => (
                         <li key={index} className="flex items-start space-x-2">
-                          <div className="w-2 h-2 bg-[#B12EBC] rounded-full mt-2 flex-shrink-0"></div>
+                          <div className="w-2 h-2 bg-[#815A93] rounded-full mt-2 flex-shrink-0"></div>
                           <span>{item}</span>
                         </li>
                       ))}
@@ -664,7 +664,7 @@ export default function SkinPage() {
               <div className="lg:grid lg:grid-cols-2">
                 <div className="p-8 lg:p-12">
                   <div className="flex items-center space-x-3 mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-r from-[#00326D] to-[#B12EBC] rounded-xl flex items-center justify-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-[#815A93] to-[#e3c19d] rounded-xl flex items-center justify-center">
                       <CheckCircle className="w-6 h-6 text-white" />
                     </div>
                     <h3 className="text-3xl font-bold text-gray-900">
@@ -717,7 +717,7 @@ export default function SkinPage() {
                 </div>
                 <div className="p-8 lg:p-12 order-1 lg:order-2">
                   <div className="flex items-center space-x-3 mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-r from-[#B12EBC] to-[#00326D] rounded-xl flex items-center justify-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-[#815A93] to-[#e3c19d] rounded-xl flex items-center justify-center">
                       <Zap className="w-6 h-6 text-white" />
                     </div>
                     <h3 className="text-3xl font-bold text-gray-900">
@@ -761,7 +761,7 @@ export default function SkinPage() {
                         "Experience of the doctor",
                       ].map((item, index) => (
                         <li key={index} className="flex items-start space-x-2">
-                          <div className="w-2 h-2 bg-[#B12EBC] rounded-full mt-2 flex-shrink-0"></div>
+                          <div className="w-2 h-2 bg-[#815A93] rounded-full mt-2 flex-shrink-0"></div>
                           <span>{item}</span>
                         </li>
                       ))}
@@ -784,12 +784,12 @@ export default function SkinPage() {
             variants={fadeInUp}
             className="text-center mb-16"
           >
-            <span className="inline-block bg-gradient-to-r from-[#00326D]/10 to-[#B12EBC]/10 text-[#00326D] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4">
+            <span className="inline-block bg-gradient-to-r from-[#815A93]/10 to-[#e3c19d]/10 text-[#815A93] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4">
               Your Skin Journey
             </span>
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Your Path to{" "}
-              <span className="bg-gradient-to-r from-[#00326D] to-[#B12EBC] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#815A93] to-[#e3c19d] bg-clip-text text-transparent">
                 Radiant Skin
               </span>
             </h2>
@@ -816,18 +816,18 @@ export default function SkinPage() {
               >
                 {/* Connection line for desktop */}
                 {index < skinJourney.length - 1 && (
-                  <div className="hidden lg:block absolute top-16 left-full w-full h-0.5 bg-gradient-to-r from-[#00326D]/20 to-[#B12EBC]/20 transform translate-x-4 z-0"></div>
+                  <div className="hidden lg:block absolute top-16 left-full w-full h-0.5 bg-gradient-to-r from-[#815A93]/20 to-[#e3c19d]/20 transform translate-x-4 z-0"></div>
                 )}
 
                 <div className="relative z-10 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 p-8 text-center border border-gray-100">
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="w-10 h-10 bg-gradient-to-r from-[#00326D] to-[#B12EBC] rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg">
+                    <div className="w-10 h-10 bg-gradient-to-r from-[#815A93] to-[#e3c19d] rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg">
                       {step.step}
                     </div>
                   </div>
 
                   <div className="mt-4 mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-r from-[#B12EBC] to-[#00326D] rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                    <div className="w-16 h-16 bg-gradient-to-r from-[#815A93] to-[#e3c19d] rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:shadow-xl transition-all duration-300">
                       <step.icon className="w-8 h-8 text-white" />
                     </div>
                   </div>
@@ -839,7 +839,7 @@ export default function SkinPage() {
                     {step.description}
                   </p>
 
-                  <div className="inline-flex items-center space-x-2 bg-[#00326D]/10 text-[#00326D] px-4 py-2 rounded-full text-sm font-medium">
+                  <div className="inline-flex items-center space-x-2 bg-[#815A93]/10 text-[#815A93] px-4 py-2 rounded-full text-sm font-medium">
                     <Clock className="w-4 h-4" />
                     <span>{step.duration}</span>
                   </div>
@@ -856,10 +856,10 @@ export default function SkinPage() {
         title="What Our Patients Say"
         subtitle="Don't just take our word for it. Here's what our satisfied patients have to say about their transformative skin care experience at CLINICA."
         tagText="Patient Stories"
-        tagColor="from-[#B12EBC]/10 to-[#00326D]/10 text-[#B12EBC]"
-        titleGradientFrom="from-[#B12EBC]"
-        titleGradientTo="to-[#00326D]"
-        backgroundClass="bg-gradient-to-br from-gray-50 to-[#B12EBC]/5"
+        tagColor="from-[#815A93]/10 to-[#e3c19d]/10 text-[#815A93]"
+        titleGradientFrom="from-[#815A93]"
+        titleGradientTo="to-[#e3c19d]"
+        backgroundClass="bg-gradient-to-br from-gray-50 to-[#815A93]/5"
       />
 
       {/* FAQ Section */}
@@ -868,9 +868,9 @@ export default function SkinPage() {
         title="Got Skin Care Questions?"
         subtitle="Get answers to common questions about our skin care treatments, procedures, and what to expect during your visit."
         tagText="Skin Care FAQ"
-        tagColor="from-[#00326D]/10 to-[#B12EBC]/10 text-[#00326D]"
-        titleGradientFrom="from-[#00326D]"
-        titleGradientTo="to-[#B12EBC]"
+        tagColor="from-[#815A93]/10 to-[#e3c19d]/10 text-[#815A93]"
+        titleGradientFrom="from-[#815A93]"
+        titleGradientTo="to-[#e3c19d]"
       />
 
       {/* Contact Form Section */}
@@ -889,9 +889,9 @@ export default function SkinPage() {
                 title="Ready to Transform Your"
                 subtitle="Skin?"
                 tagText="Book Consultation"
-                tagColor="from-[#B12EBC]/10 to-[#00326D]/10 text-[#B12EBC]"
-                titleGradientFrom="from-[#B12EBC]"
-                titleGradientTo="to-[#00326D]"
+                tagColor="from-[#815A93]/10 to-[#e3c19d]/10 text-[#815A93]"
+                titleGradientFrom="from-[#815A93]"
+                titleGradientTo="to-[#e3c19d]"
                 buttonText="Book Consultation"
                 successMessage="Consultation Booked Successfully!"
                 successSubtitle="Thank you for booking your skin consultation with CLINICA. We'll contact you within 24 hours to confirm your appointment."
@@ -920,21 +920,21 @@ export default function SkinPage() {
                     content:
                       "123 Medical Center Dr, Suite 100\nCity, State 12345",
                     subtext: "Modern facility with ample parking",
-                    color: "from-[#00326D] to-[#B12EBC]",
+                    color: "from-[#815A93] to-[#e3c19d]",
                   },
                   {
                     icon: Phone,
                     title: "Call Us",
                     content: "(555) 123-4567\nAvailable 24/7 for emergencies",
                     subtext: "Immediate response guaranteed",
-                    color: "from-[#B12EBC] to-[#00326D]",
+                    color: "from-[#815A93] to-[#e3c19d]",
                   },
                   {
                     icon: Mail,
                     title: "Email Us",
                     content: "info@clinica.com\nWe respond within 24 hours",
                     subtext: "Professional consultation via email",
-                    color: "from-[#00326D] to-[#B12EBC]",
+                    color: "from-[#815A93] to-[#e3c19d]",
                   },
                 ].map((contact, index) => (
                   <motion.div
@@ -970,10 +970,10 @@ export default function SkinPage() {
         subtitle="Join thousands of satisfied patients who have experienced the CLINICA difference. Book your consultation today and take the first step towards radiant, healthy skin."
         buttonText="Book Your Consultation"
         phoneText="Call Us Today"
-        gradientFrom="from-[#B12EBC]"
-        gradientTo="to-[#00326D]"
-        titleGradientFrom="from-[#B12EBC]"
-        titleGradientTo="to-[#00326D]"
+        gradientFrom="from-[#815A93]"
+        gradientTo="to-[#e3c19d]"
+        titleGradientFrom="from-[#815A93]"
+        titleGradientTo="to-[#e3c19d]"
       />
     </div>
   );

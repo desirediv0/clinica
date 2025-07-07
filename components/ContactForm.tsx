@@ -120,7 +120,7 @@ export default function ContactForm({
   return (
     <div className="mb-8">
       <span
-        className={`inline-block bg-gradient-to-r ${tagColor} font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4 text-white`}
+        className={`inline-block bg-gradient-to-r ${tagColor} font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4 text-black`}
       >
         {tagText}
       </span>
