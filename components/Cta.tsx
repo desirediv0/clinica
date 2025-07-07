@@ -19,10 +19,10 @@ const Cta: React.FC<CtaProps> = ({
   subtitle = "Join thousands of satisfied patients who have experienced the CLINICA difference. Book your consultation today and take the first step towards a beautiful, healthy smile.",
   buttonText = "Book Consultation",
   phoneText = "Call Us Today",
-  gradientFrom = "from-blue-900",
-  gradientTo = "to-cyan-900",
-  titleGradientFrom = "from-cyan-300",
-  titleGradientTo = "to-purple-300",
+  gradientFrom = "from-[#e3c19d]",
+  gradientTo = "to-[#815A93]",
+  titleGradientFrom = "from-[#e3c19d]",
+  titleGradientTo = "to-[#815A93]",
 }) => {
   // Enhanced Animation variants
   const fadeInUp = {
@@ -47,7 +47,7 @@ const Cta: React.FC<CtaProps> = ({
 
   return (
     <section
-      className={`py-20 lg:py-32 bg-gradient-to-br ${gradientFrom} via-purple-900 ${gradientTo} text-white relative overflow-hidden`}
+      className={`py-20 lg:py-32 bg-gradient-to-br ${gradientFrom} via-[#815A93]/80 ${gradientTo} text-white relative overflow-hidden`}
     >
       <div className="absolute inset-0 bg-[url('/placeholder.svg?height=1080&width=1920')] opacity-10"></div>
 
@@ -66,7 +66,7 @@ const Cta: React.FC<CtaProps> = ({
               {title.split(" ").slice(-2).join(" ")}
             </span>
           </h2>
-          <p className="text-xl lg:text-2xl mb-12 text-blue-100 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl lg:text-2xl mb-12 text-white/90 max-w-4xl mx-auto leading-relaxed">
             {subtitle}
           </p>
 
@@ -81,7 +81,7 @@ const Cta: React.FC<CtaProps> = ({
             >
               <Link
                 href="/contact"
-                className="group relative inline-flex items-center space-x-3 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 px-8 py-4 rounded-full text-white font-bold text-lg shadow-2xl transition-all duration-300 overflow-hidden"
+                className="group relative inline-flex items-center space-x-3 bg-gradient-to-r from-[#e3c19d] to-[#815A93] hover:from-[#e3c19d]/80 hover:to-[#815A93]/80 px-8 py-4 rounded-full text-white font-bold text-lg shadow-2xl transition-all duration-300 overflow-hidden"
               >
                 <div className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
                 <Calendar className="w-6 h-6 relative z-10" />
@@ -104,7 +104,7 @@ const Cta: React.FC<CtaProps> = ({
             </motion.div>
           </motion.div>
 
-          <div className="text-cyan-200">
+          <div className="text-[#e3c19d]">
             <p className="text-lg">📞 Available 24/7 </p>
           </div>
         </motion.div>

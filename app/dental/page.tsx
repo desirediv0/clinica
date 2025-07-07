@@ -80,9 +80,9 @@ export default function DentalPage() {
       recovery: "3-6 months",
       image: "/images/dental-implant.jpg",
       icon: Smile,
-      color: "from-[#00326D] to-[#B12EBC]",
+      color: "from-[#e3c19d] to-[#815A93]",
       details:
-        "All our implant systems meet the most stringent of international quality standards. Implants act by replacing the root portion of the tooth, thus not only replace a tooth, but also support the bone beneath thereby preventing loss of jaw bone after tooth loss.",
+        "This structure acts as a support for the 'crown' or the artificial tooth. These mechanics are similar to how a natural tooth anchors itself, making dental implants the ideal replacement solution. All our implant systems meet the most stringent of international quality standards. Implants act by replacing the root portion of the tooth, thus not only replace a tooth, but also support the bone beneath thereby preventing loss of jaw bone after tooth loss.",
     },
     {
       title: "Full Mouth Rehabilitation",
@@ -100,14 +100,14 @@ export default function DentalPage() {
       recovery: "Varies by case",
       image: "/images/full-mouth-rehabilitation.jpg",
       icon: Award,
-      color: "from-[#B12EBC] to-[#00326D]",
+      color: "from-[#815A93] to-[#e3c19d]",
       details:
-        "Our team of skilled specialists plan the entire treatment while taking into account the patient's primary and secondary concerns, expectations, existing medical and oral condition, and budget and time constraints.",
+        "Along with looking and feeling younger, you will also be able to enjoy all your favourite foods again. Our team of skilled specialists plan the entire treatment while taking into account the patient's primary and secondary concerns, expectations, existing medical and oral condition, and budget and time constraints.",
     },
     {
       title: "Orthodontics",
       description:
-        "Everyone wants those perfectly aligned teeth; our team of orthodontists makes sure that your teeth stay that way. We provide conventional braces as well as clear aligners so that both the young and the adult can be happy with their smile.",
+        "Everyone wants those perfectly aligned teeth; our team of orthodontists makes sure that your teeth stay that way. Orthodontics deals with braces that align your teeth in an ideal manner.",
       benefits: [
         "Metal braces",
         "Ceramic braces",
@@ -120,9 +120,9 @@ export default function DentalPage() {
       recovery: "No downtime",
       image: "/images/orthodonics.jpg",
       icon: Shield,
-      color: "from-[#00326D] to-[#B12EBC]",
+      color: "from-[#e3c19d] to-[#815A93]",
       details:
-        "Clear aligners are wafer-thin, transparent aligners that fit snugly on your teeth and gently reposition them to give you the perfect smile. They offer all the benefits of conventional orthodontics with added convenience.",
+        "We provide the conventional braces as well as clear aligners so that both the young and the adult can be happy with their smile. Clear aligners are wafer-thin, transparent aligners that fit snugly on your teeth and gently reposition them to give you the perfect smile. They offer you all the benefits of conventional orthodontics, can be taken out as and when needed spare you from the inconvenience and awkwardness of metal brackets and wires.",
     },
     {
       title: "Laser Teeth Whitening",
@@ -140,14 +140,14 @@ export default function DentalPage() {
       recovery: "No downtime",
       image: "/images/laser-teeth-whitening.jpg",
       icon: Sparkles,
-      color: "from-[#B12EBC] to-[#00326D]",
+      color: "from-[#815A93] to-[#e3c19d]",
       details:
-        "The peroxide reacts with the stain-producing substances thereby oxidizing and clearing them completely. The gums and lips are protected with special barriers to prevent their contact with peroxide.",
+        "The peroxide reacts with the stain-producing substances thereby oxidizing and clearing them completely. The gums and lips are protected with special barriers to prevent their contact with peroxide. The laser bleaching is more effective and stays for longer period. Our entire teeth whitening procedure requires just about 45 minutes to complete and is professionally performed by the LASER Specialist.",
     },
     {
       title: "Painless Root Canal",
       description:
-        "We combine state-of-the-art technology with our expertise and soft-skill approach to ensure that every root canal procedure is precise, seamless and pain-free. Most treatments are performed within 30 minutes.",
+        "A root canal treatment entails removing the infected soft tissue within the tooth and replacing it with an artificial inert 'filling' material. This procedure not only saves the tooth but also eliminates dental pain.",
       benefits: [
         "Pain-free procedure",
         "30-minute treatment",
@@ -160,9 +160,9 @@ export default function DentalPage() {
       recovery: "1-2 days",
       image: "/images/dantkriti-root-canel.jpg",
       icon: CheckCircle,
-      color: "from-[#00326D] to-[#B12EBC]",
+      color: "from-[#e3c19d] to-[#815A93]",
       details:
-        "We understand that people fear root canals and tend to avoid undergoing the treatment. However, our specialists carefully craft the entire process to eliminate any fear attached to this procedure.",
+        "We combine state-of-the-art technology with our expertise and soft-skill approach to ensure that every root canal procedure is precise, seamless and pain-free. Most of the root canal treatments at CLINICA are performed within 30 minutes by our expert who make sure you are always comfortable and relaxed. We understand that people fear root canals and tend to avoid undergoing the treatment. However, our specialists carefully craft the entire process to eliminate any fear attached to this procedure.",
     },
     {
       title: "Cosmetic Smile Makeovers",
@@ -180,9 +180,9 @@ export default function DentalPage() {
       recovery: "No downtime",
       image: "/images/cosmetic-dentist.jpg",
       icon: Heart,
-      color: "from-[#B12EBC] to-[#00326D]",
+      color: "from-[#815A93] to-[#e3c19d]",
       details:
-        "From mild to extreme smile makeovers and smile enhancements, we use a combination of treatments to transform your set of dull teeth into natural-looking ones within 90 minutes.",
+        "From mild to extreme smile makeovers and smile enhancements, we use a combination of treatments to transform your set of dull teeth into natural-looking ones within 90 minutes. This includes bonding, veneers, metal-free ceramic crowns, gum recontouring, instant tooth whitening, tooth recontouring, and replacement of 'black-line' crowns.",
     },
   ];
 
@@ -190,44 +190,44 @@ export default function DentalPage() {
     {
       title: "Extractions & Surgical Extractions",
       description:
-        "Most wisdom teeth are impacted and require surgical extraction. All surgical extractions are performed by skilled surgeons with high standards of hygiene and sterilization.",
+        "Generally, most wisdom teeth are impacted and require a surgical extraction. All surgical extractions at our centres are performed by skilled surgeons who practice high standards of hygiene and sterilization.",
       icon: Scissors,
-      color: "from-[#00326D] to-[#B12EBC]",
+      color: "from-[#e3c19d] to-[#815A93]",
     },
     {
       title: "Complete & Partial Dentures",
       description:
-        "Economical options for fixed dentures including basic complete dentures, implant supported complete dentures, cast partial dentures, and Val Plast partial dentures.",
+        "These are denture-based options for the replacement of teeth, such as basic complete dentures, implant supported complete dentures, cast partial dentures, Val Plast partial dentures, and more. These are economical options for fixed dentures.",
       icon: Shield,
-      color: "from-[#B12EBC] to-[#00326D]",
+      color: "from-[#815A93] to-[#e3c19d]",
     },
     {
       title: "Gum Surgeries",
       description:
-        "Our periodontists perform all types of periodontal (gum) surgeries with finesse to arrest damage and restore your gum health.",
+        "Unhygienic oral habits often lead to deep-seated infections that destroy the gums. Our periodontists perform all types of periodontal (gum) surgeries with finesse to arrest the damage and restore your gum health.",
       icon: Activity,
-      color: "from-[#00326D] to-[#B12EBC]",
+      color: "from-[#e3c19d] to-[#815A93]",
     },
     {
       title: "Bridges",
       description:
-        "Used for replacing teeth where implants are contraindicated. We incorporate artificial tints in ceramic to match natural shade transitions.",
+        "Bridges are used for replacing teeth in cases where implants are contraindicated. We incorporate artificial tints in the ceramic to match the natural shade transitions of the adjacent teeth.",
       icon: Shield,
-      color: "from-[#B12EBC] to-[#00326D]",
+      color: "from-[#815A93] to-[#e3c19d]",
     },
     {
       title: "Professional Clean-up",
       description:
-        "Essential every 6 months to maintain oral cavity health. Efficiently removes plaque, tartar and stains while preventing gum problems.",
+        "Professional clean-up, scaling and polishing are essential at least once every 6 months to maintain the health of the oral cavity and address any problems in its early stages. Clean-ups efficiently remove the plaque, tartar and stains.",
       icon: Droplets,
-      color: "from-[#00326D] to-[#B12EBC]",
+      color: "from-[#e3c19d] to-[#815A93]",
     },
     {
       title: "Pediatric Dentistry",
       description:
-        "Specialized care for children with preventive measures, fluoride application, sealant treatment, and oral hygiene education.",
+        "Our team of child specialist dentists not only caters to the needs of a child for dental treatment but they also make sure to educate the children and their parents for oral health awareness for future.",
       icon: Baby,
-      color: "from-[#B12EBC] to-[#00326D]",
+      color: "from-[#815A93] to-[#e3c19d]",
     },
   ];
 
@@ -235,30 +235,44 @@ export default function DentalPage() {
     {
       title: "Excellence Through Expertise and Artistry",
       description:
-        "Our responsibility towards you begins much before you sit on the dental chair. Our clinic is designed to instantly make you feel comfortable and relaxed.",
+        "Our responsibility towards you begins much before you sit on the dental chair. Our clinic is designed to instantly make you feel comfortable and relaxed. We believe that the best outcomes originate from personalised patient care.",
       icon: Award,
-      color: "from-[#00326D] to-[#B12EBC]",
+      color: "from-[#e3c19d] to-[#815A93]",
     },
     {
       title: "World-class Equipment",
       description:
         "We use one of the best quality of equipment and materials to keep pace with the innovations in dental technology internationally.",
       icon: Zap,
-      color: "from-[#B12EBC] to-[#00326D]",
+      color: "from-[#815A93] to-[#e3c19d]",
     },
     {
       title: "Safety and Sterilization",
       description:
-        "We maintain the highest standards of hygiene and adhere to stringent sterilization protocols. All protocols are monitored as an internationally certified setup.",
+        "We maintain the highest standards of hygiene and adhere to stringent sterilization protocols for your safety. Since we are an internationally certified setup, all our protocols are monitored.",
       icon: Shield,
-      color: "from-[#00326D] to-[#B12EBC]",
+      color: "from-[#e3c19d] to-[#815A93]",
     },
     {
       title: "Hi-Tech Dentistry",
       description:
         "The right expertise and technology enable us to undertake advanced smile makeovers, full mouth dental implants, zirconia and CAD CAM crowns, laser dentistry, aligners and more.",
       icon: Sparkle,
-      color: "from-[#B12EBC] to-[#00326D]",
+      color: "from-[#815A93] to-[#e3c19d]",
+    },
+    {
+      title: "Specialists in Makeovers",
+      description:
+        "Smile makeovers are a sublime combination of exceptional expertise and rare artistry. They help in achieving a dramatic transformation in the appearance of a person while simultaneously restoring the health and function of the teeth.",
+      icon: Heart,
+      color: "from-[#e3c19d] to-[#815A93]",
+    },
+    {
+      title: "The Perfect Solution to Replace Missing Teeth",
+      description:
+        "Form, function and aesthetics are at the forefront of our dental implant solutions. Single, multiple or full mouth dental implants are the best solution to replace damaged or missing teeth with an artificial fixture that look and feel exactly like a real tooth.",
+      icon: Smile,
+      color: "from-[#815A93] to-[#e3c19d]",
     },
   ];
 
@@ -270,7 +284,7 @@ export default function DentalPage() {
         "Detailed evaluation of your dental health, education about oral health status, and creation of a personalized treatment plan with estimated cost and time.",
       icon: Eye,
       duration: "60 minutes",
-      color: "from-[#00326D] to-[#B12EBC]",
+      color: "from-[#e3c19d] to-[#815A93]",
     },
     {
       step: "02",
@@ -279,7 +293,7 @@ export default function DentalPage() {
         "We lay down various alternative treatment plans that suit your budget, time constraints and needs. All doubts and queries are cleared at this stage.",
       icon: Shield,
       duration: "30 minutes",
-      color: "from-[#B12EBC] to-[#00326D]",
+      color: "from-[#815A93] to-[#e3c19d]",
     },
     {
       step: "03",
@@ -288,7 +302,7 @@ export default function DentalPage() {
         "State-of-the-art technology combined with expertise and soft-skill approach ensures precise, seamless and comfortable treatment procedures.",
       icon: CheckCircle,
       duration: "Varies",
-      color: "from-[#00326D] to-[#B12EBC]",
+      color: "from-[#e3c19d] to-[#815A93]",
     },
     {
       step: "04",
@@ -297,7 +311,7 @@ export default function DentalPage() {
         "Ongoing maintenance, support, and monitoring to ensure lasting results. We maintain lifetime dental records for continuous oral health progress tracking.",
       icon: Heart,
       duration: "Lifetime",
-      color: "from-[#B12EBC] to-[#00326D]",
+      color: "from-[#815A93] to-[#e3c19d]",
     },
   ];
 
@@ -305,42 +319,52 @@ export default function DentalPage() {
     {
       question: "How long do dental implants last?",
       answer:
-        "With proper care and maintenance, dental implants can last a lifetime. They have a success rate of over 95% and are designed to be a permanent solution. Regular dental checkups and good oral hygiene are essential for longevity.",
+        "With proper care and maintenance, dental implants can last a lifetime. They have a success rate of over 95% and are designed to be a permanent solution. Implants act by replacing the root portion of the tooth, thus not only replace a tooth, but also support the bone beneath thereby preventing loss of jaw bone after tooth loss.",
     },
     {
       question: "Is teeth whitening safe for my teeth?",
       answer:
-        "Yes, professional teeth whitening is completely safe when performed by trained dental professionals. We use advanced techniques and monitor the process to ensure optimal results without damage to your tooth enamel.",
+        "Yes, professional teeth whitening is completely safe when performed by trained dental professionals. Our LASER expert professionally removes stains using a peroxide-based agent. The gums and lips are protected with special barriers to prevent their contact with peroxide. The laser bleaching is more effective and stays for longer period.",
     },
     {
-      question: "How long does orthodontic treatment typically take?",
+      question: "What types of braces do you offer?",
       answer:
-        "Treatment duration varies depending on the complexity of your case and the type of orthodontic treatment chosen. Most patients complete treatment in 18-24 months, but some cases may take longer for optimal results.",
+        "We provide conventional braces as well as clear aligners. This includes metal braces (conventional metal brackets), ceramic braces (tooth colored brackets), self-ligating braces (to reduce treatment duration), and invisible/clear aligners (wafer-thin, transparent aligners that are virtually invisible).",
     },
     {
       question: "Are root canal procedures painful?",
       answer:
-        "Modern root canal procedures are virtually painless. We use advanced anesthesia techniques and the latest technology to ensure your comfort throughout the procedure. Most patients experience minimal discomfort.",
+        "Don't fear the root canal anymore! We combine state-of-the-art technology with our expertise and soft-skill approach to ensure that every root canal procedure is precise, seamless and pain-free. Most of the root canal treatments at CLINICA are performed within 30 minutes by our expert who make sure you are always comfortable and relaxed.",
     },
     {
       question: "What's included in a smile makeover?",
       answer:
-        "A smile makeover is customized to your specific needs and may include teeth whitening, veneers, crowns, orthodontics, or other cosmetic procedures. We create a comprehensive plan based on your goals and budget.",
+        "A smile makeover includes bonding treatments, veneers and metal-free ceramic crowns, gum recontouring, instant tooth whitening, tooth recontouring, replacement of 'black-line' crowns, laser depigmentation of gums, orthodontic treatments, and tooth-colored fillings. We use natural tooth-colored composite materials for all cavity fillings.",
     },
     {
-      question: "How do I maintain my dental work?",
+      question: "How often should I get professional clean-up?",
       answer:
-        "Maintaining your dental work involves regular brushing, flossing, and professional cleanings. We provide detailed aftercare instructions and recommend regular checkups to ensure the longevity of your treatment.",
+        "Professional clean-up, scaling and polishing are essential at least once every 6 months to maintain the health of the oral cavity and address any problems in its early stages. Clean-ups efficiently remove the plaque, tartar and stains which accumulate over a period of time.",
     },
     {
       question: "What makes CLINICA different from other dental clinics?",
       answer:
-        "CLINICA specializes in cutting-edge dentistry with world-class equipment, international quality standards, and a team of highly skilled specialists. We focus on personalized patient care and use the latest technology for optimal results.",
+        "CLINICA specializes in cutting-edge dentistry with world-class equipment, international quality standards, and a team of highly skilled specialists. We focus on personalized patient care and use the latest technology for optimal results. Our clinic is designed to instantly make you feel comfortable and relaxed.",
     },
     {
-      question: "Do you offer emergency dental care?",
+      question: "Do you offer pediatric dentistry?",
       answer:
-        "Yes, we provide 24/7 emergency care services. Our team is always available to handle dental emergencies and provide immediate relief when you need it most.",
+        "Yes, our team of child specialist dentists not only caters to the needs of a child for dental treatment but they also make sure to educate the children and their parents for oral health awareness for future. We provide fluoride application, sealant treatment, restorative procedures, and preventive orthodontics.",
+    },
+    {
+      question: "What is comprehensive consultation?",
+      answer:
+        "Your first consultation appointment is a crucial step in assessing your overall dental health. Our doctors will conduct a detailed evaluation, educate you about the status of your oral health and create a personalized treatment plan. We lay down various alternative treatment plans that suit your budget, time constraints and any other needs.",
+    },
+    {
+      question: "Do you offer full mouth rehabilitation?",
+      answer:
+        "Yes, a full mouth reconstruction (rehabilitation) is needed when your oral health deteriorates completely due to multiple dental problems. The procedure has the power to turn back the clock by taking away at least 10 to 15 years of facial ageing. Along with looking and feeling younger, you will also be able to enjoy all your favourite foods again.",
     },
   ];
 
@@ -369,6 +393,22 @@ export default function DentalPage() {
       image: "/images/expert3.jpeg",
       location: "Texas",
     },
+    {
+      name: "David Chen",
+      text: "The root canal treatment was completely painless! I was so nervous but the team made me feel comfortable throughout. The 30-minute procedure was quick and efficient.",
+      rating: 5,
+      treatment: "Root Canal",
+      image: "/images/expert1.jpg",
+      location: "Chicago",
+    },
+    {
+      name: "Sarah Johnson",
+      text: "My orthodontic treatment with clear aligners was amazing. They're virtually invisible and I can take them out when needed. The results are perfect!",
+      rating: 5,
+      treatment: "Orthodontics",
+      image: "/images/expert2.jpg.avif",
+      location: "Miami",
+    },
   ];
 
   return (
@@ -393,11 +433,11 @@ export default function DentalPage() {
           { number: "15+", label: "Years Experience" },
           { number: "24/7", label: "Emergency Care" },
         ]}
-        subtitleColor="text-[#B12EBC]"
+        subtitleColor="text-[#815A93]"
       />
 
       {/* Clinic Features Section */}
-      <section className="py-20 lg:py-32 bg-gradient-to-br from-[#00326D]/5 to-[#B12EBC]/5">
+      <section className="py-20 lg:py-32 bg-gradient-to-br from-[#e3c19d]/5 to-[#815A93]/5">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial="initial"
@@ -406,12 +446,12 @@ export default function DentalPage() {
             variants={fadeInUp}
             className="text-center mb-16"
           >
-            <span className="inline-block bg-gradient-to-r from-[#00326D]/10 to-[#B12EBC]/10 text-[#00326D] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4">
+            <span className="inline-block bg-gradient-to-r from-[#e3c19d]/10 to-[#815A93]/10 text-[#e3c19d] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4">
               Why Choose CLINICA
             </span>
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Excellence Through{" "}
-              <span className="bg-gradient-to-r from-[#00326D] to-[#B12EBC] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#e3c19d] to-[#815A93] bg-clip-text text-transparent">
                 Expertise and Artistry
               </span>
             </h2>
@@ -427,7 +467,7 @@ export default function DentalPage() {
             whileInView="animate"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
-            className="grid md:grid-cols-2 gap-8"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {clinicFeatures.map((feature, index) => (
               <motion.div
@@ -467,12 +507,12 @@ export default function DentalPage() {
             variants={fadeInUp}
             className="text-center mb-16"
           >
-            <span className="inline-block bg-gradient-to-r from-[#00326D]/10 to-[#B12EBC]/10 text-[#00326D] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4">
+            <span className="inline-block bg-gradient-to-r from-[#e3c19d]/10 to-[#815A93]/10 text-[#e3c19d] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4">
               Our Dental Treatments
             </span>
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Comprehensive{" "}
-              <span className="bg-gradient-to-r from-[#00326D] to-[#B12EBC] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#e3c19d] to-[#815A93] bg-clip-text text-transparent">
                 Dental Care Solutions
               </span>
             </h2>
@@ -524,13 +564,13 @@ export default function DentalPage() {
 
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     <div className="flex items-center space-x-2">
-                      <Clock className="w-4 h-4 text-[#00326D]" />
+                      <Clock className="w-4 h-4 text-[#e3c19d]" />
                       <span className="text-sm text-gray-600">
                         {treatment.duration}
                       </span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <Award className="w-4 h-4 text-[#00326D]" />
+                      <Award className="w-4 h-4 text-[#e3c19d]" />
                       <span className="text-sm text-gray-600">
                         {treatment.recovery}
                       </span>
@@ -567,7 +607,7 @@ export default function DentalPage() {
                   >
                     <Link
                       href="/contact"
-                      className="w-full inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-[#00326D] to-[#B12EBC] hover:from-[#00326D]/80 hover:to-[#B12EBC]/80 text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                      className="w-full inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-[#e3c19d] to-[#815A93] hover:from-[#e3c19d]/80 hover:to-[#815A93]/80 text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                     >
                       <Calendar className="w-4 h-4" />
                       <span>Book Treatment</span>
@@ -581,7 +621,7 @@ export default function DentalPage() {
       </section>
 
       {/* Additional Treatments Section */}
-      <section className="py-20 lg:py-32 bg-gradient-to-br from-[#B12EBC]/5 to-[#00326D]/5">
+      <section className="py-20 lg:py-32 bg-gradient-to-br from-[#815A93]/5 to-[#e3c19d]/5">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial="initial"
@@ -590,12 +630,12 @@ export default function DentalPage() {
             variants={fadeInUp}
             className="text-center mb-16"
           >
-            <span className="inline-block bg-gradient-to-r from-[#B12EBC]/10 to-[#00326D]/10 text-[#B12EBC] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4">
+            <span className="inline-block bg-gradient-to-r from-[#815A93]/10 to-[#e3c19d]/10 text-[#815A93] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4">
               Additional Services
             </span>
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Complete{" "}
-              <span className="bg-gradient-to-r from-[#B12EBC] to-[#00326D] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#815A93] to-[#e3c19d] bg-clip-text text-transparent">
                 Dental Care Services
               </span>
             </h2>
@@ -639,7 +679,7 @@ export default function DentalPage() {
       </section>
 
       {/* Enhanced Smile Journey Timeline */}
-      <section className="py-20 lg:py-32 bg-gradient-to-br from-[#00326D]/5 to-[#B12EBC]/5">
+      <section className="py-20 lg:py-32 bg-gradient-to-br from-[#e3c19d]/5 to-[#815A93]/5">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial="initial"
@@ -648,12 +688,12 @@ export default function DentalPage() {
             variants={fadeInUp}
             className="text-center mb-16"
           >
-            <span className="inline-block bg-gradient-to-r from-[#B12EBC]/10 to-[#00326D]/10 text-[#B12EBC] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4">
+            <span className="inline-block bg-gradient-to-r from-[#815A93]/10 to-[#e3c19d]/10 text-[#815A93] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4">
               Your Dental Journey
             </span>
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Your Path to a{" "}
-              <span className="bg-gradient-to-r from-[#B12EBC] to-[#00326D] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#815A93] to-[#e3c19d] bg-clip-text text-transparent">
                 Perfect Smile
               </span>
             </h2>
@@ -680,18 +720,18 @@ export default function DentalPage() {
               >
                 {/* Connection line for desktop */}
                 {index < smileJourney.length - 1 && (
-                  <div className="hidden lg:block absolute top-16 left-full w-full h-0.5 bg-gradient-to-r from-[#B12EBC]/20 to-[#00326D]/20 transform translate-x-4 z-0"></div>
+                  <div className="hidden lg:block absolute top-16 left-full w-full h-0.5 bg-gradient-to-r from-[#815A93]/20 to-[#e3c19d]/20 transform translate-x-4 z-0"></div>
                 )}
 
                 <div className="relative z-10 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 p-8 text-center border border-gray-100">
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="w-10 h-10 bg-gradient-to-r from-[#B12EBC] to-[#00326D] rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg">
+                    <div className="w-10 h-10 bg-gradient-to-r from-[#815A93] to-[#e3c19d] rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg">
                       {step.step}
                     </div>
                   </div>
 
                   <div className="mt-4 mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-r from-[#00326D] to-[#B12EBC] rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                    <div className="w-16 h-16 bg-gradient-to-r from-[#e3c19d] to-[#815A93] rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:shadow-xl transition-all duration-300">
                       <step.icon className="w-8 h-8 text-white" />
                     </div>
                   </div>
@@ -703,7 +743,7 @@ export default function DentalPage() {
                     {step.description}
                   </p>
 
-                  <div className="inline-flex items-center space-x-2 bg-[#B12EBC]/10 text-[#B12EBC] px-4 py-2 rounded-full text-sm font-medium">
+                  <div className="inline-flex items-center space-x-2 bg-[#815A93]/10 text-[#815A93] px-4 py-2 rounded-full text-sm font-medium">
                     <Clock className="w-4 h-4" />
                     <span>{step.duration}</span>
                   </div>
@@ -720,9 +760,9 @@ export default function DentalPage() {
         title="What Our Patients Say"
         subtitle="Don't just take our word for it. Here's what our satisfied patients have to say about their life-changing dental care experience at CLINICA."
         tagText="Patient Stories"
-        tagColor="from-[#00326D]/10 to-[#B12EBC]/10 text-[#00326D]"
-        titleGradientFrom="from-[#00326D]"
-        titleGradientTo="to-[#B12EBC]"
+        tagColor="from-[#e3c19d]/10 to-[#815A93]/10 text-[#e3c19d]"
+        titleGradientFrom="from-[#e3c19d]"
+        titleGradientTo="to-[#815A93]"
         backgroundClass="bg-white"
       />
 
@@ -732,13 +772,13 @@ export default function DentalPage() {
         title="Got Questions?"
         subtitle="Get answers to common questions about our dental treatments, procedures, and what to expect during your visit."
         tagText="Frequently Asked Questions"
-        tagColor="from-[#B12EBC]/10 to-[#00326D]/10 text-[#B12EBC]"
-        titleGradientFrom="from-[#B12EBC]"
-        titleGradientTo="to-[#00326D]"
+        tagColor="from-[#815A93]/10 to-[#e3c19d]/10 text-[#815A93]"
+        titleGradientFrom="from-[#815A93]"
+        titleGradientTo="to-[#e3c19d]"
       />
 
       {/* Contact Form Section */}
-      <section className="py-20 lg:py-32 bg-gradient-to-br from-gray-50 to-blue-50">
+      <section className="py-20 lg:py-32 bg-gradient-to-br from-gray-50 to-[#e3c19d]/10">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial="initial"
@@ -753,9 +793,9 @@ export default function DentalPage() {
                 title="Ready to Transform Your"
                 subtitle="Smile?"
                 tagText="Book Consultation"
-                tagColor="from-[#00326D]/10 to-[#B12EBC]/10 text-[#00326D]"
-                titleGradientFrom="from-[#00326D]"
-                titleGradientTo="to-[#B12EBC]"
+                tagColor="from-[#e3c19d]/10 to-[#815A93]/10 text-[#e3c19d]"
+                titleGradientFrom="from-[#e3c19d]"
+                titleGradientTo="to-[#815A93]"
                 buttonText="Book Consultation"
                 successMessage="Consultation Booked Successfully!"
                 successSubtitle="Thank you for booking your dental consultation with CLINICA. We'll contact you within 24 hours to confirm your appointment."
@@ -765,12 +805,12 @@ export default function DentalPage() {
             {/* Contact Information */}
             <motion.div variants={slideInRight}>
               <div className="mb-8">
-                <span className="inline-block bg-gradient-to-r from-blue-100 to-cyan-100 text-blue-600 font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4">
+                <span className="inline-block bg-gradient-to-r from-[#e3c19d]/10 to-[#815A93]/10 text-[#e3c19d] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4">
                   Contact Information
                 </span>
                 <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                   Get in{" "}
-                  <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-[#e3c19d] to-[#815A93] bg-clip-text text-transparent">
                     Touch
                   </span>
                 </h2>
@@ -784,21 +824,21 @@ export default function DentalPage() {
                     content:
                       "123 Medical Center Dr, Suite 100\nCity, State 12345",
                     subtext: "Modern facility with ample parking",
-                    color: "from-[#00326D] to-[#B12EBC]",
+                    color: "from-[#e3c19d] to-[#815A93]",
                   },
                   {
                     icon: Phone,
                     title: "Call Us",
                     content: "(555) 123-4567\nAvailable 24/7 for emergencies",
                     subtext: "Immediate response guaranteed",
-                    color: "from-[#B12EBC] to-[#00326D]",
+                    color: "from-[#815A93] to-[#e3c19d]",
                   },
                   {
                     icon: Mail,
                     title: "Email Us",
                     content: "info@clinica.com\nWe respond within 24 hours",
                     subtext: "Professional consultation via email",
-                    color: "from-[#00326D] to-[#B12EBC]",
+                    color: "from-[#e3c19d] to-[#815A93]",
                   },
                 ].map((contact, index) => (
                   <motion.div

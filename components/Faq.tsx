@@ -19,12 +19,12 @@ interface FaqProps {
 }
 
 const Faq: React.FC<FaqProps> = ({
-  title = "Got Questions?",
-  subtitle = "Get answers to common questions about our treatments, procedures, and what to expect during your visit.",
-  tagText = "Frequently Asked Questions",
-  tagColor = "from-purple-100 to-pink-100 text-purple-600",
-  titleGradientFrom = "from-purple-600",
-  titleGradientTo = "to-pink-600",
+  title = "Got Dental Questions?",
+  subtitle = "Get answers to common questions about our dental treatments, procedures, and what to expect during your visit.",
+  tagText = "Dental FAQ",
+  tagColor = "from-blue-100 to-cyan-100 text-blue-600",
+  titleGradientFrom = "from-blue-600",
+  titleGradientTo = "to-cyan-600",
   faqs,
 }) => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -104,9 +104,9 @@ const Faq: React.FC<FaqProps> = ({
                   className="flex-shrink-0"
                 >
                   {openFaq === index ? (
-                    <Minus className="w-6 h-6 text-purple-600" />
+                    <Minus className="w-6 h-6 text-blue-600" />
                   ) : (
-                    <Plus className="w-6 h-6 text-purple-600" />
+                    <Plus className="w-6 h-6 text-blue-600" />
                   )}
                 </motion.div>
               </button>

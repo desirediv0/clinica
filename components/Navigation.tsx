@@ -61,7 +61,7 @@ export default function Navigation() {
       icon: Smile,
       description: "Complete dental solutions for a perfect smile",
       color: "from-blue-500 to-cyan-500",
-      features: ["Dental Implants", "Smile Makeovers", "Orthodontics"],
+      features: ["Dental Implants", "Smile Makeovers", "Teeth Whitening"],
     },
     {
       name: "Skin Care",
@@ -69,15 +69,15 @@ export default function Navigation() {
       icon: Sparkles,
       description: "Advanced skin treatments for radiant beauty",
       color: "from-pink-500 to-purple-500",
-      features: ["HydraFacial", "Chemical Peels", "Laser Treatments"],
+      features: ["HydraFacial", "Chemical Peels", "Microneedling"],
     },
   ];
 
   const contactInfo = [
     {
       icon: Phone,
-      text: "(555) 123-4567",
-      href: "tel:+15551234567",
+      text: "+91 70071 45918",
+      href: "tel:+917007145918",
       label: "Call Us Now",
     },
     {
@@ -88,7 +88,7 @@ export default function Navigation() {
     },
     {
       icon: MapPin,
-      text: "123 Medical Center Dr",
+      text: "1st Floor, Plot No. 24, Sector-12A Rd",
       href: "#location",
       label: "Visit Us",
     },
@@ -96,16 +96,39 @@ export default function Navigation() {
 
   return (
     <>
+      {/* Sub-navigation bar for contact info */}
+      <div
+        className={`fixed top-0 w-full z-50 bg-gradient-to-r from-[#e3c19d] to-[#815A93] text-white transition-all duration-500 ${
+          isScrolled ? "h-0 overflow-hidden" : "h-10"
+        }`}
+      >
+        <div className="container mx-auto px-4 lg:px-8 h-full">
+          <div className="flex items-center justify-end h-full space-x-6">
+            {contactInfo.map((item, index) => (
+              <motion.a
+                key={index}
+                href={item.href}
+                className="flex items-center space-x-2 text-sm hover:text-white/80 transition-colors duration-300"
+                whileHover={{ y: -1 }}
+              >
+                <item.icon className="w-4 h-4" />
+                <span className="hidden md:inline">{item.text}</span>
+              </motion.a>
+            ))}
+          </div>
+        </div>
+      </div>
+
       <nav
-        className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+        className={`fixed top-0 w-full z-40 transition-all duration-500 ${
           isScrolled
-            ? "bg-white/95 backdrop-blur-lg shadow-xl border-b border-gray-100"
-            : "bg-white/90 backdrop-blur-md"
+            ? "bg-white/95 backdrop-blur-lg shadow-xl border-b border-gray-100 top-0"
+            : "bg-white/90 backdrop-blur-md top-10"
         }`}
       >
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="flex items-center justify-between h-24">
-            {/* Enhanced Logo - Responsive */}
+          <div className="flex items-center justify-between h-20">
+            {/* Logo */}
             <motion.div
               className="flex-shrink-0 flex items-center"
               whileHover={{ scale: 1.02 }}
@@ -119,17 +142,17 @@ export default function Navigation() {
                   <Image
                     src="/images/logo.png"
                     alt="CLINICA Logo"
-                    width={200}
-                    height={200}
-                    className="relative object-cover transition-all duration-300 hidden md:block "
+                    width={100}
+                    height={100}
+                    className="relative object-cover transition-all duration-300 hidden md:block"
                     priority
                   />
                   <Image
                     src="/images/logo.png"
                     alt="CLINICA Logo"
-                    width={180}
-                    height={180}
-                    className="relative object-cover transition-all duration-300  block md:hidden "
+                    width={110}
+                    height={110}
+                    className="relative object-cover transition-all duration-300 block md:hidden"
                     priority
                   />
                 </div>
@@ -148,15 +171,15 @@ export default function Navigation() {
                     href={item.href}
                     className={`relative px-6 py-3 text-sm font-semibold transition-all duration-300 rounded-xl group ${
                       pathname === item.href
-                        ? "text-[#00326D] bg-[#B12EBC]/10 shadow-md"
-                        : "text-gray-700 hover:text-[#00326D] hover:bg-gray-50"
+                        ? "text-[#815A93] bg-[#e3c19d]/20 shadow-md"
+                        : "text-gray-700 hover:text-[#815A93] hover:bg-[#e3c19d]/10"
                     }`}
                   >
                     {item.name}
                     {pathname === item.href && (
                       <motion.div
                         layoutId="activeTab"
-                        className="absolute inset-0 bg-[#B12EBC]/10 rounded-xl -z-10 shadow-md"
+                        className="absolute inset-0 bg-[#e3c19d]/20 rounded-xl -z-10 shadow-md"
                         transition={{
                           type: "spring",
                           bounce: 0.2,
@@ -164,12 +187,12 @@ export default function Navigation() {
                         }}
                       />
                     )}
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#00326D]/10 to-[#B12EBC]/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#e3c19d]/10 to-[#815A93]/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
                   </Link>
                 </motion.div>
               ))}
 
-              {/* Enhanced Services Dropdown */}
+              {/* Services Dropdown */}
               <div
                 className="relative"
                 onMouseEnter={() => setShowServicesDropdown(true)}
@@ -178,7 +201,7 @@ export default function Navigation() {
                 <motion.button
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className="flex items-center space-x-2 px-6 py-3 text-sm font-semibold text-gray-700 hover:text-[#00326D] hover:bg-gray-50 rounded-xl transition-all duration-300 group"
+                  className="flex items-center space-x-2 px-6 py-3 text-sm font-semibold text-gray-700 hover:text-[#815A93] hover:bg-[#e3c19d]/10 rounded-xl transition-all duration-300 group"
                 >
                   <span>Services</span>
                   <motion.div
@@ -187,7 +210,7 @@ export default function Navigation() {
                   >
                     <ChevronDown className="w-4 h-4" />
                   </motion.div>
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#00326D]/10 to-[#B12EBC]/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#e3c19d]/10 to-[#815A93]/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
                 </motion.button>
 
                 <AnimatePresence>
@@ -199,228 +222,143 @@ export default function Navigation() {
                       transition={{ duration: 0.3, ease: "easeOut" }}
                       className="absolute top-full right-7 mt-4 w-96 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden"
                     >
-                      <div className="p-6">
-                        <div className="grid gap-4">
-                          {servicesItems.map((item, index) => (
-                            <motion.div
-                              key={item.name}
-                              initial={{ opacity: 0, x: -20 }}
-                              animate={{ opacity: 1, x: 0 }}
-                              transition={{ delay: index * 0.1 }}
-                              whileHover={{ scale: 1.02 }}
-                              className="group"
-                            >
-                              <Link
-                                href={item.href}
-                                className={`flex items-start space-x-4 p-4 rounded-xl transition-all duration-300 ${
-                                  pathname === item.href
-                                    ? "text-[#00326D] bg-[#B12EBC]/10 shadow-md"
-                                    : "text-gray-700 hover:text-[#00326D] hover:bg-gray-50"
-                                }`}
+                      {servicesItems.map((service, index) => (
+                        <Link
+                          key={service.name}
+                          href={service.href}
+                          className="block"
+                        >
+                          <motion.div
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: index * 0.1 }}
+                            className="p-6 hover:bg-[#e3c19d]/10 transition-colors duration-300"
+                          >
+                            <div className="flex items-start space-x-4">
+                              <div
+                                className={`w-12 h-12 bg-gradient-to-r ${
+                                  index % 2 === 0
+                                    ? "from-[#e3c19d] to-[#815A93]"
+                                    : "from-[#815A93] to-[#e3c19d]"
+                                } rounded-xl flex items-center justify-center shadow-lg`}
                               >
-                                <div
-                                  className={`w-12 h-12 bg-gradient-to-r from-[#B12EBC] to-[#00326D] rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300`}
-                                >
-                                  <item.icon className="w-6 h-6 text-white" />
+                                <service.icon className="w-6 h-6 text-white" />
+                              </div>
+                              <div>
+                                <h3 className="text-[#815A93] font-semibold mb-1">
+                                  {service.name}
+                                </h3>
+                                <p className="text-gray-600 text-sm">
+                                  {service.description}
+                                </p>
+                                <div className="mt-2 flex flex-wrap gap-2">
+                                  {service.features.map((feature, idx) => (
+                                    <span
+                                      key={idx}
+                                      className="text-xs bg-[#e3c19d]/20 text-[#815A93] px-2 py-1 rounded-full"
+                                    >
+                                      {feature}
+                                    </span>
+                                  ))}
                                 </div>
-                                <div className="flex-1">
-                                  <h3 className="font-bold text-lg mb-1">
-                                    {item.name}
-                                  </h3>
-                                  <p className="text-sm text-gray-500 mb-3">
-                                    {item.description}
-                                  </p>
-                                  <div className="flex flex-wrap gap-2">
-                                    {item.features.map((feature, idx) => (
-                                      <span
-                                        key={idx}
-                                        className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full"
-                                      >
-                                        {feature}
-                                      </span>
-                                    ))}
-                                  </div>
-                                </div>
-                              </Link>
-                            </motion.div>
-                          ))}
-                        </div>
-                      </div>
+                              </div>
+                            </div>
+                          </motion.div>
+                        </Link>
+                      ))}
                     </motion.div>
                   )}
                 </AnimatePresence>
               </div>
-
-              {/* Enhanced Contact Button */}
-              <motion.div
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-                className="ml-4"
-              >
-                <Link
-                  href="/contact"
-                  className="group relative inline-flex items-center space-x-2 bg-gradient-to-r from-[#00326D] to-[#B12EBC] text-white px-6 py-3 rounded-xl text-sm font-bold hover:from-[#00326D]/80 hover:to-[#B12EBC]/80 transition-all duration-300 shadow-lg hover:shadow-xl overflow-hidden"
-                >
-                  <div className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-                  <Calendar className="w-4 h-4 relative z-10" />
-                  <span className="relative z-10">Book Now</span>
-                </Link>
-              </motion.div>
             </div>
 
-            {/* Mobile Menu Button */}
-            <div className="flex lg:hidden items-center space-x-2">
-              <motion.a
-                href="tel:+15551234567"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="flex items-center space-x-1 bg-gradient-to-r from-[#00326D] to-[#B12EBC] text-white px-3 py-2 rounded-lg text-xs font-semibold shadow-lg"
-              >
-                <Phone className="w-3 h-3" />
-                <span className="hidden xs:inline">Call</span>
-              </motion.a>
-
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors duration-300 mobile-menu shadow-md"
-                onClick={() => setIsOpen(!isOpen)}
-              >
-                <AnimatePresence mode="wait">
-                  {isOpen ? (
-                    <motion.div
-                      key="close"
-                      initial={{ rotate: -90, opacity: 0 }}
-                      animate={{ rotate: 0, opacity: 1 }}
-                      exit={{ rotate: 90, opacity: 0 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      <X className="w-5 h-5 text-gray-700" />
-                    </motion.div>
-                  ) : (
-                    <motion.div
-                      key="menu"
-                      initial={{ rotate: 90, opacity: 0 }}
-                      animate={{ rotate: 0, opacity: 1 }}
-                      exit={{ rotate: -90, opacity: 0 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      <Menu className="w-5 h-5 text-gray-700" />
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </motion.button>
-            </div>
+            {/* Mobile menu button */}
+            <motion.button
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setIsOpen(!isOpen)}
+              className="lg:hidden p-2 rounded-xl hover:bg-[#e3c19d]/10 transition-colors duration-300"
+            >
+              {isOpen ? (
+                <X className="w-6 h-6 text-gray-700" />
+              ) : (
+                <Menu className="w-6 h-6 text-gray-700" />
+              )}
+            </motion.button>
           </div>
-
-          {/* Enhanced Mobile Navigation */}
-          <AnimatePresence>
-            {isOpen && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.4, ease: "easeInOut" }}
-                className="lg:hidden border-t border-gray-100 bg-white/98 backdrop-blur-lg mobile-menu rounded-b-2xl shadow-2xl"
-              >
-                <div className="py-6 space-y-6">
-                  {/* Main Navigation */}
-                  <div className="space-y-2 px-4">
-                    <h4 className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-3">
-                      Navigation
-                    </h4>
-                    {navItems.map((item, index) => (
-                      <motion.div
-                        key={item.name}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{
-                          delay: (contactInfo.length + index) * 0.1,
-                        }}
-                        whileHover={{ scale: 1.02 }}
-                      >
-                        <Link
-                          href={item.href}
-                          className={`flex items-center justify-between px-4 py-3 rounded-xl transition-all duration-300 group ${
-                            pathname === item.href
-                              ? "text-[#00326D] bg-[#B12EBC]/10 font-bold shadow-md"
-                              : "text-gray-700 hover:text-[#00326D] hover:bg-gray-50"
-                          }`}
-                        >
-                          <span className="text-sm">{item.name}</span>
-                          <ChevronDown className="w-4 h-4 transform rotate-[-90deg] group-hover:translate-x-1 transition-transform duration-300" />
-                        </Link>
-                      </motion.div>
-                    ))}
-                  </div>
-
-                  {/* Services Section */}
-                  <div className="px-4">
-                    <h4 className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-3">
-                      Our Services
-                    </h4>
-                    <div className="space-y-3">
-                      {servicesItems.map((item, index) => (
-                        <motion.div
-                          key={item.name}
-                          initial={{ opacity: 0, x: -20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{
-                            delay:
-                              (contactInfo.length + navItems.length + index) *
-                              0.1,
-                          }}
-                          whileHover={{ scale: 1.02 }}
-                        >
-                          <Link
-                            href={item.href}
-                            className={`flex items-center space-x-3 p-3 rounded-xl transition-all duration-300 group ${
-                              pathname === item.href
-                                ? "text-[#00326D] bg-[#B12EBC]/10 font-bold shadow-md"
-                                : "text-gray-700 hover:text-[#00326D] hover:bg-gray-50"
-                            }`}
-                          >
-                            <div
-                              className={`w-10 h-10 bg-gradient-to-r from-[#B12EBC] to-[#00326D] rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300`}
-                            >
-                              <item.icon className="w-5 h-5 text-white" />
-                            </div>
-                            <div className="flex-1">
-                              <h3 className="font-bold text-sm">{item.name}</h3>
-                              <p className="text-xs text-gray-500">
-                                {item.description}
-                              </p>
-                            </div>
-                          </Link>
-                        </motion.div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Book Now Button for Mobile */}
-                  <div className="px-4">
-                    <motion.div
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                    >
-                      <Link
-                        href="/contact"
-                        className="w-full flex items-center justify-center space-x-2 bg-gradient-to-r from-[#00326D] to-[#B12EBC] text-white px-6 py-3 rounded-xl text-sm font-bold shadow-lg hover:shadow-xl transition-all duration-300"
-                      >
-                        <Calendar className="w-4 h-4" />
-                        <span>Book Appointment</span>
-                      </Link>
-                    </motion.div>
-                  </div>
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
         </div>
       </nav>
 
-      {/* Spacer to prevent content from hiding behind fixed nav */}
-      <div className="h-16 lg:h-20"></div>
+      {/* Mobile menu */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+            className="lg:hidden fixed inset-x-0 top-24 p-4 bg-white/95 backdrop-blur-lg border-b border-gray-100 shadow-xl z-40 mobile-menu"
+          >
+            <div className="flex flex-col space-y-1">
+              {navItems.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={`px-4 py-3 text-sm font-semibold rounded-xl transition-colors duration-300 ${
+                    pathname === item.href
+                      ? "text-[#815A93] bg-[#e3c19d]/20"
+                      : "text-gray-700 hover:text-[#815A93] hover:bg-[#e3c19d]/10"
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              ))}
+
+              {/* Services section in mobile menu */}
+              <div className="px-4 py-3">
+                <div
+                  className="flex items-center justify-between text-sm font-semibold text-gray-700 mb-2"
+                  onClick={() => setShowServicesDropdown(!showServicesDropdown)}
+                >
+                  <span>Services</span>
+                  <motion.div
+                    animate={{ rotate: showServicesDropdown ? 180 : 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <ChevronDown className="w-4 h-4" />
+                  </motion.div>
+                </div>
+
+                <AnimatePresence>
+                  {showServicesDropdown && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="space-y-2"
+                    >
+                      {servicesItems.map((service) => (
+                        <Link
+                          key={service.name}
+                          href={service.href}
+                          className="block p-3 rounded-xl hover:bg-[#e3c19d]/10 transition-colors duration-300"
+                        >
+                          <div className="flex items-center space-x-3">
+                            <service.icon className="w-5 h-5 text-[#815A93]" />
+                            <span className="text-sm font-medium text-gray-700">
+                              {service.name}
+                            </span>
+                          </div>
+                        </Link>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }

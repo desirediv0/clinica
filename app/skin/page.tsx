@@ -68,7 +68,7 @@ export default function SkinPage() {
         "Comprehensive skin assessment using advanced diagnostic tools to identify your specific concerns and skin type.",
       icon: Eye,
       duration: "30 minutes",
-      color: "from-[#00326D] to-[#B12EBC]",
+      color: "from-[#815A93] to-[#e3c19d]",
     },
     {
       step: "02",
@@ -77,7 +77,7 @@ export default function SkinPage() {
         "Personalized treatment plan created based on your skin analysis, goals, and lifestyle preferences.",
       icon: Shield,
       duration: "15 minutes",
-      color: "from-[#B12EBC] to-[#00326D]",
+      color: "from-[#e3c19d] to-[#815A93]",
     },
     {
       step: "03",
@@ -86,7 +86,7 @@ export default function SkinPage() {
         "Professional treatment sessions using advanced technology and techniques for optimal, safe results.",
       icon: CheckCircle,
       duration: "Varies",
-      color: "from-[#00326D] to-[#B12EBC]",
+      color: "from-[#815A93] to-[#e3c19d]",
     },
     {
       step: "04",
@@ -95,15 +95,15 @@ export default function SkinPage() {
         "Ongoing support, skincare guidance, and maintenance treatments to preserve and enhance your results.",
       icon: Heart,
       duration: "Ongoing",
-      color: "from-[#B12EBC] to-[#00326D]",
+      color: "from-[#e3c19d] to-[#815A93]",
     },
   ];
 
   const skinFaqs = [
     {
-      question: "How many treatments will I need for optimal results?",
+      question: "How many skin treatments will I need for optimal results?",
       answer:
-        "The number of treatments varies depending on your skin concerns and goals. Most patients see significant improvement after 3-6 sessions, spaced 4-6 weeks apart. During your consultation, we'll create a personalized treatment plan with specific recommendations.",
+        "The number of skin treatments varies depending on your skin concerns and goals. Most patients see significant improvement after 3-6 sessions, spaced 4-6 weeks apart. During your consultation, we'll create a personalized treatment plan with specific recommendations.",
     },
     {
       question: "Is there any downtime after skin treatments?",
@@ -113,22 +113,27 @@ export default function SkinPage() {
     {
       question: "Are the skin treatments painful or uncomfortable?",
       answer:
-        "Most treatments are well-tolerated with minimal discomfort. We use advanced techniques and can apply numbing cream if needed to ensure your comfort. Many patients find treatments relaxing and enjoy the pampering experience.",
+        "Most skin treatments are well-tolerated with minimal discomfort. We use advanced techniques and can apply numbing cream if needed to ensure your comfort. Many patients find treatments relaxing and enjoy the pampering experience.",
     },
     {
       question: "How long do the results from skin treatments last?",
       answer:
-        "Results vary by treatment and individual factors. Some treatments like HydraFacial provide immediate results lasting 4-6 weeks, while others like microneedling show improvement over 3-6 months. Maintenance sessions help prolong and enhance results.",
+        "Skin treatment results vary by treatment and individual factors. Some treatments like HydraFacial provide immediate results lasting 4-6 weeks, while others like microneedling show improvement over 3-6 months. Maintenance sessions help prolong and enhance results.",
     },
     {
       question: "Can I combine multiple skin treatments together?",
       answer:
-        "Yes, we often recommend combining treatments for optimal results. Popular combinations include HydraFacial with chemical peels or microneedling with LED therapy. Our experts will create a safe, effective combination plan based on your skin needs.",
+        "Yes, we often recommend combining skin treatments for optimal results. Popular combinations include HydraFacial with chemical peels or microneedling with LED therapy. Our experts will create a safe, effective combination plan based on your skin needs.",
     },
     {
       question: "What should I do to prepare for my skin treatment?",
       answer:
         "Avoid sun exposure, tanning, and certain skincare products (retinoids, acids) for 1-2 weeks before treatment. Stay hydrated and inform us of any medications or skin conditions. We'll provide specific pre-treatment instructions during your consultation.",
+    },
+    {
+      question: "Do you also offer dental services?",
+      answer:
+        "Yes! While we specialize in skin care, CLINICA is primarily a dental clinic offering comprehensive dental services including implants, smile makeovers, teeth whitening, and more. Our dental services are our primary focus and we're proud to offer both dental and skin care under one roof.",
     },
   ];
 
@@ -181,7 +186,7 @@ export default function SkinPage() {
           { number: "6", label: "Advanced Treatments" },
           { number: "24/7", label: "Expert Support" },
         ]}
-        subtitleColor="text-[#B12EBC]"
+        subtitleColor="text-[#815A93]"
       />
 
       {/* About CLINICA Skin Care Section */}
@@ -196,7 +201,7 @@ export default function SkinPage() {
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               About{" "}
-              <span className="bg-gradient-to-r from-[#B12EBC] to-[#00326D] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#815A93] to-[#e3c19d] bg-clip-text text-transparent">
                 CLINICA Skin Care
               </span>
             </h2>
@@ -229,17 +234,17 @@ export default function SkinPage() {
                 <p>We follow a simple process:</p>
                 <ul className="space-y-3 pl-6">
                   <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-[#B12EBC] rounded-full mt-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-[#815A93] rounded-full mt-3 flex-shrink-0"></div>
                     <span>
                       Meeting the patient and understanding the problem
                     </span>
                   </li>
                   <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-[#B12EBC] rounded-full mt-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-[#815A93] rounded-full mt-3 flex-shrink-0"></div>
                     <span>Proper diagnosis and getting the root cause</span>
                   </li>
                   <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-[#B12EBC] rounded-full mt-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-[#815A93] rounded-full mt-3 flex-shrink-0"></div>
                     <span>
                       Prescribing the right procedure or treatment along with
                       the required products
@@ -860,9 +865,9 @@ export default function SkinPage() {
       {/* FAQ Section */}
       <Faq
         faqs={skinFaqs}
-        title="Got Questions?"
+        title="Got Skin Care Questions?"
         subtitle="Get answers to common questions about our skin care treatments, procedures, and what to expect during your visit."
-        tagText="Frequently Asked Questions"
+        tagText="Skin Care FAQ"
         tagColor="from-[#00326D]/10 to-[#B12EBC]/10 text-[#00326D]"
         titleGradientFrom="from-[#00326D]"
         titleGradientTo="to-[#B12EBC]"

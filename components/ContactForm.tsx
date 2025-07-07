@@ -27,9 +27,9 @@ export default function ContactForm({
   title = "Send us a Message",
   subtitle = "Get in touch with us today",
   tagText = "Get In Touch",
-  tagColor = "from-purple-100 to-pink-100 text-purple-600",
-  titleGradientFrom = "from-purple-600",
-  titleGradientTo = "to-pink-600",
+  tagColor = "from-[#e3c19d] to-[#815A93] text-[#815A93]",
+  titleGradientFrom = "from-[#815A93]",
+  titleGradientTo = "to-[#e3c19d]",
   buttonText = "Send Message",
   successMessage = "Message Sent Successfully!",
   successSubtitle = "Thank you for contacting CLINICA. We'll get back to you within 24 hours with a personalized response.",
@@ -120,7 +120,7 @@ export default function ContactForm({
   return (
     <div className="mb-8">
       <span
-        className={`inline-block bg-gradient-to-r ${tagColor} font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4`}
+        className={`inline-block bg-gradient-to-r ${tagColor} font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4 text-white`}
       >
         {tagText}
       </span>
@@ -139,7 +139,7 @@ export default function ContactForm({
           animate={{ opacity: 1, scale: 1 }}
           className="bg-white rounded-3xl shadow-2xl p-8 lg:p-12 text-center border border-gray-100"
         >
-          <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+          <div className="w-20 h-20 bg-gradient-to-r from-[#815A93] to-[#e3c19d] rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
             <CheckCircle className="w-10 h-10 text-white" />
           </div>
           <h3 className="text-3xl font-bold text-gray-900 mb-4">
@@ -148,7 +148,7 @@ export default function ContactForm({
           <p className="text-lg text-gray-600 leading-relaxed mb-6">
             {successSubtitle}
           </p>
-          <div className="flex items-center justify-center space-x-2 text-green-600">
+          <div className="flex items-center justify-center space-x-2 text-[#815A93]">
             <Star className="w-5 h-5 fill-current" />
             <span className="font-medium">We appreciate your trust in us</span>
           </div>
@@ -180,7 +180,7 @@ export default function ContactForm({
                       value={formData[field.name] || ""}
                       onChange={handleInputChange}
                       required={field.required}
-                      className="w-full px-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
+                      className="w-full px-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#815A93] focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
                       placeholder={field.placeholder}
                     />
                   </div>
@@ -198,7 +198,7 @@ export default function ContactForm({
                         name={field.name}
                         value={formData[field.name] || ""}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
+                        className="w-full px-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#815A93] focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
                       >
                         {field.options?.map((option) => (
                           <option key={option.value} value={option.value}>
@@ -214,7 +214,7 @@ export default function ContactForm({
                         onChange={handleInputChange}
                         required={field.required}
                         rows={5}
-                        className="w-full px-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white resize-none"
+                        className="w-full px-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#815A93] focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white resize-none"
                         placeholder={field.placeholder}
                       ></textarea>
                     ) : (
@@ -225,7 +225,7 @@ export default function ContactForm({
                         value={formData[field.name] || ""}
                         onChange={handleInputChange}
                         required={field.required}
-                        className="w-full px-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
+                        className="w-full px-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#815A93] focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
                         placeholder={field.placeholder}
                       />
                     )}
@@ -239,7 +239,7 @@ export default function ContactForm({
               whileTap={{ scale: 0.98 }}
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full bg-gradient-to-r from-[#815A93] to-[#e3c19d] hover:from-[#6a4a7a] hover:to-[#c9ab85] text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isSubmitting ? (
                 <div className="flex items-center justify-center space-x-3">

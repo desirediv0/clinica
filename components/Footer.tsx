@@ -36,10 +36,10 @@ export default function Footer() {
   const services = [
     { name: "Dental Implants", href: "/dental", icon: "🦷" },
     { name: "Smile Makeovers", href: "/dental", icon: "😊" },
+    { name: "Teeth Whitening", href: "/dental", icon: "⚡" },
+    { name: "Root Canal Treatment", href: "/dental", icon: "🦷" },
     { name: "Chemical Peels", href: "/skin", icon: "✨" },
     { name: "HydraFacial", href: "/skin", icon: "💧" },
-    { name: "Teeth Whitening", href: "/dental", icon: "⚡" },
-    { name: "Laser Hair Removal", href: "/skin", icon: "🔥" },
   ];
 
   const socialLinks = [
@@ -76,10 +76,10 @@ export default function Footer() {
   ];
 
   const achievements = [
-    { icon: Award, text: "Best Medical Clinic 2023" },
-    { icon: Shield, text: "FDA Approved Procedures" },
-    { icon: Star, text: "5-Star Patient Rating" },
-    { icon: Heart, text: "Patient Safety Excellence" },
+    { icon: Award, text: "Best Dental Clinic 2023" },
+    { icon: Shield, text: "FDA Approved Dental Procedures" },
+    { icon: Star, text: "5-Star Dental Patient Rating" },
+    { icon: Heart, text: "Dental Safety Excellence" },
   ];
 
   const workingHours = [
@@ -93,7 +93,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gradient-to-bl from-[#00326D] via-[#00326D]/95 to-[#B12EBC] text-white  overflow-hidden relative">
+    <footer className="bg-gradient-to-bl from-[#815A93] via-[#815A93] to-[#815A93] text-white overflow-hidden relative">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-[url('/placeholder.svg?height=1080&width=1920')] bg-cover bg-center"></div>
@@ -111,7 +111,7 @@ export default function Footer() {
             repeat: Number.POSITIVE_INFINITY,
             ease: "linear",
           }}
-          className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-r from-[#B12EBC]/10 to-[#00326D]/10 rounded-full blur-3xl"
+          className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-r from-[#815A93]/10 to-[#e3c19d]/10 rounded-full blur-3xl"
         />
         <motion.div
           animate={{
@@ -123,7 +123,7 @@ export default function Footer() {
             repeat: Number.POSITIVE_INFINITY,
             ease: "linear",
           }}
-          className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-r from-[#00326D]/10 to-[#B12EBC]/10 rounded-full blur-3xl"
+          className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-r from-[#e3c19d]/10 to-[#815A93]/10 rounded-full blur-3xl"
         />
       </div>
 
@@ -139,13 +139,12 @@ export default function Footer() {
               className="flex items-center space-x-4 mb-8"
             >
               <div className="relative">
-                {/* <div className="absolute inset-0 bg-gradient-to-r from-[#B12EBC] to-[#00326D] rounded-xl blur-lg opacity-30"></div> */}
                 <Image
                   src="/images/logo.png"
                   alt="CLINICA Logo"
-                  width={200}
-                  height={200}
-                  className="relative  px-3  rounded object-cover bg-white"
+                  width={150}
+                  height={150}
+                  className="relative px-3 rounded object-cover bg-white"
                 />
               </div>
             </motion.div>
@@ -154,11 +153,10 @@ export default function Footer() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-purple-100 mb-8 leading-relaxed text-lg"
+              className="text-white/90 mb-8 leading-relaxed text-lg"
             >
-              Providing world-class skin and dental care with personalized
-              treatments and exceptional results. Your journey to natural beauty
-              starts here.
+              Providing world-class dental care with personalized treatments and
+              exceptional results. Your journey to a perfect smile starts here.
             </motion.p>
 
             {/* Achievements */}
@@ -172,9 +170,9 @@ export default function Footer() {
                 <motion.div
                   key={index}
                   whileHover={{ x: 5 }}
-                  className="flex items-center space-x-3 text-blue-200 hover:text-white transition-colors duration-300"
+                  className="flex items-center space-x-3 text-white/80 hover:text-white transition-colors duration-300"
                 >
-                  <achievement.icon className="w-5 h-5 text-[#B12EBC]" />
+                  <achievement.icon className="w-5 h-5 text-[#e3c19d]" />
                   <span className="text-sm">{achievement.text}</span>
                 </motion.div>
               ))}
@@ -205,200 +203,145 @@ export default function Footer() {
             </motion.div>
           </div>
 
-          {/* Enhanced Quick Links */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
-            <h4 className="text-xl font-bold mb-8 text-white flex items-center space-x-2">
-              <ArrowRight className="w-5 h-5 text-cyan-400" />
-              <span>Quick Links</span>
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-xl font-semibold mb-6 text-white">
+              Quick Links
             </h4>
             <ul className="space-y-4">
-              {quickLinks.map((link, index) => (
+              {quickLinks.map((link) => (
                 <motion.li
                   key={link.name}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.1 }}
                   whileHover={{ x: 5 }}
+                  className="group"
                 >
                   <Link
                     href={link.href}
-                    className="flex items-center space-x-3 text-blue-200 hover:text-white transition-all duration-300 group"
+                    className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors duration-300"
                   >
-                    <div className="w-2 h-2 bg-cyan-400 rounded-full group-hover:scale-125 transition-transform duration-300"></div>
-                    <span className="group-hover:underline">{link.name}</span>
+                    <ArrowRight className="w-4 h-4 text-[#e3c19d] group-hover:translate-x-1 transition-transform duration-300" />
+                    <span>{link.name}</span>
                   </Link>
                 </motion.li>
               ))}
             </ul>
-          </motion.div>
+          </div>
 
-          {/* Enhanced Services */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-          >
-            <h4 className="text-xl font-bold mb-8 text-white flex items-center space-x-2">
-              <Sparkles className="w-5 h-5 text-cyan-400" />
-              <span>Our Services</span>
+          {/* Services */}
+          <div>
+            <h4 className="text-xl font-semibold mb-6 text-white">
+              Our Services
             </h4>
             <ul className="space-y-4">
-              {services.map((service, index) => (
+              {services.map((service) => (
                 <motion.li
                   key={service.name}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.1 }}
                   whileHover={{ x: 5 }}
+                  className="group"
                 >
                   <Link
                     href={service.href}
-                    className="flex items-center space-x-3 text-blue-200 hover:text-white transition-all duration-300 group"
+                    className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors duration-300"
                   >
-                    <span className="text-lg group-hover:scale-110 transition-transform duration-300">
-                      {service.icon}
-                    </span>
-                    <span className="group-hover:underline">
-                      {service.name}
-                    </span>
+                    <span className="text-[#e3c19d]">{service.icon}</span>
+                    <span>{service.name}</span>
                   </Link>
                 </motion.li>
               ))}
             </ul>
-          </motion.div>
+          </div>
 
-          {/* Enhanced Contact Info */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-          >
-            <h4 className="text-xl font-bold mb-8 text-white flex items-center space-x-2">
-              <Phone className="w-5 h-5 text-cyan-400" />
-              <span>Contact Info</span>
+          {/* Contact Info */}
+          <div>
+            <h4 className="text-xl font-semibold mb-6 text-white">
+              Contact Us
             </h4>
-
-            <div className="space-y-6">
-              <motion.div
-                whileHover={{ scale: 1.02 }}
-                className="flex items-start space-x-4 p-4 bg-white/5 backdrop-blur-md rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300"
+            <ul className="space-y-6">
+              <motion.li
+                whileHover={{ x: 5 }}
+                className="flex items-start space-x-4"
               >
-                <MapPin className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
+                <div className="w-12 h-12 bg-gradient-to-r from-[#e3c19d] to-[#815A93] rounded-xl flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-6 h-6 text-white" />
+                </div>
                 <div>
-                  <p className="text-white font-semibold mb-1">
-                    Visit Our Clinic
-                  </p>
-                  <p className="text-blue-200 text-sm leading-relaxed">
-                    123 Medical Center Dr, Suite 100
-                    <br />
-                    City, State 12345
+                  <h5 className="font-semibold text-white mb-1">Visit Us</h5>
+                  <p className="text-white/80 text-sm leading-relaxed">
+                    1st Floor, Plot No. 24, Sector-12A Rd
                   </p>
                 </div>
-              </motion.div>
+              </motion.li>
 
-              <motion.div
-                whileHover={{ scale: 1.02 }}
-                className="flex items-start space-x-4 p-4 bg-white/5 backdrop-blur-md rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300"
+              <motion.li
+                whileHover={{ x: 5 }}
+                className="flex items-start space-x-4"
               >
-                <Phone className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
-                <div>
-                  <p className="text-white font-semibold mb-1">Call Us</p>
-                  <p className="text-blue-200 text-sm">(555) 123-4567</p>
-                  <p className="text-blue-300 text-xs">24/7 Emergency Care</p>
+                <div className="w-12 h-12 bg-gradient-to-r from-[#815A93] to-[#e3c19d] rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-6 h-6 text-white" />
                 </div>
-              </motion.div>
+                <div>
+                  <h5 className="font-semibold text-white mb-1">Call Us</h5>
+                  <p className="text-white/80 text-sm leading-relaxed">
+                    +91 70071 45918
+                  </p>
+                </div>
+              </motion.li>
 
-              <motion.div
-                whileHover={{ scale: 1.02 }}
-                className="flex items-start space-x-4 p-4 bg-white/5 backdrop-blur-md rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300"
+              <motion.li
+                whileHover={{ x: 5 }}
+                className="flex items-start space-x-4"
               >
-                <Mail className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
+                <div className="w-12 h-12 bg-gradient-to-r from-[#e3c19d] to-[#815A93] rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-6 h-6 text-white" />
+                </div>
                 <div>
-                  <p className="text-white font-semibold mb-1">Email Us</p>
-                  <p className="text-blue-200 text-sm">info@clinica.com</p>
-                  <p className="text-blue-300 text-xs">We respond within 24h</p>
+                  <h5 className="font-semibold text-white mb-1">Email Us</h5>
+                  <p className="text-white/80 text-sm leading-relaxed">
+                    info@clinica.com
+                  </p>
                 </div>
-              </motion.div>
+              </motion.li>
 
-              {/* Working Hours */}
-              <div className="p-4 bg-white/5 backdrop-blur-md rounded-xl border border-white/10">
-                <div className="flex items-center space-x-2 mb-4">
-                  <Clock className="w-5 h-5 text-cyan-400" />
-                  <h5 className="text-white font-semibold">Working Hours</h5>
+              <motion.li
+                whileHover={{ x: 5 }}
+                className="flex items-start space-x-4"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-[#815A93] to-[#e3c19d] rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Clock className="w-6 h-6 text-white" />
                 </div>
-                <div className="space-y-2">
-                  {workingHours.map((schedule, index) => (
-                    <div
-                      key={index}
-                      className="flex justify-between items-center text-sm"
-                    >
-                      <span className="text-blue-200">{schedule.day}</span>
-                      <span className="text-white font-medium">
-                        {schedule.hours}
-                      </span>
-                    </div>
-                  ))}
+                <div>
+                  <h5 className="font-semibold text-white mb-1">
+                    Working Hours
+                  </h5>
+                  <ul className="text-white/80 text-sm leading-relaxed">
+                    {workingHours.map((schedule, index) => (
+                      <li key={index} className="flex justify-between">
+                        <span>{schedule.day}:</span>
+                        <span className="text-[#e3c19d]">{schedule.hours}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </div>
-            </div>
-          </motion.div>
+              </motion.li>
+            </ul>
+          </div>
         </div>
-      </div>
 
-      {/* Enhanced Bottom Footer */}
-      <div className="relative z-10 border-t border-white/10 py-8">
-        <div className="container mx-auto px-4 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="flex flex-col lg:flex-row items-center justify-between space-y-6 lg:space-y-0"
-          >
-            <div className="text-purple-200 text-sm text-center lg:text-left">
-              © {currentYear} CLINICA. All rights reserved. |{" "}
-              <Link
-                href="/privacy"
-                className="hover:text-white transition-colors duration-300 underline"
-              >
-                Privacy Policy
-              </Link>{" "}
-              |{" "}
-              <Link
-                href="/terms"
-                className="hover:text-white transition-colors duration-300 underline"
-              >
-                Terms of Service
-              </Link>
-            </div>
-
-            <div className="flex items-center space-x-2 text-purple-200 text-sm">
-              <span>Designed with</span>
-              <motion.div
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 1, repeat: Number.POSITIVE_INFINITY }}
-              >
-                <Heart className="w-4 h-4 text-[#B12EBC] fill-current" />
-              </motion.div>
-              <span>for your health and beauty</span>
-            </div>
-
-            <div className="flex items-center space-x-4">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-[#B12EBC] to-[#00326D] hover:from-[#B12EBC]/80 hover:to-[#00326D]/80 px-6 py-2 rounded-full text-white font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                <Link href="/contact" className="flex items-center space-x-2">
-                  <Calendar className="w-4 h-4" />
-                  <span>Book Now</span>
-                </Link>
-              </motion.button>
-            </div>
-          </motion.div>
+        {/* Footer Bottom */}
+        <div className="mt-16 pt-8 border-t border-white/10">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-white/80 text-sm mb-4 md:mb-0">
+              © {currentYear} CLINICA. All rights reserved.
+            </p>
+            <motion.button
+              onClick={scrollToTop}
+              whileHover={{ scale: 1.1, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              className="w-12 h-12 bg-gradient-to-r from-[#e3c19d] to-[#815A93] rounded-xl flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              <ChevronUp className="w-6 h-6" />
+            </motion.button>
+          </div>
         </div>
       </div>
     </footer>

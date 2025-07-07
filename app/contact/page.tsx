@@ -52,30 +52,31 @@ export default function ContactPage() {
     {
       icon: MapPin,
       title: "Visit Our Clinic",
-      content: "123 Medical Center Dr, Suite 100\nCity, State 12345",
+      content:
+        "1st Floor, Plot No. 24, Sector-12A Rd, opp. Bal Bharti School, above AU Small Finance Bank, Block A, Sector 12 Dwarka, Dwarka, New Delhi, Delhi, 110075",
       subtext: "Modern facility with ample parking",
-      color: "from-[#00326D] to-[#B12EBC]",
+      color: "from-[#815A93] to-[#e3c19d]",
     },
     {
       icon: Phone,
       title: "Call Us",
-      content: "(555) 123-4567\nAvailable 24/7 for emergencies",
+      content: "+91 70071 45918\nAvailable 24/7 for emergencies",
       subtext: "Immediate response guaranteed",
-      color: "from-[#B12EBC] to-[#00326D]",
+      color: "from-[#e3c19d] to-[#815A93]",
     },
     {
       icon: Mail,
       title: "Email Us",
       content: "info@clinica.com\nWe respond within 24 hours",
       subtext: "Professional consultation via email",
-      color: "from-[#00326D] to-[#B12EBC]",
+      color: "from-[#815A93] to-[#e3c19d]",
     },
     {
       icon: Clock,
       title: "Emergency Care",
       content: "24/7 Emergency Services\nUrgent care available",
       subtext: "Round-the-clock medical support",
-      color: "from-[#B12EBC] to-[#00326D]",
+      color: "from-[#e3c19d] to-[#815A93]",
     },
   ];
 
@@ -94,25 +95,25 @@ export default function ContactPage() {
       icon: Award,
       title: "Expert Care",
       description: "Board-certified specialists",
-      color: "from-[#00326D] to-[#B12EBC]",
+      color: "from-[#815A93] to-[#e3c19d]",
     },
     {
       icon: Shield,
       title: "Safe & Secure",
       description: "FDA approved procedures",
-      color: "from-[#B12EBC] to-[#00326D]",
+      color: "from-[#e3c19d] to-[#815A93]",
     },
     {
       icon: Heart,
       title: "Patient First",
       description: "Personalized treatment plans",
-      color: "from-[#00326D] to-[#B12EBC]",
+      color: "from-[#815A93] to-[#e3c19d]",
     },
     {
       icon: Sparkles,
       title: "Latest Technology",
       description: "Advanced medical equipment",
-      color: "from-[#B12EBC] to-[#00326D]",
+      color: "from-[#e3c19d] to-[#815A93]",
     },
   ];
 
@@ -132,7 +133,7 @@ export default function ContactPage() {
         secondaryButtonText="Call Now"
         secondaryButtonIcon={Phone}
         secondaryButtonLink="tel:+15551234567"
-        titleGradient="from-blue-600 via-cyan-600 to-teal-600"
+        titleGradient="from-[#815A93] via-[#e3c19d] to-[#815A93]"
       />
 
       {/* Why Choose Us Section */}
@@ -147,7 +148,7 @@ export default function ContactPage() {
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Why Choose{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#815A93] to-[#e3c19d] bg-clip-text text-transparent">
                 CLINICA
               </span>
             </h2>
@@ -191,7 +192,7 @@ export default function ContactPage() {
       {/* Contact Form & Info Section */}
       <section
         id="contact-form"
-        className="py-20 lg:py-32 bg-gradient-to-br from-gray-50 to-blue-50"
+        className="py-20 lg:py-32 bg-gradient-to-br from-gray-50 to-[#815A93]/5"
       >
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
@@ -209,12 +210,12 @@ export default function ContactPage() {
             {/* Contact Information */}
             <motion.div variants={slideInRight}>
               <div className="mb-8">
-                <span className="inline-block bg-gradient-to-r from-blue-100 to-cyan-100 text-blue-600 font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4">
+                <span className="inline-block bg-gradient-to-r from-[#815A93]/10 to-[#e3c19d]/10 text-[#815A93] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4">
                   Contact Information
                 </span>
                 <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                   Get in{" "}
-                  <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-[#815A93] to-[#e3c19d] bg-clip-text text-transparent">
                     Touch
                   </span>
                 </h2>

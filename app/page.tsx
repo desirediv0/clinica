@@ -262,7 +262,7 @@ export default function HomePage() {
           <Hero
             title="Transform Your"
             subtitle="Beauty with CLINICA"
-            description="Advanced Skin & Dental Care with Personalized Excellence"
+            description="Advanced  Dental Care & Skin with Personalized Excellence"
             backgroundImage="/images/hero.jpg"
             tagText="Premium Medical Excellence"
             tagIcon={Sparkles}
@@ -280,7 +280,7 @@ export default function HomePage() {
       {/* Enhanced About Section */}
       <section
         id="about"
-        className="py-12 sm:py-16 md:py-20 lg:py-32 bg-gradient-to-br from-gray-50 to-blue-50"
+        className="py-12 sm:py-16 md:py-20 lg:py-32 bg-gradient-to-br from-[#e3c19d]/5 to-[#815A93]/5"
       >
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
@@ -292,21 +292,21 @@ export default function HomePage() {
           >
             <motion.div variants={slideInLeft}>
               <div className="mb-8">
-                <span className="inline-block bg-[#B12EBC]/10 text-[#B12EBC] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4">
+                <span className="inline-block bg-[#e3c19d]/10 text-[#815A93] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4">
                   About CLINICA
                 </span>
                 <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                   Excellence in{" "}
-                  <span className="bg-gradient-to-r from-[#B12EBC] to-[#00326D] bg-clip-text text-transparent">
-                    Esthetics & Dentistry
+                  <span className="bg-gradient-to-r from-[#e3c19d] to-[#815A93] bg-clip-text text-transparent">
+                    Dentistry & Esthetics
                   </span>
                 </h2>
               </div>
 
               <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
                 <p>
-                  At CLINICA, we are dedicated to providing world-class skin and
-                  dental care that combines cutting-edge technology with
+                  At CLINICA, we are dedicated to providing world-class dental
+                  and skin care that combines cutting-edge technology with
                   personalized treatment plans. Our mission is to enhance your
                   natural beauty and restore your confidence.
                 </p>
@@ -346,7 +346,7 @@ export default function HomePage() {
                     whileHover={{ scale: 1.05 }}
                     className="flex items-start space-x-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
                   >
-                    <div className="w-10 h-10 bg-gradient-to-r from-[#B12EBC] to-[#00326D] rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 bg-gradient-to-r from-[#e3c19d] to-[#815A93] rounded-lg flex items-center justify-center flex-shrink-0">
                       <item.icon className="w-5 h-5 text-white" />
                     </div>
                     <div>
@@ -366,7 +366,7 @@ export default function HomePage() {
               >
                 <Link
                   href="/about"
-                  className="inline-flex items-center space-x-3 bg-gradient-to-r from-[#B12EBC] to-[#00326D] hover:from-[#B12EBC]/80 hover:to-[#00326D]/80 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg transition-all duration-300"
+                  className="inline-flex items-center space-x-3 bg-gradient-to-r from-[#e3c19d] to-[#815A93] hover:from-[#e3c19d]/90 hover:to-[#815A93]/90 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg transition-all duration-300"
                 >
                   <span>Discover Our Story</span>
                   <ArrowRight className="w-5 h-5" />
@@ -388,7 +388,7 @@ export default function HomePage() {
                       height={300}
                       className="w-full h-64 object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-blue-900/30 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#815A93]/30 to-transparent"></div>
                   </motion.div>
                   <motion.div
                     whileHover={{ scale: 1.05, rotate: -2 }}
@@ -401,7 +401,7 @@ export default function HomePage() {
                       height={200}
                       className="w-full h-48 object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-cyan-900/30 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#e3c19d]/30 to-transparent"></div>
                   </motion.div>
                 </div>
                 <div className="space-y-6 pt-12">
@@ -416,7 +416,7 @@ export default function HomePage() {
                       height={200}
                       className="w-full h-48 object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-blue-900/30 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#815A93]/30 to-transparent"></div>
                   </motion.div>
                   <motion.div
                     whileHover={{ scale: 1.05, rotate: 2 }}
@@ -429,7 +429,7 @@ export default function HomePage() {
                       height={300}
                       className="w-full h-64 object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-cyan-900/30 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#e3c19d]/30 to-transparent"></div>
                   </motion.div>
                 </div>
               </div>
@@ -445,7 +445,7 @@ export default function HomePage() {
                 className="absolute -top-6 -right-6 bg-white rounded-full p-4 shadow-2xl"
               >
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600">15+</div>
+                  <div className="text-2xl font-bold text-[#815A93]">15+</div>
                   <div className="text-xs text-gray-600">Years</div>
                 </div>
               </motion.div>
@@ -454,29 +454,44 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Enhanced Skin Treatments Section */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-32 bg-white">
-        <div className="container mx-auto px-4 lg:px-8">
+      {/* Enhanced Dental Treatments Section - Made Larger and More Prominent */}
+      <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-gradient-to-br from-[#815A93]/5 to-[#e3c19d]/5 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-[#e3c19d]/5 to-[#815A93]/5"></div>
+        <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <motion.div
             initial="initial"
             whileInView="animate"
             viewport={{ once: true, margin: "-100px" }}
             variants={fadeInUp}
-            className="text-center mb-16"
+            className="text-center mb-20"
           >
-            <span className="inline-block bg-gradient-to-r from-pink-100 to-purple-100 text-purple-600 font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4">
-              Skin Treatments
+            <span className="inline-block bg-gradient-to-r from-[#e3c19d]/10 to-[#815A93]/10 text-[#815A93] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-6">
+              Dental Excellence
             </span>
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Glow Starts Here –{" "}
-              <span className="bg-gradient-to-r from-[#B12EBC] to-[#00326D] bg-clip-text text-transparent">
-                Premium Skin Care
+            <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-8">
+              Smile Beautifully,{" "}
+              <span className="bg-gradient-to-r from-[#e3c19d] to-[#815A93] bg-clip-text text-transparent">
+                Chew Confidently
               </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Discover our comprehensive range of skin care treatments designed
-              to enhance your natural beauty with advanced technology.
+            <p className="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-8">
+              From routine checkups to advanced cosmetic procedures, we provide
+              complete dental solutions for a healthy, beautiful smile.
             </p>
+            <div className="flex flex-wrap justify-center gap-4 text-lg text-gray-600">
+              <span className="flex items-center space-x-2">
+                <CheckCircle className="w-5 h-5 text-[#815A93]" />
+                <span>Painless Procedures</span>
+              </span>
+              <span className="flex items-center space-x-2">
+                <CheckCircle className="w-5 h-5 text-[#815A93]" />
+                <span>Advanced Technology</span>
+              </span>
+              <span className="flex items-center space-x-2">
+                <CheckCircle className="w-5 h-5 text-[#815A93]" />
+                <span>Expert Care</span>
+              </span>
+            </div>
           </motion.div>
 
           <motion.div
@@ -484,34 +499,39 @@ export default function HomePage() {
             whileInView="animate"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8"
           >
-            {skinTreatments.map((treatment, index) => (
+            {dentalTreatments.map((treatment, index) => (
               <motion.div
                 key={treatment.title}
                 variants={scaleIn}
-                whileHover={{ y: -10, scale: 1.02 }}
-                className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100"
+                whileHover={{ y: -12, scale: 1.03 }}
+                className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100"
               >
-                <div className="relative overflow-hidden h-56">
+                <div className="relative overflow-hidden h-48">
                   <Image
                     src={treatment.image || "/placeholder.svg"}
                     alt={treatment.title}
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent"></div>
                   <div className="absolute top-4 right-4">
                     <div className="w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/30">
                       <treatment.icon className="w-6 h-6 text-white" />
                     </div>
                   </div>
+                  <div className="absolute bottom-4 left-4">
+                    <span className="bg-white/20 backdrop-blur-md text-white px-3 py-1 rounded-full text-sm font-medium border border-white/30">
+                      {treatment.duration}
+                    </span>
+                  </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  <h3 className="font-bold text-gray-900 mb-3 text-xl">
                     {treatment.title}
                   </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
+                  <p className="text-gray-600 text-base mb-6 leading-relaxed">
                     {treatment.description}
                   </p>
                   <motion.div
@@ -519,8 +539,8 @@ export default function HomePage() {
                     whileTap={{ scale: 0.95 }}
                   >
                     <Link
-                      href="/skin"
-                      className="inline-flex items-center space-x-2 text-[#B12EBC] hover:text-[#00326D] font-semibold group-hover:translate-x-1 transition-all duration-300"
+                      href="/dental"
+                      className="inline-flex items-center space-x-2 text-[#00326D] hover:text-[#B12EBC] font-semibold text-base group-hover:translate-x-1 transition-all duration-300"
                     >
                       <span>Learn More</span>
                       <ArrowRight className="w-4 h-4" />
@@ -530,12 +550,60 @@ export default function HomePage() {
               </motion.div>
             ))}
           </motion.div>
+
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={fadeInUp}
+            className="text-center mt-16"
+          >
+            <div className="bg-white rounded-3xl shadow-2xl p-8 lg:p-12 max-w-4xl mx-auto">
+              <h3 className="text-3xl font-bold text-gray-900 mb-6">
+                Why Choose Our Dental Care?
+              </h3>
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#e3c19d]  to-[#815A93] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Shield className="w-8 h-8 text-white" />
+                  </div>
+                  <h4 className="font-bold text-gray-900 mb-2">
+                    Safe & Painless
+                  </h4>
+                  <p className="text-gray-600 text-sm">
+                    Advanced techniques ensure comfortable procedures
+                  </p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#e3c19d]  to-[#815A93] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Zap className="w-8 h-8 text-white" />
+                  </div>
+                  <h4 className="font-bold text-gray-900 mb-2">
+                    Latest Technology
+                  </h4>
+                  <p className="text-gray-600 text-sm">
+                    State-of-the-art equipment for precise results
+                  </p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#e3c19d]  to-[#815A93] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Award className="w-8 h-8 text-white" />
+                  </div>
+                  <h4 className="font-bold text-gray-900 mb-2">Expert Team</h4>
+                  <p className="text-gray-600 text-sm">
+                    Certified professionals with years of experience
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Enhanced Dental Treatments Section */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-32 bg-gradient-to-br from-blue-50 to-cyan-50">
-        <div className="container mx-auto px-4 lg:px-8">
+      {/* Enhanced Skin Treatments Section */}
+      <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#e3c19d]/5 to-[#815A93]/5"></div>
+        <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <motion.div
             initial="initial"
             whileInView="animate"
@@ -543,18 +611,18 @@ export default function HomePage() {
             variants={fadeInUp}
             className="text-center mb-16"
           >
-            <span className="inline-block bg-gradient-to-r from-[#00326D]/10 to-[#00326D]/20 text-[#00326D] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4">
-              Dental Excellence
+            <span className="inline-block bg-gradient-to-r from-[#e3c19d]/10 to-[#815A93]/10 text-[#815A93] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4">
+              Skin Excellence
             </span>
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Smile Beautifully,{" "}
-              <span className="bg-gradient-to-r from-[#00326D] to-[#B12EBC] bg-clip-text text-transparent">
-                Chew Confidently
+              Radiant Skin,{" "}
+              <span className="bg-gradient-to-r from-[#e3c19d] to-[#815A93] bg-clip-text text-transparent">
+                Timeless Beauty
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              From routine checkups to advanced cosmetic procedures, we provide
-              complete dental solutions for a healthy, beautiful smile.
+              Experience transformative skincare treatments that enhance your
+              natural beauty and restore your confidence with our expert care.
             </p>
           </motion.div>
 
@@ -563,51 +631,64 @@ export default function HomePage() {
             whileInView="animate"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {dentalTreatments.map((treatment, index) => (
+            {skinTreatments.map((treatment, index) => (
               <motion.div
                 key={treatment.title}
                 variants={scaleIn}
-                whileHover={{ y: -8, scale: 1.02 }}
-                className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-500 overflow-hidden"
+                whileHover={{ y: -10, scale: 1.02 }}
+                className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden border border-gray-100"
               >
-                <div className="relative overflow-hidden h-40">
+                <div className="relative h-64 overflow-hidden">
                   <Image
-                    src={treatment.image || "/placeholder.svg"}
+                    src={treatment.image}
                     alt={treatment.title}
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent"></div>
-                  <div className="absolute top-3 right-3">
-                    <div className="w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/30">
-                      <treatment.icon className="w-5 h-5 text-white" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <h3 className="text-2xl font-bold text-white mb-2">
+                      {treatment.title}
+                    </h3>
+                    <p className="text-white/90 text-sm">
+                      {treatment.description}
+                    </p>
+                  </div>
+                  <div className="absolute top-4 right-4">
+                    <div
+                      className={`w-12 h-12 bg-gradient-to-r ${
+                        index % 2 === 0
+                          ? "from-[#e3c19d] to-[#815A93]"
+                          : "from-[#815A93] to-[#e3c19d]"
+                      } rounded-full flex items-center justify-center shadow-lg`}
+                    >
+                      <treatment.icon className="w-6 h-6 text-white" />
                     </div>
                   </div>
-                  <div className="absolute bottom-3 left-3">
-                    <span className="bg-white/20 backdrop-blur-md text-white px-2 py-1 rounded-full text-xs font-medium border border-white/30">
-                      {treatment.duration}
-                    </span>
-                  </div>
                 </div>
-                <div className="p-5">
-                  <h3 className="font-bold text-gray-900 mb-2 text-lg">
-                    {treatment.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                    {treatment.description}
-                  </p>
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center space-x-2">
+                      <Clock className="w-4 h-4 text-[#815A93]" />
+                      <span className="text-sm text-gray-600">45-60 mins</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="w-4 h-4 text-[#815A93]" />
+                      <span className="text-sm text-gray-600">No downtime</span>
+                    </div>
+                  </div>
                   <motion.div
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
                     <Link
-                      href="/dental"
-                      className="inline-flex items-center space-x-1 text-[#00326D] hover:text-[#B12EBC] font-semibold text-sm group-hover:translate-x-1 transition-all duration-300"
+                      href="/contact"
+                      className="w-full inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-[#e3c19d] to-[#815A93] hover:from-[#e3c19d]/90 hover:to-[#815A93]/90 text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                     >
-                      <span>Learn More</span>
-                      <ArrowRight className="w-3 h-3" />
+                      <Calendar className="w-4 h-4" />
+                      <span>Book Treatment</span>
                     </Link>
                   </motion.div>
                 </div>
@@ -618,9 +699,8 @@ export default function HomePage() {
       </section>
 
       {/* Enhanced Why Choose Us Section */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-32 bg-gradient-to-br from-[#00326D] via-[#00326D]/90 to-[#B12EBC] text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/homepagebanner.jpg.avif')] opacity-10"></div>
-        <div className="container mx-auto px-4 lg:px-8 relative z-10">
+      <section className="py-20 lg:py-32 bg-gradient-to-br from-[#e3c19d]/5 to-[#815A93]/5">
+        <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial="initial"
             whileInView="animate"
@@ -628,18 +708,19 @@ export default function HomePage() {
             variants={fadeInUp}
             className="text-center mb-16"
           >
-            <span className="inline-block bg-white/10 backdrop-blur-md text-white font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4 border border-white/20">
+            <span className="inline-block bg-gradient-to-r from-[#e3c19d]/10 to-[#815A93]/10 text-[#815A93] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4">
               Why Choose CLINICA
             </span>
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Experience the{" "}
-              <span className="bg-gradient-to-r from-white to-[#B12EBC] bg-clip-text text-transparent">
-                CLINICA Difference
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              Excellence Through{" "}
+              <span className="bg-gradient-to-r from-[#e3c19d] to-[#815A93] bg-clip-text text-transparent">
+                Expertise and Artistry
               </span>
             </h2>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-              We combine medical expertise with cutting-edge technology to
-              deliver exceptional results that exceed your expectations.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Our clinic is designed to instantly make you feel comfortable and
+              relaxed. We believe that the best outcomes originate from
+              personalised patient care.
             </p>
           </motion.div>
 
@@ -650,23 +731,35 @@ export default function HomePage() {
             variants={staggerContainer}
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
           >
-            {whyChooseUs.map((item, index) => (
+            {whyChooseUs.map((feature, index) => (
               <motion.div
-                key={item.title}
+                key={feature.title}
                 variants={scaleIn}
-                whileHover={{ y: -10, scale: 1.05 }}
-                className="text-center p-8 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-500"
+                whileHover={{ y: -5, scale: 1.02 }}
+                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 p-8 border border-gray-100"
               >
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-[#B12EBC] to-white rounded-2xl mb-6 shadow-2xl">
-                  <item.icon className="w-10 h-10 text-[#00326D]" />
+                <div className="flex items-start space-x-6">
+                  <div
+                    className={`w-16 h-16 bg-gradient-to-r ${
+                      index % 2 === 0
+                        ? "from-[#e3c19d] to-[#815A93]"
+                        : "from-[#815A93] to-[#e3c19d]"
+                    } rounded-2xl flex items-center justify-center shadow-lg flex-shrink-0`}
+                  >
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      {feature.description}
+                    </p>
+                    <div className="mt-4 inline-block bg-[#e3c19d]/10 text-[#815A93] px-3 py-1 rounded-full text-sm font-medium">
+                      {feature.stat}
+                    </div>
+                  </div>
                 </div>
-                <div className="text-3xl font-bold text-[#B12EBC] mb-2">
-                  {item.stat}
-                </div>
-                <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                <p className="text-blue-100 leading-relaxed">
-                  {item.description}
-                </p>
               </motion.div>
             ))}
           </motion.div>
@@ -674,7 +767,7 @@ export default function HomePage() {
       </section>
 
       {/* Enhanced Experts Section */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-32 bg-white">
+      <section className="py-20 lg:py-32 bg-gradient-to-br from-[#815A93]/5 to-[#e3c19d]/5">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial="initial"
@@ -683,18 +776,18 @@ export default function HomePage() {
             variants={fadeInUp}
             className="text-center mb-16"
           >
-            <span className="inline-block bg-gradient-to-r from-green-100 to-teal-100 text-teal-600 font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4">
-              Our Expert Team
+            <span className="inline-block bg-gradient-to-r from-[#e3c19d]/10 to-[#815A93]/10 text-[#815A93] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4">
+              Our Experts
             </span>
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Meet Our{" "}
-              <span className="bg-gradient-to-r from-[#B12EBC] to-[#00326D] bg-clip-text text-transparent">
-                Medical Experts
+              <span className="bg-gradient-to-r from-[#e3c19d] to-[#815A93] bg-clip-text text-transparent">
+                Specialists
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Our experienced professionals are dedicated to providing you with
-              the highest quality care and exceptional results.
+              Our team of highly qualified doctors brings years of experience
+              and expertise to provide you with the best care possible.
             </p>
           </motion.div>
 
@@ -710,41 +803,35 @@ export default function HomePage() {
                 key={expert.name}
                 variants={scaleIn}
                 whileHover={{ y: -10, scale: 1.02 }}
-                className="group bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100"
+                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden border border-gray-100"
               >
-                <div className="relative p-8 text-center">
-                  <div className="relative mb-6">
-                    <div className="relative w-32 h-32 mx-auto">
-                      <Image
-                        src={expert.image || "/placeholder.svg"}
-                        alt={expert.name}
-                        fill
-                        className="rounded-full object-cover shadow-xl group-hover:shadow-2xl transition-all duration-500"
-                      />
-                      <div className="absolute -bottom-2 -right-2 w-10 h-10 bg-gradient-to-r from-[#B12EBC] to-[#00326D] rounded-full flex items-center justify-center shadow-lg">
-                        <CheckCircle className="w-6 h-6 text-white" />
-                      </div>
-                    </div>
-                  </div>
-
+                <div className="relative h-72 overflow-hidden">
+                  <Image
+                    src={expert.image}
+                    alt={expert.name}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                </div>
+                <div className="p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
                     {expert.name}
                   </h3>
-                  <p className="text-[#B12EBC] font-semibold mb-1">
-                    {expert.specialization}
-                  </p>
-                  <p className="text-gray-500 text-sm mb-4">
-                    {expert.credentials}
-                  </p>
-                  <p className="text-gray-600 text-sm mb-6 leading-relaxed">
-                    {expert.description}
-                  </p>
-
-                  <div className="flex items-center justify-center space-x-4">
-                    <div className="inline-flex items-center space-x-2 bg-[#B12EBC]/10 text-[#B12EBC] px-4 py-2 rounded-full text-sm font-medium">
-                      <Clock className="w-4 h-4" />
-                      <span>{expert.experience}</span>
-                    </div>
+                  <div className="flex items-center space-x-2 mb-3">
+                    <Award className="w-4 h-4 text-[#815A93]" />
+                    <span className="text-[#815A93] font-medium">
+                      {expert.credentials}
+                    </span>
+                  </div>
+                  <p className="text-gray-600 mb-4">{expert.description}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="inline-block bg-[#e3c19d]/10 text-[#815A93] px-3 py-1 rounded-full text-sm font-medium">
+                      {expert.specialization}
+                    </span>
+                    <span className="text-gray-600 text-sm">
+                      {expert.experience}
+                    </span>
                   </div>
                 </div>
               </motion.div>
@@ -753,28 +840,28 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Enhanced Technology Section */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-32 bg-gradient-to-br from-gray-50 to-blue-50">
-        <div className="container mx-auto px-4 lg:px-8 text-center">
+      {/* Enhanced Technologies Section */}
+      <section className="py-20 lg:py-32 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial="initial"
             whileInView="animate"
             viewport={{ once: true, margin: "-100px" }}
             variants={fadeInUp}
-            className="mb-16"
+            className="text-center mb-16"
           >
-            <span className="inline-block bg-gradient-to-r from-[#00326D]/10 to-[#B12EBC]/10 text-[#00326D] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4">
+            <span className="inline-block bg-gradient-to-r from-[#e3c19d]/10 to-[#815A93]/10 text-[#815A93] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4">
               Advanced Technology
             </span>
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              International{" "}
-              <span className="bg-gradient-to-r from-[#00326D] to-[#B12EBC] bg-clip-text text-transparent">
-                Quality Standards
+              Cutting-Edge{" "}
+              <span className="bg-gradient-to-r from-[#e3c19d] to-[#815A93] bg-clip-text text-transparent">
+                Medical Technology
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              All our systems meet the most stringent international quality
-              standards for your safety and optimal results.
+              We invest in the latest medical technology to ensure precise
+              diagnostics and superior treatment outcomes.
             </p>
           </motion.div>
 
@@ -783,84 +870,274 @@ export default function HomePage() {
             whileInView="animate"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
-            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6 md:gap-8"
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8"
           >
             {technologies.map((tech, index) => (
               <motion.div
-                key={index}
+                key={tech.name}
                 variants={scaleIn}
-                whileHover={{ scale: 1.1, rotate: 3 }}
-                className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 p-2 border border-gray-100"
+                whileHover={{ y: -5, scale: 1.05 }}
+                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 p-6 border border-gray-100"
               >
-                <div className="w-32 h-32 mx-auto mb-4 relative">
+                <div className="relative h-20 mb-4">
                   <Image
-                    src={tech.logo || "/placeholder.svg"}
+                    src={tech.logo}
                     alt={tech.name}
                     fill
-                    className="object-contain group-hover:scale-110 transition-transform duration-300"
+                    className="object-contain"
                   />
                 </div>
+                <p className="text-center text-sm font-medium text-gray-900">
+                  {tech.name}
+                </p>
               </motion.div>
             ))}
           </motion.div>
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <Testimonials
-        testimonials={homeTestimonials}
-        title="What Our Patients Say"
-        subtitle="Don't just take our word for it. Here's what our satisfied patients have to say about their transformative experience."
-        tagText="Patient Stories"
-        tagColor="from-yellow-100 to-orange-100 text-orange-600"
-        titleGradientFrom="from-yellow-600"
-        titleGradientTo="to-orange-600"
-        backgroundClass="bg-white"
-      />
-
-      {/* CTA Section */}
-      <Cta
-        title="Ready to Transform Your Smile & Skin?"
-        subtitle="Take the first step towards your transformation. Book your consultation today and experience the CLINICA difference."
-        buttonText="Book Appointment Now"
-        phoneText="Call Us Today"
-        gradientFrom="from-[#00326D]"
-        gradientTo="to-[#B12EBC]"
-        titleGradientFrom="from-white"
-        titleGradientTo="to-[#B12EBC]"
-      />
-
-      {/* Enhanced Contact Section */}
-      <section
-        id="contact"
-        className="py-12 sm:py-16 md:py-20 lg:py-32 bg-gradient-to-br from-gray-50 to-white"
-      >
+      {/* Enhanced Stats Section */}
+      <section className="py-20 lg:py-32 bg-gradient-to-br from-[#e3c19d]/5 to-[#815A93]/5">
         <div className="container mx-auto px-4 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {[
+              { number: "15+", label: "Years Experience" },
+              { number: "10k+", label: "Happy Patients" },
+              { number: "50+", label: "Expert Doctors" },
+              { number: "99%", label: "Success Rate" },
+            ].map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial="initial"
+                whileInView="animate"
+                viewport={{ once: true }}
+                variants={fadeInUp}
+                className="text-center"
+              >
+                <div className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-[#e3c19d] to-[#815A93] bg-clip-text text-transparent mb-2">
+                  {stat.number}
+                </div>
+                <p className="text-gray-600 font-medium">{stat.label}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Enhanced Testimonials Section */}
+      <section className="py-20 lg:py-32 relative overflow-hidden">
+        <div className="container mx-auto px-4 lg:px-8 relative z-10">
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={fadeInUp}
+            className="text-center mb-16"
+          >
+            <span className="inline-block bg-black/90 text-[#e3c19d] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4 border border-white/5">
+              Patient Stories
+            </span>
+            <h2 className="text-4xl lg:text-5xl font-bold text-black mb-6">
+              What Our{" "}
+              <span className="bg-gradient-to-r from-[#e3c19d] to-[#815A93] bg-clip-text text-transparent">
+                Patients Say
+              </span>
+            </h2>
+            <p className="text-xl text-gray-800 max-w-3xl mx-auto leading-relaxed">
+              Real experiences from our valued patients who have transformed
+              their smiles and confidence with our expert care.
+            </p>
+          </motion.div>
+
           <motion.div
             initial="initial"
             whileInView="animate"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
-            className="grid lg:grid-cols-2 gap-16 lg:gap-20"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
+            {homeTestimonials.map((testimonial, index) => (
+              <motion.div
+                key={testimonial.name}
+                variants={scaleIn}
+                whileHover={{ y: -10, scale: 1.02 }}
+                className="bg-black/5 backdrop-blur-lg rounded-2xl p-8 border border-black/10 hover:bg-black/10 transition-all duration-500"
+              >
+                <div className="flex items-start space-x-4 mb-6">
+                  <div className="relative w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
+                    <Image
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-black mb-1">
+                      {testimonial.name}
+                    </h3>
+                    <div className="flex items-center space-x-2">
+                      <div className="flex">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <Star
+                            key={i}
+                            className="w-4 h-4 text-[#eba458] fill-[#eba458]"
+                          />
+                        ))}
+                      </div>
+                      <span className="text-[#eba458] text-sm">
+                        {testimonial.service}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="relative">
+                  <Quote className="w-8 h-8 text-[#815A93]/20 absolute -top-4 -left-2" />
+                  <p className="text-gray-800 leading-relaxed mb-4">
+                    {testimonial.text}
+                  </p>
+                </div>
+
+                <div className="flex items-center justify-between text-sm text-gray-600">
+                  <span>{testimonial.location}</span>
+                  <span>Verified Patient</span>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={fadeInUp}
+            className="text-center mt-12"
+          >
+            <Link
+              href="/testimonials"
+              className="inline-flex items-center space-x-2 bg-gradient-to-r from-[#e3c19d] to-[#815A93] hover:from-[#e3c19d]/90 hover:to-[#815A93]/90 text-white px-8 py-4 rounded-full font-semibold shadow-lg transition-all duration-300"
+            >
+              <span>View All Stories</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Enhanced Contact Section */}
+      <section className="py-20 lg:py-32 relative overflow-hidden">
+        <div className="container mx-auto px-4 lg:px-8 relative z-10">
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+            className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-start"
+          >
+            {/* Contact Form */}
             <motion.div variants={slideInLeft}>
               <div className="mb-8">
-                <span className="inline-block bg-gradient-to-r from-[#00326D]/10 to-[#B12EBC]/10 text-[#00326D] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4">
-                  Get In Touch
+                <span className="inline-block bg-black/90 text-[#e3c19d] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4 border border-white/5">
+                  Book Consultation
                 </span>
-                <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                  Let's Talk About Your{" "}
-                  <span className="bg-gradient-to-r from-[#00326D] to-[#B12EBC] bg-clip-text text-transparent">
+                <h2 className="text-4xl lg:text-5xl font-bold text-black mb-6">
+                  Start Your{" "}
+                  <span className="bg-gradient-to-r from-[#e3c19d] to-[#815A93] bg-clip-text text-transparent">
                     Transformation
                   </span>
                 </h2>
+                <p className="text-xl text-gray-800 leading-relaxed">
+                  Schedule your consultation today and take the first step
+                  towards your enhanced confidence and well-being.
+                </p>
               </div>
 
-              <p className="text-xl text-gray-600 mb-10 leading-relaxed">
-                Ready to start your journey? Contact us today to schedule your
-                consultation or learn more about our services.
-              </p>
+              <div className="bg-black/5 backdrop-blur-lg rounded-2xl p-8 border border-black/10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                  <div>
+                    <label className="block text-gray-800 text-sm font-medium mb-2">
+                      Full Name
+                    </label>
+                    <input
+                      type="text"
+                      className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#e3c19d] transition-colors duration-300"
+                      placeholder="John Doe"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-gray-800 text-sm font-medium mb-2">
+                      Phone Number
+                    </label>
+                    <input
+                      type="tel"
+                      className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#e3c19d] transition-colors duration-300"
+                      placeholder="(555) 123-4567"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-gray-800 text-sm font-medium mb-2">
+                      Email Address
+                    </label>
+                    <input
+                      type="email"
+                      className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#e3c19d] transition-colors duration-300"
+                      placeholder="john@example.com"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-gray-800 text-sm font-medium mb-2">
+                      Preferred Date
+                    </label>
+                    <input
+                      type="date"
+                      className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#e3c19d] transition-colors duration-300"
+                    />
+                  </div>
+                </div>
 
+                <div className="mb-6">
+                  <label className="block text-gray-800 text-sm font-medium mb-2">
+                    Treatment Interest
+                  </label>
+                  <select className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#e3c19d] transition-colors duration-300">
+                    <option value="" className="bg-[#1a1a1a]">
+                      Select Treatment
+                    </option>
+                    <option value="dental" className="bg-[#1a1a1a]">
+                      Dental Care
+                    </option>
+                    <option value="skin" className="bg-[#1a1a1a]">
+                      Skin Treatment
+                    </option>
+                    <option value="both" className="bg-[#1a1a1a]">
+                      Both Services
+                    </option>
+                  </select>
+                </div>
+
+                <div className="mb-6">
+                  <label className="block text-gray-800 text-sm font-medium mb-2">
+                    Message
+                  </label>
+                  <textarea
+                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#e3c19d] transition-colors duration-300 h-32 resize-none"
+                    placeholder="Tell us about your concerns..."
+                  ></textarea>
+                </div>
+
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="w-full bg-gradient-to-r from-[#e3c19d] to-[#815A93] hover:from-[#e3c19d]/90 hover:to-[#815A93]/90 text-white font-semibold py-4 px-8 rounded-lg shadow-lg transition-all duration-300"
+                >
+                  Book Your Consultation
+                </motion.button>
+              </div>
+            </motion.div>
+
+            {/* Contact Information */}
+            <motion.div variants={slideInRight}>
               <div className="space-y-8">
                 {[
                   {
@@ -868,163 +1145,129 @@ export default function HomePage() {
                     title: "Visit Our Clinic",
                     content:
                       "123 Medical Center Dr, Suite 100\nCity, State 12345",
-                    color: "from-[#00326D] to-[#B12EBC]",
+                    subtext: "Modern facility with ample parking",
                   },
                   {
                     icon: Phone,
                     title: "Call Us",
-                    content: "(555) 123-4567\nAvailable 24/7",
-                    color: "from-[#B12EBC] to-[#00326D]",
+                    content: "(555) 123-4567\nEmergency: (555) 999-8888",
+                    subtext: "24/7 emergency support available",
                   },
                   {
                     icon: Mail,
                     title: "Email Us",
-                    content: "info@clinica.com\nQuick Response Guaranteed",
-                    color: "from-[#00326D] to-[#B12EBC]",
+                    content: "info@clinica.com\nappointments@clinica.com",
+                    subtext: "Response within 24 hours",
                   },
-                ].map((contact, index) => (
+                  {
+                    icon: Clock,
+                    title: "Working Hours",
+                    content:
+                      "Mon-Fri: 9:00 AM - 7:00 PM\nSat: 9:00 AM - 5:00 PM",
+                    subtext: "Emergency care available 24/7",
+                  },
+                ].map((item, index) => (
                   <motion.div
                     key={index}
                     whileHover={{ scale: 1.02, x: 10 }}
-                    className="flex items-start space-x-6 p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
+                    className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10"
                   >
-                    <div
-                      className={`w-14 h-14 bg-gradient-to-r ${contact.color} rounded-2xl flex items-center justify-center shadow-lg flex-shrink-0`}
-                    >
-                      <contact.icon className="w-7 h-7 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-gray-900 text-lg mb-2">
-                        {contact.title}
-                      </h3>
-                      <p className="text-gray-600 leading-relaxed whitespace-pre-line">
-                        {contact.content}
-                      </p>
+                    <div className="flex items-start space-x-4">
+                      <div className="w-12 h-12 bg-gradient-to-r from-[#e3c19d] to-[#815A93] rounded-xl flex items-center justify-center flex-shrink-0">
+                        <item.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-black mb-2">
+                          {item.title}
+                        </h3>
+                        <p className="text-gray-800 whitespace-pre-line mb-1">
+                          {item.content}
+                        </p>
+                        <p className="text-sm text-[#eba458]">{item.subtext}</p>
+                      </div>
                     </div>
                   </motion.div>
                 ))}
               </div>
-            </motion.div>
 
-            <motion.div variants={slideInRight}>
-              <div className="bg-white rounded-3xl shadow-2xl p-8 lg:p-10 border border-gray-100">
-                <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-                  Send us a Message
+              {/* Map or Additional Info */}
+              <motion.div
+                whileHover={{ scale: 1.02 }}
+                className="mt-8 bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10"
+              >
+                <h3 className="text-xl font-bold text-black mb-4">
+                  Why Choose CLINICA?
                 </h3>
-
-                <form className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label
-                        htmlFor="firstName"
-                        className="block text-sm font-semibold text-gray-700 mb-3"
-                      >
-                        First Name
-                      </label>
-                      <input
-                        type="text"
-                        id="firstName"
-                        name="firstName"
-                        className="w-full px-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#B12EBC] focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
-                        placeholder="John"
-                      />
-                    </div>
-                    <div>
-                      <label
-                        htmlFor="lastName"
-                        className="block text-sm font-semibold text-gray-700 mb-3"
-                      >
-                        Last Name
-                      </label>
-                      <input
-                        type="text"
-                        id="lastName"
-                        name="lastName"
-                        className="w-full px-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#B12EBC] focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
-                        placeholder="Doe"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="email"
-                      className="block text-sm font-semibold text-gray-700 mb-3"
-                    >
-                      Email Address
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      className="w-full px-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#B12EBC] focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
-                      placeholder="john.doe@example.com"
-                    />
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="phone"
-                      className="block text-sm font-semibold text-gray-700 mb-3"
-                    >
-                      Phone Number
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      className="w-full px-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#B12EBC] focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
-                      placeholder="(555) 123-4567"
-                    />
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="service"
-                      className="block text-sm font-semibold text-gray-700 mb-3"
-                    >
-                      Service Interest
-                    </label>
-                    <select
-                      id="service"
-                      name="service"
-                      className="w-full px-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#B12EBC] focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
-                    >
-                      <option value="">Select a service</option>
-                      <option value="dental">Dental Care</option>
-                      <option value="skin">Skin Care</option>
-                      <option value="consultation">General Consultation</option>
-                      <option value="emergency">Emergency Care</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="message"
-                      className="block text-sm font-semibold text-gray-700 mb-3"
-                    >
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={5}
-                      className="w-full px-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#B12EBC] focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white resize-none"
-                      placeholder="Tell us about your concerns or questions..."
-                    ></textarea>
-                  </div>
-
-                  <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    type="submit"
-                    className="w-full bg-gradient-to-r from-[#B12EBC] to-[#00326D] hover:from-[#B12EBC]/80 hover:to-[#00326D]/80 text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-                  >
-                    Send Message
-                  </motion.button>
-                </form>
-              </div>
+                <ul className="space-y-3">
+                  {[
+                    "State-of-the-art facilities",
+                    "Expert medical professionals",
+                    "Comprehensive care approach",
+                    "Flexible scheduling options",
+                    "Insurance accepted",
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-[#e3c19d]" />
+                      <span className="text-gray-800">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
             </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Enhanced CTA Section */}
+      <section className="py-20 lg:py-32 relative overflow-hidden">
+        <div className="container mx-auto px-4 lg:px-8 relative z-10">
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={fadeInUp}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <span className="inline-block bg-black/80 text-[#e3c19d] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4 border border-white/5">
+              Get Started Today
+            </span>
+            <h2 className="text-4xl lg:text-6xl font-bold text-black mb-6">
+              Transform Your{" "}
+              <span className="bg-gradient-to-r from-[#e3c19d] to-[#815A93] bg-clip-text text-transparent">
+                Smile & Confidence
+              </span>
+            </h2>
+            <p className="text-xl text-gray-800 mb-12 leading-relaxed">
+              Experience the perfect blend of advanced dental care and skin
+              treatments. Book your consultation now and take the first step
+              towards a more confident you.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center space-x-3 bg-gradient-to-r from-[#e3c19d] to-[#815A93] hover:from-[#e3c19d]/90 hover:to-[#815A93]/90 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg transition-all duration-300"
+                >
+                  <Calendar className="w-5 h-5" />
+                  <span>Book Consultation</span>
+                </Link>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Link
+                  href="/services"
+                  className="inline-flex items-center space-x-3 bg-black/70 hover:bg-black/80 text-white px-8 py-4 rounded-full font-semibold text-lg border border-white/10 transition-all duration-300"
+                >
+                  <Play className="w-5 h-5" />
+                  <span>Learn More</span>
+                </Link>
+              </motion.div>
+            </div>
           </motion.div>
         </div>
       </section>
