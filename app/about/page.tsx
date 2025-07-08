@@ -64,7 +64,7 @@ export default function AboutPage() {
         "Board-certified dental specialists with decades of combined experience in advanced dental procedures",
       icon: Award,
       color: "from-blue-500 to-cyan-500",
-      stat: "15+ Years",
+      stat: "12+ Years",
     },
     {
       title: "Advanced Dental Tech",
@@ -151,7 +151,7 @@ export default function AboutPage() {
       description: "Exceptional dental outcomes",
     },
     {
-      number: "15+",
+      number: "12+",
       label: "Years Experience",
       icon: Shield,
       description: "Expert dental care",

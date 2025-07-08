@@ -430,7 +430,7 @@ export default function DentalPage() {
         stats={[
           { number: "5000+", label: "Successful Treatments" },
           { number: "99%", label: "Patient Satisfaction" },
-          { number: "15+", label: "Years Experience" },
+          { number: "12+", label: "Years Experience" },
           { number: "24/7", label: "Emergency Care" },
         ]}
         subtitleColor="text-[#815A93]"

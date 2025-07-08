@@ -445,7 +445,7 @@ export default function HomePage() {
                 className="absolute -top-6 -right-6 bg-white rounded-full p-4 shadow-2xl"
               >
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-[#815A93]">15+</div>
+                  <div className="text-2xl font-bold text-[#815A93]">12+</div>
                   <div className="text-xs text-gray-600">Years</div>
                 </div>
               </motion.div>
@@ -901,7 +901,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { number: "15+", label: "Years Experience" },
+              { number: "12+", label: "Years Experience" },
               { number: "10k+", label: "Happy Patients" },
               { number: "50+", label: "Expert Doctors" },
               { number: "99%", label: "Success Rate" },
