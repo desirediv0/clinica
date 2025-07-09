@@ -71,10 +71,10 @@ export default function DentalPage() {
       benefits: [
         "Permanent solution",
         "Natural appearance",
-        "Restores full function",
         "Prevents bone loss",
         "International quality standards",
         "Lifelong solution",
+        "Bite & Chew With Ease",
       ],
       duration: "2-3 hours",
       recovery: "3-6 months",
@@ -94,7 +94,7 @@ export default function DentalPage() {
         "Enhanced aesthetics",
         "Long-term solution",
         "Better oral health",
-        "Renewed confidence",
+        "Enjoy favorite foods",
       ],
       duration: "Multiple visits",
       recovery: "Varies by case",
@@ -102,19 +102,19 @@ export default function DentalPage() {
       icon: Award,
       color: "from-[#815A93] to-[#e3c19d]",
       details:
-        "Along with looking and feeling younger, you will also be able to enjoy all your favourite foods again. Our team of skilled specialists plan the entire treatment while taking into account the patient's primary and secondary concerns, expectations, existing medical and oral condition, and budget and time constraints.",
+        "Along with looking and feeling younger, you will also be able to enjoy all your favourite foods again. Our team of skilled specialists plan the entire treatment while taking into account the patient's primary and secondary concerns, expectations, existing medical and oral condition, and budget and time constraints. Full mouth rehabilitation with dental implants can include All-on-Four, All-on-Six, All-on-Eight or All-on-X techniques for complete teeth replacement.",
     },
     {
       title: "Orthodontics",
       description:
         "Everyone wants those perfectly aligned teeth; our team of orthodontists makes sure that your teeth stay that way. Orthodontics deals with braces that align your teeth in an ideal manner.",
       benefits: [
-        "Metal braces",
-        "Ceramic braces",
-        "Self-ligating braces",
-        "Clear aligners",
-        "Invisible treatment",
-        "Customized solutions",
+        "Type 1: Metal Braces - Traditional metal brackets for effective alignment",
+        "Type 2: Ceramic Braces - Tooth-colored brackets, virtually invisible",
+        "Type 3: Self-Ligating Braces - Faster treatment, increased comfort",
+        "Type 4: Clear Aligners - Removable, transparent teeth straightening",
+        "Type 5: Lingual Braces - Hidden behind teeth, completely invisible",
+        "Type 6: Preventive Orthodontics - Early intervention for children",
       ],
       duration: "6-24 months",
       recovery: "No downtime",
@@ -122,12 +122,12 @@ export default function DentalPage() {
       icon: Shield,
       color: "from-[#e3c19d] to-[#815A93]",
       details:
-        "We provide the conventional braces as well as clear aligners so that both the young and the adult can be happy with their smile. Clear aligners are wafer-thin, transparent aligners that fit snugly on your teeth and gently reposition them to give you the perfect smile. They offer you all the benefits of conventional orthodontics, can be taken out as and when needed spare you from the inconvenience and awkwardness of metal brackets and wires.",
+        "We provide conventional braces as well as clear aligners so that both the young and the adult can be happy with their smile. Metal braces offer traditional metal brackets, while ceramic braces use tooth-colored brackets that are not visible to the eye at a distance. Self-ligating braces reduce treatment duration and increase comfort and can be used with both metal and ceramic. Clear aligners are wafer-thin, transparent aligners that fit snugly on your teeth and gently reposition them. They offer all the benefits of conventional orthodontics, can be taken out as needed and spare you from the inconvenience of metal brackets and wires.",
     },
     {
       title: "Laser Teeth Whitening",
       description:
-        "Intrinsic stains and discolouration present deep within the teeth are responsible for the overall dull or yellowish appearance of your teeth. Our LASER expert professionally remove these stains using a peroxide-based agent.",
+        "Intrinsic stains and discolouration present deep within the teeth are responsible for the overall dull or yellowish appearance of your teeth. Our LASER expert professionally removes these stains using a peroxide-based agent.",
       benefits: [
         "60 minutes treatment",
         "100% safe",
@@ -162,19 +162,19 @@ export default function DentalPage() {
       icon: CheckCircle,
       color: "from-[#e3c19d] to-[#815A93]",
       details:
-        "We combine state-of-the-art technology with our expertise and soft-skill approach to ensure that every root canal procedure is precise, seamless and pain-free. Most of the root canal treatments at CLINICA are performed within 30 minutes by our expert who make sure you are always comfortable and relaxed. We understand that people fear root canals and tend to avoid undergoing the treatment. However, our specialists carefully craft the entire process to eliminate any fear attached to this procedure.",
+        "We combine state-of-the-art technology with our expertise and soft-skill approach to ensure that every root canal procedure is precise, seamless and pain-free. Most of the root canal treatments at CLINICA are performed within 30 minutes by our expert who make sure you are always comfortable and relaxed. We understand that people fear root canals and tend to avoid undergoing the treatment. However, our specialists carefully craft the entire process to eliminate any fear attached to this procedure. In fact, we turn it into a very positive experience. Most of our referrals come from patients who have undergone RCT.",
     },
     {
       title: "Cosmetic Smile Makeovers",
       description:
         "Aesthetics and functionality are at the heart of what we do. Our experts use a combination of treatment modalities to enhance your natural smile and boost your confidence.",
       benefits: [
-        "Bonding treatments",
-        "Veneers & crowns",
-        "Gum recontouring",
-        "Instant whitening",
-        "Tooth recontouring",
-        "Metal-free crowns",
+        "Type 1: Dental Bonding - Repairs chips, cracks, and small gaps",
+        "Type 2: Porcelain Veneers - Custom-made shells for perfect teeth",
+        "Type 3: LASER Gum Contouring - Reshapes uneven gumlines",
+        "Type 4: Professional Whitening - Instant brightness enhancement",
+        "Type 5: Tooth Recontouring - Perfects shape and proportions",
+        "Type 6: Metal-Free Crowns - Natural-looking restorations",
       ],
       duration: "90 minutes",
       recovery: "No downtime",
@@ -182,7 +182,7 @@ export default function DentalPage() {
       icon: Heart,
       color: "from-[#815A93] to-[#e3c19d]",
       details:
-        "From mild to extreme smile makeovers and smile enhancements, we use a combination of treatments to transform your set of dull teeth into natural-looking ones within 90 minutes. This includes bonding, veneers, metal-free ceramic crowns, gum recontouring, instant tooth whitening, tooth recontouring, and replacement of 'black-line' crowns.",
+        "From mild to extreme smile makeovers and smile enhancements, we use a combination of treatments to transform your set of dull teeth into natural-looking ones within 90 minutes. This includes bonding for minor flaws like chipped or cracked teeth, veneers and metal-free ceramic crowns for repairs, gum recontouring with LASERs for uneven gumlines, instant tooth whitening, tooth recontouring for shape and size alterations, and replacement of 'black-line' crowns. We also offer LASER depigmentation of gums to give them a natural and uniform color. Our metal-free ceramic crowns ensure no black lines are formed and blend naturally with adjacent teeth.",
     },
   ];
 
@@ -190,42 +190,42 @@ export default function DentalPage() {
     {
       title: "Extractions & Surgical Extractions",
       description:
-        "Generally, most wisdom teeth are impacted and require a surgical extraction. All surgical extractions at our centres are performed by skilled surgeons who practice high standards of hygiene and sterilization.",
+        "Generally, most wisdom teeth are impacted and require a surgical extraction. All surgical extractions at our centres are performed by skilled surgeons who practice high standards of hygiene and sterilization. We ensure a comfortable and safe experience for all types of extractions.",
       icon: Scissors,
       color: "from-[#e3c19d] to-[#815A93]",
     },
     {
       title: "Complete & Partial Dentures",
       description:
-        "These are denture-based options for the replacement of teeth, such as basic complete dentures, implant supported complete dentures, cast partial dentures, Val Plast partial dentures, and more. These are economical options for fixed dentures.",
+        "We offer various denture-based options for tooth replacement, including basic complete dentures, implant supported complete dentures, cast partial dentures, and Val Plast partial dentures. These provide economical yet effective solutions for fixed dentures.",
       icon: Shield,
       color: "from-[#815A93] to-[#e3c19d]",
     },
     {
-      title: "Gum Surgeries",
+      title: "Advanced Gum Treatments",
       description:
-        "Unhygienic oral habits often lead to deep-seated infections that destroy the gums. Our periodontists perform all types of periodontal (gum) surgeries with finesse to arrest the damage and restore your gum health.",
+        "Most forms of gum disease involve the infection and erosion of gums. Sometimes, it spreads below the gums and infects the bone that supports the teeth. Gum disease ranges from a mild condition called gingivitis that is easily reversible, to severe periodontitis that requires comprehensive treatment. We offer complete gum disease treatments including scaling and polishing, root planning or curettage, flap surgery, gingival grafts (periodontal plastic surgery), and bone grafts. Early treatment is crucial as gum disease can progress from mild gingivitis to severe periodontitis affecting bone support.",
       icon: Activity,
       color: "from-[#e3c19d] to-[#815A93]",
     },
     {
-      title: "Bridges",
+      title: "Bridges & Fixed Solutions",
       description:
-        "Bridges are used for replacing teeth in cases where implants are contraindicated. We incorporate artificial tints in the ceramic to match the natural shade transitions of the adjacent teeth.",
+        "Bridges are used for replacing teeth in cases where implants are contraindicated. We incorporate artificial tints in the ceramic to match the natural shade transitions of the adjacent teeth, ensuring a seamless appearance.",
       icon: Shield,
       color: "from-[#815A93] to-[#e3c19d]",
     },
     {
       title: "Professional Clean-up",
       description:
-        "Professional clean-up, scaling and polishing are essential at least once every 6 months to maintain the health of the oral cavity and address any problems in its early stages. Clean-ups efficiently remove the plaque, tartar and stains.",
+        "Professional clean-up, scaling and polishing are essential at least once every 6 months to maintain oral health. These procedures efficiently remove plaque, tartar and stains, preventing gum problems when done regularly.",
       icon: Droplets,
       color: "from-[#e3c19d] to-[#815A93]",
     },
     {
       title: "Pediatric Dentistry",
       description:
-        "Our team of child specialist dentists not only caters to the needs of a child for dental treatment but they also make sure to educate the children and their parents for oral health awareness for future.",
+        "Our child specialists provide comprehensive care including fluoride application, sealant treatment, pulpectomy, habit breakers, and preventive orthodontics. We create a friendly environment and educate both children and parents about oral health.",
       icon: Baby,
       color: "from-[#815A93] to-[#e3c19d]",
     },
@@ -263,14 +263,14 @@ export default function DentalPage() {
     {
       title: "Specialists in Makeovers",
       description:
-        "Smile makeovers are a sublime combination of exceptional expertise and rare artistry. They help in achieving a dramatic transformation in the appearance of a person while simultaneously restoring the health and function of the teeth.",
+        "Smile makeovers are a sublime combination of exceptional expertise and rare artistry. They help in achieving a dramatic transformation in the appearance of a person while simultaneously restoring the health and function of the teeth. Our carefully selected team of aesthetic dentists and various other associated specialists (implantologists, orthodontists) work in a carefully orchestrated sync to ensure breathtaking outcomes for our patients.",
       icon: Heart,
       color: "from-[#e3c19d] to-[#815A93]",
     },
     {
       title: "The Perfect Solution to Replace Missing Teeth",
       description:
-        "Form, function and aesthetics are at the forefront of our dental implant solutions. Single, multiple or full mouth dental implants are the best solution to replace damaged or missing teeth with an artificial fixture that look and feel exactly like a real tooth.",
+        "Form, function and aesthetics are at the forefront of our dental implant solutions. Single, multiple or full mouth dental implants are the best solution to replace damaged or missing teeth with an artificial fixture that look and feel exactly like a real tooth so that one can Bite & Chew With Ease, Look Younger and have a Life-long Solution.",
       icon: Smile,
       color: "from-[#815A93] to-[#e3c19d]",
     },
@@ -319,52 +319,52 @@ export default function DentalPage() {
     {
       question: "How long do dental implants last?",
       answer:
-        "With proper care and maintenance, dental implants can last a lifetime. They have a success rate of over 95% and are designed to be a permanent solution. Implants act by replacing the root portion of the tooth, thus not only replace a tooth, but also support the bone beneath thereby preventing loss of jaw bone after tooth loss.",
-    },
-    {
-      question: "Is teeth whitening safe for my teeth?",
-      answer:
-        "Yes, professional teeth whitening is completely safe when performed by trained dental professionals. Our LASER expert professionally removes stains using a peroxide-based agent. The gums and lips are protected with special barriers to prevent their contact with peroxide. The laser bleaching is more effective and stays for longer period.",
-    },
-    {
-      question: "What types of braces do you offer?",
-      answer:
-        "We provide conventional braces as well as clear aligners. This includes metal braces (conventional metal brackets), ceramic braces (tooth colored brackets), self-ligating braces (to reduce treatment duration), and invisible/clear aligners (wafer-thin, transparent aligners that are virtually invisible).",
-    },
-    {
-      question: "Are root canal procedures painful?",
-      answer:
-        "Don't fear the root canal anymore! We combine state-of-the-art technology with our expertise and soft-skill approach to ensure that every root canal procedure is precise, seamless and pain-free. Most of the root canal treatments at CLINICA are performed within 30 minutes by our expert who make sure you are always comfortable and relaxed.",
-    },
-    {
-      question: "What's included in a smile makeover?",
-      answer:
-        "A smile makeover includes bonding treatments, veneers and metal-free ceramic crowns, gum recontouring, instant tooth whitening, tooth recontouring, replacement of 'black-line' crowns, laser depigmentation of gums, orthodontic treatments, and tooth-colored fillings. We use natural tooth-colored composite materials for all cavity fillings.",
-    },
-    {
-      question: "How often should I get professional clean-up?",
-      answer:
-        "Professional clean-up, scaling and polishing are essential at least once every 6 months to maintain the health of the oral cavity and address any problems in its early stages. Clean-ups efficiently remove the plaque, tartar and stains which accumulate over a period of time.",
+        "With proper care and maintenance, dental implants can last a lifetime. They have a success rate of over 95% and are designed to be a permanent solution. Implants act by replacing the root portion of the tooth, thus not only replace a tooth but also support the bone beneath, preventing loss of jaw bone after tooth loss. They allow you to bite and chew with ease while looking younger.",
     },
     {
       question: "What makes CLINICA different from other dental clinics?",
       answer:
-        "CLINICA specializes in cutting-edge dentistry with world-class equipment, international quality standards, and a team of highly skilled specialists. We focus on personalized patient care and use the latest technology for optimal results. Our clinic is designed to instantly make you feel comfortable and relaxed.",
+        "CLINICA specializes in cutting-edge dentistry with world-class equipment, international quality standards, and a team of highly skilled specialists. We focus on personalized patient care and use the latest technology for optimal results. Our clinic is designed to instantly make you feel comfortable and relaxed. We maintain lifetime dental records for continuous oral health progress tracking and emphasize preventive care.",
     },
     {
-      question: "Do you offer pediatric dentistry?",
+      question: "What is included in a comprehensive consultation?",
       answer:
-        "Yes, our team of child specialist dentists not only caters to the needs of a child for dental treatment but they also make sure to educate the children and their parents for oral health awareness for future. We provide fluoride application, sealant treatment, restorative procedures, and preventive orthodontics.",
+        "Your first consultation appointment is a crucial step in assessing your overall dental health. Our doctors conduct a detailed evaluation, educate you about your oral health status, and create a personalized treatment plan with estimated cost and time. We lay down various alternative treatment plans that suit your budget, time constraints, and needs. All doubts and queries are cleared at this stage, helping you make an informed decision.",
     },
     {
-      question: "What is comprehensive consultation?",
+      question: "What types of orthodontic treatments do you offer?",
       answer:
-        "Your first consultation appointment is a crucial step in assessing your overall dental health. Our doctors will conduct a detailed evaluation, educate you about the status of your oral health and create a personalized treatment plan. We lay down various alternative treatment plans that suit your budget, time constraints and any other needs.",
+        "We provide both conventional braces and clear aligners. Our options include metal braces (conventional metal brackets), ceramic braces (tooth-colored brackets that are less visible), self-ligating braces (to reduce treatment duration and increase comfort), and invisible/clear aligners. Clear aligners are wafer-thin, transparent aligners that fit snugly on your teeth, can be removed as needed, and spare you from the inconvenience of metal brackets and wires.",
     },
     {
-      question: "Do you offer full mouth rehabilitation?",
+      question: "What services do you offer for children's dental care?",
       answer:
-        "Yes, a full mouth reconstruction (rehabilitation) is needed when your oral health deteriorates completely due to multiple dental problems. The procedure has the power to turn back the clock by taking away at least 10 to 15 years of facial ageing. Along with looking and feeling younger, you will also be able to enjoy all your favourite foods again.",
+        "Our team of child specialists provides comprehensive pediatric care including fluoride application for developing teeth, sealant treatment to make teeth caries resistant, restorative procedures, pulpectomy (RCT for kids teeth), habit breakers, preventive and corrective orthodontics, and oral hygiene education. We create a friendly environment and ensure both children and parents are educated about maintaining good oral health.",
+    },
+    {
+      question: "What is involved in a smile makeover?",
+      answer:
+        "A smile makeover combines multiple treatments including bonding for minor flaws, veneers and metal-free ceramic crowns for repairs, gum recontouring with LASERs, instant tooth whitening, tooth recontouring, and replacement of 'black-line' crowns. We also offer LASER depigmentation of gums for a natural and uniform color. Our carefully selected team of aesthetic dentists and specialists work together to ensure breathtaking outcomes.",
+    },
+    {
+      question: "How do you handle gum disease treatment?",
+      answer:
+        "We offer comprehensive gum disease treatments ranging from basic procedures to advanced surgeries. This includes scaling and polishing, root planning or curettage, flap surgery, gingival grafts (periodontal plastic surgery), and bone grafts. Early treatment is crucial as gum disease can progress from mild gingivitis to severe periodontitis affecting bone support. Regular professional clean-ups every 6 months help prevent gum problems.",
+    },
+    {
+      question: "What is preventive dentistry and why is it important?",
+      answer:
+        "At CLINICA, we believe that prevention is better than cure. Preventive dentistry helps intercept oral diseases early, preventing their development into serious conditions. This includes addressing irregularities in teeth, cavity-prone teeth, development of aesthetic facial structure, proper speech, and avoiding oral habits like thumb sucking and nail biting. We maintain lifetime dental records to track oral health progress and plan preventive treatments accordingly.",
+    },
+    {
+      question: "What options do you offer for full mouth rehabilitation?",
+      answer:
+        "Full mouth rehabilitation can include various treatments depending on your needs. For replacing all teeth with dental implants, we can use two to ten implants based on bone condition and other factors. We offer All-on-Four, All-on-Six, All-on-Eight or All-on-X techniques for complete teeth replacement. The procedure can take years off your facial age and restore your ability to enjoy all foods while providing a natural appearance.",
+    },
+    {
+      question: "How safe is your laser teeth whitening procedure?",
+      answer:
+        "Our laser teeth whitening is completely safe and professionally performed by LASER specialists. The procedure takes just 45 minutes, with the peroxide-based agent effectively removing deep stains. We use special barriers to protect your gums and lips during the treatment. The results are guaranteed to last up to 2 years, making it a highly cost-effective solution for a brighter smile.",
     },
   ];
 
@@ -469,7 +469,7 @@ export default function DentalPage() {
             variants={staggerContainer}
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {clinicFeatures.map((feature, index) => (
+            {clinicFeatures.map((feature) => (
               <motion.div
                 key={feature.title}
                 variants={scaleIn}
@@ -530,7 +530,7 @@ export default function DentalPage() {
             variants={staggerContainer}
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {dentalTreatments.map((treatment, index) => (
+            {dentalTreatments.map((treatment) => (
               <motion.div
                 key={treatment.title}
                 variants={scaleIn}
@@ -578,11 +578,19 @@ export default function DentalPage() {
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-3">
-                      Key Benefits:
-                    </h4>
+                    {treatment.title === "Orthodontics" ||
+                    treatment.title === "Cosmetic Smile Makeovers" ? (
+                      <h5 className="font-semibold text-gray-900 mb-3">
+                        Types:
+                      </h5>
+                    ) : (
+                      <h4 className="font-semibold text-gray-900 mb-3">
+                        Key Benefits:
+                      </h4>
+                    )}
+
                     <div className="grid grid-cols-1 gap-2">
-                      {treatment.benefits.slice(0, 4).map((benefit, idx) => (
+                      {treatment.benefits.map((benefit, idx) => (
                         <div key={idx} className="flex items-center space-x-2">
                           <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                           <span className="text-sm text-gray-600">
@@ -652,7 +660,7 @@ export default function DentalPage() {
             variants={staggerContainer}
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {additionalTreatments.map((treatment, index) => (
+            {additionalTreatments.map((treatment) => (
               <motion.div
                 key={treatment.title}
                 variants={scaleIn}
