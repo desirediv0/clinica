@@ -501,7 +501,7 @@ export default function DentalPage() {
         stats={[
           { number: "5000+", label: "Successful Treatments" },
           { number: "99%", label: "Patient Satisfaction" },
-          { number: "15+", label: "Years Experience" },
+          { number: "12+", label: "Years Experience" },
           { number: "24/7", label: "Emergency Care" },
         ]}
         subtitleColor="text-[#815A93]"
@@ -662,7 +662,7 @@ export default function DentalPage() {
                 key={treatment.title}
                 variants={scaleIn}
                 whileHover={{ y: -10, scale: 1.02 }}
-                className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 max-h-min"
+                className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 flex flex-col h-full"
               >
                 <div className="relative overflow-hidden h-56">
                   <Image
@@ -680,7 +680,7 @@ export default function DentalPage() {
                     </div>
                   </div>
                 </div>
-                <div className="p-6">
+                <div className="p-6 flex flex-col flex-grow">
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
                     {treatment.title}
                   </h3>
@@ -701,7 +701,7 @@ export default function DentalPage() {
                       </span>
                     </div>
                   </div>
-                  <div className="mb-6">
+                  <div className="mb-6 flex-grow">
                     <h4 className="font-semibold text-gray-900 mb-3">
                       {treatment.keyBenefitsLabel || "Key Benefits:"}
                     </h4>
@@ -726,6 +726,7 @@ export default function DentalPage() {
                   <motion.div
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
+                    className="mt-auto"
                   >
                     <Link
                       href="/contact"
@@ -778,7 +779,7 @@ export default function DentalPage() {
                 key={treatment.title}
                 variants={scaleIn}
                 whileHover={{ y: -5, scale: 1.02 }}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 p-8 border border-gray-100 max-h-min"
+                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 p-8 border border-gray-100 flex flex-col h-full"
               >
                 <div className="flex items-start space-x-4 mb-6">
                   <div
@@ -790,33 +791,40 @@ export default function DentalPage() {
                     {treatment.title}
                   </h3>
                 </div>
-                <p className="text-gray-600 leading-relaxed mb-4">
-                  {treatment.description}
-                </p>
-                {treatment.benefits && (
-                  <div className="mb-4">
-                    <h5 className="font-semibold text-gray-900 mb-3">
-                      {treatment.keyBenefitsLabel || "Key Benefits:"}
-                    </h5>
-                    <div className="grid grid-cols-1 gap-2">
-                      {treatment.benefits.map((benefit, idx) => (
-                        <div key={idx} className="flex items-start space-x-2">
-                          <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
-                          <span className="text-sm text-gray-600">
-                            {benefit}
-                          </span>
-                        </div>
-                      ))}
+                <div className="flex-grow">
+                  <p className="text-gray-600 leading-relaxed mb-4">
+                    {treatment.description}
+                  </p>
+                  {treatment.benefits && (
+                    <div className="mb-4">
+                      <h5 className="font-semibold text-gray-900 mb-3">
+                        {treatment.keyBenefitsLabel || "Key Benefits:"}
+                      </h5>
+                      <div className="grid grid-cols-1 gap-2">
+                        {treatment.benefits.map(
+                          (benefit: string, idx: number) => (
+                            <div
+                              key={idx}
+                              className="flex items-start space-x-2"
+                            >
+                              <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+                              <span className="text-sm text-gray-600">
+                                {benefit}
+                              </span>
+                            </div>
+                          )
+                        )}
+                      </div>
                     </div>
-                  </div>
-                )}
-                {treatment.details && (
-                  <div className="p-4 bg-gray-50 rounded-lg">
-                    <p className="text-sm text-gray-700 leading-relaxed">
-                      {treatment.details}
-                    </p>
-                  </div>
-                )}
+                  )}
+                  {treatment.details && (
+                    <div className="p-4 bg-gray-50 rounded-lg mt-auto">
+                      <p className="text-sm text-gray-700 leading-relaxed">
+                        {treatment.details}
+                      </p>
+                    </div>
+                  )}
+                </div>
               </motion.div>
             ))}
           </motion.div>
