@@ -489,7 +489,7 @@ export default function DentalPage() {
         title="Smile Beautifully,"
         subtitle="Chew Confidently"
         description="Advanced dental care treatments designed to restore your smile and improve your oral health with personalized, expert care. Our responsibility towards you begins much before you sit on the dental chair."
-        backgroundImage="/placeholder.svg?height=600&width=1200"
+        backgroundImage="/images/cosmetic-dentist.jpg"
         tagText="Premium Dental Care"
         tagIcon={Smile}
         primaryButtonText="View Treatments"
