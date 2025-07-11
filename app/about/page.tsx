@@ -183,28 +183,34 @@ export default function AboutPage() {
 
   const homeTestimonials = [
     {
-      name: "Maria Garcia",
-      text: "CLINICA transformed my smile completely. The dental team is professional, caring, and the results exceeded my expectations. I can't stop smiling!",
+      name: "Nitesh Singh",
+      text: "The hygiene and cleanliness is very good. My friend recomended me Dr Sehar. Everything was explained and showed very nicely . I had long time phobia of dentist. It is over now. I am happy",
       rating: 5,
-      service: "Dental Implants",
-      image: "/images/expert1.jpg",
-      location: "New York",
     },
     {
-      name: "David Chen",
-      text: "Amazing dental experience! My teeth whitening treatment was painless and the results are incredible. The staff is so professional and caring!",
+      name: "Shruti Raikwar",
+      text: "Me and my mothers visit to Clinica was worth mentioning. The sanitization and the hygiene was worth praising . My sons treatment with Dr Anjum Sehar was completely painless. Everything was explained at basic level before starting only. Highly recomending this clinic to everyone.",
       rating: 5,
-      service: "Teeth Whitening",
-      image: "/images/expert2.jpg.avif",
-      location: "California",
     },
     {
-      name: "Lisa Thompson",
-      text: "Painless dental work and amazing results. The dental staff made me feel comfortable throughout the entire process. Highly recommended!",
+      name: "Himanshu Rathore",
+      text: "A high tech and clean dental clinic i have been searching from very long time around my society and i saw this . Good to have such a dental clinic on my walking distance. My wife has taken skin consulation also.",
       rating: 5,
-      service: "Smile Makeover",
-      image: "/images/expert3.jpeg",
-      location: "Texas",
+    },
+    {
+      name: "Dimple Mehra",
+      text: "Dr. Sehar’s Clinic is amazing. She’s professional and truly talented. The clinic is clean ,welcoming and delivers visible results. Whether it’s for dental care or glowing skin, she provides top-quality service. Highly recommend visiting Clinica.",
+      rating: 5,
+    },
+    {
+      name: "Anamika (Singh)",
+      text: "I had heard about teeth whitening but was not sure about results. My whitening was done by dr anjum . The results were so good and then and there only. Laser machine was used. I was told what to and what not to after whitening for a week. I am so satisfied with the result.",
+      rating: 5,
+    },
+    {
+      name: "Sayyead Rahil",
+      text: "I recently visited Dr Anjum Sehar’s Clinic and i must say- it’s an obsolute gem. From consultation to treatment , you feel truly cared for. The clinic is modern , hygienic with a calming environment that puts you at ease.",
+      rating: 5,
     },
   ];
   return (

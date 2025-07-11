@@ -22,8 +22,6 @@ import {
   Play,
   Quote,
 } from "lucide-react";
-import Cta from "@/components/Cta";
-import Testimonials from "@/components/Testimonials";
 import Hero from "@/components/Hero";
 
 // Enhanced Animation variants
@@ -220,28 +218,34 @@ export default function HomePage() {
 
   const homeTestimonials = [
     {
-      name: "Maria Garcia",
-      text: "CLINICA transformed my smile completely. The team is professional, caring, and the results exceeded my expectations. I can't stop smiling!",
+      name: "Nitesh Singh",
+      text: "The hygiene and cleanliness is very good. My friend recomended me Dr Sehar. Everything was explained and showed very nicely . I had long time phobia of dentist. It is over now. I am happy",
       rating: 5,
-      service: "Dental Implants",
-      image: "/images/expert1.jpg",
-      location: "New York",
     },
     {
-      name: "James Wilson",
-      text: "Best skin treatment I've ever had. My skin looks 10 years younger and the HydraFacial was incredibly relaxing and effective!",
+      name: "Shruti Raikwar",
+      text: "Me and my mothers visit to Clinica was worth mentioning. The sanitization and the hygiene was worth praising . My sons treatment with Dr Anjum Sehar was completely painless. Everything was explained at basic level before starting only. Highly recomending this clinic to everyone.",
       rating: 5,
-      service: "HydraFacial",
-      image: "/images/expert2.jpg.avif",
-      location: "California",
     },
     {
-      name: "Lisa Thompson",
-      text: "Painless dental work and amazing results. The staff made me feel comfortable throughout the entire process. Highly recommended!",
+      name: "Himanshu Rathore",
+      text: "A high tech and clean dental clinic i have been searching from very long time around my society and i saw this . Good to have such a dental clinic on my walking distance. My wife has taken skin consulation also.",
       rating: 5,
-      service: "Smile Makeover",
-      image: "/images/expert3.jpeg",
-      location: "Texas",
+    },
+    {
+      name: "Dimple Mehra",
+      text: "Dr. Sehar’s Clinic is amazing. She’s professional and truly talented. The clinic is clean ,welcoming and delivers visible results. Whether it’s for dental care or glowing skin, she provides top-quality service. Highly recommend visiting Clinica.",
+      rating: 5,
+    },
+    {
+      name: "Anamika (Singh)",
+      text: "I had heard about teeth whitening but was not sure about results. My whitening was done by dr anjum . The results were so good and then and there only. Laser machine was used. I was told what to and what not to after whitening for a week. I am so satisfied with the result.",
+      rating: 5,
+    },
+    {
+      name: "Sayyead Rahil",
+      text: "I recently visited Dr Anjum Sehar’s Clinic and i must say- it’s an obsolute gem. From consultation to treatment , you feel truly cared for. The clinic is modern , hygienic with a calming environment that puts you at ease.",
+      rating: 5,
     },
   ];
 
@@ -964,14 +968,6 @@ export default function HomePage() {
                 className="bg-black/5 backdrop-blur-lg rounded-2xl p-8 border border-black/10 hover:bg-black/10 transition-all duration-500"
               >
                 <div className="flex items-start space-x-4 mb-6">
-                  <div className="relative w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
-                    <Image
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
                   <div>
                     <h3 className="text-xl font-bold text-black mb-1">
                       {testimonial.name}
@@ -985,9 +981,6 @@ export default function HomePage() {
                           />
                         ))}
                       </div>
-                      <span className="text-[#eba458] text-sm">
-                        {testimonial.service}
-                      </span>
                     </div>
                   </div>
                 </div>
@@ -997,11 +990,6 @@ export default function HomePage() {
                   <p className="text-gray-800 leading-relaxed mb-4">
                     {testimonial.text}
                   </p>
-                </div>
-
-                <div className="flex items-center justify-between text-sm text-gray-600">
-                  <span>{testimonial.location}</span>
-                  <span>Verified Patient</span>
                 </div>
               </motion.div>
             ))}
@@ -1085,22 +1073,13 @@ export default function HomePage() {
                       placeholder="john@example.com"
                     />
                   </div>
-                  <div>
-                    <label className="block text-gray-800 text-sm font-medium mb-2">
-                      Preferred Date
-                    </label>
-                    <input
-                      type="date"
-                      className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#e3c19d] transition-colors duration-300"
-                    />
-                  </div>
                 </div>
 
                 <div className="mb-6">
                   <label className="block text-gray-800 text-sm font-medium mb-2">
                     Treatment Interest
                   </label>
-                  <select className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#e3c19d] transition-colors duration-300">
+                  <select className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-black placeholder-gray-400 focus:outline-none focus:border-[#e3c19d] transition-colors duration-300">
                     <option value="" className="bg-[#1a1a1a]">
                       Select Treatment
                     </option>
@@ -1144,26 +1123,18 @@ export default function HomePage() {
                     icon: MapPin,
                     title: "Visit Our Clinic",
                     content:
-                      "123 Medical Center Dr, Suite 100\nCity, State 12345",
-                    subtext: "Modern facility with ample parking",
+                      "1st Floor, Plot No. 24, Sector-12A Rd, opp. Bal Bharti School, above AU Small Finance Bank, Block A, Sector 12 Dwarka, Dwarka, New Delhi, Delhi, 110075",
                   },
                   {
                     icon: Phone,
                     title: "Call Us",
-                    content: "(555) 123-4567\nEmergency: (555) 999-8888",
-                    subtext: "24/7 emergency support available",
+                    content: "+91 70071 45918",
                   },
                   {
                     icon: Mail,
                     title: "Email Us",
                     content: "info@clinica.com\nappointments@clinica.com",
                     subtext: "Response within 24 hours",
-                  },
-                  {
-                    icon: Clock,
-                    title: "Working Hours",
-                    content:
-                      "Mon-Fri: 9:00 AM - 7:00 PM\nSat: 9:00 AM - 5:00 PM",
                   },
                 ].map((item, index) => (
                   <motion.div
@@ -1182,7 +1153,9 @@ export default function HomePage() {
                         <p className="text-gray-800 whitespace-pre-line mb-1">
                           {item.content}
                         </p>
-                        <p className="text-sm text-[#eba458]">{item.subtext}</p>
+                        <p className="text-sm text-[#eba458]">
+                          {item?.subtext}
+                        </p>
                       </div>
                     </div>
                   </motion.div>
@@ -1259,7 +1232,7 @@ export default function HomePage() {
                 whileTap={{ scale: 0.95 }}
               >
                 <Link
-                  href="/services"
+                  href="/about"
                   className="inline-flex items-center space-x-3 bg-black/70 hover:bg-black/80 text-white px-8 py-4 rounded-full font-semibold text-lg border border-white/10 transition-all duration-300"
                 >
                   <Play className="w-5 h-5" />
