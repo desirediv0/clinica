@@ -1,8 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import {
   Calendar,
   Smile,
@@ -25,6 +26,8 @@ import {
   Activity,
   Users,
   Stethoscope,
+  ChevronDown,
+  ChevronUp,
 } from "lucide-react";
 import Cta from "@/components/Cta";
 import Faq from "@/components/Faq";
@@ -66,6 +69,8 @@ const slideInRight = {
 };
 
 export default function DentalPage() {
+  const [expandedCard, setExpandedCard] = useState<string | null>(null);
+
   const dentalTreatments = [
     {
       title: "Dental Implants",
@@ -75,7 +80,6 @@ export default function DentalPage() {
         "Permanent solution for missing teeth",
         "Natural appearance and feel",
         "Prevents bone loss in jaw",
-        "International quality standards",
         "Lifelong solution with proper care",
         "Bite & Chew With Ease like natural teeth",
         "Look Younger with restored facial structure",
@@ -109,7 +113,7 @@ export default function DentalPage() {
       icon: Award,
       color: "from-[#815A93] to-[#e3c19d]",
       details:
-        "Along with looking and feeling younger, you will also be able to enjoy all your favourite foods again. Our team of skilled specialists plan the entire treatment while taking into account the patient's primary and secondary concerns, expectations, existing medical and oral condition, and budget and time constraints. Full mouth rehabilitation with dental implants can include All-on-Four, All-on-Six, All-on-Eight or All-on-X techniques for complete teeth replacement giving the ideal aesthetics with the most natural appearance and complete functions of chewing and speaking.",
+        "Along with looking and feeling younger, you will also be able to enjoy all your favourite foods again. Our team of skilled specialists plan the entire treatment while taking into account the patient's primary and secondary concerns, expectations, existing medical and oral condition, and budget and time constraints. Full mouth rehabilitation with dental implants can include All-on-Four, All-on-Six, All-on-Eight or All-on-X techniques for complete teeth replacement giving the ideal aesthetics with the most natural appearance and complete functions of chewing and speaking. Suitable for both young and adult patients and Improved oral health and aesthetics",
     },
     {
       title: "Orthodontics",
@@ -122,8 +126,6 @@ export default function DentalPage() {
         "Type 4: Clear Aligners - Removable, transparent, virtually invisible",
         "Type 5: Lingual Braces - Hidden behind teeth, completely invisible",
         "Type 6: Preventive Orthodontics - Early intervention for children",
-        "Suitable for both young and adult patients",
-        "Improved oral health and aesthetics",
       ],
       duration: "6-24 months",
       recovery: "No downtime required",
@@ -131,7 +133,7 @@ export default function DentalPage() {
       icon: Shield,
       color: "from-[#e3c19d] to-[#815A93]",
       details:
-        "Clear aligners are wafer-thin, transparent aligners that fit snugly on your teeth and gently reposition them to give you the perfect smile. They offer you all the benefits of conventional orthodontics, can be taken out as and when needed spare you from the inconvenience and awkwardness of metal brackets and wires. Self-ligating systems can be used with both metal and ceramic brackets to reduce treatment duration and increase treatment quality and comfort.",
+        "Clear aligners are wafer-thin, transparent aligners that fit snugly on your teeth and gently reposition them to give you the perfect smile. They offer you all the benefits of conventional orthodontics, can be taken out as and when needed spare you from the inconvenience and awkwardness of metal brackets and wires. Self-ligating systems can be used with both metal and ceramic brackets to reduce treatment duration and increase treatment quality and comfort.  Suitable for both young and adult patients and Improved oral health and aesthetics",
       keyBenefitsLabel: "Types:",
     },
     {
@@ -139,7 +141,6 @@ export default function DentalPage() {
       description:
         "Intrinsic stains and discolouration present deep within the teeth are responsible for the overall dull or yellowish appearance of your teeth. Our LASER expert professionally removes these stains using a peroxide-based agent.",
       benefits: [
-        "60 minutes to brighter teeth",
         "100% safe procedure",
         "Guaranteed visible results",
         "Teeth-whitening experts",
@@ -162,7 +163,6 @@ export default function DentalPage() {
         "A root canal treatment entails removing the infected soft tissue within the tooth and replacing it with an artificial inert 'filling' material. This procedure not only saves the tooth but also eliminates dental pain.",
       benefits: [
         "Completely pain-free procedure",
-        "30-minute treatment duration",
         "State-of-the-art technology used",
         "Expert endodontic specialists",
         "Comfortable and relaxed experience",
@@ -305,7 +305,7 @@ export default function DentalPage() {
       color: "from-[#815A93] to-[#e3c19d]",
     },
     {
-      title: "Specialists in Makeovers",
+      title: "Specialists in  Smile Makeovers",
       description:
         "Smile makeovers are a sublime combination of exceptional expertise and rare artistry. They help in achieving a dramatic transformation in appearance while simultaneously restoring health and function. Our carefully selected team of aesthetic dentists and specialists work in orchestrated sync to ensure breathtaking outcomes.",
       icon: Heart,
@@ -774,59 +774,108 @@ export default function DentalPage() {
             variants={staggerContainer}
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {additionalTreatments.map((treatment) => (
-              <motion.div
-                key={treatment.title}
-                variants={scaleIn}
-                whileHover={{ y: -5, scale: 1.02 }}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 p-8 border border-gray-100 flex flex-col h-full"
-              >
-                <div className="flex items-start space-x-4 mb-6">
-                  <div
-                    className={`w-12 h-12 bg-gradient-to-r ${treatment.color} rounded-xl flex items-center justify-center shadow-lg flex-shrink-0`}
-                  >
-                    <treatment.icon className="w-6 h-6 text-white" />
+            {additionalTreatments.map((treatment) => {
+              const isExpanded = expandedCard === treatment.title;
+              const truncatedDescription =
+                treatment.description.slice(0, 200) +
+                (treatment.description.length > 200 ? "..." : "");
+
+              return (
+                <motion.div
+                  key={treatment.title}
+                  variants={scaleIn}
+                  whileHover={{ y: -5, scale: 1.02 }}
+                  className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 p-8 border border-gray-100 flex flex-col h-full cursor-pointer"
+                  onClick={() =>
+                    setExpandedCard(isExpanded ? null : treatment.title)
+                  }
+                >
+                  <div className="flex items-start space-x-4 mb-6">
+                    <div
+                      className={`w-12 h-12 bg-gradient-to-r ${treatment.color} rounded-xl flex items-center justify-center shadow-lg flex-shrink-0`}
+                    >
+                      <treatment.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="text-lg font-bold text-gray-900">
+                      {treatment.title}
+                    </h3>
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900">
-                    {treatment.title}
-                  </h3>
-                </div>
-                <div className="flex-grow">
-                  <p className="text-gray-600 leading-relaxed mb-4">
-                    {treatment.description}
-                  </p>
-                  {treatment.benefits && (
-                    <div className="mb-4">
-                      <h5 className="font-semibold text-gray-900 mb-3">
-                        {treatment.keyBenefitsLabel || "Key Benefits:"}
-                      </h5>
-                      <div className="grid grid-cols-1 gap-2">
-                        {treatment.benefits.map(
-                          (benefit: string, idx: number) => (
-                            <div
-                              key={idx}
-                              className="flex items-start space-x-2"
-                            >
-                              <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
-                              <span className="text-sm text-gray-600">
-                                {benefit}
-                              </span>
+                  <div className="flex-grow">
+                    <AnimatePresence initial={false}>
+                      <motion.div
+                        initial={{ height: "auto" }}
+                        animate={{ height: "auto" }}
+                        exit={{ height: "auto" }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                      >
+                        <p className="text-gray-600 leading-relaxed mb-4">
+                          {isExpanded
+                            ? treatment.description
+                            : truncatedDescription}
+                        </p>
+                        {treatment.benefits && isExpanded && (
+                          <motion.div
+                            initial={{ opacity: 0, y: -10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -10 }}
+                            transition={{ duration: 0.3 }}
+                            className="mb-4"
+                          >
+                            <h5 className="font-semibold text-gray-900 mb-3">
+                              {treatment.keyBenefitsLabel || "Key Benefits:"}
+                            </h5>
+                            <div className="grid grid-cols-1 gap-2">
+                              {treatment.benefits.map(
+                                (benefit: string, idx: number) => (
+                                  <div
+                                    key={idx}
+                                    className="flex items-start space-x-2"
+                                  >
+                                    <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+                                    <span className="text-sm text-gray-600">
+                                      {benefit}
+                                    </span>
+                                  </div>
+                                )
+                              )}
                             </div>
-                          )
+                          </motion.div>
                         )}
-                      </div>
+                        {treatment.details && isExpanded && (
+                          <motion.div
+                            initial={{ opacity: 0, y: -10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -10 }}
+                            transition={{ duration: 0.3 }}
+                            className="p-4 bg-gray-50 rounded-lg mt-4"
+                          >
+                            <p className="text-sm text-gray-700 leading-relaxed">
+                              {treatment.details}
+                            </p>
+                          </motion.div>
+                        )}
+                      </motion.div>
+                    </AnimatePresence>
+                    <div className="flex justify-center mt-4">
+                      <button
+                        className="flex items-center space-x-1 text-[#815A93] hover:text-[#e3c19d] transition-colors duration-300"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setExpandedCard(isExpanded ? null : treatment.title);
+                        }}
+                      >
+                        <span>{isExpanded ? "Show Less" : "Read More"}</span>
+                        {isExpanded ? (
+                          <ChevronUp className="w-4 h-4" />
+                        ) : (
+                          <ChevronDown className="w-4 h-4" />
+                        )}
+                      </button>
                     </div>
-                  )}
-                  {treatment.details && (
-                    <div className="p-4 bg-gray-50 rounded-lg mt-auto">
-                      <p className="text-sm text-gray-700 leading-relaxed">
-                        {treatment.details}
-                      </p>
-                    </div>
-                  )}
-                </div>
-              </motion.div>
-            ))}
+                  </div>
+                </motion.div>
+              );
+            })}
           </motion.div>
         </div>
       </section>
