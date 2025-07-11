@@ -38,54 +38,40 @@ export default function Footer() {
     { name: "Smile Makeovers", href: "/dental", icon: "😊" },
     { name: "Teeth Whitening", href: "/dental", icon: "⚡" },
     { name: "Root Canal Treatment", href: "/dental", icon: "🦷" },
+    { name: "Orthodontics", href: "/dental", icon: "🎯" },
+    { name: "Pediatric Dentistry", href: "/dental", icon: "👶" },
     { name: "Chemical Peels", href: "/skin", icon: "✨" },
     { name: "HydraFacial", href: "/skin", icon: "💧" },
+    { name: "Laser Hair Reduction", href: "/skin", icon: "🌟" },
+    { name: "Skin Tag Removal", href: "/skin", icon: "🎯" },
+    { name: "Microneedling", href: "/skin", icon: "💉" },
+    { name: "Carbon Peel", href: "/skin", icon: "⭐" },
   ];
 
   const socialLinks = [
     {
-      name: "Facebook",
-      href: "#",
-      icon: Facebook,
-      color: "hover:bg-blue-600",
-    },
-    {
       name: "Instagram",
-      href: "#",
+      href: "https://www.instagram.com/clinicadentalandskin",
       icon: Instagram,
       color: "hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600",
-    },
-    {
-      name: "Twitter",
-      href: "#",
-      icon: Twitter,
-      color: "hover:bg-blue-400",
-    },
-    {
-      name: "LinkedIn",
-      href: "#",
-      icon: Linkedin,
-      color: "hover:bg-blue-700",
-    },
-    {
-      name: "YouTube",
-      href: "#",
-      icon: Youtube,
-      color: "hover:bg-red-600",
     },
   ];
 
   const achievements = [
-    { icon: Award, text: "Best Dental Clinic 2023" },
+    { icon: Award, text: "Best Multi-Specialty Clinic" },
     { icon: Shield, text: "FDA Approved Dental Procedures" },
     { icon: Star, text: "5-Star Dental Patient Rating" },
     { icon: Heart, text: "Dental Safety Excellence" },
   ];
 
   const workingHours = [
-    { day: "Monday - Friday", hours: "8:00 AM - 6:00 PM" },
-    { day: "Saturday", hours: "9:00 AM - 3:00 PM" },
-    { day: "Sunday", hours: "Emergency Only" },
+    { day: "Monday", hours: "12:00 AM - 9:00 PM", isOpen: true },
+    { day: "Tuesday", hours: "12:00 AM - 9:00 PM", isOpen: true },
+    { day: "Wednesday", hours: "Closed", isOpen: false },
+    { day: "Thursday", hours: "12:00 AM - 9:00 PM", isOpen: true },
+    { day: "Friday", hours: "12:00 AM - 9:00 PM", isOpen: true },
+    { day: "Saturday", hours: "12:00 AM - 9:00 PM", isOpen: true },
+    { day: "Sunday", hours: "12:00 AM - 9:00 PM", isOpen: true },
   ];
 
   const scrollToTop = () => {

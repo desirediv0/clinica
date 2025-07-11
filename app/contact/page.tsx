@@ -54,13 +54,12 @@ export default function ContactPage() {
       title: "Visit Our Clinic",
       content:
         "1st Floor, Plot No. 24, Sector-12A Rd, opp. Bal Bharti School, above AU Small Finance Bank, Block A, Sector 12 Dwarka, Dwarka, New Delhi, Delhi, 110075",
-      subtext: "Modern facility with ample parking",
       color: "from-[#815A93] to-[#e3c19d]",
     },
     {
       icon: Phone,
       title: "Call Us",
-      content: "+91 70071 45918\nAvailable 24/7 for emergencies",
+      content: "+91 70071 45918",
       subtext: "Immediate response guaranteed",
       color: "from-[#e3c19d] to-[#815A93]",
     },
@@ -71,30 +70,23 @@ export default function ContactPage() {
       subtext: "Professional consultation via email",
       color: "from-[#815A93] to-[#e3c19d]",
     },
-    {
-      icon: Clock,
-      title: "Emergency Care",
-      content: "24/7 Emergency Services\nUrgent care available",
-      subtext: "Round-the-clock medical support",
-      color: "from-[#e3c19d] to-[#815A93]",
-    },
   ];
 
   const workingHours = [
-    { day: "Monday", hours: "8:00 AM - 6:00 PM", isOpen: true },
-    { day: "Tuesday", hours: "8:00 AM - 6:00 PM", isOpen: true },
-    { day: "Wednesday", hours: "8:00 AM - 6:00 PM", isOpen: true },
-    { day: "Thursday", hours: "8:00 AM - 6:00 PM", isOpen: true },
-    { day: "Friday", hours: "8:00 AM - 5:00 PM", isOpen: true },
-    { day: "Saturday", hours: "9:00 AM - 3:00 PM", isOpen: true },
-    { day: "Sunday", hours: "Closed", isOpen: false },
+    { day: "Monday", hours: "12:00 AM - 9:00 PM", isOpen: true },
+    { day: "Tuesday", hours: "12:00 AM - 9:00 PM", isOpen: true },
+    { day: "Wednesday", hours: "Closed", isOpen: false },
+    { day: "Thursday", hours: "12:00 AM - 9:00 PM", isOpen: true },
+    { day: "Friday", hours: "12:00 AM - 9:00 PM", isOpen: true },
+    { day: "Saturday", hours: "12:00 AM - 9:00 PM", isOpen: true },
+    { day: "Sunday", hours: "12:00 AM - 9:00 PM", isOpen: true },
   ];
 
   const whyChooseUs = [
     {
       icon: Award,
       title: "Expert Care",
-      description: "Board-certified specialists",
+      description: "Certified specialists",
       color: "from-[#815A93] to-[#e3c19d]",
     },
     {
@@ -275,6 +267,48 @@ export default function ContactPage() {
                 </div>
               </div>
             </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Map Section */}
+      <section className="py-20 lg:py-32 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={fadeInUp}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              Find Us{" "}
+              <span className="bg-gradient-to-r from-[#815A93] to-[#e3c19d] bg-clip-text text-transparent">
+                Here
+              </span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Visit our state-of-the-art clinic located in the heart of Dwarka,
+              New Delhi.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={scaleIn}
+            className="w-full rounded-2xl overflow-hidden shadow-2xl border-8 border-white"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.0806089776147!2d77.03832867528769!3d28.597358475683873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1b09f3446b91%3A0x706f3fd85bb1916b!2sCLINICA%20Dental%20and%20Skin!5e0!3m2!1sen!2sin!4v1752227255128!5m2!1sen!2sin"
+              width="100%"
+              height="600"
+              style={{ border: 0 }}
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </motion.div>
         </div>
       </section>

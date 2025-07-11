@@ -139,28 +139,34 @@ export default function SkinPage() {
 
   const skinTestimonials = [
     {
-      name: "Sarah Johnson",
-      text: "The HydraFacial treatment was incredible! My skin feels so smooth and hydrated. I can't believe the immediate results - my complexion looks years younger and so radiant!",
+      name: "Nitesh Singh",
+      text: "The hygiene and cleanliness is very good. My friend recomended me Dr Sehar. Everything was explained and showed very nicely . I had long time phobia of dentist. It is over now. I am happy",
       rating: 5,
-      treatment: "HydraFacial",
-      image: "/placeholder.svg?height=60&width=60",
-      location: "New York",
     },
     {
-      name: "Michael Chen",
-      text: "After struggling with acne scars for years, microneedling has transformed my skin. The results are amazing and my confidence has returned. Best investment I've made!",
+      name: "Shruti Raikwar",
+      text: "Me and my mothers visit to Clinica was worth mentioning. The sanitization and the hygiene was worth praising . My sons treatment with Dr Anjum Sehar was completely painless. Everything was explained at basic level before starting only. Highly recomending this clinic to everyone.",
       rating: 5,
-      treatment: "Microneedling",
-      image: "/placeholder.svg?height=60&width=60",
-      location: "California",
     },
     {
-      name: "Emily Rodriguez",
-      text: "The chemical peel exceeded my expectations. My skin tone is so much more even and my fine lines have diminished significantly. The team was professional and caring throughout.",
+      name: "Himanshu Rathore",
+      text: "A high tech and clean dental clinic i have been searching from very long time around my society and i saw this . Good to have such a dental clinic on my walking distance. My wife has taken skin consulation also.",
       rating: 5,
-      treatment: "Chemical Peel",
-      image: "/placeholder.svg?height=60&width=60",
-      location: "Texas",
+    },
+    {
+      name: "Dimple Mehra",
+      text: "Dr. Sehar’s Clinic is amazing. She’s professional and truly talented. The clinic is clean ,welcoming and delivers visible results. Whether it’s for dental care or glowing skin, she provides top-quality service. Highly recommend visiting Clinica.",
+      rating: 5,
+    },
+    {
+      name: "Anamika (Singh)",
+      text: "I had heard about teeth whitening but was not sure about results. My whitening was done by dr anjum . The results were so good and then and there only. Laser machine was used. I was told what to and what not to after whitening for a week. I am so satisfied with the result.",
+      rating: 5,
+    },
+    {
+      name: "Sayyead Rahil",
+      text: "I recently visited Dr Anjum Sehar’s Clinic and i must say- it’s an obsolute gem. From consultation to treatment , you feel truly cared for. The clinic is modern , hygienic with a calming environment that puts you at ease.",
+      rating: 5,
     },
   ];
 
@@ -918,14 +924,14 @@ export default function SkinPage() {
                     icon: MapPin,
                     title: "Visit Our Clinic",
                     content:
-                      "123 Medical Center Dr, Suite 100\nCity, State 12345",
-                    subtext: "Modern facility with ample parking",
+                      "1st Floor, Plot No. 24, Sector-12A Rd, opp. Bal Bharti School, above AU Small Finance Bank, Block A, Sector 12 Dwarka, Dwarka, New Delhi, Delhi, 110075",
+
                     color: "from-[#815A93] to-[#e3c19d]",
                   },
                   {
                     icon: Phone,
                     title: "Call Us",
-                    content: "(555) 123-4567\nAvailable 24/7 for emergencies",
+                    content: "+91 70071 45918",
                     subtext: "Immediate response guaranteed",
                     color: "from-[#815A93] to-[#e3c19d]",
                   },
@@ -954,7 +960,9 @@ export default function SkinPage() {
                       <p className="text-gray-600 leading-relaxed whitespace-pre-line mb-1">
                         {contact.content}
                       </p>
-                      <p className="text-sm text-gray-500">{contact.subtext}</p>
+                      <p className="text-sm text-gray-500">
+                        {contact?.subtext}
+                      </p>
                     </div>
                   </motion.div>
                 ))}

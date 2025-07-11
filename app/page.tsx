@@ -1164,7 +1164,6 @@ export default function HomePage() {
                     title: "Working Hours",
                     content:
                       "Mon-Fri: 9:00 AM - 7:00 PM\nSat: 9:00 AM - 5:00 PM",
-                    subtext: "Emergency care available 24/7",
                   },
                 ].map((item, index) => (
                   <motion.div

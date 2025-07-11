@@ -160,7 +160,7 @@ export default function AboutPage() {
 
   const achievements = [
     {
-      title: "Best Dental Clinic 2023",
+      title: "Best Multi-Specialty Clinic",
       organization: "Dental Excellence Awards",
       icon: Award,
     },
@@ -657,13 +657,13 @@ export default function AboutPage() {
                 title: "Visit Our Clinic",
                 content:
                   "1st Floor, Plot No. 24, Sector-12A Rd, opp. Bal Bharti School, above AU Small Finance Bank, Block A, Sector 12 Dwarka, Dwarka, New Delhi, Delhi, 110075",
-                subtext: "Modern facility with ample parking",
+
                 color: "from-[#e3c19d] to-[#815A93]",
               },
               {
                 icon: Phone,
                 title: "Call Us",
-                content: "+91 70071 45918\nAvailable 24/7 for emergencies",
+                content: "+91 70071 45918",
                 subtext: "Immediate response guaranteed",
                 color: "from-[#815A93] to-[#e3c19d]",
               },
@@ -692,7 +692,7 @@ export default function AboutPage() {
                 <p className="text-lg text-gray-600 leading-relaxed mb-2 whitespace-pre-line">
                   {contact.content}
                 </p>
-                <p className="text-sm text-gray-500">{contact.subtext}</p>
+                <p className="text-sm text-gray-500">{contact?.subtext}</p>
               </motion.div>
             ))}
           </motion.div>

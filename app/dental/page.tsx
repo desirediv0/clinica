@@ -1012,14 +1012,14 @@ export default function DentalPage() {
                     icon: MapPin,
                     title: "Visit Our Clinic",
                     content:
-                      "123 Medical Center Dr, Suite 100\nCity, State 12345",
-                    subtext: "Modern facility with world-class equipment",
+                      "1st Floor, Plot No. 24, Sector-12A Rd, opp. Bal Bharti School, above AU Small Finance Bank, Block A, Sector 12 Dwarka, Dwarka, New Delhi, Delhi, 110075",
+
                     color: "from-[#e3c19d] to-[#815A93]",
                   },
                   {
                     icon: Phone,
                     title: "Call Us",
-                    content: "(555) 123-4567\nAvailable 24/7 for emergencies",
+                    content: "+91 70071 45918",
                     subtext: "Immediate response guaranteed",
                     color: "from-[#815A93] to-[#e3c19d]",
                   },
@@ -1048,7 +1048,9 @@ export default function DentalPage() {
                       <p className="text-gray-600 leading-relaxed whitespace-pre-line mb-1">
                         {contact.content}
                       </p>
-                      <p className="text-sm text-gray-500">{contact.subtext}</p>
+                      <p className="text-sm text-gray-500">
+                        {contact?.subtext}
+                      </p>
                     </div>
                   </motion.div>
                 ))}

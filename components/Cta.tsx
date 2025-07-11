@@ -95,7 +95,7 @@ const Cta: React.FC<CtaProps> = ({
               whileTap={{ scale: 0.95 }}
             >
               <Link
-                href="tel:+15551234567"
+                href="tel:+917007145918"
                 className="group inline-flex items-center space-x-3 bg-white/10 backdrop-blur-md hover:bg-white/20 px-8 py-4 rounded-full text-white font-bold text-lg border border-white/30 hover:border-white/50 transition-all duration-300"
               >
                 <Phone className="w-6 h-6" />
@@ -103,10 +103,6 @@ const Cta: React.FC<CtaProps> = ({
               </Link>
             </motion.div>
           </motion.div>
-
-          <div className="text-[#e3c19d]">
-            <p className="text-lg">📞 Available 24/7 </p>
-          </div>
         </motion.div>
       </div>
     </section>
