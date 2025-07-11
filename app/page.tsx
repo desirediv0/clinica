@@ -318,7 +318,7 @@ export default function HomePage() {
   const whyChooseUs = [
     {
       title: "Expert Doctors",
-      description: "Board-certified specialists with decades of experience",
+      description: "Certified specialists with decades of experience",
       icon: Award,
       color: "from-[#00326D] to-[#B12EBC]",
       stat: "Expert Care",

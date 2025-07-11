@@ -114,7 +114,7 @@ export default function ContactPage() {
       {/* Hero Section */}
       <Hero
         title="Let's Talk About Your"
-        subtitle="Transformation"
+        subtitle="Dental & Skin"
         description="Ready to start your journey? Contact us today to schedule your consultation or learn more about our services. We're here to help you achieve your goals."
         backgroundImage="/images/contact.jpg"
         tagText="Contact CLINICA"

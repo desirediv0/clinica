@@ -61,7 +61,7 @@ export default function AboutPage() {
     {
       title: "Dental Excellence",
       description:
-        "Board-certified dental specialists with decades of combined experience in advanced dental procedures",
+        "Certified dental specialists with decades of combined experience in advanced dental procedures",
       icon: Award,
       color: "from-blue-500 to-cyan-500",
       stat: "12+ Years",
