@@ -61,7 +61,6 @@ export default function Navigation() {
       icon: Smile,
       description: "Complete dental solutions for a perfect smile",
       color: "from-blue-500 to-cyan-500",
-      features: ["Dental Implants", "Smile Makeovers", "Teeth Whitening"],
     },
     {
       name: "Skin Care",
@@ -69,7 +68,13 @@ export default function Navigation() {
       icon: Sparkles,
       description: "Advanced skin treatments for radiant beauty",
       color: "from-pink-500 to-purple-500",
-      features: ["HydraFacial", "Chemical Peels", "Microneedling"],
+    },
+    {
+      name: "FAQ",
+      href: "/faq",
+      icon: ChevronDown,
+      description: "Frequently asked questions about our services",
+      color: "from-[#e3c19d] to-[#815A93]",
     },
   ];
 
@@ -251,16 +256,6 @@ export default function Navigation() {
                                 <p className="text-gray-600 text-sm">
                                   {service.description}
                                 </p>
-                                <div className="mt-2 flex flex-wrap gap-2">
-                                  {service.features.map((feature, idx) => (
-                                    <span
-                                      key={idx}
-                                      className="text-xs bg-[#e3c19d]/20 text-[#815A93] px-2 py-1 rounded-full"
-                                    >
-                                      {feature}
-                                    </span>
-                                  ))}
-                                </div>
                               </div>
                             </div>
                           </motion.div>

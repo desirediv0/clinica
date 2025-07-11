@@ -30,6 +30,7 @@ export default function Footer() {
     { name: "About Us", href: "/about" },
     { name: "Dental Care", href: "/dental" },
     { name: "Skin Care", href: "/skin" },
+    { name: "FAQ", href: "/faq" },
     { name: "Contact Us", href: "/contact" },
   ];
 
