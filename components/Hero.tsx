@@ -22,7 +22,7 @@ const staggerContainer = {
 interface HeroProps {
   title: string;
   subtitle: string;
-  description: string;
+  description?: string;
   backgroundImage: string;
   tagText: string;
   tagIcon: LucideIcon;

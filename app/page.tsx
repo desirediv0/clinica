@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -21,8 +21,12 @@ import {
   Smile,
   Play,
   Quote,
+  ChevronDown,
+  ChevronUp,
 } from "lucide-react";
+import { useState } from "react";
 import Hero from "@/components/Hero";
+import WhyChoose from "@/components/WhyChoose";
 
 // Enhanced Animation variants
 const fadeInUp = {
@@ -58,102 +62,256 @@ const slideInRight = {
 };
 
 export default function HomePage() {
+  const [expandedCard, setExpandedCard] = useState<string | null>(null);
+
+  const toggleCard = (title: string) => {
+    if (expandedCard === title) {
+      setExpandedCard(null);
+    } else {
+      setExpandedCard(title);
+    }
+  };
+
   const skinTreatments = [
     {
       title: "Chemical Peels",
       description:
-        "Advanced exfoliation for radiant, youthful skin with professional-grade solutions",
+        "Advanced exfoliation treatments that remove damaged skin layers to reveal fresh, youthful skin beneath. Our medical-grade peels target various concerns from acne to aging.",
       icon: Sparkles,
       image: "/images/chemical-peel.jpg",
+      benefits: [
+        "Reduces fine lines and wrinkles",
+        "Improves skin texture and tone",
+        "Treats acne and scarring",
+        "Minimizes sun damage",
+        "Enhances skin radiance",
+      ],
+      duration: "30-45 minutes",
+      recovery: "3-7 days",
+      details:
+        "We offer different strengths of peels customized to your skin type and concerns. Our expert team ensures safe application and provides comprehensive aftercare guidance.",
     },
     {
       title: "HydraFacial",
-      description: "Deep cleansing and hydration for glowing, refreshed skin",
+      description:
+        "A revolutionary treatment combining cleansing, exfoliation, extraction, and hydration. Perfect for all skin types, delivering instant, visible results.",
       icon: Heart,
       image: "/images/hydrafacial.jpg",
+      benefits: [
+        "Deep pore cleansing",
+        "Instant hydration boost",
+        "No downtime required",
+        "Customizable serums",
+        "Immediate visible results",
+      ],
+      duration: "45-60 minutes",
+      recovery: "No downtime",
+      details:
+        "Our signature HydraFacial treatment uses patented technology to cleanse, extract, and hydrate. The multi-step treatment includes specialized serums that address your specific skin concerns.",
     },
     {
       title: "Carbon Peel",
-      description: "Laser treatment for skin rejuvenation and pore refinement",
+      description:
+        "Advanced laser treatment using carbon particles to deeply cleanse and rejuvenate skin. Ideal for oily skin, enlarged pores, and dull complexion.",
       icon: Zap,
       image: "/images/cardon-peel.jpg",
+      benefits: [
+        "Reduces pore size",
+        "Controls oil production",
+        "Brightens complexion",
+        "Improves skin texture",
+        "Treats mild acne",
+      ],
+      duration: "45 minutes",
+      recovery: "No downtime",
+      details:
+        "The treatment involves applying a carbon solution followed by laser therapy that targets pigmentation, oil production, and skin texture in one session.",
     },
     {
       title: "Microneedling",
-      description: "Collagen induction therapy for improved skin texture",
+      description:
+        "Advanced collagen induction therapy using precision micro-needles to stimulate natural skin regeneration. Perfect for scars, wrinkles, and skin rejuvenation.",
       icon: Eye,
       image: "/images/microneedeing.jpg",
+      benefits: [
+        "Stimulates collagen production",
+        "Reduces acne scars",
+        "Improves skin texture",
+        "Minimizes fine lines",
+        "Enhances product absorption",
+      ],
+      duration: "60 minutes",
+      recovery: "2-3 days",
+      details:
+        "Our advanced microneedling system creates controlled micro-injuries that trigger the body's natural healing process, resulting in firmer, smoother skin.",
     },
     {
       title: "Skin Tag Removal",
-      description: "Safe and effective removal of unwanted skin tags",
+      description:
+        "Safe and effective removal of unwanted skin tags using advanced techniques. Our experts ensure minimal discomfort and optimal aesthetic results.",
       icon: CheckCircle,
       image: "/images/skin-tag-removal.jpg",
+      benefits: [
+        "Quick and painless procedure",
+        "No scarring",
+        "Immediate results",
+        "Multiple tags treated at once",
+        "Prevents recurrence",
+      ],
+      duration: "15-30 minutes",
+      recovery: "1-2 days",
+      details:
+        "We use state-of-the-art equipment for precise removal of skin tags, ensuring clean results with minimal recovery time.",
     },
     {
       title: "Laser Hair Reduction",
-      description: "Permanent hair reduction with advanced laser technology",
+      description:
+        "Permanent hair reduction using advanced laser technology. Safe for all skin types with long-lasting results.",
       icon: Zap,
       image: "/images/lazer-hair-reduction.jpg",
+      benefits: [
+        "Permanent hair reduction",
+        "Suitable for all skin types",
+        "Treats large areas quickly",
+        "Precise and targeted",
+        "Cost-effective long-term",
+      ],
+      duration: "15-60 minutes",
+      recovery: "No downtime",
+      details:
+        "Our advanced laser systems target hair follicles while protecting surrounding skin, providing safe and effective permanent hair reduction.",
     },
   ];
 
   const dentalTreatments = [
     {
       title: "Dental Implants",
-      description: "Permanent tooth replacement with natural results",
-      icon: Smile,
+      description:
+        "Successfully replacing teeth using implants is an extremely 'technique-sensitive' procedure that requires great expertise. An advanced titanium structure is anchored into the jawbone where the tooth is to be replaced.",
+      benefits: [
+        "Permanent solution for missing teeth",
+        "Natural appearance and feel",
+        "Prevents bone loss in jaw",
+        "Lifelong solution with proper care",
+        "Bite & Chew With Ease like natural teeth",
+        "Look Younger with restored facial structure",
+        "Single, multiple or full mouth options available",
+      ],
+      duration: "2-3 hours",
+      recovery: "3-6 months",
       image: "/images/dental-implant.jpg",
-      duration: "2-3 visits",
+      icon: Smile,
+      color: "from-[#e3c19d] to-[#815A93]",
+      details:
+        "This structure acts as a support for the 'crown' or the artificial tooth. These mechanics are similar to how a natural tooth anchors itself, making dental implants the ideal replacement solution. All our implant systems meet the most stringent of international quality standards. Implants act by replacing the root portion of the tooth, thus not only replace a tooth but also support the bone beneath thereby preventing loss of jaw bone after tooth loss. On top of dental implants, implant crowns are placed that replace the tooth portion.",
     },
     {
       title: "Full Mouth Rehabilitation",
-      description: "Complete smile transformation and restoration",
-      icon: Award,
+      description:
+        "A full mouth reconstruction (rehabilitation) is needed when your oral health deteriorates completely due to multiple dental problems. The procedure has the power to turn back the clock by taking away at least 10 to 15 years of facial ageing.",
+      benefits: [
+        "Complete oral health restoration",
+        "Reverses 10-15 years of facial ageing",
+        "Enhanced aesthetics and function",
+        "Long-term comprehensive solution",
+        "Better overall oral health",
+        "Enjoy all favorite foods again",
+        "Customized treatment planning",
+        "All-on-Four, All-on-Six, All-on-Eight options",
+      ],
+      duration: "Multiple visits over 3-6 months",
+      recovery: "Varies by individual case",
       image: "/images/full-mouth-rehabilitation.jpg",
-      duration: "4-6 months",
+      icon: Award,
+      color: "from-[#815A93] to-[#e3c19d]",
+      details:
+        "Along with looking and feeling younger, you will also be able to enjoy all your favourite foods again. Our team of skilled specialists plan the entire treatment while taking into account the patient's primary and secondary concerns, expectations, existing medical and oral condition, and budget and time constraints. Full mouth rehabilitation with dental implants can include All-on-Four, All-on-Six, All-on-Eight or All-on-X techniques for complete teeth replacement giving the ideal aesthetics with the most natural appearance and complete functions of chewing and speaking. Suitable for both young and adult patients and Improved oral health and aesthetics",
     },
     {
       title: "Orthodontics",
-      description: "Braces and aligners for perfect alignment",
-      icon: Shield,
+      description:
+        "Everyone wants those perfectly aligned teeth; our team of orthodontists makes sure that your teeth stay that way. Orthodontics deals with braces that align your teeth in an ideal manner. We provide conventional braces as well as clear aligners so that both the young and the adult can be happy with their smile.",
+      benefits: [
+        "Type 1: Metal Braces - Conventional metal brackets for effective alignment",
+        "Type 2: Ceramic Braces - Tooth-colored brackets, virtually invisible at distance",
+        "Type 3: Self-Ligating Braces - Reduced treatment duration, increased comfort",
+        "Type 4: Clear Aligners - Removable, transparent, virtually invisible",
+        "Type 5: Lingual Braces - Hidden behind teeth, completely invisible",
+        "Type 6: Preventive Orthodontics - Early intervention for children",
+      ],
+      duration: "6-24 months",
+      recovery: "No downtime required",
       image: "/images/orthodonics.jpg",
-      duration: "12-24 months",
-    },
-    {
-      title: "Teeth Whitening",
-      description: "Professional whitening for a brighter smile",
-      icon: Sparkles,
-      image: "/images/laser-teeth-whitening.jpg",
-      duration: "1 session",
-    },
-    {
-      title: "Smile Makeovers",
-      description: "Comprehensive cosmetic transformations",
-      icon: Heart,
-      image: "/images/cosmetic-dentist.jpg",
-      duration: "2-4 weeks",
-    },
-    {
-      title: "Painless Root Canal",
-      description: "Advanced treatment with minimal discomfort",
-      icon: CheckCircle,
-      image: "/images/dantkriti-root-canel.jpg",
-      duration: "1-2 visits",
-    },
-    {
-      title: "Pediatric Dentistry",
-      description: "Gentle dental care for children",
-      icon: Users,
-      image: "/images/pediatric-dentistry.jpg",
-      duration: "30-45 mins",
-    },
-    {
-      title: "Preventive Dentistry",
-      description: "Comprehensive care for optimal oral health",
       icon: Shield,
-      image: "/images/preventive-dentistry.jpg",
-      duration: "45-60 mins",
+      color: "from-[#e3c19d] to-[#815A93]",
+      details:
+        "Clear aligners are wafer-thin, transparent aligners that fit snugly on your teeth and gently reposition them to give you the perfect smile. They offer you all the benefits of conventional orthodontics, can be taken out as and when needed spare you from the inconvenience and awkwardness of metal brackets and wires. Self-ligating systems can be used with both metal and ceramic brackets to reduce treatment duration and increase treatment quality and comfort.  Suitable for both young and adult patients and Improved oral health and aesthetics",
+      keyBenefitsLabel: "Types:",
+    },
+    {
+      title: "Laser Teeth Whitening",
+      description:
+        "Intrinsic stains and discolouration present deep within the teeth are responsible for the overall dull or yellowish appearance of your teeth. Our LASER expert professionally removes these stains using a peroxide-based agent.",
+      benefits: [
+        "100% safe procedure",
+        "Guaranteed visible results",
+        "Teeth-whitening experts",
+        "Highly cost-effective treatment",
+        "Results last for 2 years",
+        "Professional LASER specialist performed",
+        "Special barriers protect gums and lips",
+      ],
+      duration: "45 minutes",
+      recovery: "No downtime",
+      image: "/images/laser-teeth-whitening.jpg",
+      icon: Sparkles,
+      color: "from-[#815A93] to-[#e3c19d]",
+      details:
+        "The peroxide reacts with the stain-producing substances thereby oxidizing and clearing them completely. The gums and lips are protected with special barriers to prevent their contact with peroxide. The laser bleaching is more effective and stays for longer period. Bring back the sparkle in your smile. Transform your dull, stained or yellowish teeth into the perfect set of pearly whites in under an hour.",
+    },
+    {
+      title: "Painless Root Canal Treatments",
+      description:
+        "A root canal treatment entails removing the infected soft tissue within the tooth and replacing it with an artificial inert 'filling' material. This procedure not only saves the tooth but also eliminates dental pain.",
+      benefits: [
+        "Completely pain-free procedure",
+        "State-of-the-art technology used",
+        "Expert endodontic specialists",
+        "Comfortable and relaxed experience",
+        "High success rate",
+        "Saves natural tooth structure",
+        "Eliminates dental pain permanently",
+      ],
+      duration: "30 minutes",
+      recovery: "1-2 days",
+      image: "/images/dantkriti-root-canel.jpg",
+      icon: CheckCircle,
+      color: "from-[#e3c19d] to-[#815A93]",
+      details:
+        "We combine state-of-the-art technology with our expertise and soft-skill approach to ensure that every root canal procedure is precise, seamless and pain-free. Most of the root canal treatments at CLINICA are performed within 30 minutes by our expert who make sure you are always comfortable and relaxed. We understand that people fear root canals and tend to avoid undergoing the treatment. However, our specialists carefully craft the entire process to eliminate any fear attached to this procedure. In fact, we turn it into a very positive experience. Most of our referrals come from patients who have undergone RCT.",
+    },
+    {
+      title: "Cosmetic Smile Makeovers",
+      description:
+        "Aesthetics and functionality are at the heart of what we do. Our experts use a combination of treatment modalities to enhance your natural smile and boost your confidence. From mild to extreme smile makeovers and smile enhancements, we transform your teeth within 90 minutes.",
+      benefits: [
+        "Type 1: Dental Bonding - Repairs chips, cracks, and small gaps between teeth",
+        "Type 2: Porcelain Veneers - Custom-made shells for perfect teeth appearance",
+        "Type 3: LASER Gum Contouring - Reshapes uneven and asymmetrical gumlines",
+        "Type 4: Professional Whitening - Instant brightness enhancement treatment",
+        "Type 5: Tooth Recontouring - Perfects shape, size and proportions",
+        "Type 6: Metal-Free Crowns - Natural-looking restorations without black lines",
+        "LASER Depigmentation of Gums - Removes black and brown pigments",
+        "Complete transformation in 90 minutes",
+      ],
+      duration: "90 minutes",
+      recovery: "No downtime",
+      image: "/images/cosmetic-dentist.jpg",
+      icon: Heart,
+      color: "from-[#815A93] to-[#e3c19d]",
+      details:
+        "Smile makeovers are a sublime combination of exceptional expertise and rare artistry. They help in achieving a dramatic transformation in the appearance of a person while simultaneously restoring the health and function of the teeth. Our carefully selected team of aesthetic dentists and various other associated specialists (implantologists, orthodontists) work in a carefully orchestrated sync to ensure breathtaking outcomes for our patients. We use only metal-free ceramic crowns for anterior teeth to ensure no black lines are formed and the crowns blend in naturally with the adjacent teeth.",
+      keyBenefitsLabel: "Types:",
     },
   ];
 
@@ -256,6 +414,7 @@ export default function HomePage() {
     { name: "AI Diagnostics", logo: "/images/technology4.png" },
     { name: "Robotic Surgery", logo: "/images/technology5.png" },
     { name: "Smart Monitoring", logo: "/images/technology6.png" },
+    { name: "Bio Laser", logo: "/images/bio-laser.jpg" },
   ];
 
   return (
@@ -264,11 +423,10 @@ export default function HomePage() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="relative z-10 container mx-auto  text-center text-white">
           <Hero
-            title="Transform Your"
-            subtitle="Beauty with CLINICA"
-            description="Advanced  Dental Care & Skin with Personalized Excellence"
+            title="Advanced Dental Care & Skin"
+            subtitle="with Personalized Excellence At Clinica"
             backgroundImage="/images/hero.jpg"
-            tagText="Premium Medical Excellence"
+            tagText="Premium Dental And Skin Excellence"
             tagIcon={Sparkles}
             primaryButtonText="Book Consultation"
             primaryButtonIcon={Calendar}
@@ -326,13 +484,13 @@ export default function HomePage() {
                 {[
                   {
                     icon: Award,
-                    title: "Award Winning",
+                    title: "Award Winning Doctors",
                     desc: "Recognized Excellence",
                   },
                   {
                     icon: Shield,
                     title: "Safe & Secure",
-                    desc: "FDA Approved",
+                    desc: "Strict Sterlization Protocols",
                   },
                   {
                     icon: Users,
@@ -342,7 +500,7 @@ export default function HomePage() {
                   {
                     icon: Zap,
                     title: "Latest Tech",
-                    desc: "Advanced Equipment",
+                    desc: "Advanced Equipments",
                   },
                 ].map((item, index) => (
                   <motion.div
@@ -458,7 +616,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Enhanced Dental Treatments Section - Made Larger and More Prominent */}
+      {/* Dental Treatments Section */}
       <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-gradient-to-br from-[#815A93]/5 to-[#e3c19d]/5 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-[#e3c19d]/5 to-[#815A93]/5"></div>
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
@@ -503,13 +661,12 @@ export default function HomePage() {
             whileInView="animate"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
           >
             {dentalTreatments.map((treatment, index) => (
               <motion.div
                 key={treatment.title}
                 variants={scaleIn}
-                whileHover={{ y: -12, scale: 1.03 }}
                 className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100"
               >
                 <div className="relative overflow-hidden h-48">
@@ -538,68 +695,78 @@ export default function HomePage() {
                   <p className="text-gray-600 text-base mb-6 leading-relaxed">
                     {treatment.description}
                   </p>
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+
+                  <AnimatePresence>
+                    {expandedCard === treatment.title && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="overflow-hidden"
+                      >
+                        <div className="pt-4 border-t border-gray-100">
+                          <h4 className="font-semibold text-gray-900 mb-3">
+                            {treatment.keyBenefitsLabel || "Benefits:"}
+                          </h4>
+                          <ul className="space-y-2">
+                            {treatment.benefits.map((benefit, idx) => (
+                              <li
+                                key={idx}
+                                className="flex items-start space-x-2"
+                              >
+                                <CheckCircle className="w-5 h-5 text-[#815A93] mt-0.5 flex-shrink-0" />
+                                <span className="text-gray-600">{benefit}</span>
+                              </li>
+                            ))}
+                          </ul>
+                          <div className="mt-4">
+                            <h4 className="font-semibold text-gray-900 mb-2">
+                              Details:
+                            </h4>
+                            <p className="text-gray-600">{treatment.details}</p>
+                          </div>
+                          <div className="mt-4 grid grid-cols-2 gap-4">
+                            <div>
+                              <h4 className="font-semibold text-gray-900 mb-1">
+                                Duration:
+                              </h4>
+                              <p className="text-gray-600">
+                                {treatment.duration}
+                              </p>
+                            </div>
+                            <div>
+                              <h4 className="font-semibold text-gray-900 mb-1">
+                                Recovery:
+                              </h4>
+                              <p className="text-gray-600">
+                                {treatment.recovery}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+
+                  <motion.button
+                    onClick={() => toggleCard(treatment.title)}
+                    className="w-full inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-[#e3c19d] to-[#815A93] hover:from-[#e3c19d]/90 hover:to-[#815A93]/90 text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 mt-4"
                   >
-                    <Link
-                      href="/dental"
-                      className="inline-flex items-center space-x-2 text-[#00326D] hover:text-[#B12EBC] font-semibold text-base group-hover:translate-x-1 transition-all duration-300"
-                    >
-                      <span>Learn More</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </Link>
-                  </motion.div>
+                    <span>
+                      {expandedCard === treatment.title
+                        ? "Show Less"
+                        : "Learn More"}
+                    </span>
+                    {expandedCard === treatment.title ? (
+                      <ChevronUp className="w-5 h-5" />
+                    ) : (
+                      <ChevronDown className="w-5 h-5" />
+                    )}
+                  </motion.button>
                 </div>
               </motion.div>
             ))}
-          </motion.div>
-
-          <motion.div
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={fadeInUp}
-            className="text-center mt-16"
-          >
-            <div className="bg-white rounded-3xl shadow-2xl p-8 lg:p-12 max-w-4xl mx-auto">
-              <h3 className="text-3xl font-bold text-gray-900 mb-6">
-                Why Choose Our Dental Care?
-              </h3>
-              <div className="grid md:grid-cols-3 gap-8">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-[#e3c19d]  to-[#815A93] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Shield className="w-8 h-8 text-white" />
-                  </div>
-                  <h4 className="font-bold text-gray-900 mb-2">
-                    Safe & Painless
-                  </h4>
-                  <p className="text-gray-600 text-sm">
-                    Advanced techniques ensure comfortable procedures
-                  </p>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-[#e3c19d]  to-[#815A93] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Zap className="w-8 h-8 text-white" />
-                  </div>
-                  <h4 className="font-bold text-gray-900 mb-2">
-                    Latest Technology
-                  </h4>
-                  <p className="text-gray-600 text-sm">
-                    State-of-the-art equipment for precise results
-                  </p>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-[#e3c19d]  to-[#815A93] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Award className="w-8 h-8 text-white" />
-                  </div>
-                  <h4 className="font-bold text-gray-900 mb-2">Expert Team</h4>
-                  <p className="text-gray-600 text-sm">
-                    Certified professionals with years of experience
-                  </p>
-                </div>
-              </div>
-            </div>
           </motion.div>
         </div>
       </section>
@@ -656,7 +823,7 @@ export default function HomePage() {
                     <h3 className="text-2xl font-bold text-white mb-2">
                       {treatment.title}
                     </h3>
-                    <p className="text-white/90 text-sm">
+                    <p className="text-white/90 text-sm line-clamp-2">
                       {treatment.description}
                     </p>
                   </div>
@@ -676,13 +843,41 @@ export default function HomePage() {
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-2">
                       <Clock className="w-4 h-4 text-[#815A93]" />
-                      <span className="text-sm text-gray-600">45-60 mins</span>
+                      <span className="text-sm text-gray-600">
+                        {treatment.duration}
+                      </span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <CheckCircle className="w-4 h-4 text-[#815A93]" />
-                      <span className="text-sm text-gray-600">No downtime</span>
+                      <span className="text-sm text-gray-600">
+                        Recovery: {treatment.recovery}
+                      </span>
                     </div>
                   </div>
+
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-gray-900 mb-2">
+                      Key Benefits:
+                    </h4>
+                    <ul className="space-y-2">
+                      {treatment.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-start space-x-2">
+                          <CheckCircle className="w-4 h-4 text-[#815A93] mt-0.5 flex-shrink-0" />
+                          <span className="text-sm text-gray-600">
+                            {benefit}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-gray-900 mb-2">
+                      Treatment Details:
+                    </h4>
+                    <p className="text-sm text-gray-600">{treatment.details}</p>
+                  </div>
+
                   <motion.div
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -702,7 +897,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Enhanced Why Choose Us Section */}
+      {/* Enhanced Why Choose CLINICA Section */}
       <section className="py-20 lg:py-32 bg-gradient-to-br from-[#e3c19d]/5 to-[#815A93]/5">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
@@ -718,13 +913,13 @@ export default function HomePage() {
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Excellence Through{" "}
               <span className="bg-gradient-to-r from-[#e3c19d] to-[#815A93] bg-clip-text text-transparent">
-                Expertise and Artistry
+                Expertise and Innovation
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Our clinic is designed to instantly make you feel comfortable and
-              relaxed. We believe that the best outcomes originate from
-              personalised patient care.
+              At CLINICA, we combine advanced technology with expert care to
+              deliver exceptional results. Our commitment to excellence makes us
+              the preferred choice for all your dental and skin care needs.
             </p>
           </motion.div>
 
@@ -733,39 +928,115 @@ export default function HomePage() {
             whileInView="animate"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {whyChooseUs.map((feature, index) => (
+            {[
+              {
+                icon: Award,
+                title: "12+ Years of Excellence",
+                description:
+                  "Over a decade of experience in providing top-tier dental and skin care services with proven results and satisfied patients.",
+                stat: "",
+                color: "from-[#e3c19d] to-[#815A93]",
+              },
+              {
+                icon: Shield,
+                title: "Advanced Safety Protocols",
+                description:
+                  "State-of-the-art sterilization and safety measures ensuring the highest standards of hygiene and protection for our patients.",
+                stat: "100% Safe",
+                color: "from-[#815A93] to-[#e3c19d]",
+              },
+              {
+                icon: Users,
+                title: "Expert Team",
+                description:
+                  "Our team of highly qualified doctors and specialists brings years of experience and expertise to provide you with the best care possible.",
+                stat: "50+ Experts",
+                color: "from-[#e3c19d] to-[#815A93]",
+              },
+              {
+                icon: Zap,
+                title: "Latest Technology",
+                description:
+                  "Equipped with cutting-edge dental and skincare technology for precise diagnostics and superior treatment outcomes.",
+                stat: "Digital Excellence",
+                color: "from-[#815A93] to-[#e3c19d]",
+              },
+              {
+                icon: Star,
+                title: "Patient Satisfaction",
+                description:
+                  "Consistently rated 5 stars by our patients for quality care, comfortable environment, and exceptional results.",
+                stat: "98% Happy Patients",
+                color: "from-[#e3c19d] to-[#815A93]",
+              },
+              {
+                icon: Clock,
+                title: "Convenient Care",
+                description:
+                  "Flexible scheduling, minimal waiting times, and comprehensive care all under one roof for your convenience.",
+                stat: "12PM-9PM (Wed Off)",
+                color: "from-[#815A93] to-[#e3c19d]",
+              },
+            ].map((feature, index) => (
               <motion.div
                 key={feature.title}
                 variants={scaleIn}
-                whileHover={{ y: -5, scale: 1.02 }}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 p-8 border border-gray-100"
+                whileHover={{ y: -10, scale: 1.02 }}
+                className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 p-8 border border-gray-100"
               >
-                <div className="flex items-start space-x-6">
+                <div className="flex flex-col items-center text-center">
                   <div
-                    className={`w-16 h-16 bg-gradient-to-r ${
-                      index % 2 === 0
-                        ? "from-[#e3c19d] to-[#815A93]"
-                        : "from-[#815A93] to-[#e3c19d]"
-                    } rounded-2xl flex items-center justify-center shadow-lg flex-shrink-0`}
+                    className={`w-20 h-20 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 mb-6 group-hover:scale-110`}
                   >
-                    <feature.icon className="w-8 h-8 text-white" />
+                    <feature.icon className="w-10 h-10 text-white" />
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">
-                      {feature.title}
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      {feature.description}
-                    </p>
-                    <div className="mt-4 inline-block bg-[#e3c19d]/10 text-[#815A93] px-3 py-1 rounded-full text-sm font-medium">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#815A93] transition-colors duration-300">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed mb-4">
+                    {feature.description}
+                  </p>
+                  <div className="mt-auto">
+                    <span className="inline-block bg-gradient-to-r from-[#e3c19d]/10 to-[#815A93]/10 text-[#815A93] px-4 py-2 rounded-full text-sm font-medium">
                       {feature.stat}
-                    </div>
+                    </span>
                   </div>
                 </div>
               </motion.div>
             ))}
+          </motion.div>
+
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={fadeInUp}
+            className="text-center mt-16"
+          >
+            <div className="bg-white rounded-3xl shadow-2xl p-8 lg:p-12 max-w-4xl mx-auto">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                Experience the CLINICA Difference
+              </h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                {[
+                  { number: "12+", label: "Years Experience" },
+                  { number: "1k+", label: "Happy Patients" },
+                  { number: "50+", label: "Expert Doctors" },
+                  { number: "99%", label: "Success Rate" },
+                ].map((stat, index) => (
+                  <div key={index} className="text-center">
+                    <div className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-[#e3c19d] to-[#815A93] bg-clip-text text-transparent mb-2">
+                      {stat.number}
+                    </div>
+                    <p className="text-gray-600 text-sm font-medium">
+                      {stat.label}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -860,7 +1131,7 @@ export default function HomePage() {
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Cutting-Edge{" "}
               <span className="bg-gradient-to-r from-[#e3c19d] to-[#815A93] bg-clip-text text-transparent">
-                Medical Technology
+                Technology
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -874,7 +1145,7 @@ export default function HomePage() {
             whileInView="animate"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8"
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
           >
             {technologies.map((tech, index) => (
               <motion.div
@@ -891,9 +1162,6 @@ export default function HomePage() {
                     className="object-contain"
                   />
                 </div>
-                <p className="text-center text-sm font-medium text-gray-900">
-                  {tech.name}
-                </p>
               </motion.div>
             ))}
           </motion.div>
@@ -906,7 +1174,7 @@ export default function HomePage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
               { number: "12+", label: "Years Experience" },
-              { number: "10k+", label: "Happy Patients" },
+              { number: "1k+", label: "Happy Patients" },
               { number: "50+", label: "Expert Doctors" },
               { number: "99%", label: "Success Rate" },
             ].map((stat, index) => (
@@ -1030,9 +1298,9 @@ export default function HomePage() {
                   Book Consultation
                 </span>
                 <h2 className="text-4xl lg:text-5xl font-bold text-black mb-6">
-                  Start Your{" "}
+                  Get In
                   <span className="bg-gradient-to-r from-[#e3c19d] to-[#815A93] bg-clip-text text-transparent">
-                    Transformation
+                    Touch
                   </span>
                 </h2>
                 <p className="text-xl text-gray-800 leading-relaxed">
@@ -1049,8 +1317,8 @@ export default function HomePage() {
                     </label>
                     <input
                       type="text"
-                      className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#e3c19d] transition-colors duration-300"
-                      placeholder="John Doe"
+                      className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-[#e3c19d] transition-colors duration-300"
+                      placeholder="Ritesh"
                     />
                   </div>
                   <div>
@@ -1059,8 +1327,8 @@ export default function HomePage() {
                     </label>
                     <input
                       type="tel"
-                      className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#e3c19d] transition-colors duration-300"
-                      placeholder="(555) 123-4567"
+                      className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-[#e3c19d] transition-colors duration-300"
+                      placeholder="9876543210"
                     />
                   </div>
                   <div>
@@ -1069,8 +1337,8 @@ export default function HomePage() {
                     </label>
                     <input
                       type="email"
-                      className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#e3c19d] transition-colors duration-300"
-                      placeholder="john@example.com"
+                      className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-[#e3c19d] transition-colors duration-300"
+                      placeholder="rit@example.com"
                     />
                   </div>
                 </div>
@@ -1079,7 +1347,7 @@ export default function HomePage() {
                   <label className="block text-gray-800 text-sm font-medium mb-2">
                     Treatment Interest
                   </label>
-                  <select className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-black placeholder-gray-400 focus:outline-none focus:border-[#e3c19d] transition-colors duration-300">
+                  <select className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-black placeholder-gray-600 focus:outline-none focus:border-[#e3c19d] transition-colors duration-300">
                     <option value="" className="bg-[#1a1a1a]">
                       Select Treatment
                     </option>
@@ -1100,7 +1368,7 @@ export default function HomePage() {
                     Message
                   </label>
                   <textarea
-                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#e3c19d] transition-colors duration-300 h-32 resize-none"
+                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-[#e3c19d] transition-colors duration-300 h-32 resize-none"
                     placeholder="Tell us about your concerns..."
                   ></textarea>
                 </div>
@@ -1161,37 +1429,13 @@ export default function HomePage() {
                   </motion.div>
                 ))}
               </div>
-
-              {/* Map or Additional Info */}
-              <motion.div
-                whileHover={{ scale: 1.02 }}
-                className="mt-8 bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10"
-              >
-                <h3 className="text-xl font-bold text-black mb-4">
-                  Why Choose CLINICA?
-                </h3>
-                <ul className="space-y-3">
-                  {[
-                    "State-of-the-art facilities",
-                    "Expert medical professionals",
-                    "Comprehensive care approach",
-                    "Flexible scheduling options",
-                    "Insurance accepted",
-                  ].map((item, index) => (
-                    <li key={index} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-[#e3c19d]" />
-                      <span className="text-gray-800">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
             </motion.div>
           </motion.div>
         </div>
       </section>
 
       {/* Enhanced CTA Section */}
-      <section className="py-20 lg:py-32 relative overflow-hidden">
+      {/* <section className="py-20 lg:py-32 relative overflow-hidden">
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <motion.div
             initial="initial"
@@ -1242,7 +1486,7 @@ export default function HomePage() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

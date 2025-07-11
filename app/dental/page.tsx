@@ -489,7 +489,7 @@ export default function DentalPage() {
         secondaryButtonIcon={Play}
         secondaryButtonLink="/contact"
         stats={[
-          { number: "5000+", label: "Successful Treatments" },
+          { number: "1k+", label: "Successful Treatments" },
           { number: "99%", label: "Patient Satisfaction" },
           { number: "12+", label: "Years Experience" },
           { number: "12PM-9PM (Wed Off)", label: "Emergency Care" },

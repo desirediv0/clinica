@@ -139,7 +139,7 @@ export default function AboutPage() {
       description: "Round-the-clock dental care",
     },
     {
-      number: "5000+",
+      number: "1k+",
       label: "Happy Dental Patients",
       icon: Users,
       description: "Successful dental transformations",
@@ -218,7 +218,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <Hero
         title="Excellence in"
-        subtitle="Dental & Esthetics"
+        subtitle="Dental & Aesthetics"
         description="Discover the story behind CLINICA's commitment to providing world-class dental care with personalized treatments and exceptional results."
         backgroundImage="/images/about1.jpg"
         tagText="About CLINICA"
@@ -344,7 +344,7 @@ export default function AboutPage() {
                   </div>
                   <div className="text-center p-4 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg">
                     <div className="text-4xl font-bold bg-gradient-to-r from-[#815A93] to-[#e3c19d] bg-clip-text text-transparent mb-2">
-                      5000+
+                      1k+
                     </div>
                     <div className="text-sm text-gray-600 font-medium">
                       Happy Patients
@@ -368,7 +368,7 @@ export default function AboutPage() {
                         </div>
                         <div>
                           <div className="font-semibold text-gray-900 text-sm">
-                            Jennifer Adams
+                            Rahul
                           </div>
                           <div className="text-gray-500 text-xs">
                             Verified Patient

@@ -59,19 +59,19 @@ export default function Footer() {
 
   const achievements = [
     { icon: Award, text: "Best Multi-Specialty Clinic" },
-    { icon: Shield, text: "FDA Approved Dental Procedures" },
+    { icon: Shield, text: "Strict Sterlization Protocols" },
     { icon: Star, text: "5-Star Dental Patient Rating" },
     { icon: Heart, text: "Dental Safety Excellence" },
   ];
 
   const workingHours = [
-    { day: "Monday", hours: "12:00 AM - 9:00 PM", isOpen: true },
-    { day: "Tuesday", hours: "12:00 AM - 9:00 PM", isOpen: true },
+    { day: "Monday", hours: "12:00 PM - 9:00 PM", isOpen: true },
+    { day: "Tuesday", hours: "12:00 PM - 9:00 PM", isOpen: true },
     { day: "Wednesday", hours: "Closed", isOpen: false },
-    { day: "Thursday", hours: "12:00 AM - 9:00 PM", isOpen: true },
-    { day: "Friday", hours: "12:00 AM - 9:00 PM", isOpen: true },
-    { day: "Saturday", hours: "12:00 AM - 9:00 PM", isOpen: true },
-    { day: "Sunday", hours: "12:00 AM - 9:00 PM", isOpen: true },
+    { day: "Thursday", hours: "12:00 PM - 9:00 PM", isOpen: true },
+    { day: "Friday", hours: "12:00 PM - 9:00 PM", isOpen: true },
+    { day: "Saturday", hours: "12:00 PM - 9:00 PM", isOpen: true },
+    { day: "Sunday", hours: "12:00 PM - 9:00 PM", isOpen: true },
   ];
 
   const scrollToTop = () => {

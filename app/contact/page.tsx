@@ -73,13 +73,13 @@ export default function ContactPage() {
   ];
 
   const workingHours = [
-    { day: "Monday", hours: "12:00 AM - 9:00 PM", isOpen: true },
-    { day: "Tuesday", hours: "12:00 AM - 9:00 PM", isOpen: true },
+    { day: "Monday", hours: "12:00 PM - 9:00 PM", isOpen: true },
+    { day: "Tuesday", hours: "12:00 PM - 9:00 PM", isOpen: true },
     { day: "Wednesday", hours: "Closed", isOpen: false },
-    { day: "Thursday", hours: "12:00 AM - 9:00 PM", isOpen: true },
-    { day: "Friday", hours: "12:00 AM - 9:00 PM", isOpen: true },
-    { day: "Saturday", hours: "12:00 AM - 9:00 PM", isOpen: true },
-    { day: "Sunday", hours: "12:00 AM - 9:00 PM", isOpen: true },
+    { day: "Thursday", hours: "12:00 PM - 9:00 PM", isOpen: true },
+    { day: "Friday", hours: "12:00 PM - 9:00 PM", isOpen: true },
+    { day: "Saturday", hours: "12:00 PM - 9:00 PM", isOpen: true },
+    { day: "Sunday", hours: "12:00 PM - 9:00 PM", isOpen: true },
   ];
 
   const whyChooseUs = [
@@ -92,7 +92,7 @@ export default function ContactPage() {
     {
       icon: Shield,
       title: "Safe & Secure",
-      description: "FDA approved procedures",
+      description: "Strict Sterlization Protocols",
       color: "from-[#e3c19d] to-[#815A93]",
     },
     {
@@ -104,7 +104,7 @@ export default function ContactPage() {
     {
       icon: Sparkles,
       title: "Latest Technology",
-      description: "Advanced medical equipment",
+      description: "Advanced equipments",
       color: "from-[#e3c19d] to-[#815A93]",
     },
   ];
