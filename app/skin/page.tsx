@@ -190,7 +190,7 @@ export default function SkinPage() {
           { number: "10,000+", label: "Treatments Performed" },
           { number: "98%", label: "Patient Satisfaction" },
           { number: "6", label: "Advanced Treatments" },
-          { number: "24/7", label: "Expert Support" },
+          { number: "12PM-9PM (Wed Off)", label: "Expert Support" },
         ]}
         subtitleColor="text-[#815A93]"
       />

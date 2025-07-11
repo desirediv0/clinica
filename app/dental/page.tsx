@@ -492,7 +492,7 @@ export default function DentalPage() {
           { number: "5000+", label: "Successful Treatments" },
           { number: "99%", label: "Patient Satisfaction" },
           { number: "12+", label: "Years Experience" },
-          { number: "24/7", label: "Emergency Care" },
+          { number: "12PM-9PM (Wed Off)", label: "Emergency Care" },
         ]}
         subtitleColor="text-[#815A93]"
       />

@@ -133,7 +133,7 @@ export default function AboutPage() {
 
   const stats = [
     {
-      number: "24/7",
+      number: "12PM-9PM (Wed Off)",
       label: "Dental Emergency",
       icon: Clock,
       description: "Round-the-clock dental care",
@@ -336,7 +336,7 @@ export default function AboutPage() {
                 <div className="grid grid-cols-2 gap-6 mb-8">
                   <div className="text-center p-4 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg">
                     <div className="text-4xl font-bold bg-gradient-to-r from-[#815A93] to-[#e3c19d] bg-clip-text text-transparent mb-2">
-                      24/7
+                      12PM-9PM (Wed Off)
                     </div>
                     <div className="text-sm text-gray-600 font-medium">
                       Expert Support
