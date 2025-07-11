@@ -4,7 +4,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://clinicadentalandskin.com";
 
   // Add all your static routes
-  const routes = ["", "/about", "/contact", "/dental", "/skin"].map(
+  const routes = ["", "/about", "/contact", "/dental", "/skin", "/faq"].map(
     (route) => ({
       url: `${baseUrl}${route}`,
       lastModified: new Date().toISOString(),
