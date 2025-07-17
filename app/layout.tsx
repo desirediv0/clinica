@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import MobileActions from "@/components/MobileActions";
 
 // Font configuration
 const inter = Inter({
@@ -119,12 +120,18 @@ export default function RootLayout({
         <Navigation />
 
         {/* Main content */}
-        <main id="main-content" className="min-h-screen overflow-x-hidden">
+        <main
+          id="main-content"
+          className="min-h-screen overflow-x-hidden pb-16 md:pb-0"
+        >
           {children}
         </main>
 
         {/* Footer */}
         <Footer />
+
+        {/* Mobile Actions */}
+        <MobileActions />
 
         {/* Performance monitoring */}
         <script

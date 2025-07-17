@@ -952,7 +952,7 @@ export default function HomePage() {
                 title: "Expert Team",
                 description:
                   "Our team of highly qualified doctors and specialists brings years of experience and expertise to provide you with the best care possible.",
-                stat: "50+ Experts",
+                stat: "12+ Experts",
                 color: "from-[#e3c19d] to-[#815A93]",
               },
               {
@@ -1023,7 +1023,7 @@ export default function HomePage() {
                 {[
                   { number: "12+", label: "Years Experience" },
                   { number: "1k+", label: "Happy Patients" },
-                  { number: "50+", label: "Expert Doctors" },
+                  { number: "12+", label: "Expert Doctors" },
                   { number: "99%", label: "Success Rate" },
                 ].map((stat, index) => (
                   <div key={index} className="text-center">
@@ -1175,7 +1175,7 @@ export default function HomePage() {
             {[
               { number: "12+", label: "Years Experience" },
               { number: "1k+", label: "Happy Patients" },
-              { number: "50+", label: "Expert Doctors" },
+              { number: "12+", label: "Expert Doctors" },
               { number: "99%", label: "Success Rate" },
             ].map((stat, index) => (
               <motion.div
