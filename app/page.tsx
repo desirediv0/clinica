@@ -420,8 +420,8 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Enhanced Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="relative z-10 container mx-auto  text-center text-white">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
+        <div className="relative z-10 container mx-auto text-center">
           <Hero
             title="Advanced Dental Care & Skin"
             subtitle="with Personalized Excellence At Clinica"
@@ -434,16 +434,12 @@ export default function HomePage() {
             secondaryButtonText="About Us"
             secondaryButtonIcon={Play}
             secondaryButtonLink="#about"
-            subtitleColor="text-[#B12EBC]"
           />
         </div>
       </section>
 
       {/* Enhanced About Section */}
-      <section
-        id="about"
-        className="py-12 sm:py-16 md:py-20 lg:py-32 bg-gradient-to-br from-[#e3c19d]/5 to-[#815A93]/5"
-      >
+      <section id="about" className="py-12 sm:py-16 md:py-20 lg:py-32 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial="initial"
@@ -617,8 +613,7 @@ export default function HomePage() {
       </section>
 
       {/* Dental Treatments Section */}
-      <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-gradient-to-br from-[#815A93]/5 to-[#e3c19d]/5 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#e3c19d]/5 to-[#815A93]/5"></div>
+      <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-white relative overflow-hidden">
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <motion.div
             initial="initial"
@@ -627,7 +622,7 @@ export default function HomePage() {
             variants={fadeInUp}
             className="text-center mb-20"
           >
-            <span className="inline-block bg-gradient-to-r from-[#e3c19d]/10 to-[#815A93]/10 text-[#815A93] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-6">
+            <span className="inline-block bg-white text-[#815A93] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-6 border border-[#815A93]/20">
               Dental Excellence
             </span>
             <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-8">
@@ -773,7 +768,6 @@ export default function HomePage() {
 
       {/* Enhanced Skin Treatments Section */}
       <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#e3c19d]/5 to-[#815A93]/5"></div>
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <motion.div
             initial="initial"
@@ -782,7 +776,7 @@ export default function HomePage() {
             variants={fadeInUp}
             className="text-center mb-16"
           >
-            <span className="inline-block bg-gradient-to-r from-[#e3c19d]/10 to-[#815A93]/10 text-[#815A93] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4">
+            <span className="inline-block bg-white text-[#815A93] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4 border border-[#815A93]/20">
               Skin Excellence
             </span>
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
@@ -898,7 +892,7 @@ export default function HomePage() {
       </section>
 
       {/* Enhanced Why Choose CLINICA Section */}
-      <section className="py-20 lg:py-32 bg-gradient-to-br from-[#e3c19d]/5 to-[#815A93]/5">
+      <section className="py-20 lg:py-32 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial="initial"
@@ -907,7 +901,7 @@ export default function HomePage() {
             variants={fadeInUp}
             className="text-center mb-16"
           >
-            <span className="inline-block bg-gradient-to-r from-[#e3c19d]/10 to-[#815A93]/10 text-[#815A93] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4">
+            <span className="inline-block bg-white text-[#815A93] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4 border border-[#815A93]/20">
               Why Choose CLINICA
             </span>
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">

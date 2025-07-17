@@ -180,7 +180,7 @@ export default function ContactForm({
                       value={formData[field.name] || ""}
                       onChange={handleInputChange}
                       required={field.required}
-                      className="w-full px-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#815A93] focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
+                      className="w-full px-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#815A93] focus:border-transparent transition-all duration-300 bg-white"
                       placeholder={field.placeholder}
                     />
                   </div>
@@ -198,7 +198,7 @@ export default function ContactForm({
                         name={field.name}
                         value={formData[field.name] || ""}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#815A93] focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
+                        className="w-full px-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#815A93] focus:border-transparent transition-all duration-300 bg-white"
                       >
                         {field.options?.map((option) => (
                           <option key={option.value} value={option.value}>
@@ -214,7 +214,7 @@ export default function ContactForm({
                         onChange={handleInputChange}
                         required={field.required}
                         rows={5}
-                        className="w-full px-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#815A93] focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white resize-none"
+                        className="w-full px-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#815A93] focus:border-transparent transition-all duration-300 bg-white resize-none"
                         placeholder={field.placeholder}
                       ></textarea>
                     ) : (
@@ -225,7 +225,7 @@ export default function ContactForm({
                         value={formData[field.name] || ""}
                         onChange={handleInputChange}
                         required={field.required}
-                        className="w-full px-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#815A93] focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
+                        className="w-full px-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#815A93] focus:border-transparent transition-all duration-300 bg-white"
                         placeholder={field.placeholder}
                       />
                     )}

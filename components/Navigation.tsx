@@ -127,8 +127,8 @@ export default function Navigation() {
       <nav
         className={`fixed top-0 w-full z-40 transition-all duration-500 ${
           isScrolled
-            ? "bg-white/95 backdrop-blur-lg shadow-xl border-b border-gray-100 top-0"
-            : "bg-white/90 backdrop-blur-md top-10"
+            ? "bg-white shadow-xl border-b border-gray-100 top-0"
+            : "bg-white top-10"
         }`}
       >
         <div className="container mx-auto px-4 lg:px-8">
@@ -291,7 +291,7 @@ export default function Navigation() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden fixed inset-x-0 top-24 p-4 bg-white/95 backdrop-blur-lg border-b border-gray-100 shadow-xl z-40 mobile-menu"
+            className="lg:hidden fixed inset-x-0 top-24 p-4 bg-white border-b border-gray-100 shadow-xl z-40 mobile-menu"
           >
             <div className="flex flex-col space-y-1">
               {navItems.map((item) => (

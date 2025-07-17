@@ -52,9 +52,6 @@ export default function Hero({
   secondaryButtonIcon: SecondaryIcon,
   secondaryButtonLink,
   stats,
-  titleGradient = "from-[#e3c19d] via-white to-[#815A93]",
-  subtitleColor = "text-white", // default to white
-  subtitleGradient,
 }: HeroProps) {
   return (
     <section className="relative py-20 lg:py-36 overflow-hidden">
@@ -66,10 +63,10 @@ export default function Hero({
           className="object-cover"
           priority
         />
-        {/* Darker overlay for better text visibility */}
-        <div className="absolute inset-0 bg-black/75"></div>
+        {/* Lighter overlay for better visibility */}
+        <div className="absolute inset-0 bg-black/60"></div>
         {/* Gradient overlay for style */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#e3c19d]/30 via-[#815A93]/30 to-[#815A93]/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#e3c19d]/20 via-[#815A93]/20 to-[#815A93]/20"></div>
       </div>
 
       {/* Animated background elements */}
