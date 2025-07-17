@@ -158,29 +158,6 @@ export default function AboutPage() {
     },
   ];
 
-  const achievements = [
-    {
-      title: "Best Multi-Specialty Clinic",
-      organization: "Dental Excellence Awards",
-      icon: Award,
-    },
-    {
-      title: "Top Rated Dental Practice",
-      organization: "Patient Choice Awards",
-      icon: Star,
-    },
-    {
-      title: "Innovation in Dental Care",
-      organization: "Dental Technology Summit",
-      icon: Lightbulb,
-    },
-    {
-      title: "Dental Safety Excellence",
-      organization: "Dental Quality Institute",
-      icon: Shield,
-    },
-  ];
-
   const homeTestimonials = [
     {
       name: "Nitesh Singh",
@@ -379,25 +356,6 @@ export default function AboutPage() {
                   </div>
                 </div>
               </div>
-
-              {/* Floating achievement badge */}
-              <motion.div
-                animate={{ y: [0, -10, 0] }}
-                transition={{
-                  duration: 3,
-                  repeat: Number.POSITIVE_INFINITY,
-                  ease: "easeInOut",
-                }}
-                className="absolute -top-6 -right-6 bg-white rounded-full p-4 shadow-2xl border border-gray-100"
-              >
-                <div className="text-center">
-                  <Award className="w-8 h-8 text-[#815A93] mx-auto mb-1" />
-                  <div className="text-xs font-semibold text-gray-900">
-                    Award
-                  </div>
-                  <div className="text-xs text-gray-600">Winner</div>
-                </div>
-              </motion.div>
             </motion.div>
           </motion.div>
         </div>
@@ -559,6 +517,7 @@ export default function AboutPage() {
             </p>
           </motion.div>
 
+          {/* Stats */}
           <motion.div
             initial="initial"
             whileInView="animate"
@@ -585,32 +544,6 @@ export default function AboutPage() {
                 <div className="text-purple-200 text-sm">
                   {stat.description}
                 </div>
-              </motion.div>
-            ))}
-          </motion.div>
-
-          {/* Achievements */}
-          <motion.div
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={staggerContainer}
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
-          >
-            {achievements.map((achievement, index) => (
-              <motion.div
-                key={index}
-                variants={scaleIn}
-                whileHover={{ scale: 1.05 }}
-                className="text-center p-6 bg-white/5 backdrop-blur-md rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300"
-              >
-                <achievement.icon className="w-8 h-8 text-[#e3c19d] mx-auto mb-3" />
-                <h4 className="font-semibold text-white text-sm mb-1">
-                  {achievement.title}
-                </h4>
-                <p className="text-purple-200 text-xs">
-                  {achievement.organization}
-                </p>
               </motion.div>
             ))}
           </motion.div>
