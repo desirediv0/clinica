@@ -23,6 +23,7 @@ import {
   Quote,
   ChevronDown,
   ChevronUp,
+  Send,
 } from "lucide-react";
 import { useState } from "react";
 import Hero from "@/components/Hero";
@@ -1305,76 +1306,65 @@ export default function HomePage() {
               </div>
 
               <div className="bg-black/5 backdrop-blur-lg rounded-2xl p-8 border border-black/10">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                  <div>
-                    <label className="block text-gray-800 text-sm font-medium mb-2">
-                      Full Name
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-[#e3c19d] transition-colors duration-300"
-                      placeholder="Ritesh"
-                    />
+                <div className="text-center space-y-6">
+                  <div className="space-y-4">
+                    <h3 className="text-2xl font-bold text-black mb-4">
+                      Choose Your Option
+                    </h3>
+                    <p className="text-lg text-gray-800 leading-relaxed">
+                      Click below to book your appointment or send us a message
+                      through our secure booking system.
+                    </p>
                   </div>
-                  <div>
-                    <label className="block text-gray-800 text-sm font-medium mb-2">
-                      Phone Number
-                    </label>
-                    <input
-                      type="tel"
-                      className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-[#e3c19d] transition-colors duration-300"
-                      placeholder="9876543210"
-                    />
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <motion.button
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      onClick={() =>
+                        window.open(
+                          "https://cloud.pappyjoe.com/widget/index/VzcKMlAxUWwHZgdjAzEMZw%3D%3D",
+                          "_blank"
+                        )
+                      }
+                      className="w-full bg-gradient-to-r from-[#e3c19d] to-[#815A93] hover:from-[#e3c19d]/90 hover:to-[#815A93]/90 text-white font-bold py-6 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                    >
+                      <div className="flex items-center justify-center space-x-3">
+                        <Calendar className="w-6 h-6" />
+                        <span className="text-lg">Book Appointment</span>
+                      </div>
+                    </motion.button>
+
+                    <motion.button
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      onClick={() =>
+                        window.open(
+                          "https://cloud.pappyjoe.com/widget/index/VzcKMlAxUWwHZgdjAzEMZw%3D%3D",
+                          "_blank"
+                        )
+                      }
+                      className="w-full bg-gradient-to-r from-[#815A93] to-[#e3c19d] hover:from-[#815A93]/90 hover:to-[#e3c19d]/90 text-white font-bold py-6 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                    >
+                      <div className="flex items-center justify-center space-x-3">
+                        <Send className="w-6 h-6" />
+                        <span className="text-lg">Send Message</span>
+                      </div>
+                    </motion.button>
                   </div>
-                  <div>
-                    <label className="block text-gray-800 text-sm font-medium mb-2">
-                      Email Address
-                    </label>
-                    <input
-                      type="email"
-                      className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-[#e3c19d] transition-colors duration-300"
-                      placeholder="rit@example.com"
-                    />
+
+                  <div className="mt-6 p-6 bg-white/10 rounded-xl">
+                    <h4 className="font-semibold text-black mb-2">
+                      What to expect:
+                    </h4>
+                    <ul className="text-sm text-gray-800 space-y-1">
+                      <li>• Secure booking system powered by Pappyjoe</li>
+                      <li>• Easy appointment scheduling</li>
+                      <li>• Direct communication with our team</li>
+                      <li>• Quick response within 24 hours</li>
+                    </ul>
                   </div>
                 </div>
-
-                <div className="mb-6">
-                  <label className="block text-gray-800 text-sm font-medium mb-2">
-                    Treatment Interest
-                  </label>
-                  <select className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-black placeholder-gray-600 focus:outline-none focus:border-[#e3c19d] transition-colors duration-300">
-                    <option value="" className="bg-[#1a1a1a]">
-                      Select Treatment
-                    </option>
-                    <option value="dental" className="bg-[#1a1a1a]">
-                      Dental Care
-                    </option>
-                    <option value="skin" className="bg-[#1a1a1a]">
-                      Skin Treatment
-                    </option>
-                    <option value="both" className="bg-[#1a1a1a]">
-                      Both Services
-                    </option>
-                  </select>
-                </div>
-
-                <div className="mb-6">
-                  <label className="block text-gray-800 text-sm font-medium mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-[#e3c19d] transition-colors duration-300 h-32 resize-none"
-                    placeholder="Tell us about your concerns..."
-                  ></textarea>
-                </div>
-
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="w-full bg-gradient-to-r from-[#e3c19d] to-[#815A93] hover:from-[#e3c19d]/90 hover:to-[#815A93]/90 text-white font-semibold py-4 px-8 rounded-lg shadow-lg transition-all duration-300"
-                >
-                  Book Your Consultation
-                </motion.button>
               </div>
             </motion.div>
 

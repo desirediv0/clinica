@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { CheckCircle, Star, Send } from "lucide-react";
+import { CheckCircle, Star, Send, Calendar } from "lucide-react";
 
 interface ContactFormProps {
   title?: string;
@@ -13,108 +13,45 @@ interface ContactFormProps {
   buttonText?: string;
   successMessage?: string;
   successSubtitle?: string;
-  fields?: Array<{
-    name: string;
-    label: string;
-    type: string;
-    placeholder: string;
-    required?: boolean;
-    options?: Array<{ value: string; label: string }>;
-  }>;
 }
 
 export default function ContactForm({
-  title = "Send us a Message",
+  title = "Book Your Appointment",
   subtitle = "Get in touch with us today",
   tagText = "Get In Touch",
   tagColor = "from-[#e3c19d] to-[#815A93] text-[#815A93]",
   titleGradientFrom = "from-[#815A93]",
   titleGradientTo = "to-[#e3c19d]",
-  buttonText = "Send Message",
-  successMessage = "Message Sent Successfully!",
-  successSubtitle = "Thank you for contacting CLINICA. We'll get back to you within 24 hours with a personalized response.",
-  fields = [
-    {
-      name: "firstName",
-      label: "First Name *",
-      type: "text",
-      placeholder: "Ritesh",
-      required: true,
-    },
-    {
-      name: "lastName",
-      label: "Last Name *",
-      type: "text",
-      placeholder: "Sharma",
-      required: true,
-    },
-    {
-      name: "email",
-      label: "Email Address *",
-      type: "email",
-      placeholder: "ritesh@example.com",
-      required: true,
-    },
-    {
-      name: "phone",
-      label: "Phone Number",
-      type: "tel",
-      placeholder: "9876543210",
-    },
-    {
-      name: "service",
-      label: "Service Interest",
-      type: "select",
-      placeholder: "Select a service",
-      options: [
-        { value: "", label: "Select a service" },
-        { value: "dental-consultation", label: "Dental Consultation" },
-        { value: "skin-consultation", label: "Skin Consultation" },
-        { value: "dental-implants", label: "Dental Implants" },
-        { value: "smile-makeover", label: "Smile Makeover" },
-        { value: "chemical-peel", label: "Chemical Peel" },
-        { value: "hydrafacial", label: "HydraFacial" },
-        { value: "laser-hair-removal", label: "Laser Hair Removal" },
-        { value: "general", label: "General Inquiry" },
-      ],
-    },
-    {
-      name: "message",
-      label: "Message *",
-      type: "textarea",
-      placeholder:
-        "Tell us about your concerns, questions, or what you'd like to achieve...",
-      required: true,
-    },
-  ],
+  buttonText = "Book Appointment",
+  successMessage = "Redirecting to Booking...",
+  successSubtitle = "You will be redirected to our secure booking system.",
 }: ContactFormProps) {
-  const [formData, setFormData] = useState<Record<string, string>>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isRedirecting, setIsRedirecting] = useState(false);
 
-  const handleInputChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+  const handleBookingRedirect = () => {
+    setIsRedirecting(true);
+    // Redirect to Pappyjoe booking widget
+    window.open(
+      "https://cloud.pappyjoe.com/widget/index/VzcKMlAxUWwHZgdjAzEMZw%3D%3D",
+      "_blank"
+    );
+    // Reset after a short delay
+    setTimeout(() => {
+      setIsRedirecting(false);
+    }, 2000);
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    // Reset form after 5 seconds
+  const handleContactRedirect = () => {
+    setIsRedirecting(true);
+    // Redirect to Pappyjoe booking widget
+    window.open(
+      "https://cloud.pappyjoe.com/widget/index/VzcKMlAxUWwHZgdjAzEMZw%3D%3D",
+      "_blank"
+    );
+    // Reset after a short delay
     setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({});
-    }, 5000);
+      setIsRedirecting(false);
+    }, 2000);
   };
 
   return (
@@ -133,7 +70,7 @@ export default function ContactForm({
         </span>
       </h2>
 
-      {isSubmitted ? (
+      {isRedirecting ? (
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -155,105 +92,57 @@ export default function ContactForm({
         </motion.div>
       ) : (
         <div className="bg-white rounded-3xl shadow-2xl p-8 lg:p-12 border border-gray-100">
-          <form onSubmit={handleSubmit} className="space-y-6">
-            {fields.map((field, index) => (
-              <div
-                key={field.name}
-                className={
-                  field.name === "firstName" || field.name === "lastName"
-                    ? "grid md:grid-cols-2 gap-6"
-                    : ""
-                }
-              >
-                {field.name === "firstName" || field.name === "lastName" ? (
-                  <div>
-                    <label
-                      htmlFor={field.name}
-                      className="block text-sm font-semibold text-gray-700 mb-3"
-                    >
-                      {field.label}
-                    </label>
-                    <input
-                      type={field.type}
-                      id={field.name}
-                      name={field.name}
-                      value={formData[field.name] || ""}
-                      onChange={handleInputChange}
-                      required={field.required}
-                      className="w-full px-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#815A93] focus:border-transparent transition-all duration-300 bg-white"
-                      placeholder={field.placeholder}
-                    />
-                  </div>
-                ) : (
-                  <div>
-                    <label
-                      htmlFor={field.name}
-                      className="block text-sm font-semibold text-gray-700 mb-3"
-                    >
-                      {field.label}
-                    </label>
-                    {field.type === "select" ? (
-                      <select
-                        id={field.name}
-                        name={field.name}
-                        value={formData[field.name] || ""}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#815A93] focus:border-transparent transition-all duration-300 bg-white"
-                      >
-                        {field.options?.map((option) => (
-                          <option key={option.value} value={option.value}>
-                            {option.label}
-                          </option>
-                        ))}
-                      </select>
-                    ) : field.type === "textarea" ? (
-                      <textarea
-                        id={field.name}
-                        name={field.name}
-                        value={formData[field.name] || ""}
-                        onChange={handleInputChange}
-                        required={field.required}
-                        rows={5}
-                        className="w-full px-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#815A93] focus:border-transparent transition-all duration-300 bg-white resize-none"
-                        placeholder={field.placeholder}
-                      ></textarea>
-                    ) : (
-                      <input
-                        type={field.type}
-                        id={field.name}
-                        name={field.name}
-                        value={formData[field.name] || ""}
-                        onChange={handleInputChange}
-                        required={field.required}
-                        className="w-full px-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#815A93] focus:border-transparent transition-all duration-300 bg-white"
-                        placeholder={field.placeholder}
-                      />
-                    )}
-                  </div>
-                )}
-              </div>
-            ))}
+          <div className="text-center space-y-8">
+            <div className="space-y-4">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Choose Your Option
+              </h3>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Click below to book your appointment or send us a message
+                through our secure booking system.
+              </p>
+            </div>
 
-            <motion.button
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              type="submit"
-              disabled={isSubmitting}
-              className="w-full bg-gradient-to-r from-[#815A93] to-[#e3c19d] hover:from-[#6a4a7a] hover:to-[#c9ab85] text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              {isSubmitting ? (
+            <div className="grid md:grid-cols-2 gap-6">
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={handleBookingRedirect}
+                disabled={isRedirecting}
+                className="w-full bg-gradient-to-r from-[#815A93] to-[#e3c19d] hover:from-[#6a4a7a] hover:to-[#c9ab85] text-white font-bold py-6 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
                 <div className="flex items-center justify-center space-x-3">
-                  <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                  <span>Sending Message...</span>
+                  <Calendar className="w-6 h-6" />
+                  <span className="text-lg">Book Appointment</span>
                 </div>
-              ) : (
+              </motion.button>
+
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={handleContactRedirect}
+                disabled={isRedirecting}
+                className="w-full bg-gradient-to-r from-[#e3c19d] to-[#815A93] hover:from-[#c9ab85] hover:to-[#6a4a7a] text-white font-bold py-6 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
                 <div className="flex items-center justify-center space-x-3">
-                  <Send className="w-5 h-5" />
-                  <span>{buttonText}</span>
+                  <Send className="w-6 h-6" />
+                  <span className="text-lg">Send Message</span>
                 </div>
-              )}
-            </motion.button>
-          </form>
+              </motion.button>
+            </div>
+
+            <div className="mt-8 p-6 bg-gray-50 rounded-xl">
+              <h4 className="font-semibold text-gray-900 mb-2">
+                What to expect:
+              </h4>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• Secure booking system powered by Pappyjoe</li>
+                <li>• Easy appointment scheduling</li>
+                <li>• Direct communication with our team</li>
+                <li>• Quick response within 24 hours</li>
+              </ul>
+            </div>
+          </div>
         </div>
       )}
     </div>
