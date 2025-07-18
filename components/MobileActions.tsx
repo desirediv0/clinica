@@ -12,7 +12,8 @@ export default function MobileActions() {
         <span>Call Now</span>
       </a>
       <Link
-        href="/contact"
+        href="https://cloud.pappyjoe.com/widget/index/VzcKMlAxUWwHZgdjAzEMZw%3D%3D"
+        target="_blank"
         className="bg-[#e3c19d] text-white px-6 py-3 rounded-full flex items-center justify-center space-x-2 hover:bg-[#c9a987] transition-colors shadow-lg"
       >
         <Calendar className="w-5 h-5" />

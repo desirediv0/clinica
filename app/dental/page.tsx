@@ -487,7 +487,7 @@ export default function DentalPage() {
         primaryButtonLink="#treatments"
         secondaryButtonText="Book Consultation"
         secondaryButtonIcon={Play}
-        secondaryButtonLink="/contact"
+        secondaryButtonLink="https://cloud.pappyjoe.com/widget/index/VzcKMlAxUWwHZgdjAzEMZw%3D%3D"
         stats={[
           { number: "1k+", label: "Successful Treatments" },
           { number: "99%", label: "Patient Satisfaction" },
@@ -719,7 +719,8 @@ export default function DentalPage() {
                     className="mt-auto"
                   >
                     <Link
-                      href="/contact"
+                      href="https://cloud.pappyjoe.com/widget/index/VzcKMlAxUWwHZgdjAzEMZw%3D%3D"
+                      target="_blank"
                       className="w-full inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-[#e3c19d] to-[#815A93] hover:from-[#e3c19d]/80 hover:to-[#815A93]/80 text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                     >
                       <Calendar className="w-4 h-4" />

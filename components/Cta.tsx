@@ -80,7 +80,8 @@ const Cta: React.FC<CtaProps> = ({
               whileTap={{ scale: 0.95 }}
             >
               <Link
-                href="/contact"
+                href="https://cloud.pappyjoe.com/widget/index/VzcKMlAxUWwHZgdjAzEMZw%3D%3D"
+                target="_blank"
                 className="group relative inline-flex items-center space-x-3 bg-gradient-to-r from-[#e3c19d] to-[#815A93] hover:from-[#e3c19d]/80 hover:to-[#815A93]/80 px-8 py-4 rounded-full text-white font-bold text-lg shadow-2xl transition-all duration-300 overflow-hidden"
               >
                 <div className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>

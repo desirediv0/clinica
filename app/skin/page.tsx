@@ -185,7 +185,7 @@ export default function SkinPage() {
         primaryButtonLink="#treatments"
         secondaryButtonText="Book Consultation"
         secondaryButtonIcon={Play}
-        secondaryButtonLink="/contact"
+        secondaryButtonLink="https://cloud.pappyjoe.com/widget/index/VzcKMlAxUWwHZgdjAzEMZw%3D%3D"
         stats={[
           { number: "10,000+", label: "Treatments Performed" },
           { number: "98%", label: "Patient Satisfaction" },
