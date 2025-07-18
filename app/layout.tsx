@@ -22,11 +22,12 @@ const poppins = Poppins({
 // Metadata configuration
 export const metadata: Metadata = {
   title: {
-    default: "CLINICA - Top Dental Care & Skin Treatments",
+    default:
+      "Best Dental Clinic In Dwarka | Best Dentist In Dwarka | Best Skin Clinic In Dwarka",
     template: "%s | CLINICA",
   },
   description:
-    "Discover the best dental care and skin treatments at CLINICA. Leading-edge dental technology, expert dentists, and personalized care for your perfect smile. Book your dental consultation today.",
+    "Discover the best dental care and skin treatments at CLINICA. Leading-edge dental technology, expert dentists, and personalized care for your perfect smile. Book your dental consultation today. Best Dental Clinic In Dwarka | Best Dentist In Dwarka | Best Skin Clinic In Dwarka",
   keywords: [
     "best dental clinic",
     "dental implants",
@@ -48,6 +49,13 @@ export const metadata: Metadata = {
     "beauty treatments",
     "dermatology",
     "skin rejuvenation",
+    "best dental clinic in dwarka",
+    "best dentist in dwarka",
+    "best skin clinic in dwarka",
+    "best dental clinic in dwarka",
+    "best dental clinic in dwarka",
+    "best dental in dwarka",
+    "best dental clinic in dwarka",
   ],
   authors: [{ name: "CLINICA Team" }],
   creator: "CLINICA",
@@ -65,7 +73,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://clinicadentalandskin.com",
-    title: "CLINICA - Premier Dental Care & Skin Treatments",
+    title:
+      "Best Dental Clinic In Dwarka | Best Dentist In Dwarka | Best Skin Clinic In Dwarka",
     description:
       "Discover the best dental care and skin treatments at CLINICA. Leading-edge dental technology, expert dentists, and personalized care for your perfect smile.",
     siteName: "CLINICA",
@@ -80,7 +89,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "CLINICA - Premier Dental Care & Skin Treatments",
+    title:
+      "Best Dental Clinic In Dwarka | Best Dentist In Dwarka | Best Skin Clinic In Dwarka",
     description:
       "Discover the best dental care and skin treatments at CLINICA. Leading-edge dental technology and expert care.",
     images: ["/images/logo2.jpeg"],

@@ -322,9 +322,9 @@ export default function DentalPage() {
 
   const whyChooseUs = [
     {
-      title: "Top-quality care that lasts",
+      title: "Excellence Through Expertise and Artistry",
       description:
-        "We focus on results that are built to last, providing treatment solutions that maintain their strength and beauty over time.",
+        "Our responsibility towards you begins much before you sit on the dental chair. Our clinic is designed to instantly make you feel comfortable and relaxed. We believe that the best outcomes originate from personalised patient care.",
       icon: Award,
     },
     {
