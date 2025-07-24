@@ -274,7 +274,7 @@ export default function Footer() {
                 </div>
               </motion.li>
 
-              <motion.li
+              {/* <motion.li
                 whileHover={{ x: 5 }}
                 className="flex items-start space-x-4"
               >
@@ -287,7 +287,7 @@ export default function Footer() {
                     info@clinica.com
                   </p>
                 </div>
-              </motion.li>
+              </motion.li> */}
 
               <motion.li
                 whileHover={{ x: 5 }}

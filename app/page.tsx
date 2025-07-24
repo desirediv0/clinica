@@ -1383,12 +1383,12 @@ export default function HomePage() {
                     title: "Call Us",
                     content: "+91 70071 45918",
                   },
-                  {
-                    icon: Mail,
-                    title: "Email Us",
-                    content: "info@clinica.com\nappointments@clinica.com",
-                    subtext: "Response within 24 hours",
-                  },
+                  // {
+                  //   icon: Mail,
+                  //   title: "Email Us",
+                  //   content: "info@clinica.com\nappointments@clinica.com",
+                  //   subtext: "Response within 24 hours",
+                  // },
                 ].map((item, index) => (
                   <motion.div
                     key={index}
@@ -1405,9 +1405,6 @@ export default function HomePage() {
                         </h3>
                         <p className="text-gray-800 whitespace-pre-line mb-1">
                           {item.content}
-                        </p>
-                        <p className="text-sm text-[#eba458]">
-                          {item?.subtext}
                         </p>
                       </div>
                     </div>

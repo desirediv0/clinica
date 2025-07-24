@@ -85,12 +85,12 @@ export default function Navigation() {
       href: "tel:+917007145918",
       label: "Call Us Now",
     },
-    {
-      icon: Mail,
-      text: "info@clinica.com",
-      href: "mailto:info@clinica.com",
-      label: "Email Us",
-    },
+    // {
+    //   icon: Mail,
+    //   text: "info@clinica.com",
+    //   href: "mailto:info@clinica.com",
+    //   label: "Email Us",
+    // },
     {
       icon: MapPin,
       text: "1st Floor, Plot No. 24, Sector-12A Rd",

@@ -63,13 +63,13 @@ export default function ContactPage() {
       subtext: "Immediate response guaranteed",
       color: "from-[#e3c19d] to-[#815A93]",
     },
-    {
-      icon: Mail,
-      title: "Email Us",
-      content: "info@clinica.com\nWe respond within 24 hours",
-      subtext: "Professional consultation via email",
-      color: "from-[#815A93] to-[#e3c19d]",
-    },
+    // {
+    //   icon: Mail,
+    //   title: "Email Us",
+    //   content: "info@clinica.com\nWe respond within 24 hours",
+    //   subtext: "Professional consultation via email",
+    //   color: "from-[#815A93] to-[#e3c19d]",
+    // },
   ];
 
   const workingHours = [
