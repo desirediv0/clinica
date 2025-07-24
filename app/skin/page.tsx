@@ -287,7 +287,11 @@ export default function SkinPage() {
                     </div>
                   </div>
                   <div className="text-center p-4 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg">
+<<<<<<< HEAD
                     <div className="text-lg md:text-4xl font-bold bg-gradient-to-r from-[#815A93] to-[#e3c19d] bg-clip-text text-transparent mb-2">
+=======
+                    <div className="text-4xl font-bold bg-gradient-to-r from-[#815A93] to-[#e3c19d] bg-clip-text text-transparent mb-2">
+>>>>>>> 1e513d55f9a0caf48f4521419f7077bbdb15f788
                       EMI Options
                     </div>
                     <div className="text-sm text-gray-600 font-medium">
