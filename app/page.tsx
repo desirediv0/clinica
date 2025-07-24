@@ -26,6 +26,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import Hero from "@/components/Hero";
+import ContactForm from "@/components/ContactForm";
 
 // Enhanced Animation variants
 const fadeInUp = {
@@ -1228,7 +1229,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Enhanced Contact Section */}
+      {/* Contact Form Section */}
       <section className="py-20 lg:py-32 relative overflow-hidden">
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <motion.div
@@ -1240,123 +1241,74 @@ export default function HomePage() {
           >
             {/* Contact Form */}
             <motion.div variants={slideInLeft}>
-              <div className="mb-8">
-                <span className="inline-block bg-black/90 text-[#e3c19d] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4 border border-white/5">
-                  Book Consultation
-                </span>
-                <h2 className="text-4xl lg:text-5xl font-bold text-black mb-6">
-                  Get In{" "}
-                  <span className="bg-gradient-to-r from-[#e3c19d] to-[#815A93] bg-clip-text text-transparent">
-                    Touch
-                  </span>
-                </h2>
-                <p className="text-xl text-gray-800 leading-relaxed">
-                  Schedule your consultation today and take the first step
-                  towards your enhanced confidence and well-being.
-                </p>
-              </div>
-
-              <div className="bg-black/5 backdrop-blur-lg rounded-2xl p-8 border border-black/10">
-                <div className="text-center space-y-6">
-                  <div className="space-y-4">
-                    <h3 className="text-2xl font-bold text-black mb-4">
-                      Choose Your Option
-                    </h3>
-                    <p className="text-lg text-gray-800 leading-relaxed">
-                      Click below to book your appointment or send us a message
-                      through our secure booking system.
-                    </p>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <motion.button
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                      onClick={() =>
-                        window.open(
-                          "https://cloud.pappyjoe.com/widget/index/VzcKMlAxUWwHZgdjAzEMZw%3D%3D",
-                          "_blank"
-                        )
-                      }
-                      className="w-full bg-gradient-to-r from-[#e3c19d] to-[#815A93] hover:from-[#e3c19d]/90 hover:to-[#815A93]/90 text-white font-bold py-6 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-                    >
-                      <div className="flex items-center justify-center space-x-3">
-                        <Calendar className="w-6 h-6" />
-                        <span className="text-lg">Book Appointment</span>
-                      </div>
-                    </motion.button>
-
-                    <motion.button
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                      onClick={() =>
-                        window.open(
-                          "https://cloud.pappyjoe.com/widget/index/VzcKMlAxUWwHZgdjAzEMZw%3D%3D",
-                          "_blank"
-                        )
-                      }
-                      className="w-full bg-gradient-to-r from-[#815A93] to-[#e3c19d] hover:from-[#815A93]/90 hover:to-[#e3c19d]/90 text-white font-bold py-6 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-                    >
-                      <div className="flex items-center justify-center space-x-3">
-                        <Send className="w-6 h-6" />
-                        <span className="text-lg">Send Message</span>
-                      </div>
-                    </motion.button>
-                  </div>
-
-                  <div className="mt-6 p-6 bg-white/10 rounded-xl">
-                    <h4 className="font-semibold text-black mb-2">
-                      What to expect:
-                    </h4>
-                    <ul className="text-sm text-gray-800 space-y-1">
-                      <li>• Secure booking system powered by Pappyjoe</li>
-                      <li>• Easy appointment scheduling</li>
-                      <li>• Direct communication with our team</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+              <ContactForm
+                title="Ready to Transform Your"
+                subtitle="Life?"
+                tagText="Book Consultation"
+                tagColor="from-[#e3c19d]/10 to-[#815A93]/10 text-[#815A93]"
+                titleGradientFrom="from-[#815A93]"
+                titleGradientTo="to-[#e3c19d]"
+                buttonText="Book Consultation"
+                successMessage="Consultation Booked Successfully!"
+                successSubtitle="Thank you for choosing CLINICA. We'll contact you within 24 hours to confirm your appointment."
+              />
             </motion.div>
 
             {/* Contact Information */}
             <motion.div variants={slideInRight}>
-              <div className="space-y-8">
+              <div className="mb-8">
+                <span className="inline-block bg-gradient-to-r from-[#e3c19d]/10 to-[#815A93]/10 text-[#815A93] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4">
+                  Contact Information
+                </span>
+                <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                  Get in{" "}
+                  <span className="bg-gradient-to-r from-[#815A93] to-[#e3c19d] bg-clip-text text-transparent">
+                    Touch
+                  </span>
+                </h2>
+                <p className="text-xl text-gray-600 leading-relaxed">
+                  Trust CLINICA for top-quality care, expert guidance, and
+                  personalized solutions that truly stand the test of time.
+                </p>
+              </div>
+
+              <div className="space-y-6 mb-12">
                 {[
                   {
                     icon: MapPin,
                     title: "Visit Our Clinic",
                     content:
                       "1st Floor, Plot No. 24, Sector-12A Rd, opp. Bal Bharti School, above AU Small Finance Bank, Block A, Sector 12 Dwarka, Dwarka, New Delhi, Delhi, 110075",
+                    color: "from-[#e3c19d] to-[#815A93]",
                   },
                   {
                     icon: Phone,
                     title: "Call Us",
                     content: "+91 70071 45918",
+                    subtext: "Immediate response guaranteed",
+                    color: "from-[#815A93] to-[#e3c19d]",
                   },
-                  // {
-                  //   icon: Mail,
-                  //   title: "Email Us",
-                  //   content: "info@clinica.com\nappointments@clinica.com",
-                  //   subtext: "Response within 24 hours",
-                  // },
-                ].map((item, index) => (
+                ].map((contact, index) => (
                   <motion.div
                     key={index}
                     whileHover={{ scale: 1.02, x: 10 }}
-                    className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10"
+                    className="flex items-start space-x-6 p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
                   >
-                    <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-gradient-to-r from-[#e3c19d] to-[#815A93] rounded-xl flex items-center justify-center flex-shrink-0">
-                        <item.icon className="w-6 h-6 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-black mb-2">
-                          {item.title}
-                        </h3>
-                        <p className="text-gray-800 whitespace-pre-line mb-1">
-                          {item.content}
-                        </p>
-                      </div>
+                    <div
+                      className={`w-14 h-14 bg-gradient-to-r ${contact.color} rounded-2xl flex items-center justify-center shadow-lg flex-shrink-0`}
+                    >
+                      <contact.icon className="w-7 h-7 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-gray-900 text-lg mb-2">
+                        {contact.title}
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed whitespace-pre-line mb-1">
+                        {contact.content}
+                      </p>
+                      <p className="text-sm text-gray-500">
+                        {contact?.subtext}
+                      </p>
                     </div>
                   </motion.div>
                 ))}

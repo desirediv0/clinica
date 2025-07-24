@@ -1,7 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown, ChevronUp, MapPin, Phone } from "lucide-react";
 import { useState } from "react";
+import ContactForm from "@/components/ContactForm";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -175,6 +176,91 @@ export default function FaqPage() {
           ))}
         </div>
       </div>
+
+      {/* Contact Form Section */}
+      <section className="py-20 lg:py-32 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={fadeInUp}
+            className="grid lg:grid-cols-2 gap-16 lg:gap-20"
+          >
+            {/* Contact Form */}
+            <motion.div variants={fadeInUp}>
+              <ContactForm
+                title="Still Have"
+                subtitle="Questions?"
+                tagText="Get In Touch"
+                tagColor="from-[#e3c19d]/10 to-[#815A93]/10 text-[#815A93]"
+                titleGradientFrom="from-[#815A93]"
+                titleGradientTo="to-[#e3c19d]"
+                buttonText="Send Message"
+                successMessage="Message Sent Successfully!"
+                successSubtitle="We'll get back to you with answers to your questions within 24 hours."
+              />
+            </motion.div>
+
+            {/* Contact Information */}
+            <motion.div variants={fadeInUp}>
+              <div className="mb-8">
+                <span className="inline-block bg-gradient-to-r from-[#815A93]/10 to-[#e3c19d]/10 text-[#815A93] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4">
+                  Contact Information
+                </span>
+                <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                  Get in{" "}
+                  <span className="bg-gradient-to-r from-[#815A93] to-[#e3c19d] bg-clip-text text-transparent">
+                    Touch
+                  </span>
+                </h2>
+              </div>
+
+              <div className="space-y-6 mb-12">
+                {[
+                  {
+                    icon: MapPin,
+                    title: "Visit Our Clinic",
+                    content:
+                      "1st Floor, Plot No. 24, Sector-12A Rd, opp. Bal Bharti School, above AU Small Finance Bank, Block A, Sector 12 Dwarka, Dwarka, New Delhi, Delhi, 110075",
+                    color: "from-[#e3c19d] to-[#815A93]",
+                  },
+                  {
+                    icon: Phone,
+                    title: "Call Us",
+                    content: "+91 70071 45918",
+                    subtext: "Immediate response guaranteed",
+                    color: "from-[#815A93] to-[#e3c19d]",
+                  },
+                ].map((contact, index) => (
+                  <motion.div
+                    key={index}
+                    whileHover={{ scale: 1.02, x: 10 }}
+                    className="flex items-start space-x-6 p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
+                  >
+                    <div
+                      className={`w-14 h-14 bg-gradient-to-r ${contact.color} rounded-2xl flex items-center justify-center shadow-lg flex-shrink-0`}
+                    >
+                      <contact.icon className="w-7 h-7 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-gray-900 text-lg mb-2">
+                        {contact.title}
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed whitespace-pre-line mb-1">
+                        {contact.content}
+                      </p>
+                      <p className="text-sm text-gray-500">
+                        {contact?.subtext}
+                      </p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
 }

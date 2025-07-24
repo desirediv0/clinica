@@ -279,7 +279,7 @@ export default function SkinPage() {
 
                 <div className="grid grid-cols-2 gap-6 mb-8">
                   <div className="text-center p-4 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg">
-                    <div className="text-4xl font-bold bg-gradient-to-r from-[#815A93] to-[#e3c19d] bg-clip-text text-transparent mb-2">
+                    <div className="text-lg md:text-4xl font-bold bg-gradient-to-r from-[#815A93] to-[#e3c19d] bg-clip-text text-transparent mb-2">
                       99%
                     </div>
                     <div className="text-sm text-gray-600 font-medium">
@@ -287,11 +287,11 @@ export default function SkinPage() {
                     </div>
                   </div>
                   <div className="text-center p-4 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg">
-                    <div className="text-4xl font-bold bg-gradient-to-r from-[#815A93] to-[#e3c19d] bg-clip-text text-transparent mb-2">
-                      6
+                    <div className="text-lg md:text-4xl font-bold bg-gradient-to-r from-[#815A93] to-[#e3c19d] bg-clip-text text-transparent mb-2">
+                      EMI Options
                     </div>
                     <div className="text-sm text-gray-600 font-medium">
-                      Advanced Treatments
+                      Available
                     </div>
                   </div>
                 </div>

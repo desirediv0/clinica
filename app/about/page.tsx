@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 import Hero from "@/components/Hero";
 import Testimonials from "@/components/Testimonials";
+import ContactForm from "@/components/ContactForm";
 
 // Enhanced Animation variants
 const fadeInUp = {
@@ -312,7 +313,7 @@ export default function AboutPage() {
 
                 <div className="grid grid-cols-2 gap-6 mb-8">
                   <div className="text-center p-4 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg">
-                    <div className="text-4xl font-bold bg-gradient-to-r from-[#815A93] to-[#e3c19d] bg-clip-text text-transparent mb-2">
+                    <div className="text-lg md:text-4xl font-bold bg-gradient-to-r from-[#815A93] to-[#e3c19d] bg-clip-text text-transparent mb-2">
                       EMI Options
                     </div>
                     <div className="text-sm text-gray-600 font-medium">
@@ -320,7 +321,7 @@ export default function AboutPage() {
                     </div>
                   </div>
                   <div className="text-center p-4 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg">
-                    <div className="text-4xl font-bold bg-gradient-to-r from-[#815A93] to-[#e3c19d] bg-clip-text text-transparent mb-2">
+                    <div className="text-lg md:text-4xl font-bold bg-gradient-to-r from-[#815A93] to-[#e3c19d] bg-clip-text text-transparent mb-2">
                       30k
                     </div>
                     <div className="text-sm text-gray-600 font-medium">
@@ -535,10 +536,10 @@ export default function AboutPage() {
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl mb-6 border border-white/30">
                   <stat.icon className="w-10 h-10 text-white" />
                 </div>
-                <div className="text-5xl font-bold mb-2 bg-gradient-to-r from-white to-[#e3c19d] bg-clip-text text-transparent">
+                <div className="text-xl md:text-5xl font-bold mb-2 bg-gradient-to-r from-white to-[#e3c19d] bg-clip-text text-transparent">
                   {stat.number}
                 </div>
-                <div className="text-xl font-semibold text-white mb-2">
+                <div className="text-sm md:text-xl font-semibold text-white mb-2">
                   {stat.label}
                 </div>
                 <div className="text-purple-200 text-sm">
@@ -560,6 +561,95 @@ export default function AboutPage() {
         titleGradientTo="to-orange-600"
         backgroundClass="bg-white"
       />
+
+      {/* Contact Form Section */}
+      <section className="py-20 lg:py-32 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+            className="grid lg:grid-cols-2 gap-16 lg:gap-20"
+          >
+            {/* Contact Form */}
+            <motion.div variants={slideInLeft}>
+              <ContactForm
+                title="Ready to Experience"
+                subtitle="CLINICA?"
+                tagText="Book Consultation"
+                tagColor="from-[#e3c19d]/10 to-[#815A93]/10 text-[#815A93]"
+                titleGradientFrom="from-[#815A93]"
+                titleGradientTo="to-[#e3c19d]"
+                buttonText="Book Consultation"
+                successMessage="Consultation Booked Successfully!"
+                successSubtitle="Thank you for choosing CLINICA. We'll contact you within 24 hours to confirm your appointment."
+              />
+            </motion.div>
+
+            {/* Contact Information */}
+            <motion.div variants={slideInRight}>
+              <div className="mb-8">
+                <span className="inline-block bg-gradient-to-r from-[#e3c19d]/10 to-[#815A93]/10 text-[#815A93] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4">
+                  Contact Information
+                </span>
+                <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                  Get in{" "}
+                  <span className="bg-gradient-to-r from-[#815A93] to-[#e3c19d] bg-clip-text text-transparent">
+                    Touch
+                  </span>
+                </h2>
+                <p className="text-xl text-gray-600 leading-relaxed">
+                  Trust CLINICA for top-quality care, expert guidance, and
+                  personalized solutions that truly stand the test of time.
+                </p>
+              </div>
+
+              <div className="space-y-6 mb-12">
+                {[
+                  {
+                    icon: MapPin,
+                    title: "Visit Our Clinic",
+                    content:
+                      "1st Floor, Plot No. 24, Sector-12A Rd, opp. Bal Bharti School, above AU Small Finance Bank, Block A, Sector 12 Dwarka, Dwarka, New Delhi, Delhi, 110075",
+                    color: "from-[#e3c19d] to-[#815A93]",
+                  },
+                  {
+                    icon: Phone,
+                    title: "Call Us",
+                    content: "+91 70071 45918",
+                    subtext: "Immediate response guaranteed",
+                    color: "from-[#815A93] to-[#e3c19d]",
+                  },
+                ].map((contact, index) => (
+                  <motion.div
+                    key={index}
+                    whileHover={{ scale: 1.02, x: 10 }}
+                    className="flex items-start space-x-6 p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
+                  >
+                    <div
+                      className={`w-14 h-14 bg-gradient-to-r ${contact.color} rounded-2xl flex items-center justify-center shadow-lg flex-shrink-0`}
+                    >
+                      <contact.icon className="w-7 h-7 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-gray-900 text-lg mb-2">
+                        {contact.title}
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed whitespace-pre-line mb-1">
+                        {contact.content}
+                      </p>
+                      <p className="text-sm text-gray-500">
+                        {contact?.subtext}
+                      </p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
 
       {/* Enhanced Contact Info Section */}
       <section className="py-20 lg:py-32 bg-gradient-to-br from-gray-50 to-white">

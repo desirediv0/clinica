@@ -174,7 +174,7 @@ export default function Hero({
                   key={index}
                   className="text-center bg-[#815A93]/10 backdrop-blur-md rounded-2xl p-6 shadow-lg border border-[#e3c19d]/30"
                 >
-                  <div className="text-3xl md:text-4xl font-bold text-[#e3c19d] mb-2">
+                  <div className="text-xl md:text-4xl font-bold text-[#e3c19d] mb-2">
                     {stat.number}
                   </div>
                   <div className="text-white text-sm md:text-base">
