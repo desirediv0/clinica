@@ -3,12 +3,12 @@ import nodemailer from "nodemailer";
 
 // Email configuration
 const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST,
+  host: process.env.NEXT_PUBLIC_SMTP_HOST,
   port: 587,
   secure: false, // true for 465, false for other ports
   auth: {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASSWORD,
+    user: process.env.NEXT_PUBLIC_SMTP_USER,
+    pass: process.env.NEXT_PUBLIC_SMTP_PASSWORD,
   },
 });
 
@@ -16,9 +16,9 @@ export async function POST(request: NextRequest) {
   try {
     // Check if environment variables are set
     if (
-      !process.env.SMTP_HOST ||
-      !process.env.SMTP_USER ||
-      !process.env.SMTP_PASSWORD
+      !process.env.NEXT_PUBLIC_SMTP_HOST ||
+      !process.env.NEXT_PUBLIC_SMTP_USER ||
+      !process.env.NEXT_PUBLIC_SMTP_PASSWORD
     ) {
       console.error("Missing SMTP environment variables");
       return NextResponse.json(
@@ -143,8 +143,8 @@ export async function POST(request: NextRequest) {
 
     // Send email
     const mailOptions = {
-      from: process.env.FROM_EMAIL,
-      to: process.env.TO_EMAIL, // Admin email
+      from: process.env.NEXT_PUBLIC_FROM_EMAIL,
+      to: process.env.NEXT_PUBLIC_TO_EMAIL, // Admin email
       subject: `New Contact Form Submission: ${subject}`,
       html: emailTemplate,
       replyTo: email, // So admin can reply directly to the sender
