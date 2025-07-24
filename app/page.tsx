@@ -986,7 +986,7 @@ export default function HomePage() {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                 {[
                   { number: "12+", label: "Years Experience" },
-                  { number: "1k+", label: "Happy Patients" },
+                  { number: "30k+", label: "Successful Treatments" },
                   { number: "12+", label: "Expert Doctors" },
                   { number: "99%", label: "Success Rate" },
                 ].map((stat, index) => (
@@ -1138,7 +1138,7 @@ export default function HomePage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
               { number: "12+", label: "Years Experience" },
-              { number: "1k+", label: "Happy Patients" },
+              { number: "30k+", label: "Successful Treatments" },
               { number: "12+", label: "Expert Doctors" },
               { number: "99%", label: "Success Rate" },
             ].map((stat, index) => (
