@@ -203,9 +203,9 @@ export default function AboutPage() {
         primaryButtonText="Our Mission"
         primaryButtonIcon={Target}
         primaryButtonLink="#mission"
-        secondaryButtonText="About Us"
+        secondaryButtonText="Contact"
         secondaryButtonIcon={Play}
-        secondaryButtonLink="#story"
+        secondaryButtonLink="/contact"
         subtitleColor="text-[#815A93]"
       />
 

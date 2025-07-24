@@ -489,10 +489,10 @@ export default function DentalPage() {
         secondaryButtonIcon={Play}
         secondaryButtonLink="https://cloud.pappyjoe.com/widget/index/VzcKMlAxUWwHZgdjAzEMZw%3D%3D"
         stats={[
-          { number: "1k+", label: "Successful Treatments" },
+          { number: "30k+", label: "Successful Treatments" },
           { number: "99%", label: "Patient Satisfaction" },
           { number: "12+", label: "Years Experience" },
-          { number: "12PM-9PM (Wed Off)", label: "Emergency Care" },
+          { number: "EMI Options", label: "Available" },
         ]}
         subtitleColor="text-[#815A93]"
       />

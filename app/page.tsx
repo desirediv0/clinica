@@ -5,7 +5,6 @@ import Link from "next/link";
 import {
   Calendar,
   Phone,
-  Mail,
   MapPin,
   Star,
   ArrowRight,
@@ -27,7 +26,6 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import Hero from "@/components/Hero";
-import WhyChoose from "@/components/WhyChoose";
 
 // Enhanced Animation variants
 const fadeInUp = {
@@ -316,37 +314,6 @@ export default function HomePage() {
     },
   ];
 
-  const whyChooseUs = [
-    {
-      title: "Expert Doctors",
-      description: "Certified specialists with decades of experience",
-      icon: Award,
-      color: "from-[#00326D] to-[#B12EBC]",
-      stat: "Expert Care",
-    },
-    {
-      title: "Advanced Technology",
-      description: "State-of-the-art equipment with latest innovations",
-      icon: Zap,
-      color: "from-[#B12EBC] to-[#00326D]",
-      stat: "99.9% Success",
-    },
-    {
-      title: "Personalized Care",
-      description: "Customized treatment plans for every patient",
-      icon: Users,
-      color: "from-[#00326D] to-[#B12EBC]",
-      stat: "1000+ Patients",
-    },
-    {
-      title: "Digital Precision",
-      description: "Latest digital techniques for accurate results",
-      icon: Shield,
-      color: "from-[#B12EBC] to-[#00326D]",
-      stat: "100% Digital",
-    },
-  ];
-
   const experts = [
     {
       name: "Dr. Sarah Johnson",
@@ -431,7 +398,7 @@ export default function HomePage() {
             tagIcon={Sparkles}
             primaryButtonText="Book Consultation"
             primaryButtonIcon={Calendar}
-            primaryButtonLink="#contact"
+            primaryButtonLink="/contact"
             secondaryButtonText="About Us"
             secondaryButtonIcon={Play}
             secondaryButtonLink="#about"
