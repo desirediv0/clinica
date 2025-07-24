@@ -1225,22 +1225,6 @@ export default function HomePage() {
               </motion.div>
             ))}
           </motion.div>
-
-          <motion.div
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={fadeInUp}
-            className="text-center mt-12"
-          >
-            <Link
-              href="/testimonials"
-              className="inline-flex items-center space-x-2 bg-gradient-to-r from-[#e3c19d] to-[#815A93] hover:from-[#e3c19d]/90 hover:to-[#815A93]/90 text-white px-8 py-4 rounded-full font-semibold shadow-lg transition-all duration-300"
-            >
-              <span>View All Stories</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </motion.div>
         </div>
       </section>
 
@@ -1261,7 +1245,7 @@ export default function HomePage() {
                   Book Consultation
                 </span>
                 <h2 className="text-4xl lg:text-5xl font-bold text-black mb-6">
-                  Get In
+                  Get In{" "}
                   <span className="bg-gradient-to-r from-[#e3c19d] to-[#815A93] bg-clip-text text-transparent">
                     Touch
                   </span>
@@ -1328,7 +1312,6 @@ export default function HomePage() {
                       <li>• Secure booking system powered by Pappyjoe</li>
                       <li>• Easy appointment scheduling</li>
                       <li>• Direct communication with our team</li>
-                      <li>• Quick response within 24 hours</li>
                     </ul>
                   </div>
                 </div>

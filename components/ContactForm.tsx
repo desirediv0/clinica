@@ -139,7 +139,6 @@ export default function ContactForm({
                 <li>• Secure booking system powered by Pappyjoe</li>
                 <li>• Easy appointment scheduling</li>
                 <li>• Direct communication with our team</li>
-                <li>• Quick response within 24 hours</li>
               </ul>
             </div>
           </div>

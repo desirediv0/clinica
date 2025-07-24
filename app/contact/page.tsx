@@ -317,8 +317,8 @@ export default function ContactPage() {
       <Cta
         title="Ready to Start Your Journey?"
         subtitle="Don't wait to achieve the results you deserve. Contact us today and take the first step towards your transformation with CLINICA's expert care."
-        buttonText="Call Us Now"
-        phoneText="Book Consultation"
+        buttonText="Book Consultation"
+        phoneText="Call Us Now"
         gradientFrom="from-blue-900"
         gradientTo="to-cyan-900"
         titleGradientFrom="from-cyan-300"
