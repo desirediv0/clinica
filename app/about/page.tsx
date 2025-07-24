@@ -133,28 +133,28 @@ export default function AboutPage() {
 
   const stats = [
     {
-      number: "12PM-9PM (Wed Off)",
-      label: "Dental Emergency",
+      number: "EMI Options",
+      label: "Available",
       icon: Clock,
-      description: "Round-the-clock dental care",
+      description: "Flexible payment options",
     },
     {
-      number: "1k+",
-      label: "Happy Dental Patients",
+      number: "30k+",
+      label: "Successful Treatments",
       icon: Users,
-      description: "Successful dental transformations",
+      description: "Successful treatments",
     },
     {
-      number: "99.8%",
-      label: "Dental Success Rate",
+      number: "99%",
+      label: "Patient Satisfaction",
       icon: Star,
-      description: "Exceptional dental outcomes",
+      description: "Exceptional results",
     },
     {
       number: "12+",
-      label: "Years Experience",
+      label: "Years of Experience",
       icon: Shield,
-      description: "Expert dental care",
+      description: "Expert care",
     },
   ];
 
@@ -313,18 +313,18 @@ export default function AboutPage() {
                 <div className="grid grid-cols-2 gap-6 mb-8">
                   <div className="text-center p-4 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg">
                     <div className="text-4xl font-bold bg-gradient-to-r from-[#815A93] to-[#e3c19d] bg-clip-text text-transparent mb-2">
-                      12PM-9PM (Wed Off)
+                      EMI Options
                     </div>
                     <div className="text-sm text-gray-600 font-medium">
-                      Expert Support
+                      Flexible Payment
                     </div>
                   </div>
                   <div className="text-center p-4 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg">
                     <div className="text-4xl font-bold bg-gradient-to-r from-[#815A93] to-[#e3c19d] bg-clip-text text-transparent mb-2">
-                      1k+
+                      30k
                     </div>
                     <div className="text-sm text-gray-600 font-medium">
-                      Happy Patients
+                      Successful Treatments
                     </div>
                   </div>
                 </div>

@@ -187,10 +187,10 @@ export default function SkinPage() {
         secondaryButtonIcon={Play}
         secondaryButtonLink="https://cloud.pappyjoe.com/widget/index/VzcKMlAxUWwHZgdjAzEMZw%3D%3D"
         stats={[
-          { number: "10,000+", label: "Treatments Performed" },
-          { number: "98%", label: "Patient Satisfaction" },
-          { number: "6", label: "Advanced Treatments" },
-          { number: "12PM-9PM (Wed Off)", label: "Expert Support" },
+          { number: "30k", label: "Successful Treatments" },
+          { number: "99%", label: "Patient Satisfaction" },
+          { number: "12+", label: "Years of Experience" },
+          { number: "EMI Options", label: "Available" },
         ]}
         subtitleColor="text-[#815A93]"
       />
@@ -280,7 +280,7 @@ export default function SkinPage() {
                 <div className="grid grid-cols-2 gap-6 mb-8">
                   <div className="text-center p-4 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg">
                     <div className="text-4xl font-bold bg-gradient-to-r from-[#815A93] to-[#e3c19d] bg-clip-text text-transparent mb-2">
-                      98%
+                      99%
                     </div>
                     <div className="text-sm text-gray-600 font-medium">
                       Patient Satisfaction
@@ -311,7 +311,7 @@ export default function SkinPage() {
                         </div>
                         <div>
                           <div className="font-semibold text-gray-900 text-sm">
-                            Sarah Mitchell
+                            Rishabh Singh
                           </div>
                           <div className="text-gray-500 text-xs">
                             Verified Patient
