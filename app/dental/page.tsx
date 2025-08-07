@@ -94,6 +94,31 @@ export default function DentalPage() {
         "This structure acts as a support for the 'crown' or the artificial tooth. These mechanics are similar to how a natural tooth anchors itself, making dental implants the ideal replacement solution. All our implant systems meet the most stringent of international quality standards. Implants act by replacing the root portion of the tooth, thus not only replace a tooth but also support the bone beneath thereby preventing loss of jaw bone after tooth loss. On top of dental implants, implant crowns are placed that replace the tooth portion.",
     },
     {
+      title: "Pediatric Dentistry",
+      description:
+        "Kids are one of the most difficult to handle, and when it comes to expressing, they always need special care. Our team of child specialist dentists not only caters to the needs of a child for dental treatment but they also make sure to educate the children and their parents for oral health awareness for future.",
+      benefits: [
+        "Fluoride application for developing teeth",
+        "Sealant application for making teeth caries resistant",
+        "Restorative procedures for damaged teeth",
+        "Pulpectomy (RCT for kids teeth)",
+        "Habit breakers for thumb sucking, nail biting",
+        "Preventive and corrective orthodontics",
+        "Oral hygiene education for children and parents",
+        "Monitoring proper growth and development of teeth",
+        "Friendly and playful environment for kids",
+        "Complete dental development monitoring",
+      ],
+      duration: "30-60 minutes",
+      recovery: "No downtime",
+      image: "/images/pediatric-dentistry.jpg",
+      icon: Baby,
+      color: "from-[#815A93] to-[#e3c19d]",
+      details:
+        "In our commitment towards improving complete oral health, we ensure we spend time with each child entering our clinic to educate them about the importance of oral health and how to maintain it. Kids enjoy coming to our setup as we make sure to provide them a friendly and playful environment. We at CLINICA make sure that the kids are free from thumb sucking habit, nail biting, lip biting, etc. We keep a check for proper growth and development of the teeth in children. Most of the future problems can be catered on this stage and thus preventive measures are also taken care of. Our paediatric treatments include curative and preventive dental procedures, such as sealant treatment, topical fluoride application and more. We attend to all the dental care needs of children and monitor their overall dental development.",
+      keyBenefitsLabel: "Services We Provide:",
+    },
+    {
       title: "Full Mouth Rehabilitation",
       description:
         "A full mouth reconstruction (rehabilitation) is needed when your oral health deteriorates completely due to multiple dental problems. The procedure has the power to turn back the clock by taking away at least 10 to 15 years of facial ageing.",
@@ -251,13 +276,6 @@ export default function DentalPage() {
         "Professional clean-up, scaling and polishing are essential at least once every 6 months to maintain oral health. These procedures efficiently remove plaque, tartar and stains, preventing gum problems when done regularly and addressing any problems in early stages.",
       icon: Droplets,
       color: "from-[#e3c19d] to-[#815A93]",
-    },
-    {
-      title: "Pediatric Dentistry",
-      description:
-        "Kids are one of the most difficult to handle, and when it comes to dental care, they need special attention. Our child specialists provide comprehensive care including fluoride application, sealant treatment, pulpectomy, habit breakers, and preventive orthodontics. We create a friendly environment and educate both children and parents about maintaining good oral health. We ensure kids are free from thumb sucking, nail biting, lip biting habits and monitor proper growth and development of teeth.",
-      icon: Baby,
-      color: "from-[#815A93] to-[#e3c19d]",
     },
     {
       title: "Preventive Dentistry",
