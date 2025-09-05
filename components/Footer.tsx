@@ -32,6 +32,7 @@ export default function Footer() {
     { name: "Skin Care", href: "/skin" },
     { name: "FAQ", href: "/faq" },
     { name: "Contact Us", href: "/contact" },
+    { name: "Overseas Patients", href: "/overseas-patients" },
   ];
 
   const services = [
