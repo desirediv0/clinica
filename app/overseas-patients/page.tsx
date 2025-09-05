@@ -1,178 +1,862 @@
 
-import React from "react";
+"use client";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import {
+    Calendar,
+    Phone,
+    MapPin,
+    Star,
+    CheckCircle,
+    Award,
+    Users,
+    Shield,
+    Zap,
+    Heart,
+    Clock,
+    ChevronDown,
+    ChevronUp,
+    Plane,
+    Globe,
+    Mail,
+    Stethoscope,
+    FileText,
+    CreditCard,
+    ArrowRight,
+} from "lucide-react";
+import Hero from "@/components/Hero";
+import ContactForm from "@/components/ContactForm";
+import Faq from "@/components/Faq";
+import Cta from "@/components/Cta";
 
-const OverseasPatients = () => (
-    <main className="max-w-3xl mx-auto px-4 py-8 mt-28">
+// Enhanced Animation variants
+const fadeInUp = {
+    initial: { opacity: 0, y: 60 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] },
+};
 
-        <h1 className="text-3xl font-bold mb-6">Dental Tourism in Delhi, India</h1>
-        <section className="mb-6">
-            <p>
-                This is a form of tourism in which dental tourism is clubbed with tours and several medical travel agencies provide specialized services in this regard. Dental treatment is not expensive when compared with other countries for its quality. The dental tour operators have a tie up with highly qualified dentists. They help get in touch with your dentist and also arrange a nice customizable package tour wherein you can visit your favorite cities and places in India. Many a times, a dentist customizes a treatment plan which fits into your travel itinerary. This treatment plan is customized keeping in mind patients&#39; needs and also the treatments which have no downtime are placed in your itinerary, like dental fillings, gums treatments, teeth whitening, teeth cleanings, veneers. These treatments are fast and don&#39;t need any major changes in your itinerary.
-            </p>
-            <p>
-                Besides, India is a convenient country to visit where the weather is nice and the people are warm. The environment is beautiful and tropical and accommodation is comfortable too. Dental tourism is offered in many cities of India. <span className="font-bold">Delhi</span> is the preferred destination for every tourist travelling to India. Its mystical presence makes it a favorite destination for both domestic as well as international tourists. Delhi has a great transportation and commutation infrastructure, including connectivity to other popular tourist destinations in India as well as rest of the world. This makes Delhi the most visited tourist destination in India and worth visiting by all, irrespective of age and interest. No matter when you are visiting or what is the purpose of your visit, a Delhi tour is sure to leave you hypnotized with its charm that is beyond any match.
-            </p>
-        </section>
-        <section className="mb-6">
-            <h2 className="text-xl font-bold mb-2">Why Delhi for Dental Tourism in India</h2>
-            <ul className="list-disc pl-6 mb-4">
-                <li>Highly qualified and experienced Doctors</li>
-                <li>Internationally Accredited Facilities</li>
-                <li>Fluent English Speaking Doctors</li>
-                <li>Ease of Access and Safety</li>
-                <li>Plenty to See and Do</li>
-                <li>Famous for great Food</li>
-            </ul>
-        </section>
-        <section className="mb-6">
-            <h2 className="text-xl font-bold mb-2">Why CLINICA Dental and Skin for Dental Tourism In India</h2>
-            <p>
-                <span className="font-bold">CLINICA Dental and Skin</span> is known as one of the best dental tourism destinations in Delhi because of its customized service and care for visiting tourists in Delhi. <span className="font-bold">CLINICA Dental and Skin</span> is the epicenter of excellence for dental and facial aesthetics in India primarily because of its location. <span className="font-bold">This clinic is the best dental clinic and nearest to airport of all the dental clinics in Delhi providing Dental Tourism.</span> At CLINICA Dental and Skin, we treat patients from all across the globe, taking special care of their dental needs and facial aesthetics like fillers and botox associated with it to accentuate the look. Every patient is of utmost importance to us and we understand that most of our overseas patients have time constraints and we take special care in customizing treatment plans according to individual needs and travel schedule.
-            </p>
-            <p>
-                We, at <span className="font-bold">CLINICA Dental and Skin</span> emphasize on planning treatments in discussion with patients and scheduling the appointments in advance, thus making sure that none of our patients have to ever wait and all treatment goals are being met within the desired time frame.
-            </p>
-        </section>
-        <section className="mb-6">
-            <h2 className="text-xl font-bold mb-2">How to Connect Us / Plan Your Treatment</h2>
-            <ol className="list-decimal pl-6 mb-4">
-                <li>
-                    <span className="font-bold">STEP 1 - DENTAL HISTORY ANALYSIS</span><br />
-                    Send us an email with:<br />
-                    1. Name, Age, Sex<br />
-                    2. Dental Issue in Detail<br />
-                    3. Upload Dental xrays or images, if any<br />
-                    4. Upload Past Dental Records, if any<br />
-                    5. Upload Doctors Prescription, if any
-                </li>
-                <li>
-                    <span className="font-bold text-yellow-700">STEP 2 - E-Consult with the Head Specialist even before confirming your trip</span><br />
-                    Our backend team will send you an acknowledgement and within 24-48 hours come back to you with a required treatment plan along with tentative costings and duration of treatment.<br />
-                    Before you confirm your travel plans, we can schedule a Non Obligatory Online E-consultation (Audio or Video Call) appointment with our Head Specialist who can help you with your concerns and can also help you in deciding a tentative treatment plan.
-                </li>
-                <li>
-                    <span className="font-bold text-yellow-700">STEP 3 - Confirm your dates, We&#39;ll sort out the rest</span><br />
-                    On confirming your travel dates, your Personal Client Relationship Manager shall organise all your appointments, airport pick up/drops and assist you with accommodation/hotel booking and help you find a comfortable stay near our Dental Office, so that you don&#39;t have to travel much. Once you arrive, your International Client Relationship Manager will pick you up from the Airport and provide all the required assistance throughout your stay.
-                </li>
-                <li>
-                    <span className="font-bold text-yellow-700">STEP 4 - Logistics Support and Personal Care</span><br />
-                    Our International Client Relationship Managers would be more than happy to assist you with Visa Requirements, Flight selection, Travel insurance, Local mobile number, Currency exchange and also in finding a perfect meal for you while keeping your dental concerns in mind.
-                </li>
-                <li>
-                    <span className="font-bold">STEP 5 - Advanced Dental Care</span><br />
-                    Experience Luxurious International Dental Care in our State of the Art Setup which is backed with the most advanced technologies the dental world has to offer. Our World Class Infrastructure makes us rank as one of the Best Dental Clinics in India. Our team of internationally trained specialists make sure you receive the best dental experience.
-                </li>
-            </ol>
-            <p>
-                <span className="font-bold">Stay in Touch Via Tele Medicine</span><br />
-                We make relationships for life and stand strong with our patients in times of need. In future if you would require any assistance for any dental problem we would be more than happy to help you via Tele Medicine and are pleased to offer Life Time Warranties on all our work.
-            </p>
-        </section>
-        <section className="mb-6">
-            <h2 className="text-xl font-bold mb-2">WHY CLINICA DENTAL AND SKIN FOR DENTAL TOURISM IN INDIA</h2>
-            <ol className="list-decimal pl-6 mb-4">
-                <li>
-                    <span className="font-bold">PERSONALIZED CARE AND CUSTOMER SERVICE</span><br />
-                    CLINICA DENTAL AND SKIN is known as one of the best dental tourism destinations in Delhi because of its world class infrastructure, customized service and personal care for all patients any visiting medical tourists in Delhi. At CLINICA DENTAL AND SKIN, we treat individuals from all across the globe, taking special care of their dental needs. Every patient is important to us and we understand that most of our overseas patients have time constraints and require succinct planning and scheduling as part of their treatment needs.
-                </li>
-                <li>
-                    <span className="font-bold">ADVANCED PLANNING</span><br />
-                    We are completely committed towards carefully planning the treatment plan to achieve excellent and predictable results at an accelerated pace, compromising neither the health of the teeth and gums nor the quality of dental care. At CLINICA DENTAL AND SKIN, we engage with the visiting patient well in advance and educate while planning for the treatment and providing a defined timeline for the procedure. This enables the visiting patient to take the most informed decisions while being satisfied with the best results. Our emphasis on planning and scheduling means that none of our patients have to ever wait and all treatment goals set in advance are met within the desired time frame.
-                </li>
-                <li>
-                    <span className="font-bold">MAINTAINING STRICT AND INTERNATIONAL STERILIZATION PROTOCOLS</span><br />
-                    Our practice is equipped with the latest technology as well as top quality materials and tools. We take immense pride in the maintenance of international standards of infection control measures and dental care at CLINICA DENTAL AND SKIN. Also, our team regularly update their skills and knowledge with continuing education at recognized International Universities & conferences to provide the latest and best possible dental care to patients.
-                </li>
-            </ol>
-            <ul className="list-disc pl-6 mb-4">
-                <li>Multiple-Awards winning dentists</li>
-                <li>International standard Sterilization Protocol</li>
-                <li>World Class technology and services</li>
-                <li>Centrally located in the capital of India with proximity to all major landmarks</li>
-                <li>4.9 GCR Global Clinical Rating</li>
-                <li>English Speaking Dentist and staff – for other languages, interpreters can be arranged</li>
-                <li>End to end assistance for our International Patients</li>
-                <li>World class dentistry at affordable costs</li>
-            </ul>
-            <p>
-                Help us plan your dental holiday to India. Our International Patient Customer care team takes care of all your needs. Send us your query and let us do the rest.
-            </p>
-        </section>
-        <section className="mb-6">
-            <h2 className="text-xl font-bold mb-2">Medical Tourism Visa, Accommodation & Assistance</h2>
-            <p>
-                <span className="font-bold">Visa:</span> Getting visa to travel to India for dental treatment has become a lot simpler than what it was earlier. Now, you no longer need to visit an embassy or send off your passport – the Indian Government has introduced online tourist Visa (e-Visa) for business, tourism, or medical visits. Citizens from 150+ countries, including the US, who are travelling to India for periods less than 60 days can now seamlessly apply online for an Indian Tourist Visa. The process is really simple and does not take much time to complete. In addition, there is visa on arrival for 180 countries. So you can just book a flight and get the visa when you reach India. Although, it would be advisable to obtain e-Visa if you want to avoid the lines!!
-            </p>
-            <p>
-                <span className="font-bold">E-Visa Request Process:</span> You can apply for the e-Visa online and, once approved, the visa is sent to you via email. When applying for an e-Visa, it is not necessary to submit your passport or other personal documents to the consulate. The e-Visa approval will be issued in advance electronically before your departure to India. Tourists wishing to visit India will normally be granted Tourist Visa, effective from the date of issue. Tourist Visa is non-extendible.
-            </p>
-            <p>
-                <span className="font-bold">Medical Tourism Visa In India:</span> The Government of India provides a specialized medical tourist visa to India for foreigners who seek medical treatment in India. The stay time for a person with medical tourist visa in India is determined by the time taken for the procedure as well as the recovery time. Typically, the Government of India grants a one year period for a medical tourist visa (depending upon the type of treatment). However, this can be extended with the approval of the Ministry of Home Affairs.
-            </p>
-            <p>
-                <span className="font-bold">What You Need To Obtain A Medical Tourist Visa In India:</span>
-            </p>
-            <ul className="list-disc pl-6 mb-4">
-                <li>Medical documents, images, & prescriptions for verification by Indian Missions & Posts</li>
-                <li>Details of medical/procedural plans with advice of doctors in their country and doctors opted for in India</li>
-                <li>Passport with a validity of at least six months (with photocopy of passport) for patient and attendant (if any)</li>
-                <li>Proof of relation of attendant with patient</li>
-                <li>Proof of residential address</li>
-                <li>Photocopy of online visa application form</li>
-                <li>Proof of required funds for medical procedures and period of stay</li>
-            </ul>
-            <p>
-                After providing these relevant documents, the procedure for obtaining a medical tourism visa to India is similar to the tourist visa. However, the cost of medical tourism visa depends upon the country of origin. For further assistance, contact our international patient Customer care here: <br />
-                <span className="font-bold">Ph:</span> +91 70071 45918 <br />
+const staggerContainer = {
+    animate: {
+        transition: {
+            staggerChildren: 0.1,
+        },
+    },
+};
 
-                <span className="font-bold">WhatsApp:</span> +91 70071 45918
-            </p>
+const scaleIn = {
+    initial: { opacity: 0, scale: 0.8 },
+    animate: { opacity: 1, scale: 1 },
+    transition: { duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] },
+};
 
-        </section>
-        <section className="mb-6">
-            <h2 className="text-xl font-bold mb-2">Connectivity</h2>
-            <ul className="list-disc pl-6 mb-4">
-                <li><span className="font-bold">TRAVEL AIR:</span> The Indira Gandhi International Airport (code: DEL) connects Delhi with other states in India and International cities serving over 70 million domestic and international passengers. It is the busiest airport in India; 6th busiest in Asia and 12th in the world. According to Skytrax, The Indira Gandhi International Airport ranks the best airport in India and Central Asia, and 59th in the world.</li>
-                <li><span className="font-bold">RAILWAYS:</span> Delhi is the headquarters of the Northern Rail Network System and is very well connected with all states and cities in India via numerous Railway Stations such as New Delhi, Old Delhi, Nizzamuddin, and Anand Vihar.</li>
-                <li><span className="font-bold">EXPRESSWAYS:</span> Delhi has a well-maintained network of State and National Highways as well as Expressways that seamlessly connect to neighboring states. There are a total of five National Highways namely NH-1, NH-2, NH-8, NH-10 and NH-24 connecting the city to other states.</li>
-                <li><span className="font-bold">DELHI METRO:</span> Delhi Metro is best to travel within Delhi NCR. Presently, the Delhi Metro network consists of about 373 Km with 271 stations. The network has now crossed the boundaries of Delhi to reach NOIDA and Ghaziabad in Uttar Pradesh, Gurgaon, Faridabad, Bahadurgarh and Ballabhgarh in Haryana. The Airport Express links between the Indira Gandhi International Airport and New Delhi.</li>
-                <li><span className="font-bold">CABS:</span> Cabs and taxi services are easily available at a throw-away distance. Uber, Ola, Meru are popular online apps and can be conveniently booked for Delhi NCR and inter-state travels.</li>
-            </ul>
-        </section>
-        <section className="mb-6">
-            <h2 className="text-xl font-bold mb-2">Accommodation</h2>
-            <p>
-                If you are an international patient and are travelling to New Delhi, India for dental or medical treatment, accommodation will often be one of the top concerns when planning your trip. Many of our patients combine their dental appointments with medical appointments with a holiday or business trip to maximize their time in New Delhi. There are numerous options in New Delhi, ranging from budget to 5 star hotels, room rentals, Air BnB and backpacker dorms. Many of these are within walking distance to <span className="font-bold">CLINICA DENTAL AND SKIN</span> or taxi / bus ride away.
-            </p>
-        </section>
-        <section className="mb-6">
-            <h2 className="text-xl font-bold mb-2">World Class Dental Treatment at a Much Lower Price Than Your Home Country</h2>
-            <p>
-                At <span className="font-bold">CLINICA DENTAL AND SKIN</span>, we claim to do world class dental treatment, as we only use proven established materials from internationally recognised companies. This is testified by the video testimonials of myriad patients from across the globe who have visited us and thus have become an integral part of Dental Tourism in Delhi. Our international patients feel secure about the fact that when they walk into a dental clinic in their native country or any other country the materials which were used in their dental work here at <span className="font-bold">CLINICA DENTAL AND SKIN</span> will be recognised by the dentists there. This factor has helped in the substantial increase in the traffic for Dental Tourism in India. Some examples of the materials we use are:
-            </p>
-            <ul className="list-disc pl-6 mb-4">
-                <li>Fillings – Composite teeth coloured fillings from 3M (USA) and Ivoclar(Germany)</li>
-                <li>Teeth Whitening – Zoom Whitespeed (USA)</li>
-                <li>Veneers – e max porcelain veneers from Ivoclar (Germany)</li>
-                <li>Implants – Straumann (USA), Nobel Active Biocare (Sweden)</li>
-                <li>Crowns and Bridges – Dentsply (USA) Cercon HT high strength</li>
-            </ul>
-            <p>
-                Our Dental equipment is imported from the USA and Europe, therefore assuring you of world class dental treatment.
-            </p>
-            <p className="font-bold">Some of the equipment we use are:</p>
-            <ul className="list-disc pl-6 mb-4">
-                <li>RVG (Radiovisiography) machine for instant digital images of teeth with zero scattered radiation replacing the traditional imaging techniques of xrays is from the Satelec company of France</li>
-                <li>The light cure unit is from Ivoclar company in Germany</li>
-                <li>The ultrasonic scalers are from Satelec Company in France</li>
-                <li>Our rotary files and reamers for the one sitting root canal treatments, using motorised technique is from Dentsply Company in USA</li>
-            </ul>
-            <p>
-                The global standard equipment from international companies ensuring world class treatment is another big factor contributing to the Dental Tourism in India favourably. Our treatments are available at a fraction of the cost you would pay in your home country.
-            </p>
+const slideInLeft = {
+    initial: { opacity: 0, x: -60 },
+    animate: { opacity: 1, x: 0 },
+    transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] },
+};
 
-        </section>
-    </main>
-);
+const slideInRight = {
+    initial: { opacity: 0, x: 60 },
+    animate: { opacity: 1, x: 0 },
+    transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] },
+};
+
+const OverseasPatients = () => {
+    const [expandedStep, setExpandedStep] = useState<string | null>(null);
+
+    const toggleStep = (stepId: string) => {
+        if (expandedStep === stepId) {
+            setExpandedStep(null);
+        } else {
+            setExpandedStep(stepId);
+        }
+    };
+    const treatmentProcess = [
+        {
+            step: "01",
+            title: "Dental History Analysis",
+            description: "Send us your complete dental history with X-rays, images, and medical records for comprehensive evaluation.",
+            icon: FileText,
+            duration: "24-48 hours",
+            color: "from-[#815A93] to-[#e3c19d]",
+            details: [
+                "Name, Age, Sex details",
+                "Detailed dental issue description",
+                "Upload dental X-rays or images",
+                "Past dental records submission",
+                "Doctor's prescriptions (if any)"
+            ]
+        },
+        {
+            step: "02",
+            title: "E-Consultation with Specialist",
+            description: "Virtual consultation with our head specialist before confirming your trip to discuss treatment plan and costs.",
+            icon: Stethoscope,
+            duration: "30-60 minutes",
+            color: "from-[#e3c19d] to-[#815A93]",
+            details: [
+                "Treatment plan discussion",
+                "Tentative cost estimation",
+                "Treatment duration planning",
+                "Audio/Video consultation available",
+                "Non-obligatory consultation"
+            ]
+        },
+        {
+            step: "03",
+            title: "Travel Planning & Logistics",
+            description: "Confirm your dates and we'll organize everything from airport pickup to accommodation near our clinic.",
+            icon: Plane,
+            duration: "Full assistance",
+            color: "from-[#815A93] to-[#e3c19d]",
+            details: [
+                "Airport pickup/drop arrangements",
+                "Hotel booking assistance",
+                "Appointment scheduling",
+                "Personal relationship manager",
+                "Local area guidance"
+            ]
+        },
+        {
+            step: "04",
+            title: "Personal Care & Support",
+            description: "Complete assistance with visa requirements, travel insurance, currency exchange and local support.",
+            icon: Heart,
+            duration: "Throughout stay",
+            color: "from-[#e3c19d] to-[#815A93]",
+            details: [
+                "Visa requirement assistance",
+                "Flight selection guidance",
+                "Travel insurance support",
+                "Local mobile number setup",
+                "Currency exchange help"
+            ]
+        },
+        {
+            step: "05",
+            title: "Advanced Dental Treatment",
+            description: "World-class dental care in our state-of-the-art facility with internationally trained specialists.",
+            icon: Award,
+            duration: "As per plan",
+            color: "from-[#815A93] to-[#e3c19d]",
+            details: [
+                "International standard equipment",
+                "Advanced dental technologies",
+                "Internationally trained specialists",
+                "Luxurious treatment environment",
+                "Comprehensive dental care"
+            ]
+        }
+    ];
+
+    const whyClinicaAdvantages = [
+        {
+            icon: Award,
+            title: "Personalized Care & Service",
+            description: "World-class infrastructure with customized service and personal care for international patients.",
+            highlights: [
+                "Individual attention to every patient",
+                "Time-efficient treatment planning",
+                "Special care for overseas patients",
+                "Customized treatment packages"
+            ]
+        },
+        {
+            icon: Clock,
+            title: "Advanced Planning",
+            description: "Carefully planned treatment schedules to achieve excellent results at accelerated pace.",
+            highlights: [
+                "Pre-planned treatment timelines",
+                "No waiting time for patients",
+                "Educated treatment planning",
+                "Predictable excellent results"
+            ]
+        },
+        {
+            icon: Shield,
+            title: "International Standards",
+            description: "Strict international sterilization protocols with latest technology and quality materials.",
+            highlights: [
+                "International infection control",
+                "Latest dental technology",
+                "Top quality materials and tools",
+                "Continuous education updates"
+            ]
+        },
+        {
+            icon: Globe,
+            title: "Global Recognition",
+            description: "Multiple award-winning dentists with international credentials and recognition.",
+            highlights: [
+                "4.9 GCR Global Clinical Rating",
+                "English speaking staff",
+                "World-class dentistry",
+                "Affordable premium costs"
+            ]
+        }
+    ];
+
+    const dentalTourismBenefits = [
+        {
+            title: "Cost Effective Treatment",
+            description: "World-class dental care at 60-80% lower costs compared to western countries.",
+            icon: CreditCard,
+            stats: "Save up to 80%"
+        },
+        {
+            title: "No Waiting Lists",
+            description: "Immediate treatment availability without long waiting periods.",
+            icon: Clock,
+            stats: "Instant availability"
+        },
+        {
+            title: "Advanced Technology",
+            description: "Latest dental equipment and techniques from USA and Europe.",
+            icon: Zap,
+            stats: "International grade"
+        },
+        {
+            title: "English Speaking Doctors",
+            description: "Fluent English speaking doctors and staff for clear communication.",
+            icon: Users,
+            stats: "Clear communication"
+        },
+        {
+            title: "Tourism Combined",
+            description: "Combine your dental treatment with exploring incredible India.",
+            icon: MapPin,
+            stats: "Holiday + Treatment"
+        },
+        {
+            title: "International Materials",
+            description: "Only proven, internationally recognized dental materials used.",
+            icon: CheckCircle,
+            stats: "Global standards"
+        }
+    ];
+
+    return (
+        <div className="min-h-screen bg-white">
+            {/* Enhanced Hero Section */}
+            <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
+                <div className="relative z-10 container mx-auto text-center">
+                    <Hero
+                        title="World-Class Dental Tourism"
+                        subtitle="in the Heart of India"
+                        description="Experience premium dental care combined with incredible Indian hospitality. Our international patients receive personalized treatment plans, comprehensive support, and world-class dental care at affordable prices."
+                        backgroundImage="/images/homepagebanner.jpg.avif"
+                        tagText="Dental Tourism Excellence"
+                        tagIcon={Globe}
+                        primaryButtonText="Plan Your Treatment"
+                        primaryButtonIcon={Calendar}
+                        primaryButtonLink="#treatment-process"
+                        secondaryButtonText="E-Consultation"
+                        secondaryButtonIcon={Stethoscope}
+                        secondaryButtonLink="https://cloud.pappyjoe.com/widget/index/VzcKMlAxUWwHZgdjAzEMZw%3D%3D"
+                        stats={[
+                            { number: "EMI Options", label: "Available" },
+                            { number: "30k+", label: "Successful Treatments" },
+                            { number: "12+", label: "Years Experience" },
+                            { number: "99%", label: "Success Rate" },
+                        ]}
+                        subtitleColor="text-[#815A93]"
+                    />
+                </div>
+            </section>
+            {/* Why Delhi for Dental Tourism Section */}
+            <section className="py-20 lg:py-32 bg-gradient-to-br from-[#815A93]/5 to-[#e3c19d]/5">
+                <div className="container mx-auto px-4 lg:px-8">
+                    <motion.div
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{ once: true, margin: "-100px" }}
+                        variants={fadeInUp}
+                        className="text-center mb-16"
+                    >
+                        <span className="inline-block bg-gradient-to-r from-[#e3c19d]/10 to-[#815A93]/10 text-[#815A93] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4">
+                            Dental Tourism in Delhi
+                        </span>
+                        <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                            Why Choose{" "}
+                            <span className="bg-gradient-to-r from-[#e3c19d] to-[#815A93] bg-clip-text text-transparent">
+                                Delhi, India
+                            </span>
+                        </h2>
+                        <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                            Delhi stands as the premier destination for dental tourism, offering world-class healthcare, rich culture, and exceptional hospitality.
+                        </p>
+                    </motion.div>
+
+                    <motion.div
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{ once: true, margin: "-100px" }}
+                        variants={staggerContainer}
+                        className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+                    >
+                        {dentalTourismBenefits.map((benefit, index) => (
+                            <motion.div
+                                key={benefit.title}
+                                variants={scaleIn}
+                                whileHover={{ y: -10, scale: 1.02 }}
+                                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 p-8 border border-gray-100"
+                            >
+                                <div className="flex flex-col items-center text-center">
+                                    <div
+                                        className={`w-16 h-16 bg-gradient-to-r ${index % 2 === 0
+                                            ? "from-[#e3c19d] to-[#815A93]"
+                                            : "from-[#815A93] to-[#e3c19d]"
+                                            } rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 mb-6`}
+                                    >
+                                        <benefit.icon className="w-8 h-8 text-white" />
+                                    </div>
+                                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                                        {benefit.title}
+                                    </h3>
+                                    <p className="text-gray-600 leading-relaxed mb-4">
+                                        {benefit.description}
+                                    </p>
+                                    <div className="mt-auto">
+                                        <span className="inline-block bg-gradient-to-r from-[#e3c19d]/10 to-[#815A93]/10 text-[#815A93] px-4 py-2 rounded-full text-sm font-medium">
+                                            {benefit.stats}
+                                        </span>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                </div>
+            </section>
+
+            {/* Treatment Process Section */}
+            <section id="treatment-process" className="py-20 lg:py-32 bg-white">
+                <div className="container mx-auto px-4 lg:px-8">
+                    <motion.div
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{ once: true, margin: "-100px" }}
+                        variants={fadeInUp}
+                        className="text-center mb-16"
+                    >
+                        <span className="inline-block bg-white text-[#815A93] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-6 border border-[#815A93]/20">
+                            Treatment Process
+                        </span>
+                        <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
+                            Your{" "}
+                            <span className="bg-gradient-to-r from-[#e3c19d] to-[#815A93] bg-clip-text text-transparent">
+                                Treatment Journey
+                            </span>
+                        </h2>
+                        <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                            We&apos;ve streamlined our process to ensure your dental tourism experience is seamless, comfortable, and successful.
+                        </p>
+                    </motion.div>
+
+                    <motion.div
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{ once: true, margin: "-100px" }}
+                        variants={staggerContainer}
+                        className="space-y-8 grid lg:grid-cols-2 gap-8 max-w-7xl mx-auto"
+                    >
+                        {treatmentProcess.map((process, index) => (
+                            <motion.div
+                                key={process.step}
+                                variants={scaleIn}
+                                className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden border border-gray-100"
+                            >
+                                <div className="p-8">
+                                    <div className="flex items-start space-x-6">
+                                        <div className={`w-16 h-16 bg-gradient-to-r ${process.color} rounded-2xl flex items-center justify-center shadow-lg flex-shrink-0`}>
+                                            <process.icon className="w-8 h-8 text-white" />
+                                        </div>
+                                        <div className="flex-1">
+                                            <div className="flex items-center space-x-4 mb-4">
+                                                <span className="text-3xl font-bold text-[#815A93]">
+                                                    {process.step}
+                                                </span>
+                                                <h3 className="text-2xl font-bold text-gray-900">
+                                                    {process.title}
+                                                </h3>
+                                                <span className="inline-block bg-[#e3c19d]/10 text-[#815A93] px-3 py-1 rounded-full text-sm font-medium">
+                                                    {process.duration}
+                                                </span>
+                                            </div>
+                                            <p className="text-gray-600 text-lg mb-6 leading-relaxed">
+                                                {process.description}
+                                            </p>
+
+                                            <AnimatePresence>
+                                                {expandedStep === process.step && (
+                                                    <motion.div
+                                                        initial={{ height: 0, opacity: 0 }}
+                                                        animate={{ height: "auto", opacity: 1 }}
+                                                        exit={{ height: 0, opacity: 0 }}
+                                                        transition={{ duration: 0.3 }}
+                                                        className="overflow-hidden"
+                                                    >
+                                                        <div className="border-t border-gray-100 pt-6">
+                                                            <h4 className="font-semibold text-gray-900 mb-4">
+                                                                What&apos;s Included:
+                                                            </h4>
+                                                            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                                                {process.details.map((detail, idx) => (
+                                                                    <li
+                                                                        key={idx}
+                                                                        className="flex items-start space-x-3"
+                                                                    >
+                                                                        <CheckCircle className="w-5 h-5 text-[#815A93] mt-0.5 flex-shrink-0" />
+                                                                        <span className="text-gray-600">{detail}</span>
+                                                                    </li>
+                                                                ))}
+                                                            </ul>
+                                                        </div>
+                                                    </motion.div>
+                                                )}
+                                            </AnimatePresence>
+
+                                            <motion.button
+                                                onClick={() => toggleStep(process.step)}
+                                                className="inline-flex items-center space-x-2 bg-gradient-to-r from-[#e3c19d] to-[#815A93] hover:from-[#e3c19d]/90 hover:to-[#815A93]/90 text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 mt-4"
+                                            >
+                                                <span>
+                                                    {expandedStep === process.step
+                                                        ? "Show Less"
+                                                        : "Learn More"}
+                                                </span>
+                                                {expandedStep === process.step ? (
+                                                    <ChevronUp className="w-5 h-5" />
+                                                ) : (
+                                                    <ChevronDown className="w-5 h-5" />
+                                                )}
+                                            </motion.button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                </div>
+            </section>
+
+            {/* Why CLINICA Section */}
+            <section className="py-20 lg:py-32 bg-white">
+                <div className="container mx-auto px-4 lg:px-8">
+                    <motion.div
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{ once: true, margin: "-100px" }}
+                        variants={fadeInUp}
+                        className="text-center mb-16"
+                    >
+                        <span className="inline-block bg-gradient-to-r from-[#e3c19d]/10 to-[#815A93]/10 text-[#815A93] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4">
+                            Why CLINICA
+                        </span>
+                        <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                            Excellence in{" "}
+                            <span className="bg-gradient-to-r from-[#e3c19d] to-[#815A93] bg-clip-text text-transparent">
+                                Dental Tourism
+                            </span>
+                        </h2>
+                        <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                            CLINICA stands as Delhi&apos;s premier dental tourism destination, offering unparalleled care and comprehensive services for international patients.
+                        </p>
+                    </motion.div>
+
+                    <motion.div
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{ once: true, margin: "-100px" }}
+                        variants={staggerContainer}
+                        className="grid md:grid-cols-2 gap-8"
+                    >
+                        {whyClinicaAdvantages.map((advantage, index) => (
+                            <motion.div
+                                key={advantage.title}
+                                variants={scaleIn}
+                                whileHover={{ y: -10, scale: 1.02 }}
+                                className="bg-gradient-to-br from-[#815A93]/5 to-[#e3c19d]/5 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 p-8 border border-gray-100"
+                            >
+                                <div className="flex items-start space-x-6">
+                                    <div className={`w-16 h-16 bg-gradient-to-r ${index % 2 === 0
+                                        ? "from-[#e3c19d] to-[#815A93]"
+                                        : "from-[#815A93] to-[#e3c19d]"
+                                        } rounded-2xl flex items-center justify-center shadow-lg flex-shrink-0`}>
+                                        <advantage.icon className="w-8 h-8 text-white" />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-xl font-bold text-gray-900 mb-3">
+                                            {advantage.title}
+                                        </h3>
+                                        <p className="text-gray-600 leading-relaxed mb-4">
+                                            {advantage.description}
+                                        </p>
+                                        <ul className="space-y-2">
+                                            {advantage.highlights.map((highlight, idx) => (
+                                                <li key={idx} className="flex items-start space-x-2">
+                                                    <CheckCircle className="w-4 h-4 text-[#815A93] mt-0.5 flex-shrink-0" />
+                                                    <span className="text-gray-600 text-sm">{highlight}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                </div>
+            </section>
+
+            {/* Detailed Information Sections */}
+            <section className="py-20 lg:py-32 bg-gradient-to-br from-[#815A93]/5 to-[#e3c19d]/5">
+                <div className="container mx-auto px-4 lg:px-8">
+                    <div className="max-w-4xl mx-auto">
+                        <motion.div
+                            initial="initial"
+                            whileInView="animate"
+                            viewport={{ once: true, margin: "-100px" }}
+                            variants={fadeInUp}
+                            className="mb-16"
+                        >
+                            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-8">
+                                Dental Tourism in{" "}
+                                <span className="bg-gradient-to-r from-[#e3c19d] to-[#815A93] bg-clip-text text-transparent">
+                                    Delhi, India
+                                </span>
+                            </h2>
+                            <div className="prose prose-lg max-w-none text-gray-600">
+                                <p className="mb-6">
+                                    Dental tourism combines high-quality dental care with exploring incredible destinations. Delhi offers exceptional dental treatment quality at competitive prices, making it a preferred choice for patients worldwide. Our specialized medical travel services provide comprehensive packages that include both treatment and tourism opportunities.
+                                </p>
+                                <p className="mb-6">
+                                    <strong className="text-[#815A93]">Delhi</strong> serves as the ideal destination for dental tourism with its mystical charm, excellent infrastructure, and world-class healthcare facilities. The city&apos;s connectivity to major tourist destinations and international accessibility makes it the most visited destination in India for medical tourism.
+                                </p>
+                            </div>
+                        </motion.div>
+
+                        {/* Original content sections with improved styling */}
+                        <div className="space-y-12">
+                            <motion.div
+                                initial="initial"
+                                whileInView="animate"
+                                viewport={{ once: true, margin: "-100px" }}
+                                variants={slideInLeft}
+                                className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100"
+                            >
+                                <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                                    <MapPin className="w-6 h-6 text-[#815A93] mr-3" />
+                                    Why Delhi for Dental Tourism
+                                </h3>
+                                <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    {[
+                                        "Highly qualified and experienced Doctors",
+                                        "Internationally Accredited Facilities",
+                                        "Fluent English Speaking Doctors",
+                                        "Ease of Access and Safety",
+                                        "Plenty to See and Do",
+                                        "Famous for great Food"
+                                    ].map((item, index) => (
+                                        <li key={index} className="flex items-center space-x-3">
+                                            <CheckCircle className="w-5 h-5 text-[#815A93] flex-shrink-0" />
+                                            <span className="text-gray-700">{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </motion.div>
+
+                            <motion.div
+                                initial="initial"
+                                whileInView="animate"
+                                viewport={{ once: true, margin: "-100px" }}
+                                variants={slideInRight}
+                                className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100"
+                            >
+                                <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                                    <Award className="w-6 h-6 text-[#815A93] mr-3" />
+                                    World Class Materials & Equipment
+                                </h3>
+                                <div className="space-y-6">
+                                    <div>
+                                        <h4 className="text-lg font-semibold text-gray-900 mb-3">Premium Materials We Use:</h4>
+                                        <ul className="space-y-2">
+                                            {[
+                                                "Fillings – Composite teeth coloured fillings from 3M (USA) and Ivoclar(Germany)",
+                                                "Teeth Whitening – Zoom Whitespeed (USA)",
+                                                "Veneers – e max porcelain veneers from Ivoclar (Germany)",
+                                                "Implants – Straumann (USA), Nobel Active Biocare (Sweden)",
+                                                "Crowns and Bridges – Dentsply (USA) Cercon HT high strength"
+                                            ].map((material, index) => (
+                                                <li key={index} className="flex items-start space-x-3">
+                                                    <CheckCircle className="w-4 h-4 text-[#815A93] mt-1 flex-shrink-0" />
+                                                    <span className="text-gray-600 text-sm">{material}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+
+                                    <div>
+                                        <h4 className="text-lg font-semibold text-gray-900 mb-3">Advanced Equipment:</h4>
+                                        <ul className="space-y-2">
+                                            {[
+                                                "RVG (Radiovisiography) machine from Satelec (France)",
+                                                "Light cure unit from Ivoclar (Germany)",
+                                                "Ultrasonic scalers from Satelec (France)",
+                                                "Rotary files and reamers from Dentsply (USA)"
+                                            ].map((equipment, index) => (
+                                                <li key={index} className="flex items-start space-x-3">
+                                                    <Zap className="w-4 h-4 text-[#815A93] mt-1 flex-shrink-0" />
+                                                    <span className="text-gray-600 text-sm">{equipment}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </motion.div>
+
+                            <motion.div
+                                initial="initial"
+                                whileInView="animate"
+                                viewport={{ once: true, margin: "-100px" }}
+                                variants={slideInLeft}
+                                className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100"
+                            >
+                                <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                                    <Plane className="w-6 h-6 text-[#815A93] mr-3" />
+                                    Visa & Travel Information
+                                </h3>
+                                <div className="space-y-6">
+                                    <div>
+                                        <h4 className="text-lg font-semibold text-gray-900 mb-3">Medical Tourism Visa:</h4>
+                                        <p className="text-gray-600 mb-4">
+                                            The Government of India provides specialized medical tourist visas for foreigners seeking medical treatment.
+                                            The visa validity is typically one year depending on treatment requirements.
+                                        </p>
+                                        <h5 className="font-semibold text-gray-900 mb-2">Required Documents:</h5>
+                                        <ul className="space-y-2">
+                                            {[
+                                                "Medical documents, images, & prescriptions",
+                                                "Details of medical/procedural plans",
+                                                "Passport with 6+ months validity",
+                                                "Proof of relationship (for attendants)",
+                                                "Proof of residential address",
+                                                "Proof of required funds"
+                                            ].map((doc, index) => (
+                                                <li key={index} className="flex items-start space-x-3">
+                                                    <FileText className="w-4 h-4 text-[#815A93] mt-1 flex-shrink-0" />
+                                                    <span className="text-gray-600 text-sm">{doc}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </motion.div>
+
+                            <motion.div
+                                initial="initial"
+                                whileInView="animate"
+                                viewport={{ once: true, margin: "-100px" }}
+                                variants={slideInRight}
+                                className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100"
+                            >
+                                <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                                    <MapPin className="w-6 h-6 text-[#815A93] mr-3" />
+                                    Connectivity & Accommodation
+                                </h3>
+                                <div className="grid md:grid-cols-2 gap-6">
+                                    <div>
+                                        <h4 className="text-lg font-semibold text-gray-900 mb-3">Transportation:</h4>
+                                        <ul className="space-y-2">
+                                            {[
+                                                "Indira Gandhi International Airport - 6th busiest in Asia",
+                                                "Excellent railway connectivity via multiple stations",
+                                                "Well-maintained highway network",
+                                                "Comprehensive Delhi Metro system",
+                                                "Easy cab services (Uber, Ola)"
+                                            ].map((transport, index) => (
+                                                <li key={index} className="flex items-start space-x-3">
+                                                    <ArrowRight className="w-4 h-4 text-[#815A93] mt-1 flex-shrink-0" />
+                                                    <span className="text-gray-600 text-sm">{transport}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4 className="text-lg font-semibold text-gray-900 mb-3">Accommodation:</h4>
+                                        <p className="text-gray-600 mb-4">
+                                            Wide range of accommodation options from budget to 5-star hotels,
+                                            many within walking distance to CLINICA or easy transport access.
+                                        </p>
+                                        <div className="bg-gradient-to-r from-[#e3c19d]/10 to-[#815A93]/10 p-4 rounded-lg">
+                                            <p className="text-[#815A93] font-semibold text-sm">
+                                                Our team assists with accommodation booking near our clinic for your convenience.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Contact & Support Section */}
+            <section className="py-20 lg:py-32 bg-white">
+                <div className="container mx-auto px-4 lg:px-8">
+                    <motion.div
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{ once: true, margin: "-100px" }}
+                        variants={staggerContainer}
+                        className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-start"
+                    >
+                        <motion.div variants={slideInLeft}>
+                            <ContactForm
+                                title="Plan Your Dental"
+                                subtitle="Tourism Journey"
+                                tagText="International Patients"
+                                tagColor="from-[#e3c19d]/10 to-[#815A93]/10 text-[#815A93]"
+                                titleGradientFrom="from-[#815A93]"
+                                titleGradientTo="to-[#e3c19d]"
+                                buttonText="Start Planning"
+                                successMessage="Thank You for Your Interest!"
+                                successSubtitle="Our international patient coordinator will contact you within 24 hours to begin planning your dental tourism journey."
+                            />
+                        </motion.div>
+
+                        <motion.div variants={slideInRight}>
+                            <div className="mb-8">
+                                <span className="inline-block bg-gradient-to-r from-[#e3c19d]/10 to-[#815A93]/10 text-[#815A93] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4">
+                                    International Support
+                                </span>
+                                <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                                    24/7{" "}
+                                    <span className="bg-gradient-to-r from-[#815A93] to-[#e3c19d] bg-clip-text text-transparent">
+                                        Patient Support
+                                    </span>
+                                </h2>
+                                <p className="text-xl text-gray-600 leading-relaxed">
+                                    Our dedicated international patient care team provides comprehensive support throughout your dental tourism journey.
+                                </p>
+                            </div>
+
+                            <div className="space-y-6">
+                                {[
+                                    {
+                                        icon: Phone,
+                                        title: "International Helpline",
+                                        content: "+91 70071 45918",
+                                        subtext: "Available 24/7 for international patients",
+                                        color: "from-[#e3c19d] to-[#815A93]",
+                                    },
+                                    {
+                                        icon: Mail,
+                                        title: "Email Support",
+                                        content: "international@clinicadelhi.com",
+                                        subtext: "Detailed queries and document submission",
+                                        color: "from-[#815A93] to-[#e3c19d]",
+                                    },
+                                    {
+                                        icon: Globe,
+                                        title: "WhatsApp Support",
+                                        content: "+91 70071 45918",
+                                        subtext: "Instant messaging and video consultations",
+                                        color: "from-[#e3c19d] to-[#815A93]",
+                                    },
+                                ].map((contact, index) => (
+                                    <motion.div
+                                        key={index}
+                                        whileHover={{ scale: 1.02, x: 10 }}
+                                        className="flex items-start space-x-6 p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
+                                    >
+                                        <div
+                                            className={`w-14 h-14 bg-gradient-to-r ${contact.color} rounded-2xl flex items-center justify-center shadow-lg flex-shrink-0`}
+                                        >
+                                            <contact.icon className="w-7 h-7 text-white" />
+                                        </div>
+                                        <div>
+                                            <h3 className="font-bold text-gray-900 text-lg mb-2">
+                                                {contact.title}
+                                            </h3>
+                                            <p className="text-gray-600 leading-relaxed mb-1 font-semibold">
+                                                {contact.content}
+                                            </p>
+                                            <p className="text-sm text-gray-500">
+                                                {contact.subtext}
+                                            </p>
+                                        </div>
+                                    </motion.div>
+                                ))}
+                            </div>
+
+                            <motion.div
+                                whileHover={{ scale: 1.05 }}
+                                className="mt-10 p-6 bg-gradient-to-r from-[#e3c19d]/10 to-[#815A93]/10 rounded-2xl border border-[#815A93]/20"
+                            >
+                                <h3 className="text-lg font-bold text-[#815A93] mb-2">
+                                    Lifetime Warranty & Telemedicine
+                                </h3>
+                                <p className="text-gray-600">
+                                    We maintain lifelong relationships with our patients, offering lifetime warranties on our work and ongoing telemedicine support for any future dental concerns.
+                                </p>
+                            </motion.div>
+                        </motion.div>
+                    </motion.div>
+                </div>
+            </section>
+
+
+
+            {/* FAQ Section */}
+            <Faq
+                title="Dental Tourism FAQ"
+                subtitle="Everything you need to know about getting dental treatment abroad at CLINICA."
+                tagText="International Patients"
+                tagColor="from-[#e3c19d]/10 to-[#815A93]/10 text-[#815A93]"
+                titleGradientFrom="from-[#815A93]"
+                titleGradientTo="to-[#e3c19d]"
+                faqs={[
+                    {
+                        question: "How do I plan my dental tourism trip to Delhi?",
+                        answer: "Start by sending us your dental history and current issues. We'll provide a treatment plan and cost estimate. Our international patient coordinator will help with visa requirements, accommodation booking, and airport transfers to make your journey seamless."
+                    },
+                    {
+                        question: "What dental treatments do you offer for international patients?",
+                        answer: "We offer comprehensive dental services including implants, crowns, veneers, orthodontics, teeth whitening, root canal treatments, and complete smile makeovers. All treatments use international standard materials and equipment."
+                    },
+                    {
+                        question: "How much can I save with dental tourism in India?",
+                        answer: "Patients typically save 60-80% compared to dental costs in Western countries. For example, dental implants that cost $3000-5000 in the US or UK are available for $800-1200 at CLINICA, without compromising on quality."
+                    },
+                    {
+                        question: "What visa do I need for dental treatment in India?",
+                        answer: "You can apply for a Medical Tourism Visa or regular Tourist Visa. Medical visas are valid for up to one year depending on treatment duration. We provide all necessary documentation to support your visa application."
+                    },
+                    {
+                        question: "How long should I stay for my dental treatment?",
+                        answer: "Treatment duration varies by procedure. Simple treatments like cleanings or fillings require 1-2 days, while complex procedures like implants or full mouth rehabilitation may need 7-14 days. We provide detailed timelines during consultation."
+                    },
+                    {
+                        question: "Do you provide follow-up care after I return home?",
+                        answer: "Yes! We offer lifetime warranties on our work and provide telemedicine support for any post-treatment concerns. We also coordinate with local dentists in your area if follow-up visits are needed."
+                    },
+                    {
+                        question: "What safety and hygiene standards do you follow?",
+                        answer: "We maintain international sterilization protocols and use equipment from leading global manufacturers. Our clinic follows strict infection control measures, and our doctors are internationally trained with continuous education updates."
+                    },
+                    {
+                        question: "Can you help with accommodation and transportation?",
+                        answer: "Absolutely! We assist with booking hotels near our clinic, arrange airport transfers, and provide local transportation recommendations. Our team ensures you have a comfortable stay throughout your treatment period."
+                    }
+                ]}
+            />
+
+            {/* CTA Section */}
+            <Cta />
+        </div>
+    );
+};
 
 export default OverseasPatients;
+
+

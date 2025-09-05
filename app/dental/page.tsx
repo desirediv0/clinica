@@ -597,7 +597,7 @@ export default function DentalPage() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               At CLINICA, we go beyond just cosmetic improvements. We understand
               that restorative and prosthetic dentistry is about much more than
-              just looks—it's about restoring your dental function, preserving
+              just looks—it&#39;s about restoring your dental function, preserving
               oral health, and improving your quality of life.
             </p>
           </motion.div>
