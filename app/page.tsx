@@ -317,29 +317,92 @@ export default function HomePage() {
 
   const experts = [
     {
-      name: "Dr. Sarah Johnson",
-      specialization: "Chief Dental Surgeon",
-      experience: "Expert Care",
-      image: "/images/expert1.jpg",
-      description:
-        "Specialized in cosmetic dentistry and advanced implant procedures",
-      credentials: "DDS, MS",
-    },
-    {
-      name: "Dr. Michael Chen",
-      specialization: "Lead Dermatologist",
+      name: "Dr. Anjum Sehar",
+      specialization: "Laser Specialist | Smile Makeover Expert",
       experience: "12+ Years",
-      image: "/images/expert2.jpg.avif",
-      description: "Expert in advanced skin treatments and laser therapy",
-      credentials: "MD, FAAD",
+      image: "/images/expert1.jpg",
+      description: "Oral Cancer Specialist | Radiologist | Cosmetologist with expertise in laser treatments and painless procedures",
+      credentials: "BDS, MDS",
+      highlights: [
+        "12+ Years of Experience",
+        "3000+ Laser Treatments",
+        "5000+ Root Canal Procedures",
+        "6000+ Crowns, Bridges & Veneers",
+        "Best Dentist in Dwarka, Delhi"
+      ],
+      expertise: [
+        "Laser treatments for oral conditions",
+        "Painless root canal treatments",
+        "Smile makeovers with veneers",
+        "Facial aesthetics and cosmetology",
+        "Oral cancer diagnosis and treatment"
+      ]
     },
     {
-      name: "Dr. Emily Rodriguez",
-      specialization: "Cosmetic Specialist",
+      name: "Dr. Reshu Jindal Goyal",
+      specialization: "Consultant Orthodontist",
       experience: "10+ Years",
+      image: "/images/expert2.jpg.avif",
+      description: "Invisalign Certified Specialist and Smile Architect for all ages with expertise in modern orthodontic techniques",
+      credentials: "MDS Orthodontics",
+      highlights: [
+        "10+ Years of Experience",
+        "Invisalign Certified Provider",
+        "Master's from Nair Hospital, Mumbai",
+        "Former Assistant Professor",
+        "Smile Architect for All Ages"
+      ],
+      expertise: [
+        "Traditional metal & ceramic braces",
+        "Clear aligner therapy (Invisalign)",
+        "Damon & self-ligating braces",
+        "Growth modification in children",
+        "Complex malocclusion treatments"
+      ]
+    },
+    {
+      name: "Dr. Kanika Sharma",
+      specialization: "Pediatric Dentistry Specialist",
+      experience: "8+ Years",
       image: "/images/expert3.jpeg",
-      description: "Focused on smile makeovers and aesthetic procedures",
-      credentials: "DDS, AACD",
+      description: "Renowned pediatric dentist specializing in dental care for infants, children, adolescents and special needs patients",
+      credentials: "BDS, MDS Pediatric Dentistry",
+      highlights: [
+        "8+ Years of Experience",
+        "Pediatric Dental Specialist",
+        "Expert in Children's Dental Care",
+        "Special Health Care Needs",
+        "Preventive Treatment Focus"
+      ],
+      expertise: [
+        "Pediatric dental counselling",
+        "Preventive dentistry for children",
+        "Interceptive orthodontics",
+        "Dental trauma management",
+        "Sports dentistry"
+      ]
+    },
+    {
+      name: "Dr. Satya Prakash",
+      specialization: "Oral & Maxillofacial Surgeon",
+      experience: "14+ Years",
+      image: "/images/expert1.jpg",
+      description: "Implantologist and Facial Trauma Expert specializing in complex surgical procedures and full mouth rehabilitation",
+      credentials: "BDS, MDS Oral & Maxillofacial Surgery",
+      highlights: [
+        "14+ Years of Experience",
+        "Oral & Maxillofacial Surgeon",
+        "Expert Implantologist",
+        "Facial Trauma Specialist",
+        "Full Mouth Rehabilitation"
+      ],
+      expertise: [
+        "Dental implants and full mouth rehab",
+        "Wisdom tooth extractions",
+        "Facial reconstruction surgery",
+        "TMJ disorder treatment",
+        "Oral cancer removal"
+      ]
     },
   ];
 
@@ -1035,43 +1098,109 @@ export default function HomePage() {
             whileInView="animate"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
           >
             {experts.map((expert, index) => (
               <motion.div
                 key={expert.name}
                 variants={scaleIn}
-                whileHover={{ y: -10, scale: 1.02 }}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden border border-gray-100"
+                className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden border border-gray-100"
               >
-                <div className="relative h-72 overflow-hidden">
+                <div className="relative h-48 overflow-hidden">
                   <Image
                     src={expert.image}
                     alt={expert.name}
                     fill
-                    className="object-cover"
+                    className="object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                  <div className="absolute top-3 right-3">
+                    <div className="bg-white/20 backdrop-blur-md text-white px-2 py-1 rounded-full text-xs font-medium border border-white/30">
+                      {expert.experience}
+                    </div>
+                  </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                <div className="p-4">
+                  <h3 className="text-lg font-bold text-gray-900 mb-1 line-clamp-2">
                     {expert.name}
                   </h3>
-                  <div className="flex items-center space-x-2 mb-3">
-                    <Award className="w-4 h-4 text-[#815A93]" />
-                    <span className="text-[#815A93] font-medium">
+                  <div className="flex items-center space-x-1 mb-2">
+                    <Award className="w-3 h-3 text-[#815A93]" />
+                    <span className="text-[#815A93] font-medium text-xs">
                       {expert.credentials}
                     </span>
                   </div>
-                  <p className="text-gray-600 mb-4">{expert.description}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="inline-block bg-[#e3c19d]/10 text-[#815A93] px-3 py-1 rounded-full text-sm font-medium">
-                      {expert.specialization}
+                  <p className="text-gray-600 text-sm mb-3 line-clamp-2">
+                    {expert.specialization}
+                  </p>
+
+                  <AnimatePresence>
+                    {expandedCard === expert.name && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="overflow-hidden"
+                      >
+                        <div className="border-t border-gray-100 pt-3 space-y-3">
+                          <p className="text-gray-600 text-xs leading-relaxed">
+                            {expert.description}
+                          </p>
+                          <div>
+                            <h4 className="font-semibold text-gray-900 mb-2 flex items-center space-x-1 text-sm">
+                              <Star className="w-3 h-3 text-[#815A93]" />
+                              <span>Highlights:</span>
+                            </h4>
+                            <ul className="space-y-1">
+                              {expert.highlights.slice(0, 3).map((highlight, idx) => (
+                                <li
+                                  key={idx}
+                                  className="flex items-start space-x-1"
+                                >
+                                  <CheckCircle className="w-3 h-3 text-[#815A93] mt-0.5 flex-shrink-0" />
+                                  <span className="text-gray-600 text-xs">{highlight}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-gray-900 mb-2 flex items-center space-x-1 text-sm">
+                              <Zap className="w-3 h-3 text-[#815A93]" />
+                              <span>Expertise:</span>
+                            </h4>
+                            <ul className="space-y-1">
+                              {expert.expertise.slice(0, 3).map((item, idx) => (
+                                <li
+                                  key={idx}
+                                  className="flex items-start space-x-1"
+                                >
+                                  <ArrowRight className="w-3 h-3 text-[#815A93] mt-0.5 flex-shrink-0" />
+                                  <span className="text-gray-600 text-xs">{item}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+
+                  <motion.button
+                    onClick={() => toggleCard(expert.name)}
+                    className="w-full inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-[#e3c19d] to-[#815A93] hover:from-[#e3c19d]/90 hover:to-[#815A93]/90 text-white font-medium py-2 px-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 mt-3 text-sm"
+                  >
+                    <span>
+                      {expandedCard === expert.name
+                        ? "Less"
+                        : "Details"}
                     </span>
-                    <span className="text-gray-600 text-sm">
-                      {expert.experience}
-                    </span>
-                  </div>
+                    {expandedCard === expert.name ? (
+                      <ChevronUp className="w-4 h-4" />
+                    ) : (
+                      <ChevronDown className="w-4 h-4" />
+                    )}
+                  </motion.button>
                 </div>
               </motion.div>
             ))}
