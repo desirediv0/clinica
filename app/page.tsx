@@ -855,11 +855,10 @@ export default function HomePage() {
                   </div>
                   <div className="absolute top-4 right-4">
                     <div
-                      className={`w-12 h-12 bg-gradient-to-r ${
-                        index % 2 === 0
+                      className={`w-12 h-12 bg-gradient-to-r ${index % 2 === 0
                           ? "from-[#e3c19d] to-[#815A93]"
                           : "from-[#815A93] to-[#e3c19d]"
-                      } rounded-full flex items-center justify-center shadow-lg`}
+                        } rounded-full flex items-center justify-center shadow-lg`}
                     >
                       <treatment.icon className="w-6 h-6 text-white" />
                     </div>
