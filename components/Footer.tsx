@@ -67,13 +67,13 @@ export default function Footer() {
   ];
 
   const workingHours = [
-    { day: "Monday", hours: "12:00 PM - 9:00 PM", isOpen: true },
-    { day: "Tuesday", hours: "12:00 PM - 9:00 PM", isOpen: true },
+    { day: "Monday", hours: "11 AM - 9 PM", isOpen: true },
+    { day: "Tuesday", hours: "11 AM - 9 PM", isOpen: true },
     { day: "Wednesday", hours: "Closed", isOpen: false },
-    { day: "Thursday", hours: "12:00 PM - 9:00 PM", isOpen: true },
-    { day: "Friday", hours: "12:00 PM - 9:00 PM", isOpen: true },
-    { day: "Saturday", hours: "12:00 PM - 9:00 PM", isOpen: true },
-    { day: "Sunday", hours: "12:00 PM - 9:00 PM", isOpen: true },
+    { day: "Thursday", hours: "11 AM - 9 PM", isOpen: true },
+    { day: "Friday", hours: "11 AM - 9 PM", isOpen: true },
+    { day: "Saturday", hours: "11 AM - 9 PM", isOpen: true },
+    { day: "Sunday", hours: "11 AM - 9 PM", isOpen: true },
   ];
 
   const scrollToTop = () => {

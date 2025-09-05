@@ -73,13 +73,13 @@ export default function ContactPage() {
   ];
 
   const workingHours = [
-    { day: "Monday", hours: "12:00 PM - 9:00 PM", isOpen: true },
-    { day: "Tuesday", hours: "12:00 PM - 9:00 PM", isOpen: true },
+    { day: "Monday", hours: "11 AM - 9 PM", isOpen: true },
+    { day: "Tuesday", hours: "11 AM - 9 PM", isOpen: true },
     { day: "Wednesday", hours: "Closed", isOpen: false },
-    { day: "Thursday", hours: "12:00 PM - 9:00 PM", isOpen: true },
-    { day: "Friday", hours: "12:00 PM - 9:00 PM", isOpen: true },
-    { day: "Saturday", hours: "12:00 PM - 9:00 PM", isOpen: true },
-    { day: "Sunday", hours: "12:00 PM - 9:00 PM", isOpen: true },
+    { day: "Thursday", hours: "11 AM - 9 PM", isOpen: true },
+    { day: "Friday", hours: "11 AM - 9 PM", isOpen: true },
+    { day: "Saturday", hours: "11 AM - 9 PM", isOpen: true },
+    { day: "Sunday", hours: "11 AM - 9 PM", isOpen: true },
   ];
 
   const whyChooseUs = [
@@ -254,11 +254,9 @@ export default function ContactPage() {
                         {schedule.day}
                       </span>
                       <span
-                        className={`font-medium ${
-                          schedule.isOpen ? "text-green-600" : "text-red-500"
-                        } px-3 py-1 rounded-full text-sm ${
-                          schedule.isOpen ? "bg-green-50" : "bg-red-50"
-                        }`}
+                        className={`font-medium ${schedule.isOpen ? "text-green-600" : "text-red-500"
+                          } px-3 py-1 rounded-full text-sm ${schedule.isOpen ? "bg-green-50" : "bg-red-50"
+                          }`}
                       >
                         {schedule.hours}
                       </span>
