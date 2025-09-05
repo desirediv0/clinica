@@ -111,38 +111,23 @@ const OverseasPatients = () => (
             </p>
             <p>
                 <span className="font-bold">What You Need To Obtain A Medical Tourist Visa In India:</span>
-                <ul className="list-disc pl-6 mb-4">
-                    <li>Medical documents, images, & prescriptions for verification by Indian Missions & Posts</li>
-                    <li>Details of medical/procedural plans with advice of doctors in their country and doctors opted for in India</li>
-                    <li>Passport with a validity of at least six months (with photocopy of passport) for patient and attendant (if any)</li>
-                    <li>Proof of relation of attendant with patient</li>
-                    <li>Proof of residential address</li>
-                    <li>Photocopy of online visa application form</li>
-                    <li>Proof of required funds for medical procedures and period of stay</li>
-                </ul>
-                After providing these relevant documents, the procedure for obtaining a medical tourism visa to India is similar to the tourist visa. However, the cost of medical tourism visa depends upon the country of origin. For further assistance, contact our international patient Customer care here: <br />
-                <span className="font-bold">Ph:</span> 011 41606066 <br />
-                <span className="font-bold">Email:</span> merakidentalstudio@gmail.com <br />
-                <span className="font-bold">WhatsApp:</span> +91 8826983838
             </p>
+            <ul className="list-disc pl-6 mb-4">
+                <li>Medical documents, images, & prescriptions for verification by Indian Missions & Posts</li>
+                <li>Details of medical/procedural plans with advice of doctors in their country and doctors opted for in India</li>
+                <li>Passport with a validity of at least six months (with photocopy of passport) for patient and attendant (if any)</li>
+                <li>Proof of relation of attendant with patient</li>
+                <li>Proof of residential address</li>
+                <li>Photocopy of online visa application form</li>
+                <li>Proof of required funds for medical procedures and period of stay</li>
+            </ul>
             <p>
-                <span className="font-bold">New Delhi, India Tourism – Websites:</span>
-                <ul className="list-disc pl-6 mb-4">
-                    <li><a href="https://indianvisaonline.gov.in" target="_blank" rel="noopener" className="text-blue-600 font-bold">Visa assistance</a></li>
-                    <li><a href="https://passport.gov.in" target="_blank" rel="noopener" className="text-blue-600 font-bold">Passport</a></li>
-                    <li><a href="https://meaindia.nic.in" target="_blank" rel="noopener" className="text-blue-600 font-bold">Embassy Info</a></li>
-                    <li><a href="https://yatra.com" target="_blank" rel="noopener" className="text-blue-600 font-bold">Air Ticket booking</a></li>
-                    <li><a href="https://tripadvisor.in" target="_blank" rel="noopener" className="text-blue-600 font-bold">Hotel Booking</a></li>
-                    <li><a href="https://incredibleindia.org" target="_blank" rel="noopener" className="text-blue-600 font-bold">India tourism</a></li>
-                    <li><a href="https://t2india.com" target="_blank" rel="noopener" className="text-blue-600 font-bold">T2 India</a></li>
-                    <li><a href="https://indianholiday.com" target="_blank" rel="noopener" className="text-blue-600 font-bold">Indian Holiday</a></li>
-                    <li><a href="https://theindiatravel.com" target="_blank" rel="noopener" className="text-blue-600 font-bold">The India Travel</a></li>
-                    <li><a href="https://tourtravelworld.com" target="_blank" rel="noopener" className="text-blue-600 font-bold">Tour Travel World</a></li>
-                    <li><a href="https://spantours.com" target="_blank" rel="noopener" className="text-blue-600 font-bold">Span Tours</a></li>
-                    <li><a href="https://indiatourism.com" target="_blank" rel="noopener" className="text-blue-600 font-bold">India Tourism</a></li>
-                    <li><a href="https://delhitourism.com" target="_blank" rel="noopener" className="text-blue-600 font-bold">Delhi Tourism</a></li>
-                </ul>
+                After providing these relevant documents, the procedure for obtaining a medical tourism visa to India is similar to the tourist visa. However, the cost of medical tourism visa depends upon the country of origin. For further assistance, contact our international patient Customer care here: <br />
+                <span className="font-bold">Ph:</span> +91 70071 45918 <br />
+
+                <span className="font-bold">WhatsApp:</span> +91 70071 45918
             </p>
+
         </section>
         <section className="mb-6">
             <h2 className="text-xl font-bold mb-2">Connectivity</h2>
@@ -185,14 +170,7 @@ const OverseasPatients = () => (
             <p>
                 The global standard equipment from international companies ensuring world class treatment is another big factor contributing to the Dental Tourism in India favourably. Our treatments are available at a fraction of the cost you would pay in your home country.
             </p>
-            <p>
-                <span className="font-bold">For Example:</span><br />
-                A simple white filling, which may cost you approximately 400 Euros in Europe, can be done for around 30 Euros at our clinic.<br />
-                A root canal treatment, which costs approximately US$3000 in Europe or America, will cost you just US $90-100 at our clinic.
-            </p>
-            <p>
-                The substantially cost effective rates of dental treatments in Delhi using the same international quality of materials and equipment which are used in the first world countries is one of the top reasons for not just a steady increase of Dental Tourism in Delhi also Dental Tourism In India.
-            </p>
+
         </section>
     </main>
 );
