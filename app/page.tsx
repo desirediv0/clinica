@@ -22,7 +22,6 @@ import {
   Quote,
   ChevronDown,
   ChevronUp,
-  Send,
 } from "lucide-react";
 import { useState } from "react";
 import Hero from "@/components/Hero";
@@ -323,7 +322,7 @@ export default function HomePage() {
       image: "/images/Dr-anjum.JPG",
       description: "Radiologist | Cosmetologist with over 12 years of extensive clinical experience, known for precision, expertise, and patient-centric approach",
       credentials: "BDS, MDS",
-      fullDescription: "With over 12 years of extensive clinical experience, Dr. Anjum Sehar is a highly accomplished dental surgeon known for her precision, expertise, and patient-centric approach. A graduate and postgraduate from BBD University, Lucknow, Dr. Sehar has also held leadership roles including Centre Head and Zonal Clinical Manager at Clove Dental, one of India's leading dental chains. As a Radiologist and Oral Cancer Specialist, she is proficient in diagnosing and managing a wide range of oral health issues. Dr Anjum Sehar is said to have golden hands by her patients due to her precise and Painless RCT's. She is thus regarded as the Best Dentist in Delhi by her patients.",
+      fullDescription: "Dr. Anjum Sehar is a highly accomplished dental surgeon known for her precision, expertise, and patient-centric approach. A graduate and postgraduate from BBD University, Lucknow, Dr. Sehar has also held leadership roles including Centre Head and Zonal Clinical Manager at Clove Dental, one of India's leading dental chains. As a Radiologist and Oral Cancer Specialist, she is proficient in diagnosing and managing a wide range of oral health issues. Dr Anjum Sehar is said to have golden hands by her patients due to her precise and Painless RCT's. She is thus regarded as the Best Dentist in Delhi by her patients.",
       highlights: [
         "12+ Years of Experience",
         "3000+ Laser Treatments",
@@ -1166,7 +1165,7 @@ export default function HomePage() {
             whileInView="animate"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
-            className="grid lg:grid-cols-2 gap-8 max-w-7xl mx-auto"
+            className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto"
           >
             {experts.map((expert) => (
               <motion.div
@@ -1178,8 +1177,9 @@ export default function HomePage() {
                   <Image
                     src={expert.image}
                     alt={expert.name}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    width={500}
+                    height={500}
+                    className="object-cover group-hover:scale-105 transition-transform duration-700 mx-auto"
                     style={{
                       objectPosition: expert.name === "Dr. Anjum Sehar" ? '50% 15%' :
                         expert.name === "Dr. Reshu Jindal Goyal" ? '50% 25%' :
@@ -1197,7 +1197,7 @@ export default function HomePage() {
                     </p>
                   </div>
                   <div className="absolute top-6 right-6">
-                    <div className="bg-white/25 backdrop-blur-md text-white px-4 py-2 rounded-full text-base font-semibold border border-white/40 shadow-lg">
+                    <div className="bg-white/25 backdrop-blur-md text-gray-500 px-4 py-2 rounded-full text-base font-semibold border border-white/40 shadow-lg">
                       {expert.experience}
                     </div>
                   </div>
