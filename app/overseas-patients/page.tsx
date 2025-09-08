@@ -25,7 +25,7 @@ import {
     ArrowRight,
 } from "lucide-react";
 import Hero from "@/components/Hero";
-import ContactForm from "@/components/ContactForm";
+import AppointmentForm from "@/components/AppointmentForm";
 import Faq from "@/components/Faq";
 import Cta from "@/components/Cta";
 
@@ -757,14 +757,14 @@ const OverseasPatients = () => {
                         className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-start"
                     >
                         <motion.div variants={slideInLeft}>
-                            <ContactForm
+                            <AppointmentForm
                                 title="Plan Your Dental"
                                 subtitle="Tourism Journey"
                                 tagText="International Patients"
                                 tagColor="from-[#e3c19d]/10 to-[#815A93]/10 text-[#815A93]"
                                 titleGradientFrom="from-[#815A93]"
                                 titleGradientTo="to-[#e3c19d]"
-                                buttonText="Start Planning"
+                                buttonText="Book Appointment"
                                 successMessage="Thank You for Your Interest!"
                                 successSubtitle="Our international patient coordinator will contact you within 24 hours to begin planning your dental tourism journey."
                             />
