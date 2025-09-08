@@ -78,13 +78,13 @@ const OverseasPatients = () => {
             title: "Dental History Analysis",
             description: "Send us your complete dental history with X-rays, images, and medical records for comprehensive evaluation.",
             icon: FileText,
-            duration: "24-48 hours",
+            duration: "24-48 hours Response",
             color: "from-[#815A93] to-[#e3c19d]",
             details: [
                 "Name, Age, Sex details",
                 "Detailed dental issue description",
                 "Upload dental X-rays or images",
-                "Past dental records submission",
+                "Past dental records submission (if any)",
                 "Doctor's prescriptions (if any)"
             ]
         },
@@ -99,7 +99,7 @@ const OverseasPatients = () => {
                 "Treatment plan discussion",
                 "Tentative cost estimation",
                 "Treatment duration planning",
-                "Audio/Video consultation available",
+                "Audio/Video consultation available (Non-obligatory)",
                 "Non-obligatory consultation"
             ]
         },
@@ -114,7 +114,7 @@ const OverseasPatients = () => {
                 "Airport pickup/drop arrangements",
                 "Hotel booking assistance",
                 "Appointment scheduling",
-                "Personal relationship manager",
+                "Personal relationship manager for assistance",
                 "Local area guidance"
             ]
         },
@@ -178,7 +178,7 @@ const OverseasPatients = () => {
             title: "International Standards",
             description: "Strict international sterilization protocols with latest technology and quality materials.",
             highlights: [
-                "International infection control",
+                "International Standard infection control",
                 "Latest dental technology",
                 "Top quality materials and tools",
                 "Continuous education updates"
@@ -243,10 +243,10 @@ const OverseasPatients = () => {
                 <div className="relative z-10 container mx-auto text-center">
                     <Hero
                         title="World-Class Dental Tourism"
-                        subtitle="in the Heart of India"
+                        subtitle="in Delhi in the Heart of India"
                         description="Experience premium dental care combined with incredible Indian hospitality. Our international patients receive personalized treatment plans, comprehensive support, and world-class dental care at affordable prices."
                         backgroundImage="/images/homepagebanner.jpg.avif"
-                        tagText="Dental Tourism Excellence"
+                        tagText="Dental Tourism at CLINICA"
                         tagIcon={Globe}
                         primaryButtonText="Plan Your Treatment"
                         primaryButtonIcon={Calendar}
@@ -454,9 +454,10 @@ const OverseasPatients = () => {
                             Why CLINICA
                         </span>
                         <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                            Excellence in{" "}
+                            Best Tourism Clinic in Delhi, India |
+                            <br />
                             <span className="bg-gradient-to-r from-[#e3c19d] to-[#815A93] bg-clip-text text-transparent">
-                                Dental Tourism
+                                CLINICA Dental & Skin
                             </span>
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -507,6 +508,98 @@ const OverseasPatients = () => {
                     </motion.div>
                 </div>
             </section>
+
+            <motion.div
+                initial="initial"
+                whileInView="animate"
+                viewport={{ once: true, margin: "-100px" }}
+                variants={slideInRight}
+                className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 max-w-7xl mx-auto mb-10"
+            >
+                <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                    <Award className="w-6 h-6 text-[#815A93] mr-3" />
+                    World Class Materials & Equipment
+                </h3>
+                <div className="space-y-6">
+                    <div>
+                        <h4 className="text-lg font-semibold text-gray-900 mb-3">Premium Materials We Use:</h4>
+                        <ul className="space-y-2">
+                            {[
+                                "Fillings – Composite teeth coloured fillings from 3M (USA) and Ivoclar(Germany)",
+                                "Teeth Whitening – Zoom Whitespeed (USA)",
+                                "Veneers – e max porcelain veneers from Ivoclar (Germany)",
+                                "Implants – Straumann (USA), Nobel Active Biocare (Sweden)",
+                                "Crowns and Bridges – Dentsply (USA) Cercon HT high strength"
+                            ].map((material, index) => (
+                                <li key={index} className="flex items-start space-x-3">
+                                    <CheckCircle className="w-4 h-4 text-[#815A93] mt-1 flex-shrink-0" />
+                                    <span className="text-gray-600 text-sm">{material}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 className="text-lg font-semibold text-gray-900 mb-3">Advanced Equipment:</h4>
+                        <ul className="space-y-2">
+                            {[
+                                "RVG (Radiovisiography) machine from Satelec (France)",
+                                "Light cure unit from Ivoclar (Germany)",
+                                "Ultrasonic scalers from Satelec (France)",
+                                "Rotary files and reamers from Dentsply (USA)"
+                            ].map((equipment, index) => (
+                                <li key={index} className="flex items-start space-x-3">
+                                    <Zap className="w-4 h-4 text-[#815A93] mt-1 flex-shrink-0" />
+                                    <span className="text-gray-600 text-sm">{equipment}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+            </motion.div>
+
+            <motion.div
+                initial="initial"
+                whileInView="animate"
+                viewport={{ once: true, margin: "-100px" }}
+                variants={slideInLeft}
+                className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 max-w-7xl mx-auto mb-20"
+            >
+                <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                    <CreditCard className="w-6 h-6 text-[#815A93] mr-3" />
+                    Cost-Effective World-Class Treatment
+                </h3>
+                <div className="space-y-6">
+                    <div>
+                        <p className="text-gray-600 mb-6">
+                            Our treatments are available at a fraction of the cost you would pay in your
+                            home country.
+                        </p>
+                        <h4 className="text-lg font-semibold text-gray-900 mb-3">For Example:</h4>
+                        <ul className="space-y-4">
+                            <li className="flex items-start space-x-3">
+                                <ArrowRight className="w-5 h-5 text-[#815A93] mt-1 flex-shrink-0" />
+                                <span className="text-gray-600">A simple white filling, which may cost you approximately 400 Euros in
+                                    Europe, can be done for around 30 Euros at our clinic.</span>
+                            </li>
+                            <li className="flex items-start space-x-3">
+                                <ArrowRight className="w-5 h-5 text-[#815A93] mt-1 flex-shrink-0" />
+                                <span className="text-gray-600">A root canal treatment, which costs approximately US$3000 in Europe or
+                                    America, will cost you just US $ 90-100 at our clinic.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div className="bg-gradient-to-r from-[#e3c19d]/10 to-[#815A93]/10 p-6 rounded-xl">
+                        <p className="text-gray-700 leading-relaxed">
+                            The substantially cost effective rates of dental treatments in Delhi using the same
+                            international quality of materials and equipment which are used in the first world
+                            countries is one of the top reasons for not just a steady increase of Dental Tourism
+                            in Delhi also Dental Tourism In India.
+                        </p>
+                    </div>
+                </div>
+            </motion.div>
 
             {/* Detailed Information Sections */}
             <section className="py-20 lg:py-32 bg-gradient-to-br from-[#815A93]/5 to-[#e3c19d]/5">
@@ -565,54 +658,7 @@ const OverseasPatients = () => {
                                 </ul>
                             </motion.div>
 
-                            <motion.div
-                                initial="initial"
-                                whileInView="animate"
-                                viewport={{ once: true, margin: "-100px" }}
-                                variants={slideInRight}
-                                className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100"
-                            >
-                                <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                                    <Award className="w-6 h-6 text-[#815A93] mr-3" />
-                                    World Class Materials & Equipment
-                                </h3>
-                                <div className="space-y-6">
-                                    <div>
-                                        <h4 className="text-lg font-semibold text-gray-900 mb-3">Premium Materials We Use:</h4>
-                                        <ul className="space-y-2">
-                                            {[
-                                                "Fillings – Composite teeth coloured fillings from 3M (USA) and Ivoclar(Germany)",
-                                                "Teeth Whitening – Zoom Whitespeed (USA)",
-                                                "Veneers – e max porcelain veneers from Ivoclar (Germany)",
-                                                "Implants – Straumann (USA), Nobel Active Biocare (Sweden)",
-                                                "Crowns and Bridges – Dentsply (USA) Cercon HT high strength"
-                                            ].map((material, index) => (
-                                                <li key={index} className="flex items-start space-x-3">
-                                                    <CheckCircle className="w-4 h-4 text-[#815A93] mt-1 flex-shrink-0" />
-                                                    <span className="text-gray-600 text-sm">{material}</span>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
 
-                                    <div>
-                                        <h4 className="text-lg font-semibold text-gray-900 mb-3">Advanced Equipment:</h4>
-                                        <ul className="space-y-2">
-                                            {[
-                                                "RVG (Radiovisiography) machine from Satelec (France)",
-                                                "Light cure unit from Ivoclar (Germany)",
-                                                "Ultrasonic scalers from Satelec (France)",
-                                                "Rotary files and reamers from Dentsply (USA)"
-                                            ].map((equipment, index) => (
-                                                <li key={index} className="flex items-start space-x-3">
-                                                    <Zap className="w-4 h-4 text-[#815A93] mt-1 flex-shrink-0" />
-                                                    <span className="text-gray-600 text-sm">{equipment}</span>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                </div>
-                            </motion.div>
 
                             <motion.div
                                 initial="initial"

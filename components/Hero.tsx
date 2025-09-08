@@ -115,7 +115,7 @@ export default function Hero({
 
           <motion.h1
             variants={fadeInUp}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight"
+            className="text-5xl md:text-7xl  font-bold mb-8 leading-tight"
           >
             <span className="text-white">{title} </span>
             {/* Subtitle with gradient */}
