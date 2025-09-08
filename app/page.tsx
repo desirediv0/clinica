@@ -317,10 +317,10 @@ export default function HomePage() {
   const experts = [
     {
       name: "Dr. Anjum Sehar",
-      specialization: "Laser Specialist | Smile Makeover Expert | Oral Cancer Specialist",
+      specialization: "Laser Specialist | Smile Makeover Expert | Oral Cancer Specialist | Radiologist | Cosmetologist",
       experience: "12+ Years",
       image: "/images/Dr-anjum.JPG",
-      description: "Radiologist | Cosmetologist with over 12 years of extensive clinical experience, known for precision, expertise, and patient-centric approach",
+      description: "With over 12 years of extensive clinical experience, known for precision, expertise, and patient-centric approach",
       credentials: "BDS, MDS",
       fullDescription: "Dr. Anjum Sehar is a highly accomplished dental surgeon known for her precision, expertise, and patient-centric approach. A graduate and postgraduate from BBD University, Lucknow, Dr. Sehar has also held leadership roles including Centre Head and Zonal Clinical Manager at Clove Dental, one of India's leading dental chains. As a Radiologist and Oral Cancer Specialist, she is proficient in diagnosing and managing a wide range of oral health issues. Dr Anjum Sehar is said to have golden hands by her patients due to her precise and Painless RCT's. She is thus regarded as the Best Dentist in Delhi by her patients.",
       highlights: [
