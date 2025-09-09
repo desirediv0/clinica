@@ -1173,7 +1173,7 @@ export default function HomePage() {
                 variants={scaleIn}
                 className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden border border-gray-100 max-h-min"
               >
-                <div className="relative h-[500px] overflow-hidden">
+                <div className="relative md:h-[500px] overflow-hidden">
                   <Image
                     src={expert.image}
                     alt={expert.name}
