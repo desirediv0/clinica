@@ -10,6 +10,7 @@ import {
   Mail,
   MessageSquare,
 } from "lucide-react";
+import IndiaAppointmentForm from "./IndiaAppointmentForm";
 
 interface ContactFormProps {
   title?: string;
@@ -36,7 +37,7 @@ export default function ContactForm({
 }: ContactFormProps) {
   const [isRedirecting, setIsRedirecting] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showForm, setShowForm] = useState(false);
+  const [showForm, setShowForm] = useState<'none' | 'contact' | 'india'>('none');
   const [showSuccess, setShowSuccess] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -123,7 +124,7 @@ export default function ContactForm({
 
       if (response.ok) {
         // Success - show success message
-        setShowForm(false);
+        setShowForm('none');
         setShowSuccess(true);
         setIsSubmitting(false);
         // Reset form
@@ -146,19 +147,24 @@ export default function ContactForm({
   };
 
   const handleContactClick = () => {
-    setShowForm(true);
+    setShowForm('contact');
+    setShowSuccess(false);
+  };
+
+  const handleIndiaAppointmentClick = () => {
+    setShowForm('india');
     setShowSuccess(false);
   };
 
   const handleBackToOptions = () => {
-    setShowForm(false);
+    setShowForm('none');
     setShowSuccess(false);
     setErrors({});
   };
 
   const handleResetSuccess = () => {
     setShowSuccess(false);
-    setShowForm(false);
+    setShowForm('none');
   };
 
   return (
@@ -225,7 +231,7 @@ export default function ContactForm({
             Send Another Message
           </motion.button>
         </motion.div>
-      ) : !showForm ? (
+      ) : showForm === 'none' ? (
         <div className="bg-white rounded-3xl shadow-2xl p-8 lg:p-12 border border-gray-100">
           <div className="text-center space-y-8">
             <div className="space-y-4">
@@ -264,6 +270,19 @@ export default function ContactForm({
                   <span className="text-lg">Send Message</span>
                 </div>
               </motion.button>
+
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={handleIndiaAppointmentClick}
+                disabled={isRedirecting}
+                className="w-full bg-gradient-to-r from-[#e3c19d] to-[#815A93] hover:from-[#c9ab85] hover:to-[#6a4a7a] text-white font-bold py-6 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                <div className="flex items-center justify-center space-x-3">
+                  <Calendar className="w-6 h-6" />
+                  <span className="text-lg">Request Appointment (India)</span>
+                </div>
+              </motion.button>
             </div>
 
             <div className="mt-8 p-6 bg-gray-50 rounded-xl">
@@ -279,7 +298,7 @@ export default function ContactForm({
             </div>
           </div>
         </div>
-      ) : (
+      ) : showForm === 'contact' ? (
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -290,7 +309,7 @@ export default function ContactForm({
               Send Us a Message
             </h3>
             <p className="text-lg text-gray-600 leading-relaxed">
-              Fill out the form below and we'll get back to you as soon as
+              Fill out the form below and we&apos;ll get back to you as soon as
               possible.
             </p>
           </div>
@@ -311,9 +330,8 @@ export default function ContactForm({
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
-                  className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-[#815A93] focus:border-transparent transition-all duration-300 ${
-                    errors.name ? "border-red-500" : "border-gray-300"
-                  }`}
+                  className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-[#815A93] focus:border-transparent transition-all duration-300 ${errors.name ? "border-red-500" : "border-gray-300"
+                    }`}
                   placeholder="Enter your full name"
                 />
                 {errors.name && (
@@ -335,9 +353,8 @@ export default function ContactForm({
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-[#815A93] focus:border-transparent transition-all duration-300 ${
-                    errors.email ? "border-red-500" : "border-gray-300"
-                  }`}
+                  className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-[#815A93] focus:border-transparent transition-all duration-300 ${errors.email ? "border-red-500" : "border-gray-300"
+                    }`}
                   placeholder="Enter your email address"
                 />
                 {errors.email && (
@@ -359,9 +376,8 @@ export default function ContactForm({
                 name="subject"
                 value={formData.subject}
                 onChange={handleInputChange}
-                className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-[#815A93] focus:border-transparent transition-all duration-300 ${
-                  errors.subject ? "border-red-500" : "border-gray-300"
-                }`}
+                className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-[#815A93] focus:border-transparent transition-all duration-300 ${errors.subject ? "border-red-500" : "border-gray-300"
+                  }`}
                 placeholder="What is this regarding?"
               />
               {errors.subject && (
@@ -383,9 +399,8 @@ export default function ContactForm({
                 value={formData.message}
                 onChange={handleInputChange}
                 rows={6}
-                className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-[#815A93] focus:border-transparent transition-all duration-300 resize-none ${
-                  errors.message ? "border-red-500" : "border-gray-300"
-                }`}
+                className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-[#815A93] focus:border-transparent transition-all duration-300 resize-none ${errors.message ? "border-red-500" : "border-gray-300"
+                  }`}
                 placeholder="Tell us about your inquiry or concern..."
               />
               {errors.message && (
@@ -431,7 +446,11 @@ export default function ContactForm({
             </div>
           </form>
         </motion.div>
-      )}
+      ) : showForm === 'india' ? (
+        <div>
+          <IndiaAppointmentForm />
+        </div>
+      ) : null}
     </div>
   );
 }
