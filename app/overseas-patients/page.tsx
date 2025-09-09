@@ -358,32 +358,32 @@ const OverseasPatients = () => {
                         whileInView="animate"
                         viewport={{ once: true, margin: "-100px" }}
                         variants={staggerContainer}
-                        className="space-y-8 grid lg:grid-cols-2 gap-8 max-w-7xl mx-auto"
+                        className="grid lg:grid-cols-2 gap-8 max-w-7xl mx-auto"
                     >
-                        {treatmentProcess.map((process, index) => (
+                        {treatmentProcess.map((process) => (
                             <motion.div
                                 key={process.step}
                                 variants={scaleIn}
                                 className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden border border-gray-100"
                             >
-                                <div className="p-8">
-                                    <div className="flex items-start space-x-6">
-                                        <div className={`w-16 h-16 bg-gradient-to-r ${process.color} rounded-2xl flex items-center justify-center shadow-lg flex-shrink-0`}>
+                                <div className="p-6 sm:p-8">
+                                    <div className="flex flex-col sm:flex-row items-start sm:space-x-6 space-y-4 sm:space-y-0">
+                                        <div className={`w-16 h-16 bg-gradient-to-r ${process.color} rounded-2xl flex items-center justify-center shadow-lg flex-shrink-0 mx-auto sm:mx-0`}>
                                             <process.icon className="w-8 h-8 text-white" />
                                         </div>
                                         <div className="flex-1">
-                                            <div className="flex items-center space-x-4 mb-4">
-                                                <span className="text-3xl font-bold text-[#815A93]">
+                                            <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 mb-4 space-y-2 sm:space-y-0">
+                                                <span className="text-2xl sm:text-3xl font-bold text-[#815A93]">
                                                     {process.step}
                                                 </span>
-                                                <h3 className="text-2xl font-bold text-gray-900">
+                                                <h3 className="text-xl sm:text-2xl font-bold text-gray-900">
                                                     {process.title}
                                                 </h3>
                                                 <span className="inline-block bg-[#e3c19d]/10 text-[#815A93] px-3 py-1 rounded-full text-sm font-medium">
                                                     {process.duration}
                                                 </span>
                                             </div>
-                                            <p className="text-gray-600 text-lg mb-6 leading-relaxed">
+                                            <p className="text-gray-600 text-base md:text-lg mb-6 leading-relaxed">
                                                 {process.description}
                                             </p>
 
@@ -400,14 +400,14 @@ const OverseasPatients = () => {
                                                             <h4 className="font-semibold text-gray-900 mb-4">
                                                                 What&apos;s Included:
                                                             </h4>
-                                                            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                                            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                                                 {process.details.map((detail, idx) => (
                                                                     <li
                                                                         key={idx}
                                                                         className="flex items-start space-x-3"
                                                                     >
                                                                         <CheckCircle className="w-5 h-5 text-[#815A93] mt-0.5 flex-shrink-0" />
-                                                                        <span className="text-gray-600">{detail}</span>
+                                                                        <span className="text-gray-600 text-sm">{detail}</span>
                                                                     </li>
                                                                 ))}
                                                             </ul>
@@ -418,7 +418,7 @@ const OverseasPatients = () => {
 
                                             <motion.button
                                                 onClick={() => toggleStep(process.step)}
-                                                className="inline-flex items-center space-x-2 bg-gradient-to-r from-[#e3c19d] to-[#815A93] hover:from-[#e3c19d]/90 hover:to-[#815A93]/90 text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 mt-4"
+                                                className="w-full sm:inline-flex justify-center sm:justify-start items-center space-x-2 bg-gradient-to-r from-[#e3c19d] to-[#815A93] hover:from-[#e3c19d]/90 hover:to-[#815A93]/90 text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 mt-4"
                                             >
                                                 <span>
                                                     {expandedStep === process.step
