@@ -54,14 +54,34 @@ const AppointmentForm = ({
     const [showCalendar, setShowCalendar] = useState(false);
     const [showTimeDropdown, setShowTimeDropdown] = useState(false);
     const [selectedDate, setSelectedDate] = useState<Date | null>(null);
+    const today = new Date();
+    const [calendarMonth, setCalendarMonth] = useState<number>(today.getMonth());
+    const [calendarYear, setCalendarYear] = useState<number>(today.getFullYear());
 
-    // Procedures list
+    // Procedures list (expanded)
     const procedures = [
-        "General Consultation",
-        "Dental Implants",
+        "General Consultation (First visit)",
+        "Basic Extractions",
+        "Bonding",
+        "Bridges",
+        "Cavity Fillings",
+        "Ceramic Veneers",
+        "Complete Dentures",
+        "Crowns",
+        "Dental Implants (Immediate Function)",
+        "Dental Implants (Two Stage)",
+        "Gap Closures",
+        "Gum Surgeries",
+        "Implant Supported Dentures",
+        "Instant Tooth Whitening",
+        "Invisible Braces",
+        "Partial Dentures",
+        "Professional Clean Up",
         "Root Canal Treatment",
-        "Teeth Whitening",
+        "Smile Designing / Smile Enhancement / Smile Makeover",
+        "Surgical Extraction of Impacted Teeth",
         "Orthodontics",
+        "Teeth Whitening",
         "Dental Crowns",
         "Veneers",
         "Periodontal Treatment",
@@ -103,37 +123,55 @@ const AppointmentForm = ({
         "Zambia", "Zimbabwe"
     ];
 
-    // Time slots
-    const timeSlots = [
-        "09:30 AM", "10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM", "12:00 PM",
-        "12:30 PM", "01:00 PM", "01:30 PM", "02:00 PM", "02:30 PM", "03:00 PM",
-        "03:30 PM", "04:00 PM", "04:30 PM", "05:00 PM"
+    // Time slots: generate every 30 minutes from 11:00 AM to 9:00 PM
+    const generateTimeSlots = (startHour: number, endHour: number, intervalMinutes: number) => {
+        const slots: string[] = [];
+        const pad = (n: number) => n.toString().padStart(2, '0');
+
+        for (let h = startHour; h <= endHour; h++) {
+            for (let m = 0; m < 60; m += intervalMinutes) {
+                // stop when hour === endHour and minute > 0 (to include endHour:00 only)
+                if (h === endHour && m > 0) continue;
+                const date = new Date();
+                date.setHours(h, m, 0, 0);
+                let hours = date.getHours();
+                const minutes = pad(date.getMinutes());
+                const ampm = hours >= 12 ? 'PM' : 'AM';
+                hours = hours % 12 || 12;
+                slots.push(`${hours}:${minutes} ${ampm}`);
+            }
+        }
+        return slots;
+    };
+
+    const timeSlots = generateTimeSlots(11, 21, 30);
+
+    // Get all dates for a given month/year (1..daysInMonth)
+    const getDatesForMonth = (year: number, month: number) => {
+        const days: Date[] = [];
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+        for (let d = 1; d <= daysInMonth; d++) {
+            days.push(new Date(year, month, d));
+        }
+        return days;
+    };
+
+    const monthNames = [
+        'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'
     ];
 
-    // Generate calendar dates for current and next month
-    const generateCalendarDates = () => {
-        const today = new Date();
-        const dates = [];
+    const prevMonth = () => {
+        if (calendarMonth === 0) {
+            setCalendarMonth(11);
+            setCalendarYear((y) => y - 1);
+        } else setCalendarMonth((m) => m - 1);
+    };
 
-        // Current month
-        const currentMonth = today.getMonth();
-        const currentYear = today.getFullYear();
-        const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
-
-        for (let day = today.getDate(); day <= daysInMonth; day++) {
-            dates.push(new Date(currentYear, currentMonth, day));
-        }
-
-        // Next month
-        const nextMonth = currentMonth === 11 ? 0 : currentMonth + 1;
-        const nextYear = currentMonth === 11 ? currentYear + 1 : currentYear;
-        const daysInNextMonth = new Date(nextYear, nextMonth + 1, 0).getDate();
-
-        for (let day = 1; day <= daysInNextMonth; day++) {
-            dates.push(new Date(nextYear, nextMonth, day));
-        }
-
-        return dates;
+    const nextMonth = () => {
+        if (calendarMonth === 11) {
+            setCalendarMonth(0);
+            setCalendarYear((y) => y + 1);
+        } else setCalendarMonth((m) => m + 1);
     };
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -172,26 +210,29 @@ const AppointmentForm = ({
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsLoading(true);
+        try {
+            const resp = await fetch('/api/appointment', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
+            });
 
-        // Console log all form data
-        console.log("=== APPOINTMENT FORM SUBMISSION ===");
-        console.log("Procedure:", formData.procedure);
-        console.log("Name:", formData.name);
-        console.log("Phone:", formData.phone);
-        console.log("Email:", formData.email);
-        console.log("Country:", formData.country);
-        console.log("City:", formData.city);
-        console.log("Preferred Date:", formData.preferredDate);
-        console.log("Preferred Time:", formData.preferredTime);
-        console.log("Message:", formData.message);
+            const json = await resp.json();
+            if (!resp.ok) {
+                console.error('Appointment API error', json);
+                alert(json.error || 'Failed to submit appointment. Please try again later.');
+                setIsLoading(false);
+                return;
+            }
 
-        console.log("=== END SUBMISSION ===");
-
-        // Simulate API call
-        setTimeout(() => {
+            // success
             setIsLoading(false);
             setIsSubmitted(true);
-        }, 2000);
+        } catch (err) {
+            console.error('Submission error', err);
+            alert('Something went wrong while submitting. Please try again later.');
+            setIsLoading(false);
+        }
     };
 
     if (isSubmitted) {
@@ -213,8 +254,11 @@ const AppointmentForm = ({
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">
                         {successMessage}
                     </h3>
-                    <p className="text-gray-600 mb-6">
+                    <p className="text-gray-600 mb-2">
                         {successSubtitle}
+                    </p>
+                    <p className="text-gray-600 mb-6 text-sm">
+                        Our front-desk will call you at the phone number you provided (<strong>{formData.phone}</strong>) within 24 hours to confirm the appointment. If immediate help is needed, call +91 70071 45918.
                     </p>
                     <button
                         onClick={() => {
@@ -372,18 +416,24 @@ const AppointmentForm = ({
 
                         {/* Calendar Dropdown */}
                         {showCalendar && (
-                            <div className="absolute top-full left-0 mt-2 w-80 bg-white border border-gray-300 rounded-lg shadow-xl z-50 p-4">
-                                <div className="flex items-center justify-between mb-4">
-                                    <h3 className="font-semibold text-gray-900 text-lg">Select Date</h3>
-                                    <button
-                                        type="button"
-                                        onClick={() => setShowCalendar(false)}
-                                        className="text-gray-400 hover:text-gray-600"
-                                    >
-                                        <X className="w-5 h-5" />
-                                    </button>
+                            <div className="absolute top-full left-0 mt-2 w-full md:w-80 bg-white border border-gray-300 rounded-lg shadow-xl z-50 p-4">
+                                <div className="flex items-center justify-between mb-3">
+                                    <div className="flex items-center space-x-2">
+                                        <button type="button" onClick={prevMonth} className="px-2 py-1 rounded hover:bg-gray-100">‹</button>
+                                        <div className="font-semibold text-gray-900">{monthNames[calendarMonth]} {calendarYear}</div>
+                                        <button type="button" onClick={nextMonth} className="px-2 py-1 rounded hover:bg-gray-100">›</button>
+                                    </div>
+                                    <div>
+                                        <button
+                                            type="button"
+                                            onClick={() => setShowCalendar(false)}
+                                            className="text-gray-400 hover:text-gray-600"
+                                        >
+                                            <X className="w-5 h-5" />
+                                        </button>
+                                    </div>
                                 </div>
-                                <div className="grid grid-cols-7 gap-2 text-center text-sm">
+                                <div className="grid grid-cols-7 gap-2 text-center text-sm mb-2">
                                     <div className="font-semibold text-gray-600 p-2">Su</div>
                                     <div className="font-semibold text-gray-600 p-2">Mo</div>
                                     <div className="font-semibold text-gray-600 p-2">Tu</div>
@@ -391,8 +441,9 @@ const AppointmentForm = ({
                                     <div className="font-semibold text-gray-600 p-2">Th</div>
                                     <div className="font-semibold text-gray-600 p-2">Fr</div>
                                     <div className="font-semibold text-gray-600 p-2">Sa</div>
-
-                                    {generateCalendarDates().slice(0, 35).map((date, index) => {
+                                </div>
+                                <div className="grid grid-cols-7 gap-2 text-center text-sm">
+                                    {getDatesForMonth(calendarYear, calendarMonth).map((date, index) => {
                                         const isSelected = selectedDate?.toDateString() === date.toDateString();
                                         const isToday = date.toDateString() === new Date().toDateString();
 
