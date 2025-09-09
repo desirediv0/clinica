@@ -228,6 +228,83 @@ export default function DentalPage() {
     },
   ];
 
+  // helper to return contact line per treatment title
+  const contactLineFor = (title: string) => {
+    const telHref = "tel:+917007145918";
+    const phoneDisplay = "+91 70071 45918";
+    const t = title.toLowerCase();
+
+    if (t.includes("dental implants") || t.includes("implant")) {
+      return (
+        <p className="text-sm text-gray-700">
+          Looking for the best Implantologist in Dwarka, Delhi?{' '}
+          <a href={telHref} className="font-semibold text-[#815A93]">Call {phoneDisplay}</a>
+        </p>
+      );
+    }
+
+    if (t.includes("pediatric") || t.includes("pedodont") || t.includes("ped")) {
+      return (
+        <p className="text-sm text-gray-700">
+          Looking for the best Pedodontist in Dwarka, Delhi?{' '}
+          <a href={telHref} className="font-semibold text-[#815A93]">Call {phoneDisplay}</a>
+        </p>
+      );
+    }
+
+    if (t.includes("full mouth") || t.includes("rehabilitation") || t.includes("prostho") || t.includes("prosthodont")) {
+      return (
+        <p className="text-sm text-gray-700">
+          Looking for the best Prosthodontist in Dwarka, Delhi?{' '}
+          <a href={telHref} className="font-semibold text-[#815A93]">Call {phoneDisplay}</a>
+        </p>
+      );
+    }
+
+    if (t.includes("orthodont")) {
+      return (
+        <p className="text-sm text-gray-700">
+          Looking for the best Orthodontist in Dwarka, Delhi?{' '}
+          <a href={telHref} className="font-semibold text-[#815A93]">Call {phoneDisplay}</a>
+        </p>
+      );
+    }
+
+    if ((t.includes("laser") && t.includes("whiten")) || t.includes("teeth whitening") || t.includes("whitening")) {
+      return (
+        <p className="text-sm text-gray-700">
+          Looking for the best Cosmetic Dentist in Dwarka, Delhi?{' '}
+          <a href={telHref} className="font-semibold text-[#815A93]">Call {phoneDisplay}</a>
+        </p>
+      );
+    }
+
+    if (t.includes("root canal") || t.includes("rct") || t.includes("endodont")) {
+      return (
+        <p className="text-sm text-gray-700">
+          Looking for the best Endodontist in Dwarka, Delhi?{' '}
+          <a href={telHref} className="font-semibold text-[#815A93]">Call {phoneDisplay}</a>
+        </p>
+      );
+    }
+
+    if (t.includes("cosmetic smile") || t.includes("smile makeover") || (t.includes("cosmetic") && t.includes("smile"))) {
+      return (
+        <p className="text-sm text-gray-700">
+          Looking for the best Cosmetic Dentist / Prosthodontist in Dwarka, Delhi?{' '}
+          <a href={telHref} className="font-semibold text-[#815A93]">Call {phoneDisplay}</a>
+        </p>
+      );
+    }
+
+    return (
+      <p className="text-sm text-gray-700">
+        For appointments or enquiries call{' '}
+        <a href={telHref} className="font-semibold text-[#815A93]">{phoneDisplay}</a>
+      </p>
+    );
+  };
+
   const additionalTreatments = [
     {
       title: "Gum Surgery & Advanced Gum Treatments",
@@ -731,6 +808,7 @@ export default function DentalPage() {
                       </p>
                     </div>
                   )}
+                  <div className="mb-4">{contactLineFor(treatment.title)}</div>
                   <motion.div
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -996,8 +1074,8 @@ export default function DentalPage() {
             {/* Contact Form */}
             <motion.div variants={slideInLeft}>
               <ContactForm
-                title="Ready to Transform Your"
-                subtitle="Smile?"
+                title="Experience the Clinica Difference"
+                subtitle="Transform Your Life?"
                 tagText="Book Consultation"
                 tagColor="from-[#e3c19d]/10 to-[#815A93]/10 text-[#e3c19d]"
                 titleGradientFrom="from-[#e3c19d]"

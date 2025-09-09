@@ -243,7 +243,7 @@ const OverseasPatients = () => {
                 <div className="relative z-10 container mx-auto text-center">
                     <Hero
                         title="World-Class Dental Tourism"
-                        subtitle="in Delhi in the Heart of India"
+                        subtitle="in Delhi, The Heart of India"
                         description="Experience premium dental care combined with incredible Indian hospitality. Our international patients receive personalized treatment plans, comprehensive support, and world-class dental care at affordable prices."
                         backgroundImage="/images/homepagebanner.jpg.avif"
                         tagText="Dental Tourism at CLINICA"
@@ -280,7 +280,7 @@ const OverseasPatients = () => {
                         <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                             Why Choose{" "}
                             <span className="bg-gradient-to-r from-[#e3c19d] to-[#815A93] bg-clip-text text-transparent">
-                                Delhi, India
+                                Delhi, for dental tourism in India
                             </span>
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -342,10 +342,10 @@ const OverseasPatients = () => {
                         <span className="inline-block bg-white text-[#815A93] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-6 border border-[#815A93]/20">
                             Treatment Process
                         </span>
-                        <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
-                            Your{" "}
+                        <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-8 max-w-5xl mx-auto">
+                            Your Treatment Journey
                             <span className="bg-gradient-to-r from-[#e3c19d] to-[#815A93] bg-clip-text text-transparent">
-                                Treatment Journey
+                                {""} at the best dental clinic in Delhi, India
                             </span>
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -454,7 +454,7 @@ const OverseasPatients = () => {
                             Why CLINICA
                         </span>
                         <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                            Best Tourism Clinic in Delhi, India |
+                            Best Tourism Clinic in Delhi, India
                             <br />
                             <span className="bg-gradient-to-r from-[#e3c19d] to-[#815A93] bg-clip-text text-transparent">
                                 CLINICA Dental & Skin
@@ -758,7 +758,7 @@ const OverseasPatients = () => {
                     >
                         <motion.div variants={slideInLeft}>
                             <AppointmentForm
-                                title="Plan Your Dental"
+                                title="Plan Your Dental Tretment"
                                 subtitle="Tourism Journey"
                                 tagText="International Patients"
                                 tagColor="from-[#e3c19d]/10 to-[#815A93]/10 text-[#815A93]"

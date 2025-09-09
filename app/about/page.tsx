@@ -195,9 +195,9 @@ export default function AboutPage() {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <Hero
-        title="Excellence in"
-        subtitle="Dental & Aesthetics"
-        description="Discover the story behind CLINICA's commitment to providing world-class dental care with personalized treatments and exceptional results."
+        title="Team of Best Dentists in Dwarka, Delhi Providing"
+        subtitle="Excellence in Dental & Aesthetics "
+        description="Discover the story behind CLINICA's commitment to providing world-class dental & skin care with personalized treatments and exceptional results."
         backgroundImage="/images/about1.jpg"
         tagText="About CLINICA"
         tagIcon={Award}
@@ -241,14 +241,10 @@ export default function AboutPage() {
                   feel confident in their smile and oral health.
                 </p>
                 <p>
-                  Our team of experienced dental professionals combines
-                  cutting-edge dental technology with personalized treatment
-                  plans to deliver results that exceed expectations. We focus on
-                  customized dental treatments, utilize high-end dental
-                  technology, and maintain a patient-first approach.
+                  Our team of experienced dental professionals and cosmetologists combine cutting edge technology with personalized  treatment plans to deliver results that exceed expectations. We focus on customized dental treatments, utilize high end technology, and maintain a patient-first approach.
                 </p>
                 <p>
-                  From the moment you walk through our doors, you'll experience
+                  From the moment you walk through our doors, you&#39;ll experience
                   the difference that dental expertise, technology, and
                   personalized care make. Our commitment to dental excellence
                   ensures every visit is comfortable, safe, and effective.
@@ -270,8 +266,8 @@ export default function AboutPage() {
                   },
                   {
                     icon: Heart,
-                    title: "Compassionate",
-                    desc: "Caring and supportive",
+                    title: "Compassionate Expert",
+                    desc: "Best Dentists and Skin Cosmetologists",
                   },
                   {
                     icon: Sparkles,
@@ -302,7 +298,7 @@ export default function AboutPage() {
               <div className="bg-gradient-to-br from-[#815A93]/5 via-[#e3c19d]/5 to-[#815A93]/10 rounded-3xl p-8 lg:p-12 shadow-2xl border border-gray-100">
                 <div className="text-center mb-8">
                   <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                    Our Dental Commitment
+                    Our Commitment
                   </h3>
                   <p className="text-lg text-gray-600 leading-relaxed">
                     To provide the highest quality dental care with the most
@@ -314,10 +310,10 @@ export default function AboutPage() {
                 <div className="grid grid-cols-2 gap-6 mb-8">
                   <div className="text-center p-4 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg">
                     <div className="text-lg md:text-4xl font-bold bg-gradient-to-r from-[#815A93] to-[#e3c19d] bg-clip-text text-transparent mb-2">
-                      EMI Options
+                      12+
                     </div>
                     <div className="text-sm text-gray-600 font-medium">
-                      Flexible Payment
+                      Years of Experience
                     </div>
                   </div>
                   <div className="text-center p-4 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg">
@@ -336,13 +332,13 @@ export default function AboutPage() {
                     <Quote className="w-8 h-8 text-[#815A93] flex-shrink-0 mt-1" />
                     <div>
                       <p className="text-gray-700 italic mb-4 leading-relaxed">
-                        "The level of dental professionalism and care at CLINICA
+                        &quot;The level of dental professionalism and care at CLINICA
                         is unmatched. They truly care about their dental
-                        patients."
+                        patients.&quot;
                       </p>
                       <div className="flex items-center space-x-3">
                         <div className="w-10 h-10 bg-gradient-to-r from-[#815A93] to-[#e3c19d] rounded-full flex items-center justify-center text-white font-semibold">
-                          J
+                          R
                         </div>
                         <div>
                           <div className="font-semibold text-gray-900 text-sm">
@@ -668,7 +664,7 @@ export default function AboutPage() {
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              We're here to help you on your journey. Reach out to us through
+              We&apos;re here to help you on your journey. Reach out to us through
               any of these convenient methods.
             </p>
           </motion.div>

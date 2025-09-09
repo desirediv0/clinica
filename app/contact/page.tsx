@@ -114,12 +114,12 @@ export default function ContactPage() {
       {/* Hero Section */}
       <Hero
         title="Let's Talk About Your"
-        subtitle="Dental Health"
+        subtitle="Health"
         description="Ready to start your journey? Contact us today to schedule your consultation or learn more about our services. We're here to help you achieve your goals."
         backgroundImage="/images/contact.jpg"
         tagText="Contact CLINICA"
         tagIcon={Phone}
-        primaryButtonText="Send Message"
+        primaryButtonText="Book Appointment"
         primaryButtonIcon={Phone}
         primaryButtonLink="#contact-form"
         secondaryButtonText="Call Now"

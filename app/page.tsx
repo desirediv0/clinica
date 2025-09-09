@@ -523,10 +523,10 @@ export default function HomePage() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
         <div className="relative z-10 container mx-auto text-center">
           <Hero
-            title="Advanced Dental Care & Skin"
-            subtitle="with Personalized Excellence At Clinica"
+            title="Dental Clinic in Delhi With Advanced Dental & Skin Care"
+            subtitle="with Personalized Excellence"
             backgroundImage="/images/hero.jpg"
-            tagText="Premium Dental And Skin Excellence"
+            tagText="Premium Dental And Skin Excellence At Clinica"
             tagIcon={Sparkles}
             primaryButtonText="Book Consultation"
             primaryButtonIcon={Calendar}
@@ -554,9 +554,9 @@ export default function HomePage() {
                   About CLINICA
                 </span>
                 <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                  Excellence in{" "}
+                  Best Dentists in Delhi With {" "}
                   <span className="bg-gradient-to-r from-[#e3c19d] to-[#815A93] bg-clip-text text-transparent">
-                    Dentistry & Esthetics
+                    Excellence in Dentistry & Asthetics
                   </span>
                 </h2>
               </div>
@@ -725,10 +725,10 @@ export default function HomePage() {
             <span className="inline-block bg-white text-[#815A93] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-6 border border-[#815A93]/20">
               Dental Excellence
             </span>
-            <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-8">
-              Smile Beautifully,{" "}
+            <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-8 max-w-4xl mx-auto leading-tight">
+              Smile Beautifully, Chew Confidently{" "}
               <span className="bg-gradient-to-r from-[#e3c19d] to-[#815A93] bg-clip-text text-transparent">
-                Chew Confidently
+                — your smile deserves the best dental clinic in Dwarka, Delhi.
               </span>
             </h2>
             <p className="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-8">
@@ -879,10 +879,10 @@ export default function HomePage() {
             <span className="inline-block bg-white text-[#815A93] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4 border border-[#815A93]/20">
               Skin Excellence
             </span>
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Radiant Skin,{" "}
-              <span className="bg-gradient-to-r from-[#e3c19d] to-[#815A93] bg-clip-text text-transparent">
-                Timeless Beauty
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 max-w-3xl mx-auto">
+              Radiant Skin, Timeless Beauty{" "}
+              <span className="bg-gradient-to-r from-[#e3c19d] to-[#815A93] bg-clip-text text-transparent ">
+                with the Best Cosmetologists in Delhi
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -1070,7 +1070,7 @@ export default function HomePage() {
                 title: "Convenient Care",
                 description:
                   "Flexible scheduling, minimal waiting times, and comprehensive care all under one roof for your convenience.",
-                stat: "12PM-9PM (Wed Off)",
+                stat: "11 AM - 9 PM (Wed Off)",
                 color: "from-[#815A93] to-[#e3c19d]",
               },
             ].map((feature, index) => (
@@ -1148,10 +1148,10 @@ export default function HomePage() {
             <span className="inline-block bg-gradient-to-r from-[#e3c19d]/10 to-[#815A93]/10 text-[#815A93] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4">
               Our Experts
             </span>
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Meet Our{" "}
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 max-w-3xl mx-auto leading-tight">
+              Meet Our Specialists -{" "}
               <span className="bg-gradient-to-r from-[#e3c19d] to-[#815A93] bg-clip-text text-transparent">
-                Specialists
+                Best Dentists in Dwarka, Delhi
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -1180,12 +1180,7 @@ export default function HomePage() {
                     width={500}
                     height={500}
                     className="object-cover group-hover:scale-105 transition-transform duration-700 mx-auto"
-                    style={{
-                      objectPosition: expert.name === "Dr. Anjum Sehar" ? '50% 15%' :
-                        expert.name === "Dr. Reshu Jindal Goyal" ? '50% 25%' :
-                          expert.name === "Dr. Kanika Sharma" ? '50% 30%' :
-                            expert.name === "Dr. Satya Prakash" ? '50% 20%' : '50% 20%'
-                    }}
+
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
                   <div className="absolute bottom-6 left-6 right-6">
@@ -1451,33 +1446,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Enhanced Stats Section */}
-      <section className="py-20 lg:py-32 bg-gradient-to-br from-[#e3c19d]/5 to-[#815A93]/5">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { number: "12+", label: "Years Experience" },
-              { number: "30k+", label: "Successful Treatments" },
-              { number: "12+", label: "Expert Doctors" },
-              { number: "99%", label: "Success Rate" },
-            ].map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial="initial"
-                whileInView="animate"
-                viewport={{ once: true }}
-                variants={fadeInUp}
-                className="text-center"
-              >
-                <div className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-[#e3c19d] to-[#815A93] bg-clip-text text-transparent mb-2">
-                  {stat.number}
-                </div>
-                <p className="text-gray-600 font-medium">{stat.label}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Enhanced Testimonials Section */}
       <section className="py-20 lg:py-32 relative overflow-hidden">
@@ -1561,8 +1529,8 @@ export default function HomePage() {
             {/* Contact Form */}
             <motion.div variants={slideInLeft}>
               <ContactForm
-                title="Ready to Transform Your"
-                subtitle="Life?"
+                title="Experience the Clinica Difference"
+                subtitle="Transform Your Life?"
                 tagText="Book Consultation"
                 tagColor="from-[#e3c19d]/10 to-[#815A93]/10 text-[#815A93]"
                 titleGradientFrom="from-[#815A93]"
@@ -1637,59 +1605,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Enhanced CTA Section */}
-      {/* <section className="py-20 lg:py-32 relative overflow-hidden">
-        <div className="container mx-auto px-4 lg:px-8 relative z-10">
-          <motion.div
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={fadeInUp}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <span className="inline-block bg-black/80 text-[#e3c19d] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4 border border-white/5">
-              Get Started Today
-            </span>
-            <h2 className="text-4xl lg:text-6xl font-bold text-black mb-6">
-              Transform Your{" "}
-              <span className="bg-gradient-to-r from-[#e3c19d] to-[#815A93] bg-clip-text text-transparent">
-                Smile & Confidence
-              </span>
-            </h2>
-            <p className="text-xl text-gray-800 mb-12 leading-relaxed">
-              Experience the perfect blend of advanced dental care and skin
-              treatments. Book your consultation now and take the first step
-              towards a more confident you.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Link
-                  href="https://cloud.pappyjoe.com/widget/index/VzcKMlAxUWwHZgdjAzEMZw%3D%3D"
-                  className="inline-flex items-center space-x-3 bg-gradient-to-r from-[#e3c19d] to-[#815A93] hover:from-[#e3c19d]/90 hover:to-[#815A93]/90 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg transition-all duration-300"
-                >
-                  <Calendar className="w-5 h-5" />
-                  <span>Book Consultation</span>
-                </Link>
-              </motion.div>
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Link
-                  href="/about"
-                  className="inline-flex items-center space-x-3 bg-black/70 hover:bg-black/80 text-white px-8 py-4 rounded-full font-semibold text-lg border border-white/10 transition-all duration-300"
-                >
-                  <Play className="w-5 h-5" />
-                  <span>Learn More</span>
-                </Link>
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
-      </section> */}
+
     </div>
   );
 }
