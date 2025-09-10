@@ -454,7 +454,7 @@ const OverseasPatients = () => {
                             Why CLINICA
                         </span>
                         <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                            Best Tourism Clinic in Delhi, India
+                            Best Dental Tourism Clinic in Delhi, India
                             <br />
                             <span className="bg-gradient-to-r from-[#e3c19d] to-[#815A93] bg-clip-text text-transparent">
                                 CLINICA Dental & Skin

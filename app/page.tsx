@@ -556,7 +556,7 @@ export default function HomePage() {
                 <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                   Best Dentists in Delhi With {" "}
                   <span className="bg-gradient-to-r from-[#e3c19d] to-[#815A93] bg-clip-text text-transparent">
-                    Excellence in Dentistry & Asthetics
+                    Excellence in Dentistry & Aesthetics
                   </span>
                 </h2>
               </div>
