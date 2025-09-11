@@ -322,7 +322,7 @@ export default function HomePage() {
       image: "/images/Dr-anjum.JPG",
       description: "With over 12 years of extensive clinical experience, known for precision, expertise, and patient-centric approach",
       credentials: "BDS, MDS",
-      fullDescription: "Dr. Anjum Sehar is a highly accomplished dental surgeon known for her precision, expertise, and patient-centric approach. A graduate and postgraduate from BBD University, Lucknow, Dr. Sehar has also held leadership roles including Centre Head and Zonal Clinical Manager at Clove Dental, one of India's leading dental chains. As a Radiologist and Oral Cancer Specialist, she is proficient in diagnosing and managing a wide range of oral health issues. Dr Anjum Sehar is said to have golden hands by her patients due to her precise and Painless RCT's. She is thus regarded as the Best Dentist in Delhi by her patients.",
+      fullDescription: "Dr. Anjum Sehar is a highly accomplished dental surgeon known for her precision, expertise, and patient-centric approach. A graduate and postgraduate from BBD University, Lucknow, Dr. Sehar has also held leadership roles including Centre Head and Zonal Clinical Manager at Clove Dental, one of India's leading dental chains. As a Radiologist and Oral Cancer Specialist, she is proficient in diagnosing and managing a wide range of oral health issues, including oral cysts, tumors, precancerous conditions, TMJ disorders, and oral cancers, with a strong emphasis on non-surgical treatments. As a certified Laser Specialist, she effectively treats conditions such as Oral Leukoplakia, Oral Submucous Fibrosis (OSMF), Oral Lichen Planus, Gingival enlargements, Crown lengthening, Fibromas and mucoceles, and Recurrent oral ulcers. Her finesse in cosmetic dentistry also sets her apart. As a Smile Makeover Expert, she offers cutting-edge treatments like Veneers and Laminates, Laser teeth whitening, and Laser gum depigmentation—all with a focus on delivering painless and aesthetically pleasing results. In addition, Dr. Sehar is trained in facial aesthetics and offers advanced cosmetology treatments such as Facial rejuvenation, Chemical peels, Medifacials and Hydrafacial, Microneedling, and MNRF. Dr Anjum Sehar is said to have golden hands by her patients due to her precise and Painless RCT's. She is thus regarded as the Best Dentist in Delhi by her patients. Driven by academic excellence, she regularly attends national and international conferences and has contributed to various research publications in areas such as CBCT, MRI, LASERS. She has done certified courses on Implantology (All-on-4 & All-on-6 systems). She was also recognized as the Best All-Rounder Student during her graduation and ranked 2nd in her batch. Dr. Anjum Sehar is passionate about providing holistic dental care backed by the latest advancements. Her unwavering commitment to quality, comfort, and precision ensures her patients always leave with healthier, more confident smiles. She is considered as Best Dentist In Dwarka, Delhi.",
       highlights: [
         "12+ Years of Experience",
         "3000+ Laser Treatments",
@@ -333,7 +333,7 @@ export default function HomePage() {
         "5000+ Gum Depigmentation Cases",
         "500+ Gum Repositioning Surgeries",
         "15,000+ Dental Fillings",
-        "3000+ Cancerous & Precancerous Diagnoses"
+        "3000+ Cancerous & Precancerous Diagnoses & Treatments"
       ],
       laserTreatments: [
         "Oral Leukoplakia",
@@ -359,7 +359,12 @@ export default function HomePage() {
         "Painless root canal treatments",
         "Smile makeovers with veneers",
         "Facial aesthetics and cosmetology",
-        "Oral cancer diagnosis and treatment"
+        "Oral cancer diagnosis and treatment",
+        "Oral radiological interpretations",
+        "CBCT and MRI diagnostics",
+        "Implantology (All-on-4 & All-on-6 systems)",
+        "Non-surgical oral cancer treatments",
+        "TMJ disorder management"
       ]
     },
     {
