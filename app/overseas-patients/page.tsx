@@ -285,7 +285,7 @@ const OverseasPatients = () => {
                             </span>
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                            Delhi stands as the premier destination for dental tourism, offering world-class healthcare, rich culture, and exceptional hospitality.
+                            Delhi stands as the premier destination for dental tourism, offering world-class healthcare and direct air connectivity to go with its rich culture & exceptional hospitality.
                         </p>
                     </motion.div>
 
@@ -594,8 +594,7 @@ const OverseasPatients = () => {
                     <div className="bg-gradient-to-r from-[#e3c19d]/10 to-[#815A93]/10 p-6 rounded-xl">
                         <p className="text-gray-700 leading-relaxed">
                             The substantially cost effective rates of dental treatments in Delhi using the same
-                            international quality of materials and equipment which are used in the first world
-                            countries is one of the top reasons for not just a steady increase of Dental Tourism
+                            international quality of materials and equipment which are used in the western countries is one of the top reasons for not just a steady increase of Dental Tourism
                             in Delhi also Dental Tourism In India.
                         </p>
                     </div>

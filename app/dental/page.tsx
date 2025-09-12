@@ -274,7 +274,7 @@ export default function DentalPage() {
     if ((t.includes("laser") && t.includes("whiten")) || t.includes("teeth whitening") || t.includes("whitening")) {
       return (
         <p className="text-sm text-gray-700">
-          Looking for the best Cosmetic Dentist in Dwarka, Delhi?{' '}
+          Looking for the best Laser Specialist in Dwarka, Delhi?{' '}
           <a href={telHref} className="font-semibold text-[#815A93]">Call {phoneDisplay}</a>
         </p>
       );
@@ -292,7 +292,7 @@ export default function DentalPage() {
     if (t.includes("cosmetic smile") || t.includes("smile makeover") || (t.includes("cosmetic") && t.includes("smile"))) {
       return (
         <p className="text-sm text-gray-700">
-          Looking for the best Cosmetic Dentist / Prosthodontist in Dwarka, Delhi?{' '}
+          Looking for the best Smile Makeover Expert in Dwarka, Delhi?{' '}
           <a href={telHref} className="font-semibold text-[#815A93]">Call {phoneDisplay}</a>
         </p>
       );
@@ -572,9 +572,9 @@ export default function DentalPage() {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <Hero
-        title="Smile Beautifully,"
-        subtitle="Chew Confidently"
-        description="Advanced dental care treatments designed to restore your smile and improve your oral health with personalized, expert care. Our responsibility towards you begins much before you sit on the dental chair."
+        title="Dwarka's Trusted"
+        subtitle="Dental Clinic"
+        description="comprehensive dental care for your whole family-including painless root canals, aligners, braces, implants and preventive treatments."
         backgroundImage="/images/cosmetic-dentist.jpg"
         tagText="Premium Dental Care"
         tagIcon={Smile}

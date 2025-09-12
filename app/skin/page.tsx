@@ -308,7 +308,7 @@ export default function SkinPage() {
                       </p>
                       <div className="flex items-center space-x-3">
                         <div className="w-10 h-10 bg-gradient-to-r from-[#815A93] to-[#e3c19d] rounded-full flex items-center justify-center text-white font-semibold">
-                          S
+                          RS
                         </div>
                         <div>
                           <div className="font-semibold text-gray-900 text-sm">
@@ -378,7 +378,6 @@ export default function SkinPage() {
                       CHEMICAL PEELS
                     </h3>
                   </div>
-
                   <div className="space-y-6 text-gray-600 leading-relaxed">
                     <p>
                       Ageing, chronic sun exposure, or acne can make your skin
@@ -423,6 +422,13 @@ export default function SkinPage() {
                       used, a person may require 4-8 sessions to see excellent
                       results.
                     </p>
+                    {/* Contact line for CHEMICAL PEELS */}
+                    <div className="mt-6">
+                      <p className="text-[#815A93] text-base font-semibold">
+                        Looking for the best Cosmetologist in Dwarka, Delhi?{' '}
+                        <a href="tel:+917007145918" className="underline">Call +91 70071 45918</a>
+                      </p>
+                    </div>
                   </div>
                 </div>
                 <div className="relative h-64 lg:h-auto">
@@ -459,7 +465,6 @@ export default function SkinPage() {
                       HYDRAFACIAL
                     </h3>
                   </div>
-
                   <div className="space-y-6 text-gray-600 leading-relaxed">
                     <p>
                       Hydrafacial is a &quot;hydradermabrasion&quot; treatment that
@@ -501,6 +506,13 @@ export default function SkinPage() {
                       of the safest treatment options you can opt for if you are
                       looking to get a clearer radiant skin.
                     </p>
+                    {/* Contact line for HYDRAFACIAL */}
+                    <div className="mt-6">
+                      <p className="text-[#815A93] text-base font-semibold">
+                        Looking for the best Cosmetologist in Dwarka, Delhi?{' '}
+                        <a href="tel:+917007145918" className="underline">Call +91 70071 45918</a>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -521,7 +533,6 @@ export default function SkinPage() {
                       CARBON PEEL
                     </h3>
                   </div>
-
                   <div className="space-y-6 text-gray-600 leading-relaxed">
                     <p>
                       Also known as charcoal facial, charcoal peel or carbon
@@ -586,6 +597,13 @@ export default function SkinPage() {
                       and the skin looks more fresh, rejuvenated and youthful.
                       Carbon facials can be done every 3-4 weeks.
                     </p>
+                    {/* Contact line for CARBON PEEL */}
+                    <div className="mt-6">
+                      <p className="text-[#815A93] text-base font-semibold">
+                        Looking for the best Aesthetic expert in Dwarka, Delhi?{' '}
+                        <a href="tel:+917007145918" className="underline">Call +91 70071 45918</a>
+                      </p>
+                    </div>
                   </div>
                 </div>
                 <div className="relative h-64 lg:h-auto">
@@ -605,12 +623,12 @@ export default function SkinPage() {
               className="bg-white rounded-3xl shadow-2xl overflow-hidden"
             >
               <div className="lg:grid lg:grid-cols-2">
-                <div className="relative h-64 lg:h-auto order-2 lg:order-1">
+                <div className="relative h-64 lg:h-auto order-2 lg:order-1 flex items-center justify-center">
                   <Image
                     src="/images/microneedeing.jpg"
                     alt="Microneedling"
                     fill
-                    className="object-cover"
+                    className="object-fill"
                   />
                 </div>
                 <div className="p-8 lg:p-12 order-1 lg:order-2">
@@ -622,7 +640,6 @@ export default function SkinPage() {
                       MICRONEEDLING
                     </h3>
                   </div>
-
                   <div className="space-y-6 text-gray-600 leading-relaxed">
                     <p>
                       Microneedling is a procedure that use multiple minute
@@ -658,6 +675,13 @@ export default function SkinPage() {
                         </li>
                       ))}
                     </ul>
+                    {/* Contact line for MICRONEEDLING */}
+                    <div className="mt-6">
+                      <p className="text-[#815A93] text-base font-semibold">
+                        Looking for the best Aesthetic expert in Dwarka, Delhi?{' '}
+                        <a href="tel:+917007145918" className="underline">Call +91 70071 45918</a>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -678,7 +702,6 @@ export default function SkinPage() {
                       SKIN TAG and MOLE REMOVAL
                     </h3>
                   </div>
-
                   <div className="space-y-6 text-gray-600 leading-relaxed">
                     <p>
                       Skin tag is extra growth of skin tissue, hanging off the
@@ -695,6 +718,13 @@ export default function SkinPage() {
                       session procedure, however, if a person has multiple skin
                       tags, they may be removed in more than one sitting.
                     </p>
+                    {/* Contact line for SKIN TAG REMOVAL */}
+                    <div className="mt-6">
+                      <p className="text-[#815A93] text-base font-semibold">
+                        Looking for the best Aesthetic expert in Dwarka, Delhi?{' '}
+                        <a href="tel:+917007145918" className="underline">Call +91 70071 45918</a>
+                      </p>
+                    </div>
                   </div>
                 </div>
                 <div className="relative h-64 lg:h-auto">
@@ -731,7 +761,6 @@ export default function SkinPage() {
                       LASER HAIR REDUCTION
                     </h3>
                   </div>
-
                   <div className="space-y-6 text-gray-600 leading-relaxed">
                     <p>
                       Laser hair removal in delhi is a pain-free cosmetic
@@ -773,6 +802,13 @@ export default function SkinPage() {
                         </li>
                       ))}
                     </ul>
+                    {/* Contact line for LASER HAIR REDUCTION */}
+                    <div className="mt-6">
+                      <p className="text-[#815A93] text-base font-semibold">
+                        Looking for the best Aesthetic expert in Dwarka, Delhi?{' '}
+                        <a href="tel:+917007145918" className="underline">Call +91 70071 45918</a>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
