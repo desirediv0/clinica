@@ -280,7 +280,7 @@ export default function ContactForm({
               >
                 <div className="flex items-center justify-center space-x-3">
                   <Calendar className="w-6 h-6" />
-                  <span className="text-lg">Request Appointment (India)</span>
+                  <span className="text-lg">Request Appointment</span>
                 </div>
               </motion.button>
             </div>

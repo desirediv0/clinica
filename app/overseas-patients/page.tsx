@@ -28,6 +28,7 @@ import Hero from "@/components/Hero";
 import AppointmentForm from "@/components/AppointmentForm";
 import Faq from "@/components/Faq";
 import Cta from "@/components/Cta";
+import { FaWhatsapp } from "react-icons/fa";
 
 // Enhanced Animation variants
 const fadeInUp = {
@@ -280,7 +281,7 @@ const OverseasPatients = () => {
                         <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                             Why Choose{" "}
                             <span className="bg-gradient-to-r from-[#e3c19d] to-[#815A93] bg-clip-text text-transparent">
-                                Delhi, for dental tourism in India
+                                Delhi for dental tourism in India
                             </span>
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -795,15 +796,15 @@ const OverseasPatients = () => {
                                         subtext: "Available 24/7 for international patients",
                                         color: "from-[#e3c19d] to-[#815A93]",
                                     },
+                                    // {
+                                    //     icon: Mail,
+                                    //     title: "Email Support",
+                                    //     content: "international@clinicadelhi.com",
+                                    //     subtext: "Detailed queries and document submission",
+                                    //     color: "from-[#815A93] to-[#e3c19d]",
+                                    // },
                                     {
-                                        icon: Mail,
-                                        title: "Email Support",
-                                        content: "international@clinicadelhi.com",
-                                        subtext: "Detailed queries and document submission",
-                                        color: "from-[#815A93] to-[#e3c19d]",
-                                    },
-                                    {
-                                        icon: Globe,
+                                        icon: FaWhatsapp,
                                         title: "WhatsApp Support",
                                         content: "+91 70071 45918",
                                         subtext: "Instant messaging and video consultations",

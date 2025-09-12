@@ -25,6 +25,7 @@ import Faq from "@/components/Faq";
 import Testimonials from "@/components/Testimonials";
 import Hero from "@/components/Hero";
 import ContactForm from "@/components/ContactForm";
+import { FaWhatsapp } from "react-icons/fa";
 
 // Enhanced Animation variants
 const fadeInUp = {
@@ -302,8 +303,8 @@ export default function SkinPage() {
                     <Quote className="w-8 h-8 text-[#815A93] flex-shrink-0 mt-1" />
                     <div>
                       <p className="text-gray-700 italic mb-4 leading-relaxed">
-                        "The level of professionalism and care at CLINICA is
-                        unmatched. They truly care about their patients."
+                        &quot;The level of professionalism and care at CLINICA is
+                        unmatched. They truly care about their patients.&quot;
                       </p>
                       <div className="flex items-center space-x-3">
                         <div className="w-10 h-10 bg-gradient-to-r from-[#815A93] to-[#e3c19d] rounded-full flex items-center justify-center text-white font-semibold">
@@ -461,7 +462,7 @@ export default function SkinPage() {
 
                   <div className="space-y-6 text-gray-600 leading-relaxed">
                     <p>
-                      Hydrafacial is a "hydradermabrasion" treatment that
+                      Hydrafacial is a &quot;hydradermabrasion&quot; treatment that
                       basically involves three steps — cleansing, exfoliating,
                       and then infusing skin with essential serums. Hydra Facial
                       is a procedure that can give you a refreshed, hydrated and
@@ -631,7 +632,7 @@ export default function SkinPage() {
                       toned, and younger looking.
                     </p>
                     <p>
-                      Microneedling is a minimally invasive procedure that's
+                      Microneedling is a minimally invasive procedure that&apos;s
                       used to treat various skin problems by stimulating
                       collagen production. Also known as collagen induction
                       therapy, percutaneous collagen induction, needle
@@ -674,7 +675,7 @@ export default function SkinPage() {
                       <CheckCircle className="w-6 h-6 text-white" />
                     </div>
                     <h3 className="text-3xl font-bold text-gray-900">
-                      SKIN TAG REMOVAL
+                      SKIN TAG and MOLE REMOVAL
                     </h3>
                   </div>
 
@@ -690,7 +691,7 @@ export default function SkinPage() {
                     <p>
                       Skin tags are usually asymptomatic. However, they can
                       become irritated if anything, such as clothing, jewellery,
-                      or skin rubs against them. Skin tag removal is a single
+                      or skin rubs against them. Skin tag and mole removal is a single
                       session procedure, however, if a person has multiple skin
                       tags, they may be removed in more than one sitting.
                     </p>
@@ -935,6 +936,13 @@ export default function SkinPage() {
                     subtext: "Immediate response guaranteed",
                     color: "from-[#815A93] to-[#e3c19d]",
                   },
+                  {
+                    icon: FaWhatsapp,
+                    title: "WhatsApp Us",
+                    content: "+91 70071 45918",
+                    subtext: "Quick replies via WhatsApp",
+                    color: "from-[#815A93] to-[#e3c19d]",
+                  }
                   // {
                   //   icon: Mail,
                   //   title: "Email Us",

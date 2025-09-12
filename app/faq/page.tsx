@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ChevronDown, ChevronUp, MapPin, Phone } from "lucide-react";
 import { useState } from "react";
 import ContactForm from "@/components/ContactForm";
+import { FaWhatsapp } from "react-icons/fa";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -58,7 +59,7 @@ export default function FaqPage() {
         {
           title: "What skin treatments are available?",
           answer:
-            "We offer a wide range of skin treatments including chemical peels, hydrafacial, carbon peel, microneedling, skin tag removal, and laser hair reduction. Each treatment is customized to address your specific skin concerns.",
+            "We offer a wide range of skin treatments including chemical peels, hydrafacial, carbon peel, microneedling, skin tag and mole removal, and laser hair reduction. Each treatment is customized to address your specific skin concerns.",
         },
         {
           title: "Is chemical peel safe for all skin types?",
@@ -130,7 +131,7 @@ export default function FaqPage() {
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Find answers to common questions about our dental and skin
-            treatments. If you don't find what you're looking for, feel free to
+            treatments. If you don&#39;t find what you&#39;re looking for, feel free to
             contact us.
           </p>
         </motion.div>
@@ -232,6 +233,13 @@ export default function FaqPage() {
                     subtext: "Immediate response guaranteed",
                     color: "from-[#815A93] to-[#e3c19d]",
                   },
+                  {
+                    icon: FaWhatsapp,
+                    title: "WhatsApp Us",
+                    content: "+91 70071 45918",
+                    subtext: "Quick replies via WhatsApp",
+                    color: "from-[#815A93] to-[#e3c19d]",
+                  }
                 ].map((contact, index) => (
                   <motion.div
                     key={index}

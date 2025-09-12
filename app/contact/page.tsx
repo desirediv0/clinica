@@ -13,6 +13,7 @@ import {
 import Cta from "@/components/Cta";
 import Hero from "@/components/Hero";
 import ContactForm from "@/components/ContactForm";
+import { FaWhatsapp } from "react-icons/fa";
 
 // Enhanced Animation variants
 const fadeInUp = {
@@ -63,6 +64,13 @@ export default function ContactPage() {
       subtext: "Immediate response guaranteed",
       color: "from-[#e3c19d] to-[#815A93]",
     },
+    {
+      icon: FaWhatsapp,
+      title: "WhatsApp Us",
+      content: "+91 70071 45918",
+      subtext: "Chat with us on WhatsApp",
+      color: "from-[#815A93] to-[#e3c19d]",
+    }
     // {
     //   icon: Mail,
     //   title: "Email Us",
@@ -114,7 +122,7 @@ export default function ContactPage() {
       {/* Hero Section */}
       <Hero
         title="Let's Talk About Your"
-        subtitle="Health"
+        subtitle="Oral & Skin Health"
         description="Ready to start your journey? Contact us today to schedule your consultation or learn more about our services. We're here to help you achieve your goals."
         backgroundImage="/images/contact.jpg"
         tagText="Contact CLINICA"
@@ -144,10 +152,11 @@ export default function ContactPage() {
                 CLINICA
               </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Experience the difference that expertise, technology, and
-              personalized care make in your transformation journey.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed ">
+              <span className="font-bold">Expert Care, Modern Technology, Trusted smiles</span>{" "}
+              At Clinica Dental & Skin, we combine the latest advancements in dentistry - from aligners and braces, LASER treatments to dental implants & smile makeovers-with compassionate care you can trust. With a dedicated team and state-of-the-art facilities, your comfort & confidence are always our priority.
             </p>
+
           </motion.div>
 
           <motion.div

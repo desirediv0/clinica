@@ -45,7 +45,7 @@ export default function Footer() {
     { name: "Chemical Peels", href: "/skin", icon: "✨" },
     { name: "HydraFacial", href: "/skin", icon: "💧" },
     { name: "Laser Hair Reduction", href: "/skin", icon: "🌟" },
-    { name: "Skin Tag Removal", href: "/skin", icon: "🎯" },
+    { name: "Skin Tag And Mole Removal", href: "/skin", icon: "🎯" },
     { name: "Microneedling", href: "/skin", icon: "💉" },
     { name: "Carbon Peel", href: "/skin", icon: "⭐" },
   ];

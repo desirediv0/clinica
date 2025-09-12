@@ -23,6 +23,8 @@ import {
 import Hero from "@/components/Hero";
 import Testimonials from "@/components/Testimonials";
 import ContactForm from "@/components/ContactForm";
+import Expert from "@/components/expert";
+import { FaWhatsapp } from "react-icons/fa";
 
 // Enhanced Animation variants
 const fadeInUp = {
@@ -196,8 +198,8 @@ export default function AboutPage() {
       {/* Hero Section */}
       <Hero
         title="Team of Best Dentists in Dwarka, Delhi Providing"
-        subtitle="Excellence in Dental & Aesthetics "
-        description="Discover the story behind CLINICA's commitment to providing world-class dental & skin care with personalized treatments and exceptional results."
+        subtitle="Excellence in Dentistry & Aesthetics "
+        description="Clinica Dental & Skin offers world-class dental and skin care in Dwarka, Delhi. From laser treatments and smile designing to premium implants and aesthetics, we deliver advanced, comfortable care in a safe, modern setting."
         backgroundImage="/images/about1.jpg"
         tagText="About CLINICA"
         tagIcon={Award}
@@ -235,10 +237,10 @@ export default function AboutPage() {
 
               <div className="space-y-6 text-lg text-gray-600 leading-relaxed mb-8">
                 <p>
-                  At CLINICA, our mission is to enhance your natural smile and
-                  restore your confidence through advanced dental procedures and
-                  exceptional patient care. We believe that everyone deserves to
-                  feel confident in their smile and oral health.
+                  At Clinica Dental & Skin, we believe every patient deserves gentle, personalized care powered by modern technology. With expertise in Laser procedures, aligners, braces, implants, and advanced skin treatments, our team is dedicated to delivering world-class results in a comfortable, friendly environment. Rooted in trust and compassion, we are committed to creating healthier smiles and radiant confidence for every individual who walks through our doors.
+                </p>
+                <p>
+                  Our mission is to combine modern technology with compassionate care to create healthier smiles and radiant confidence for every patient.
                 </p>
                 <p>
                   Our team of experienced dental professionals and cosmetologists combine cutting edge technology with personalized  treatment plans to deliver results that exceed expectations. We focus on customized dental treatments, utilize high end technology, and maintain a patient-first approach.
@@ -249,6 +251,7 @@ export default function AboutPage() {
                   personalized care make. Our commitment to dental excellence
                   ensures every visit is comfortable, safe, and effective.
                 </p>
+                <p>Our vision is to be not just Dwarka’s but also Delhi’s most trusted destination for advanced dental and skin care, blending innovation with compassion to transform every smile and every life we touch.</p>
               </div>
 
               {/* Mission highlights */}
@@ -522,7 +525,7 @@ export default function AboutPage() {
             variants={staggerContainer}
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"
           >
-            {stats.map((stat, index) => (
+            {stats.map((stat) => (
               <motion.div
                 key={stat.label}
                 variants={scaleIn}
@@ -546,6 +549,8 @@ export default function AboutPage() {
           </motion.div>
         </div>
       </section>
+
+      <Expert />
 
       <Testimonials
         testimonials={homeTestimonials}
@@ -692,6 +697,13 @@ export default function AboutPage() {
                 subtext: "Immediate response guaranteed",
                 color: "from-[#815A93] to-[#e3c19d]",
               },
+              {
+                icon: FaWhatsapp,
+                title: "WhatsApp Us",
+                content: "+91 70071 45918",
+                subtext: "Quick replies via WhatsApp",
+                color: "from-[#815A93] to-[#e3c19d]",
+              }
               // {
               //   icon: Mail,
               //   title: "Email Us",

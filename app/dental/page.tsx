@@ -34,6 +34,7 @@ import Faq from "@/components/Faq";
 import Testimonials from "@/components/Testimonials";
 import Hero from "@/components/Hero";
 import ContactForm from "@/components/ContactForm";
+import { FaWhatsapp } from "react-icons/fa";
 
 // Enhanced Animation variants
 const fadeInUp = {
@@ -1120,6 +1121,13 @@ export default function DentalPage() {
                     subtext: "Immediate response guaranteed",
                     color: "from-[#815A93] to-[#e3c19d]",
                   },
+                  {
+                    icon: FaWhatsapp,
+                    title: "WhatsApp Us",
+                    content: "+91 70071 45918",
+                    subtext: "Quick replies via WhatsApp",
+                    color: "from-[#815A93] to-[#e3c19d]",
+                  }
                   // {
                   //   icon: Mail,
                   //   title: "Email Us",

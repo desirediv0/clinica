@@ -93,7 +93,7 @@ export default function Navigation() {
     // },
     {
       icon: MapPin,
-      text: "1st Floor, Plot No. 24, Sector-12A Rd",
+      text: "1st Floor, Plot No. 24, Sector-12A Rd, Dwarka, New Delhi",
       href: "#location",
       label: "Visit Us",
     },
@@ -103,9 +103,8 @@ export default function Navigation() {
     <>
       {/* Sub-navigation bar for contact info */}
       <div
-        className={`fixed top-0 w-full z-50 bg-gradient-to-r from-[#e3c19d] to-[#815A93] text-white transition-all duration-500 ${
-          isScrolled ? "h-0 overflow-hidden" : "h-10"
-        }`}
+        className={`hidden md:block fixed top-0 w-full z-50 bg-gradient-to-r from-[#e3c19d] to-[#815A93] text-white transition-all duration-500 ${isScrolled ? "h-0 overflow-hidden" : "h-10"
+          }`}
       >
         <div className="container mx-auto px-4 lg:px-8 h-full">
           <div className="flex items-center justify-end h-full space-x-6">
@@ -125,11 +124,10 @@ export default function Navigation() {
       </div>
 
       <nav
-        className={`fixed top-0 w-full z-40 transition-all duration-500 ${
-          isScrolled
-            ? "bg-white shadow-xl border-b border-gray-100 top-0"
-            : "bg-white top-10"
-        }`}
+        className={`fixed top-0 w-full z-40 transition-all duration-500 ${isScrolled
+          ? "bg-white shadow-xl border-b border-gray-100 top-0"
+          : "bg-white top-0 md:top-10"
+          }`}
       >
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex items-center justify-between h-20">
@@ -174,11 +172,10 @@ export default function Navigation() {
                 >
                   <Link
                     href={item.href}
-                    className={`relative px-6 py-3 text-sm font-semibold transition-all duration-300 rounded-xl group ${
-                      pathname === item.href
-                        ? "text-[#815A93] bg-[#e3c19d]/20 shadow-md"
-                        : "text-gray-700 hover:text-[#815A93] hover:bg-[#e3c19d]/10"
-                    }`}
+                    className={`relative px-6 py-3 text-sm font-semibold transition-all duration-300 rounded-xl group ${pathname === item.href
+                      ? "text-[#815A93] bg-[#e3c19d]/20 shadow-md"
+                      : "text-gray-700 hover:text-[#815A93] hover:bg-[#e3c19d]/10"
+                      }`}
                   >
                     {item.name}
                     {pathname === item.href && (
@@ -241,11 +238,10 @@ export default function Navigation() {
                           >
                             <div className="flex items-start space-x-4">
                               <div
-                                className={`w-12 h-12 bg-gradient-to-r ${
-                                  index % 2 === 0
-                                    ? "from-[#e3c19d] to-[#815A93]"
-                                    : "from-[#815A93] to-[#e3c19d]"
-                                } rounded-xl flex items-center justify-center shadow-lg`}
+                                className={`w-12 h-12 bg-gradient-to-r ${index % 2 === 0
+                                  ? "from-[#e3c19d] to-[#815A93]"
+                                  : "from-[#815A93] to-[#e3c19d]"
+                                  } rounded-xl flex items-center justify-center shadow-lg`}
                               >
                                 <service.icon className="w-6 h-6 text-white" />
                               </div>
@@ -298,11 +294,10 @@ export default function Navigation() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`px-4 py-3 text-sm font-semibold rounded-xl transition-colors duration-300 ${
-                    pathname === item.href
-                      ? "text-[#815A93] bg-[#e3c19d]/20"
-                      : "text-gray-700 hover:text-[#815A93] hover:bg-[#e3c19d]/10"
-                  }`}
+                  className={`px-4 py-3 text-sm font-semibold rounded-xl transition-colors duration-300 ${pathname === item.href
+                    ? "text-[#815A93] bg-[#e3c19d]/20"
+                    : "text-gray-700 hover:text-[#815A93] hover:bg-[#e3c19d]/10"
+                    }`}
                 >
                   {item.name}
                 </Link>
