@@ -49,7 +49,7 @@ const Cta: React.FC<CtaProps> = ({
     <section
       className={`py-20 lg:py-32 bg-gradient-to-br ${gradientFrom} via-[#815A93]/80 ${gradientTo} text-white relative overflow-hidden`}
     >
-      <div className="absolute inset-0 bg-[url('/placeholder.svg?height=1080&width=1920')] opacity-10"></div>
+      <div className="absolute inset-0  opacity-10"></div>
 
       <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
         <motion.div

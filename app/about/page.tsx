@@ -493,7 +493,7 @@ export default function AboutPage() {
 
       {/* Enhanced Stats Section */}
       <section className="py-20 lg:py-32 bg-gradient-to-br from-[#815A93] via-[#815A93]/90 to-[#e3c19d] text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/placeholder.svg?height=1080&width=1920')] opacity-10"></div>
+        <div className="absolute inset-0  opacity-10"></div>
 
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <motion.div
