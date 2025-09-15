@@ -5,19 +5,12 @@ import Image from "next/image";
 import {
   MapPin,
   Phone,
-  Mail,
   Clock,
-  Facebook,
   Instagram,
-  Twitter,
-  Linkedin,
-  Youtube,
   ArrowRight,
   Heart,
   Award,
   Shield,
-  Sparkles,
-  Calendar,
   Star,
   ChevronUp,
 } from "lucide-react";
@@ -36,6 +29,7 @@ export default function Footer() {
   ];
 
   const services = [
+    { name: "Invisalign (Invisalign Provider) ", href: "/dental", icon: "😬" },
     { name: "Dental Implants", href: "/dental", icon: "🦷" },
     { name: "Smile Makeovers", href: "/dental", icon: "😊" },
     { name: "Teeth Whitening", href: "/dental", icon: "⚡" },
@@ -274,21 +268,6 @@ export default function Footer() {
                   </p>
                 </div>
               </motion.li>
-
-              {/* <motion.li
-                whileHover={{ x: 5 }}
-                className="flex items-start space-x-4"
-              >
-                <div className="w-12 h-12 bg-gradient-to-r from-[#e3c19d] to-[#815A93] rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h5 className="font-semibold text-white mb-1">Email Us</h5>
-                  <p className="text-white/80 text-sm leading-relaxed">
-                    info@clinica.com
-                  </p>
-                </div>
-              </motion.li> */}
 
               <motion.li
                 whileHover={{ x: 5 }}

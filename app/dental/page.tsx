@@ -139,7 +139,7 @@ export default function DentalPage() {
       icon: Award,
       color: "from-[#815A93] to-[#e3c19d]",
       details:
-        "Along with looking and feeling younger, you will also be able to enjoy all your favourite foods again. Our team of skilled specialists plan the entire treatment while taking into account the patient's primary and secondary concerns, expectations, existing medical and oral condition, and budget and time constraints. Full mouth rehabilitation with dental implants can include All-on-Four, All-on-Six, All-on-Eight or All-on-X techniques for complete teeth replacement giving the ideal aesthetics with the most natural appearance and complete functions of chewing and speaking. Suitable for both young and adult patients and Improved oral health and aesthetics",
+        "Along with looking and feeling younger, you will also be able to enjoy all your favourite foods again. Our team of skilled specialists plan the entire treatment while taking into account the patient's primary and secondary concerns, expectations, existing medical and oral condition, and budget and time constraints. Full mouth rehabilitation with dental implants can include All-on-Four, All-on-Six, All-on-Eight or All-on-X techniques for complete teeth replacement giving the ideal aesthetics with the most natural appearance and complete functions of chewing and speaking. Suitable for both young and adult patients and Improved oral health and aesthetics. We also offer Screwless Dental Implants which allows complete Rehabilitation within a week. It is suitable for those who have less time ( outstation/ overseas patients ) or those having front missing or fractured teeth.",
     },
     {
       title: "Orthodontics",
@@ -159,9 +159,10 @@ export default function DentalPage() {
       icon: Shield,
       color: "from-[#e3c19d] to-[#815A93]",
       details:
-        "Clear aligners are wafer-thin, transparent aligners that fit snugly on your teeth and gently reposition them to give you the perfect smile. They offer you all the benefits of conventional orthodontics, can be taken out as and when needed spare you from the inconvenience and awkwardness of metal brackets and wires. Self-ligating systems can be used with both metal and ceramic brackets to reduce treatment duration and increase treatment quality and comfort.  Suitable for both young and adult patients and Improved oral health and aesthetics",
+        "Clear aligners are wafer-thin, transparent aligners that fit snugly on your teeth and gently reposition them to give you the perfect smile. They offer you all the benefits of conventional orthodontics, can be taken out as and when needed spare you from the inconvenience and awkwardness of metal brackets and wires. Self-ligating systems can be used with both metal and ceramic brackets to reduce treatment duration and increase treatment quality and comfort.  Suitable for both young and adult patients and Improved oral health and aesthetics With solutions like Invisalign and early intervention, treatment time can be reduced by 30 to 50%, making the decision to perfect your smile - at any age an easy one.",
       keyBenefitsLabel: "Types:",
     },
+
     {
       title: "Laser Teeth Whitening",
       description:
@@ -227,6 +228,31 @@ export default function DentalPage() {
         "Smile makeovers are a sublime combination of exceptional expertise and rare artistry. They help in achieving a dramatic transformation in the appearance of a person while simultaneously restoring the health and function of the teeth. Our carefully selected team of aesthetic dentists and various other associated specialists (implantologists, orthodontists) work in a carefully orchestrated sync to ensure breathtaking outcomes for our patients. We use only metal-free ceramic crowns for anterior teeth to ensure no black lines are formed and the crowns blend in naturally with the adjacent teeth.",
       keyBenefitsLabel: "Types:",
     },
+    {
+      title: "Invisalign Clear Aligners",
+      description:
+        "It is never too late to invest in your greatest asset, your smile. With solutions like Invisalign and early intervention, treatment time can be reduced by 30 to 50%. We are the number one Invisalign providers in Dwarka, Delhi.",
+      benefits: [
+        "Perfect solution to fit your existing lifestyle",
+        "Virtually invisible - maintain confidence in your everyday smile",
+        "Enjoy all your favorite foods without restrictions",
+        "Easy to clean and maintain oral hygiene",
+        "Up to 50% faster treatment times",
+        "Fewer office visits required",
+        "Suitable for both adults and teens",
+        "No metal brackets or wires",
+        "Removable for special occasions",
+        "Progressive treatment options available",
+      ],
+      duration: "6-18 months",
+      recovery: "No downtime required",
+      image: "/images/invisalign.jpg",
+      icon: Smile,
+      color: "from-[#815A93] to-[#e3c19d]",
+      details:
+        "Invisalign for Adults: For adults, Invisalign is the perfect solution to fit your existing lifestyle. Because Invisalign is virtually invisible, you can feel confident with your everyday smile and let your social life continue. The decision for a great smile and oral health can start at any age. Adults make up fifty percent of our patients and find that the commitment to improve their oral health has never been easier. Invisalign for Teens: With Invisalign, your child's teenage years won't skip a beat through sports, music, and all their favorite foods. Our hours are flexible with school schedules and our rewards, contests, and prizes allow kids to really have fun and enjoy the process. With early evaluation recommended for patients at age 7, progressive treatments are now available all the way through the teen years.",
+      keyBenefitsLabel: "Why Choose Invisalign:",
+    },
   ];
 
   // helper to return contact line per treatment title
@@ -257,6 +283,15 @@ export default function DentalPage() {
       return (
         <p className="text-sm text-gray-700">
           Looking for the best Prosthodontist in Dwarka, Delhi?{' '}
+          <a href={telHref} className="font-semibold text-[#815A93]">Call {phoneDisplay}</a>
+        </p>
+      );
+    }
+
+    if (t.includes("invisalign") || (t.includes("clear") && t.includes("aligners"))) {
+      return (
+        <p className="text-sm text-gray-700">
+          Looking for Invisalign Provider in Dwarka, Delhi?{' '}
           <a href={telHref} className="font-semibold text-[#815A93]">Call {phoneDisplay}</a>
         </p>
       );
@@ -368,6 +403,28 @@ export default function DentalPage() {
         "Full Mouth Dental Implants is a way of replacing or restoring all missing or failing teeth in one or both jaws. We specialize in cutting-edge dentistry to help you regain not just a beautiful smile but also the full functionality of your teeth. All-on-Four, All-on-Six, All-on-Eight or All-on-X techniques provide perfect support for complete teeth replacement with ideal aesthetics and natural appearance.",
       icon: Smile,
       color: "from-[#815A93] to-[#e3c19d]",
+    },
+    {
+      title: "Invisalign Treatment Excellence",
+      description:
+        "As the number one Invisalign providers in Dwarka, Delhi, we specialize in delivering virtually invisible orthodontic treatment. Whether you're an adult or teen, committing to braces can be intimidating. With Invisalign, you have a solution that allows you to perfect your smile while keeping up your existing lifestyle.",
+      benefits: [
+        "Invisalign for Adults - Perfect for existing lifestyle",
+        "Invisalign for Teens - Flexible with school schedules",
+        "Enjoy all meals without food restrictions",
+        "Easy to clean and maintain",
+        "Fewer office visits required",
+        "Up to 50% faster treatment times",
+        "Rewards, contests, and prizes for teens",
+        "Early evaluation from age 7",
+        "Progressive treatments through teen years",
+        "Virtually invisible appearance",
+      ],
+      icon: Sparkles,
+      color: "from-[#e3c19d] to-[#815A93]",
+      details:
+        "Whether you're an adult or teen, Invisalign offers the perfect solution. For adults, maintain your professional image and social confidence. For teens, continue enjoying sports, music, and all favorite foods. Along with typical braces comes food restrictions - no gum, popcorn, or apples. With Invisalign, you can eat all foods. Because Invisalign is easily removable, your bedtime routine continues with simple aligner cleaning. No more struggling to floss and brush metal brackets and wires.",
+      keyBenefitsLabel: "Invisalign Benefits:",
     },
   ];
 
@@ -514,6 +571,21 @@ export default function DentalPage() {
         "A smile makeover combines multiple treatments including bonding for minor flaws like chipped or cracked teeth, veneers and metal-free ceramic crowns for repairs, gum recontouring with LASERs for uneven gumlines, instant tooth whitening, tooth recontouring for shape and size alterations, and replacement of 'black-line' crowns. We also offer LASER depigmentation of gums for a natural and uniform color. Our carefully selected team of aesthetic dentists and specialists work together in orchestrated sync to ensure breathtaking outcomes.",
     },
     {
+      question: "Why choose Invisalign over traditional braces?",
+      answer:
+        "Invisalign offers numerous advantages over traditional braces. They are virtually invisible, allowing you to maintain confidence in your everyday smile. You can enjoy all your favorite foods without restrictions - no more avoiding gum, popcorn, or apples. Invisalign aligners are easy to clean and maintain, simply remove them for your bedtime routine. Treatment times can be up to 50% faster with fewer office visits required. Whether you're an adult maintaining a professional image or a teen enjoying sports and music, Invisalign fits seamlessly into your existing lifestyle.",
+    },
+    {
+      question: "Is Invisalign suitable for both adults and teens?",
+      answer:
+        "Absolutely! Adults make up fifty percent of our Invisalign patients and find that the commitment to improve their oral health has never been easier. For adults, Invisalign is perfect for fitting into existing lifestyles while maintaining professional confidence. For teens, Invisalign won't skip a beat through sports, music, and all their favorite activities. We offer flexible hours with school schedules and provide rewards, contests, and prizes to make the process fun. Early evaluation is recommended from age 7, with progressive treatments available through the teen years.",
+    },
+    {
+      question: "How long does Invisalign treatment take?",
+      answer:
+        "Invisalign treatment typically takes 6-18 months, with treatment times up to 50% faster than traditional braces. The exact duration depends on your specific case and compliance with wearing the aligners. With early intervention and Invisalign solutions, treatment time can be reduced by 30 to 50%. You'll also require fewer office visits, allowing your life to continue at the pace it always has. As the number one Invisalign providers in Dwarka, Delhi, we ensure optimal treatment planning for the fastest and most effective results.",
+    },
+    {
       question: "How do you handle gum disease treatment?",
       answer:
         "We offer comprehensive gum disease treatments ranging from basic procedures to advanced surgeries. This includes scaling and polishing, root planning or curettage, flap surgery, gingival grafts (periodontal plastic surgery), and bone grafts. Gum disease should be treated at the earliest as it can progress from mild gingivitis to severe periodontitis affecting bone support. Signs include redness, swelling, pain, receding gums, shaking teeth, pus, and persistent bad breath. Regular professional clean-ups every 6 months help prevent gum problems.",
@@ -574,7 +646,7 @@ export default function DentalPage() {
       <Hero
         title="Dwarka's Trusted"
         subtitle="Dental Clinic"
-        description="comprehensive dental care for your whole family-including painless root canals, aligners, braces, implants and preventive treatments."
+        description="Comprehensive dental care for your whole family-including painless root canals, aligners, braces, implants and preventive treatments."
         backgroundImage="/images/cosmetic-dentist.jpg"
         tagText="Premium Dental Care"
         tagIcon={Smile}
@@ -1075,7 +1147,7 @@ export default function DentalPage() {
             {/* Contact Form */}
             <motion.div variants={slideInLeft}>
               <ContactForm
-                title="Experience the Clinica Difference"
+                title="Experience the Difference at Clinica"
                 subtitle="Transform Your Life?"
                 tagText="Book Consultation"
                 tagColor="from-[#e3c19d]/10 to-[#815A93]/10 text-[#e3c19d]"

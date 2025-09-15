@@ -225,7 +225,7 @@ export default function HomePage() {
       icon: Award,
       color: "from-[#815A93] to-[#e3c19d]",
       details:
-        "Along with looking and feeling younger, you will also be able to enjoy all your favourite foods again. Our team of skilled specialists plan the entire treatment while taking into account the patient's primary and secondary concerns, expectations, existing medical and oral condition, and budget and time constraints. Full mouth rehabilitation with dental implants can include All-on-Four, All-on-Six, All-on-Eight or All-on-X techniques for complete teeth replacement giving the ideal aesthetics with the most natural appearance and complete functions of chewing and speaking. Suitable for both young and adult patients and Improved oral health and aesthetics",
+        "Along with looking and feeling younger, you will also be able to enjoy all your favourite foods again. Our team of skilled specialists plan the entire treatment while taking into account the patient's primary and secondary concerns, expectations, existing medical and oral condition, and budget and time constraints. Full mouth rehabilitation with dental implants can include All-on-Four, All-on-Six, All-on-Eight or All-on-X techniques for complete teeth replacement giving the ideal aesthetics with the most natural appearance and complete functions of chewing and speaking. Suitable for both young and adult patients and Improved oral health and aesthetics. We also offer Screwless Dental Implants which allows complete Rehabilitation within a week. It is suitable for those who have less time ( outstation/ overseas patients ) or those having front missing or fractured teeth.",
     },
     {
       title: "Orthodontics",
@@ -245,7 +245,7 @@ export default function HomePage() {
       icon: Shield,
       color: "from-[#e3c19d] to-[#815A93]",
       details:
-        "Clear aligners are wafer-thin, transparent aligners that fit snugly on your teeth and gently reposition them to give you the perfect smile. They offer you all the benefits of conventional orthodontics, can be taken out as and when needed spare you from the inconvenience and awkwardness of metal brackets and wires. Self-ligating systems can be used with both metal and ceramic brackets to reduce treatment duration and increase treatment quality and comfort.  Suitable for both young and adult patients and Improved oral health and aesthetics",
+        "Clear aligners are wafer-thin, transparent aligners that fit snugly on your teeth and gently reposition them to give you the perfect smile. They offer you all the benefits of conventional orthodontics, can be taken out as and when needed spare you from the inconvenience and awkwardness of metal brackets and wires. Self-ligating systems can be used with both metal and ceramic brackets to reduce treatment duration and increase treatment quality and comfort.  Suitable for both young and adult patients and Improved oral health and aesthetics With solutions like Invisalign and early intervention, treatment time can be reduced by 30 to 50%, making the decision to perfect your smile - at any age an easy one.",
       keyBenefitsLabel: "Types:",
     },
     {
@@ -258,7 +258,7 @@ export default function HomePage() {
         "Teeth-whitening experts",
         "Highly cost-effective treatment",
         "Results last for 2 years",
-        "Professional LASER specialist performed",
+        "Performed by Professional LASER specialist",
         "Special barriers protect gums and lips",
       ],
       duration: "45 minutes",
@@ -315,6 +315,91 @@ export default function HomePage() {
     },
   ];
 
+  const contactLineFor = (title: string) => {
+    const telHref = "tel:+917007145918";
+    const phoneDisplay = "+91 70071 45918";
+    const t = title.toLowerCase();
+
+    if (t.includes("dental implants") || t.includes("implant")) {
+      return (
+        <p className="text-sm text-gray-700">
+          Looking for the best Implantologist in Dwarka, Delhi?{' '}
+          <a href={telHref} className="font-semibold text-[#815A93]">Call {phoneDisplay}</a>
+        </p>
+      );
+    }
+
+    if (t.includes("pediatric") || t.includes("pedodont") || t.includes("ped")) {
+      return (
+        <p className="text-sm text-gray-700">
+          Looking for the best Pedodontist in Dwarka, Delhi?{' '}
+          <a href={telHref} className="font-semibold text-[#815A93]">Call {phoneDisplay}</a>
+        </p>
+      );
+    }
+
+    if (t.includes("full mouth") || t.includes("rehabilitation") || t.includes("prostho") || t.includes("prosthodont")) {
+      return (
+        <p className="text-sm text-gray-700">
+          Looking for the best Prosthodontist in Dwarka, Delhi?{' '}
+          <a href={telHref} className="font-semibold text-[#815A93]">Call {phoneDisplay}</a>
+        </p>
+      );
+    }
+
+    if (t.includes("invisalign") || (t.includes("clear") && t.includes("aligners"))) {
+      return (
+        <p className="text-sm text-gray-700">
+          Looking for Invisalign Provider in Dwarka, Delhi?{' '}
+          <a href={telHref} className="font-semibold text-[#815A93]">Call {phoneDisplay}</a>
+        </p>
+      );
+    }
+
+    if (t.includes("orthodont")) {
+      return (
+        <p className="text-sm text-gray-700">
+          Looking for the best Orthodontist in Dwarka, Delhi?{' '}
+          <a href={telHref} className="font-semibold text-[#815A93]">Call {phoneDisplay}</a>
+        </p>
+      );
+    }
+
+    if ((t.includes("laser") && t.includes("whiten")) || t.includes("teeth whitening") || t.includes("whitening")) {
+      return (
+        <p className="text-sm text-gray-700">
+          Looking for the best Laser Specialist in Dwarka, Delhi?{' '}
+          <a href={telHref} className="font-semibold text-[#815A93]">Call {phoneDisplay}</a>
+        </p>
+      );
+    }
+
+    if (t.includes("root canal") || t.includes("rct") || t.includes("endodont")) {
+      return (
+        <p className="text-sm text-gray-700">
+          Looking for the best Endodontist in Dwarka, Delhi?{' '}
+          <a href={telHref} className="font-semibold text-[#815A93]">Call {phoneDisplay}</a>
+        </p>
+      );
+    }
+
+    if (t.includes("cosmetic smile") || t.includes("smile makeover") || (t.includes("cosmetic") && t.includes("smile"))) {
+      return (
+        <p className="text-sm text-gray-700">
+          Looking for the best Smile Makeover Expert in Dwarka, Delhi?{' '}
+          <a href={telHref} className="font-semibold text-[#815A93]">Call {phoneDisplay}</a>
+        </p>
+      );
+    }
+
+    return (
+      <p className="text-sm text-gray-700">
+        For appointments or enquiries call{' '}
+        <a href={telHref} className="font-semibold text-[#815A93]">{phoneDisplay}</a>
+      </p>
+    );
+  };
+
 
 
   const homeTestimonials = [
@@ -358,6 +443,7 @@ export default function HomePage() {
     { name: "Robotic Surgery", logo: "/images/technology5.png" },
     { name: "Smart Monitoring", logo: "/images/technology6.png" },
     { name: "Bio Laser", logo: "/images/bio-laser.jpg" },
+    { name: "Invisalign", logo: "/images/technology7.png" }
   ];
 
   return (
@@ -368,7 +454,7 @@ export default function HomePage() {
           <Hero
             title="Dental Clinic in Delhi With Advanced Dental & Skin Care"
             subtitle="with Personalized Excellence"
-            description="Discover modern solutions Laser, Aligners, Implants & Aesthetic treatments - all designed to make you look and feel your best"
+            description="Discover modern solutions - Lasers, Aligners, Implants & Aesthetic treatments - all designed to make you look and feel your best"
             backgroundImage="/images/hero.jpg"
             tagText="Premium Dental and Skin Care Services at Clinica"
             tagIcon={Sparkles}
@@ -606,7 +692,7 @@ export default function HomePage() {
               <motion.div
                 key={treatment.title}
                 variants={scaleIn}
-                className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100"
+                className="group bg-white rounded-2xl shadow-xl max-h-min hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100"
               >
                 <div className="relative overflow-hidden h-48">
                   <Image
@@ -634,6 +720,7 @@ export default function HomePage() {
                   <p className="text-gray-600 text-base mb-6 leading-relaxed">
                     {treatment.description}
                   </p>
+
 
                   <AnimatePresence>
                     {expandedCard === treatment.title && (
@@ -681,8 +768,11 @@ export default function HomePage() {
                               <p className="text-gray-600">
                                 {treatment.recovery}
                               </p>
+
                             </div>
+
                           </div>
+                          <div className="my-4">{contactLineFor(treatment.title)}</div>
                         </div>
                       </motion.div>
                     )}
@@ -955,7 +1045,7 @@ export default function HomePage() {
           >
             <div className="bg-white rounded-3xl shadow-2xl p-8 lg:p-12 max-w-4xl mx-auto">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Experience the CLINICA Difference
+                Experience the Difference at Clinica
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                 {[

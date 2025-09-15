@@ -716,7 +716,7 @@ export default function SkinPage() {
                       become irritated if anything, such as clothing, jewellery,
                       or skin rubs against them. Skin tag and mole removal is a single
                       session procedure, however, if a person has multiple skin
-                      tags, they may be removed in more than one sitting.
+                      tags and moles, they may be removed in more than one sitting.
                     </p>
                     {/* Contact line for SKIN TAG REMOVAL */}
                     <div className="mt-6">
