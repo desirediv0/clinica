@@ -1,9 +1,13 @@
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Send, Calendar, CheckCircle } from "lucide-react";
+import { Calendar, CheckCircle, ArrowLeft } from "lucide-react";
 
-export default function IndiaAppointmentForm() {
+interface IndiaAppointmentFormProps {
+    onBack?: () => void;
+}
+
+export default function IndiaAppointmentForm({ onBack }: IndiaAppointmentFormProps) {
     const [formData, setFormData] = useState({
         procedure: "",
         name: "",
@@ -203,8 +207,28 @@ export default function IndiaAppointmentForm() {
                     className="w-full mt-2 p-3 border rounded-md" />
             </div>
 
-            <div className="mt-4">
-                <motion.button type="submit" disabled={isSubmitting} whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="w-full inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-[#e3c19d] to-[#815A93] text-white font-semibold py-3 px-6 rounded-xl shadow-lg disabled:opacity-70 disabled:cursor-not-allowed">
+            <div className="flex flex-col sm:flex-row gap-4 mt-4">
+                {onBack && (
+                    <motion.button
+                        type="button"
+                        onClick={onBack}
+                        disabled={isSubmitting}
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                        className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-3 px-6 rounded-xl transition-all duration-300 disabled:opacity-50 inline-flex items-center justify-center space-x-2"
+                    >
+                        <ArrowLeft className="w-4 h-4" />
+                        <span>Back to Options</span>
+                    </motion.button>
+                )}
+
+                <motion.button
+                    type="submit"
+                    disabled={isSubmitting}
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className={`${onBack ? 'flex-1' : 'w-full'} inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-[#e3c19d] to-[#815A93] text-white font-semibold py-3 px-6 rounded-xl shadow-lg disabled:opacity-70 disabled:cursor-not-allowed`}
+                >
                     {isSubmitting ? (
                         <>
                             <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>

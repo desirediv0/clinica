@@ -447,9 +447,23 @@ export default function ContactForm({
           </form>
         </motion.div>
       ) : showForm === 'india' ? (
-        <div>
-          <IndiaAppointmentForm />
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="bg-white rounded-3xl shadow-2xl border border-gray-100"
+        >
+          <div className="p-8 lg:p-12">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Request Appointment
+              </h3>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Fill out the form below and we&apos;ll contact you within 24 hours to confirm your appointment.
+              </p>
+            </div>
+            <IndiaAppointmentForm onBack={handleBackToOptions} />
+          </div>
+        </motion.div>
       ) : null}
     </div>
   );
