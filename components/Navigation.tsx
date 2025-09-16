@@ -15,6 +15,8 @@ import {
   Mail,
   Smile,
 } from "lucide-react";
+import { FaTeethOpen } from "react-icons/fa";
+
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -68,6 +70,13 @@ export default function Navigation() {
       icon: Sparkles,
       description: "Advanced skin treatments for radiant beauty",
       color: "from-pink-500 to-purple-500",
+    },
+    {
+      name: "Overseas Patients",
+      href: "/overseas-patients",
+      icon: FaTeethOpen,
+      description: "Comprehensive care for international patients",
+      color: "from-green-500 to-teal-500",
     },
     {
       name: "FAQ",
