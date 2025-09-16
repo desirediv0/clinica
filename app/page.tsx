@@ -24,7 +24,7 @@ import {
   ChevronUp,
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Hero from "@/components/Hero";
 import ContactForm from "@/components/ContactForm";
 
@@ -63,6 +63,34 @@ const slideInRight = {
 
 export default function HomePage() {
   const [expandedCard, setExpandedCard] = useState<string | null>(null);
+
+  useEffect(() => {
+    // Handle smooth scrolling to section if hash is present
+    const handleHashScroll = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        setTimeout(() => {
+          const element = document.getElementById(hash.substring(1));
+          if (element) {
+            element.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start',
+              inline: 'nearest'
+            });
+          }
+        }, 100); // Small delay to ensure page is rendered
+      }
+    };
+
+    handleHashScroll();
+
+    // Listen for hash changes
+    window.addEventListener('hashchange', handleHashScroll);
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashScroll);
+    };
+  }, []);
 
   const toggleCard = (title: string) => {
     if (expandedCard === title) {

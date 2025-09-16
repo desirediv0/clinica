@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Calendar,
   Smile,
@@ -71,6 +71,34 @@ const slideInRight = {
 
 export default function DentalPage() {
   const [expandedCard, setExpandedCard] = useState<string | null>(null);
+
+  useEffect(() => {
+    // Handle smooth scrolling to section if hash is present
+    const handleHashScroll = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        setTimeout(() => {
+          const element = document.getElementById(hash.substring(1));
+          if (element) {
+            element.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start',
+              inline: 'nearest'
+            });
+          }
+        }, 100); // Small delay to ensure page is rendered
+      }
+    };
+
+    handleHashScroll();
+
+    // Listen for hash changes
+    window.addEventListener('hashchange', handleHashScroll);
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashScroll);
+    };
+  }, []);
 
   const dentalTreatments = [
     {

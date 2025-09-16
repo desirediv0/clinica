@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
 import {
   Calendar,
   Sparkles,
@@ -9,16 +10,12 @@ import {
   Zap,
   Eye,
   CheckCircle,
-  Star,
   Clock,
-  Award,
-  Users,
   Phone,
   Play,
   Shield,
   Quote,
   MapPin,
-  Mail,
 } from "lucide-react";
 import Cta from "@/components/Cta";
 import Faq from "@/components/Faq";
@@ -61,6 +58,34 @@ const slideInRight = {
 };
 
 export default function SkinPage() {
+  useEffect(() => {
+    // Handle smooth scrolling to section if hash is present
+    const handleHashScroll = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        setTimeout(() => {
+          const element = document.getElementById(hash.substring(1));
+          if (element) {
+            element.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start',
+              inline: 'nearest'
+            });
+          }
+        }, 100); // Small delay to ensure page is rendered
+      }
+    };
+
+    handleHashScroll();
+
+    // Listen for hash changes
+    window.addEventListener('hashchange', handleHashScroll);
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashScroll);
+    };
+  }, []);
+
   const skinJourney = [
     {
       step: "01",

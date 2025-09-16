@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import {
   MapPin,
   Phone,
@@ -17,6 +18,7 @@ import {
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const router = useRouter();
 
   const quickLinks = [
     { name: "Home", href: "/" },
@@ -29,20 +31,52 @@ export default function Footer() {
   ];
 
   const services = [
-    { name: "Invisalign (Invisalign Provider) ", href: "/dental", icon: "😬" },
-    { name: "Dental Implants", href: "/dental", icon: "🦷" },
-    { name: "Smile Makeovers", href: "/dental", icon: "😊" },
-    { name: "Teeth Whitening", href: "/dental", icon: "⚡" },
-    { name: "Root Canal Treatment", href: "/dental", icon: "🦷" },
-    { name: "Orthodontics", href: "/dental", icon: "🎯" },
-    { name: "Pediatric Dentistry", href: "/dental", icon: "👶" },
-    { name: "Chemical Peels", href: "/skin", icon: "✨" },
-    { name: "HydraFacial", href: "/skin", icon: "💧" },
-    { name: "Laser Hair Reduction", href: "/skin", icon: "🌟" },
-    { name: "Skin Tag And Mole Removal", href: "/skin", icon: "🎯" },
-    { name: "Microneedling", href: "/skin", icon: "💉" },
-    { name: "Carbon Peel", href: "/skin", icon: "⭐" },
+    { name: "Invisalign (Invisalign Provider) ", href: "/dental", icon: "😬", section: "treatments" },
+    { name: "Dental Implants", href: "/dental", icon: "🦷", section: "treatments" },
+    { name: "Smile Makeovers", href: "/dental", icon: "😊", section: "treatments" },
+    { name: "Teeth Whitening", href: "/dental", icon: "⚡", section: "treatments" },
+    { name: "Root Canal Treatment", href: "/dental", icon: "🦷", section: "treatments" },
+    { name: "Orthodontics", href: "/dental", icon: "🎯", section: "treatments" },
+    { name: "Pediatric Dentistry", href: "/dental", icon: "👶", section: "treatments" },
+    { name: "Chemical Peels", href: "/skin", icon: "✨", section: "treatments" },
+    { name: "HydraFacial", href: "/skin", icon: "💧", section: "treatments" },
+    { name: "Laser Hair Reduction", href: "/skin", icon: "🌟", section: "treatments" },
+    { name: "Skin Tag And Mole Removal", href: "/skin", icon: "🎯", section: "treatments" },
+    { name: "Microneedling", href: "/skin", icon: "💉", section: "treatments" },
+    { name: "Carbon Peel", href: "/skin", icon: "⭐", section: "treatments" },
   ];
+
+  const handleServiceClick = async (service: { href: string; section: string }) => {
+    // Check if we're already on the target page
+    const currentPath = window.location.pathname;
+
+    if (currentPath === service.href) {
+      // Already on the page, just scroll to section
+      const element = document.getElementById(service.section);
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+          inline: 'nearest'
+        });
+      }
+    } else {
+      // Navigate to page with anchor hash - router will preserve the hash
+      await router.push(`${service.href}#${service.section}`);
+
+      // Fallback scroll after navigation (in case useEffect doesn't catch it)
+      setTimeout(() => {
+        const element = document.getElementById(service.section);
+        if (element) {
+          element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'nearest'
+          });
+        }
+      }, 200);
+    }
+  };
 
   const socialLinks = [
     {
@@ -221,13 +255,13 @@ export default function Footer() {
                   whileHover={{ x: 5 }}
                   className="group"
                 >
-                  <Link
-                    href={service.href}
-                    className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors duration-300"
+                  <button
+                    onClick={() => handleServiceClick(service)}
+                    className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors duration-300 text-left w-full"
                   >
                     <span className="text-[#e3c19d]">{service.icon}</span>
                     <span>{service.name}</span>
-                  </Link>
+                  </button>
                 </motion.li>
               ))}
             </ul>
