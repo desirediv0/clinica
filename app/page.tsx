@@ -183,7 +183,7 @@ export default function HomePage() {
         "Quick and painless procedure",
         "No scarring",
         "Immediate results",
-        "Multiple tags treated at once",
+        "Multiple tags or moles treated at once",
         "Prevents recurrence",
       ],
       duration: "15-30 minutes",

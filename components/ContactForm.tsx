@@ -276,7 +276,7 @@ export default function ContactForm({
                 whileTap={{ scale: 0.98 }}
                 onClick={handleIndiaAppointmentClick}
                 disabled={isRedirecting}
-                className="w-full bg-gradient-to-r from-[#e3c19d] to-[#815A93] hover:from-[#c9ab85] hover:to-[#6a4a7a] text-white font-bold py-6 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-gradient-to-r from-[#e3c19d] to-[#815A93] hover:from-[#c9ab85] hover:to-[#6a4a7a] text-white font-bold py-6 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed md:col-span-2"
               >
                 <div className="flex items-center justify-center space-x-3">
                   <Calendar className="w-6 h-6" />
@@ -454,7 +454,7 @@ export default function ContactForm({
         >
           <div className="p-8 lg:p-12">
             <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 ">
                 Request Appointment
               </h3>
               <p className="text-lg text-gray-600 leading-relaxed">

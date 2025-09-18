@@ -191,6 +191,46 @@ export default function AboutPage() {
       rating: 5,
     },
   ];
+
+  const skinJourney = [
+    {
+      step: "01",
+      title: "Skin Analysis",
+      description:
+        "Comprehensive skin assessment using advanced diagnostic tools to identify your specific concerns and skin type.",
+      icon: Eye,
+      duration: "30 minutes",
+      color: "from-[#815A93] to-[#e3c19d]",
+    },
+    {
+      step: "02",
+      title: "Custom Treatment Plan",
+      description:
+        "Personalized treatment plan created based on your skin analysis, goals, and lifestyle preferences.",
+      icon: Shield,
+      duration: "15 minutes",
+      color: "from-[#e3c19d] to-[#815A93]",
+    },
+    {
+      step: "03",
+      title: "Treatment Sessions",
+      description:
+        "Professional treatment sessions using advanced technology and techniques for optimal, safe results.",
+      icon: CheckCircle,
+      duration: "Varies",
+      color: "from-[#815A93] to-[#e3c19d]",
+    },
+    {
+      step: "04",
+      title: "Aftercare & Maintenance",
+      description:
+        "Ongoing support, skincare guidance, and maintenance treatments to preserve and enhance your results.",
+      icon: Heart,
+      duration: "Ongoing",
+      color: "from-[#e3c19d] to-[#815A93]",
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -490,7 +530,81 @@ export default function AboutPage() {
           </motion.div>
         </div>
       </section>
+      {/* Enhanced Skin Journey Timeline */}
+      <section className="py-20  bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={fadeInUp}
+            className="text-center mb-16"
+          >
+            <span className="inline-block bg-gradient-to-r from-[#815A93]/10 to-[#e3c19d]/10 text-[#815A93] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-4">
+              Your Skin Journey
+            </span>
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              Your Path to{" "}
+              <span className="bg-gradient-to-r from-[#815A93] to-[#e3c19d] bg-clip-text text-transparent">
+                Radiant Skin
+              </span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Follow our comprehensive, personalized process designed to
+              transform your skin and boost your confidence with expert care at
+              every step.
+            </p>
+          </motion.div>
 
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+            className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+          >
+            {skinJourney.map((step, index) => (
+              <motion.div
+                key={step.step}
+                variants={scaleIn}
+                whileHover={{ y: -5, scale: 1.02 }}
+                className="relative group"
+              >
+                {/* Connection line for desktop */}
+                {index < skinJourney.length - 1 && (
+                  <div className="hidden lg:block absolute top-16 left-full w-full h-0.5 bg-gradient-to-r from-[#815A93]/20 to-[#e3c19d]/20 transform translate-x-4 z-0"></div>
+                )}
+
+                <div className="relative z-10 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 p-8 text-center border border-gray-100">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <div className="w-10 h-10 bg-gradient-to-r from-[#815A93] to-[#e3c19d] rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg">
+                      {step.step}
+                    </div>
+                  </div>
+
+                  <div className="mt-4 mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-r from-[#815A93] to-[#e3c19d] rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                      <step.icon className="w-8 h-8 text-white" />
+                    </div>
+                  </div>
+
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {step.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed mb-4">
+                    {step.description}
+                  </p>
+
+                  <div className="inline-flex items-center space-x-2 bg-[#815A93]/10 text-[#815A93] px-4 py-2 rounded-full text-sm font-medium">
+                    <Clock className="w-4 h-4" />
+                    <span>{step.duration}</span>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
       {/* Enhanced Stats Section */}
       <section className="py-20 lg:py-32 bg-gradient-to-br from-[#815A93] via-[#815A93]/90 to-[#e3c19d] text-white relative overflow-hidden">
         <div className="absolute inset-0  opacity-10"></div>
@@ -657,89 +771,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Enhanced Contact Info Section */}
-      <section className="py-20 lg:py-32 bg-gradient-to-br from-gray-50 to-white">
-        <div className="container mx-auto px-4 lg:px-8">
-          <motion.div
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={fadeInUp}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Get in{" "}
-              <span className="bg-gradient-to-r from-[#e3c19d] to-[#815A93] bg-clip-text text-transparent">
-                Touch
-              </span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              We&apos;re here to help you on your journey. Reach out to us through
-              any of these convenient methods.
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={staggerContainer}
-            className="grid md:grid-cols-3 gap-8"
-          >
-            {[
-              {
-                icon: MapPin,
-                title: "Visit Our Clinic",
-                content:
-                  "1st Floor, Plot No. 24, Sector-12A Rd, opp. Bal Bharti School, above AU Small Finance Bank, Block A, Sector 12 Dwarka, Dwarka, New Delhi, Delhi, 110075",
-
-                color: "from-[#e3c19d] to-[#815A93]",
-              },
-              {
-                icon: Phone,
-                title: "Call Us",
-                content: "+91 70071 45918",
-                subtext: "Immediate response guaranteed",
-                color: "from-[#815A93] to-[#e3c19d]",
-              },
-              {
-                icon: FaWhatsapp,
-                title: "WhatsApp Us",
-                content: "+91 70071 45918",
-                subtext: "Quick replies via WhatsApp",
-                color: "from-[#815A93] to-[#e3c19d]",
-              }
-              // {
-              //   icon: Mail,
-              //   title: "Email Us",
-              //   content: "info@clinica.com\nWe respond within 24 hours",
-              //   subtext: "Professional consultation via email",
-              //   color: "from-[#e3c19d] to-[#815A93]",
-              // },
-            ].map((contact, index) => (
-              <motion.div
-                key={index}
-                variants={scaleIn}
-                whileHover={{ y: -10, scale: 1.02 }}
-                className="text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 group"
-              >
-                <div
-                  className={`w-20 h-20 bg-gradient-to-r ${contact.color} rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300`}
-                >
-                  <contact.icon className="w-10 h-10 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  {contact.title}
-                </h3>
-                <p className="text-lg text-gray-600 leading-relaxed mb-2 whitespace-pre-line">
-                  {contact.content}
-                </p>
-                <p className="text-sm text-gray-500">{contact?.subtext}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
     </div>
   );
 }
