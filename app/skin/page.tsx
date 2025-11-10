@@ -201,8 +201,8 @@ export default function SkinPage() {
       {/* Hero Section */}
       <Hero
         title="Glow Starts Here –"
-        subtitle="Premium Skin Care"
-        description="Advanced skin care treatments designed to enhance your natural beauty and address your specific concerns with personalized, expert care."
+        subtitle="Premium Aesthetic Care"
+        description="Advanced cosmetic care treatments designed to enhance your natural beauty and address your specific concerns with personalized, expert care."
         backgroundImage="/images/skincare.jpg"
         tagText="Premium Skin Care"
         tagIcon={Sparkles}
@@ -222,7 +222,7 @@ export default function SkinPage() {
       />
 
       {/* About CLINICA Skin Care Section */}
-      <section className="py-20 lg:py-32 bg-white">
+      <section className="py-20  bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial="initial"
@@ -298,7 +298,7 @@ export default function SkinPage() {
                     Our Commitment
                   </h3>
                   <p className="text-lg text-gray-600 leading-relaxed">
-                    To provide the highest quality skin care with the most
+                    To provide the highest quality aesthetic care with the most
                     advanced technology in a comfortable, welcoming environment.
                   </p>
                 </div>
@@ -356,7 +356,7 @@ export default function SkinPage() {
       {/* Enhanced Treatments Overview */}
       <section
         id="treatments"
-        className="py-20 lg:py-32 bg-gradient-to-br from-[#815A93]/5 to-[#e3c19d]/5"
+        className="py-20  bg-gradient-to-br from-[#815A93]/5 to-[#e3c19d]/5"
       >
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
@@ -843,7 +843,7 @@ export default function SkinPage() {
       </section>
 
       {/* Enhanced Skin Journey Timeline */}
-      <section className="py-20 lg:py-32 bg-white">
+      <section className="py-20  bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial="initial"
@@ -942,7 +942,7 @@ export default function SkinPage() {
       />
 
       {/* Contact Form Section */}
-      <section className="py-20 lg:py-32 bg-gradient-to-br from-gray-50 to-blue-50">
+      <section className="py-20  bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial="initial"

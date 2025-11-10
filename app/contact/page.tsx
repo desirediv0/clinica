@@ -137,7 +137,7 @@ export default function ContactPage() {
       />
 
       {/* Why Choose Us Section */}
-      <section className="py-20 lg:py-32 bg-white">
+      <section className="py-20  bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial="initial"
@@ -193,7 +193,7 @@ export default function ContactPage() {
       {/* Contact Form & Info Section */}
       <section
         id="contact-form"
-        className="py-20 lg:py-32 bg-gradient-to-br from-gray-50 to-[#815A93]/5"
+        className="py-20  bg-gradient-to-br from-gray-50 to-[#815A93]/5"
       >
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
@@ -279,7 +279,7 @@ export default function ContactPage() {
       </section>
 
       {/* Map Section */}
-      <section className="py-20 lg:py-32 bg-white">
+      <section className="py-20  bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial="initial"

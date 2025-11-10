@@ -47,7 +47,7 @@ const Cta: React.FC<CtaProps> = ({
 
   return (
     <section
-      className={`py-20 lg:py-32 bg-gradient-to-br ${gradientFrom} via-[#815A93]/80 ${gradientTo} text-white relative overflow-hidden`}
+      className={`py-20  bg-gradient-to-br ${gradientFrom} via-[#815A93]/80 ${gradientTo} text-white relative overflow-hidden`}
     >
       <div className="absolute inset-0  opacity-10"></div>
 

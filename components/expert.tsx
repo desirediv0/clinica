@@ -211,7 +211,7 @@ const Expert = () => {
     };
     return (
 
-        <section className="py-20 lg:py-32 bg-gradient-to-br from-[#815A93]/5 to-[#e3c19d]/5">
+        <section className="py-20  bg-gradient-to-br from-[#815A93]/5 to-[#e3c19d]/5">
             <div className="container mx-auto px-4 lg:px-8">
                 <motion.div
                     initial="initial"

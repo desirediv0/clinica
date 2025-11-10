@@ -18,7 +18,6 @@ import {
   Phone,
   Play,
   MapPin,
-  Mail,
   Baby,
   Scissors,
   Droplets,
@@ -694,7 +693,7 @@ export default function DentalPage() {
       />
 
       {/* Clinic Features Section */}
-      <section className="py-20 lg:py-32 bg-gradient-to-br from-[#e3c19d]/5 to-[#815A93]/5">
+      <section className="py-20  bg-gradient-to-br from-[#e3c19d]/5 to-[#815A93]/5">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial="initial"
@@ -707,7 +706,7 @@ export default function DentalPage() {
               Why Choose CLINICA
             </span>
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Excellence Through{" "}
+              Dental  Excellence Through{" "}
               <span className="bg-gradient-to-r from-[#e3c19d] to-[#815A93] bg-clip-text text-transparent">
                 Expertise and Artistry
               </span>
@@ -754,7 +753,7 @@ export default function DentalPage() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20 lg:py-32 bg-white">
+      <section className="py-20  bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial="initial"
@@ -767,7 +766,7 @@ export default function DentalPage() {
               Why Choose CLINICA
             </span>
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Top-Quality Care That{" "}
+              Top-Quality  Dental Care That{" "}
               <span className="bg-gradient-to-r from-[#815A93] to-[#e3c19d] bg-clip-text text-transparent">
                 Truly Lasts
               </span>
@@ -811,7 +810,7 @@ export default function DentalPage() {
       {/* Enhanced Treatments Overview */}
       <section
         id="treatments"
-        className="py-20 lg:py-32 bg-gradient-to-br from-[#e3c19d]/5 to-[#815A93]/5"
+        className="py-20  bg-gradient-to-br from-[#e3c19d]/5 to-[#815A93]/5"
       >
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
@@ -932,7 +931,7 @@ export default function DentalPage() {
       </section>
 
       {/* Additional Treatments Section */}
-      <section className="py-20 lg:py-32 bg-white">
+      <section className="py-20  bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial="initial"
@@ -1069,7 +1068,7 @@ export default function DentalPage() {
       </section>
 
       {/* Enhanced Smile Journey Timeline */}
-      <section className="py-20 lg:py-32 bg-gradient-to-br from-[#e3c19d]/5 to-[#815A93]/5">
+      <section className="py-20  bg-gradient-to-br from-[#e3c19d]/5 to-[#815A93]/5">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial="initial"
@@ -1091,6 +1090,10 @@ export default function DentalPage() {
               Follow our comprehensive, patient-centered process designed to
               transform your smile and restore your confidence with expert care
               at every step.
+            </p>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Your journey to a perfect smile begins with a thorough consultation,
+              Best Dental Clinica In Dwarka where we assess your oral health and understand your goals.
             </p>
           </motion.div>
           <motion.div
@@ -1163,7 +1166,7 @@ export default function DentalPage() {
       />
 
       {/* Contact Form Section */}
-      <section className="py-20 lg:py-32 bg-gradient-to-br from-gray-50 to-[#e3c19d]/10">
+      <section className="py-20  bg-gradient-to-br from-gray-50 to-[#e3c19d]/10">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial="initial"

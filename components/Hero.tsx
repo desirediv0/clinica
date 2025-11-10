@@ -107,7 +107,7 @@ export default function Hero({
           <motion.div variants={fadeInUp}>
             <div className="inline-flex items-center space-x-3 bg-[#815A93]/20 backdrop-blur-md rounded-full px-8 py-4 border border-[#e3c19d]/30 mb-8 shadow-lg">
               <TagIcon className="w-6 h-6 text-[#e3c19d]" />
-              <span className="text-lg font-semibold text-[#e3c19d]">
+              <span className="text-sm md:text-lg font-semibold text-[#e3c19d]">
                 {tagText}
               </span>
             </div>
@@ -115,7 +115,7 @@ export default function Hero({
 
           <motion.h1
             variants={fadeInUp}
-            className="text-5xl md:text-[4rem]  font-bold mb-8 leading-tight"
+            className="text-4xl md:text-6xl  font-bold mb-8 leading-tight"
           >
             <span className="text-white">{title} </span>
             {/* Subtitle with gradient */}
@@ -126,7 +126,7 @@ export default function Hero({
 
           <motion.p
             variants={fadeInUp}
-            className="text-xl md:text-2xl lg:text-3xl mb-12 text-[#e3c19d] max-w-4xl mx-auto leading-relaxed font-light"
+            className="text-xl md:text-2xl  mb-12 text-[#e3c19d] max-w-4xl mx-auto leading-relaxed font-light"
           >
             {description}
           </motion.p>

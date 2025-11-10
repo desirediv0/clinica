@@ -64,7 +64,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({
   };
 
   return (
-    <section className={`py-20 lg:py-32 ${backgroundClass}`}>
+    <section className={`py-20  ${backgroundClass}`}>
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-16">
           <span

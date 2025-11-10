@@ -23,7 +23,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: {
     default:
-      "Best Dental Clinic In Dwarka | Best Dentist In Dwarka | Best Skin Clinic In Dwarka",
+      "Best Dental Clinic In Dwarka | Best Dentist In Dwarka | Best Dental Clinic In Delhi",
     template: "%s | CLINICA",
   },
   description:

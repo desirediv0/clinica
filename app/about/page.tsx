@@ -237,7 +237,7 @@ export default function AboutPage() {
       <Hero
         title="Team of Best Dentists in Dwarka, Delhi Providing"
         subtitle="Excellence in Dentistry & Aesthetics "
-        description="Clinica Dental & Skin offers world-class dental and skin care in Dwarka, Delhi. From laser treatments and smile designing to premium implants and aesthetics, we deliver advanced, comfortable care in a safe, modern setting."
+        description="Clinica Dental & Skin offers world-class dental and aesthetic care in Dwarka, Delhi. From laser treatments and smile designing to premium implants and aesthetics, we deliver advanced, comfortable care in a safe, modern setting."
         backgroundImage="/images/about1.jpg"
         tagText="About CLINICA"
         tagIcon={Award}
@@ -251,7 +251,7 @@ export default function AboutPage() {
       />
 
       {/* Enhanced Mission Section */}
-      <section id="mission" className="py-20 lg:py-32 bg-white">
+      <section id="mission" className="py-20  bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial="initial"
@@ -275,7 +275,7 @@ export default function AboutPage() {
 
               <div className="space-y-6 text-lg text-gray-600 leading-relaxed mb-8">
                 <p>
-                  At Clinica Dental & Skin, we believe every patient deserves gentle, personalized care powered by modern technology. With expertise in Laser procedures, aligners, braces, implants, and advanced skin treatments, our team is dedicated to delivering world-class results in a comfortable, friendly environment. Rooted in trust and compassion, we are committed to creating healthier smiles and radiant confidence for every individual who walks through our doors.
+                  At Clinica Dental & Skin, we believe every patient deserves gentle, personalized care powered by modern technology. With expertise in Laser procedures, aligners, braces, implants, and advanced dental treatments, our team is dedicated to delivering world-class results in a comfortable, friendly environment. Rooted in trust and compassion, we are committed to creating healthier smiles and radiant confidence for every individual who walks through our doors.
                 </p>
                 <p>
                   Our mission is to combine modern technology with compassionate care to create healthier smiles and radiant confidence for every patient.
@@ -400,7 +400,7 @@ export default function AboutPage() {
       </section>
 
       {/* Enhanced Values Section */}
-      <section className="py-20 lg:py-32 bg-gradient-to-br from-gray-50 to-blue-50">
+      <section className="py-20  bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial="initial"
@@ -463,7 +463,7 @@ export default function AboutPage() {
       </section>
 
       {/* Enhanced Process Section */}
-      <section className="py-20 lg:py-32 bg-white">
+      <section className="py-20  bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial="initial"
@@ -606,7 +606,7 @@ export default function AboutPage() {
         </div>
       </section>
       {/* Enhanced Stats Section */}
-      <section className="py-20 lg:py-32 bg-gradient-to-br from-[#815A93] via-[#815A93]/90 to-[#e3c19d] text-white relative overflow-hidden">
+      <section className="py-20  bg-gradient-to-br from-[#815A93] via-[#815A93]/90 to-[#e3c19d] text-white relative overflow-hidden">
         <div className="absolute inset-0  opacity-10"></div>
 
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
@@ -676,7 +676,7 @@ export default function AboutPage() {
       />
 
       {/* Contact Form Section */}
-      <section className="py-20 lg:py-32 bg-white">
+      <section className="py-20  bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial="initial"

@@ -480,11 +480,11 @@ export default function HomePage() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
         <div className="relative z-10 container mx-auto text-center">
           <Hero
-            title="Dental Clinic in Delhi With Advanced Dental & Skin Care"
+            title="Dental Clinic in Delhi With Advanced Dental & Aesthetic Care"
             subtitle="with Personalized Excellence"
             description="Discover modern solutions - Lasers, Aligners, Implants & Aesthetic treatments - all designed to make you look and feel your best"
             backgroundImage="/images/hero.jpg"
-            tagText="Premium Dental and Skin Care Services at Clinica"
+            tagText="Premium Dental and Cosmetic Services at Clinica"
             tagIcon={Sparkles}
             primaryButtonText="Book Consultation"
             primaryButtonIcon={Calendar}
@@ -497,7 +497,7 @@ export default function HomePage() {
       </section>
 
       {/* Enhanced About Section */}
-      <section id="about" className="py-12 sm:py-16 md:py-20 lg:py-32 bg-white">
+      <section id="about" className="py-12 sm:py-16   bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial="initial"
@@ -522,7 +522,7 @@ export default function HomePage() {
               <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
                 <p>
                   At CLINICA, we are dedicated to providing world-class dental
-                  and skin care that combines cutting-edge technology with
+                  and aesthetic care that combines cutting-edge technology with
                   personalized treatment plans. Our mission is to enhance your
                   natural beauty and restore your confidence.
                 </p>
@@ -671,7 +671,7 @@ export default function HomePage() {
       </section>
 
       {/* Dental Treatments Section */}
-      <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-white relative overflow-hidden">
+      <section className="py-16 sm:py-20  bg-white relative overflow-hidden">
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <motion.div
             initial="initial"
@@ -829,7 +829,7 @@ export default function HomePage() {
       </section>
 
       {/* Enhanced Skin Treatments Section */}
-      <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
+      <section className="py-20  bg-white relative overflow-hidden">
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <motion.div
             initial="initial"
@@ -954,7 +954,7 @@ export default function HomePage() {
       </section>
 
       {/* Enhanced Why Choose CLINICA Section */}
-      <section className="py-20 lg:py-32 bg-white">
+      <section className="py-20  bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial="initial"
@@ -1100,7 +1100,7 @@ export default function HomePage() {
 
 
       {/* Enhanced Technologies Section */}
-      <section className="py-20 lg:py-32 bg-white">
+      <section className="py-20  bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial="initial"
@@ -1154,7 +1154,7 @@ export default function HomePage() {
 
 
       {/* Enhanced Testimonials Section */}
-      <section className="py-20 lg:py-32 relative overflow-hidden">
+      <section className="py-20  relative overflow-hidden">
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <motion.div
             initial="initial"
@@ -1223,7 +1223,7 @@ export default function HomePage() {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-20 lg:py-32 relative overflow-hidden">
+      <section className="py-20  relative overflow-hidden">
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <motion.div
             initial="initial"

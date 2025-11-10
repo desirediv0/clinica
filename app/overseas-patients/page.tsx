@@ -266,7 +266,7 @@ const OverseasPatients = () => {
                 </div>
             </section>
             {/* Why Delhi for Dental Tourism Section */}
-            <section className="py-20 lg:py-32 bg-gradient-to-br from-[#815A93]/5 to-[#e3c19d]/5">
+            <section className="py-20  bg-gradient-to-br from-[#815A93]/5 to-[#e3c19d]/5">
                 <div className="container mx-auto px-4 lg:px-8">
                     <motion.div
                         initial="initial"
@@ -331,7 +331,7 @@ const OverseasPatients = () => {
             </section>
 
             {/* Treatment Process Section */}
-            <section id="treatment-process" className="py-20 lg:py-32 bg-white">
+            <section id="treatment-process" className="py-20  bg-white">
                 <div className="container mx-auto px-4 lg:px-8">
                     <motion.div
                         initial="initial"
@@ -442,7 +442,7 @@ const OverseasPatients = () => {
             </section>
 
             {/* Why CLINICA Section */}
-            <section className="py-20 lg:py-32 bg-white">
+            <section className="py-20  bg-white">
                 <div className="container mx-auto px-4 lg:px-8">
                     <motion.div
                         initial="initial"
@@ -602,7 +602,7 @@ const OverseasPatients = () => {
             </motion.div>
 
             {/* Detailed Information Sections */}
-            <section className="py-20 lg:py-32 bg-gradient-to-br from-[#815A93]/5 to-[#e3c19d]/5">
+            <section className="py-20  bg-gradient-to-br from-[#815A93]/5 to-[#e3c19d]/5">
                 <div className="container mx-auto px-4 lg:px-8">
                     <div className="max-w-4xl mx-auto">
                         <motion.div
@@ -747,7 +747,7 @@ const OverseasPatients = () => {
             </section>
 
             {/* Contact & Support Section */}
-            <section className="py-20 lg:py-32 bg-white">
+            <section className="py-20  bg-white">
                 <div className="container mx-auto px-4 lg:px-8">
                     <motion.div
                         initial="initial"

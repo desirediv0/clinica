@@ -111,7 +111,7 @@ export default function FaqPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#e3c19d]/5 to-[#815A93]/5 py-20 lg:py-32">
+    <div className="min-h-screen bg-gradient-to-br from-[#e3c19d]/5 to-[#815A93]/5 py-20 ">
       <div className="container mx-auto px-4 lg:px-8">
         <motion.div
           initial="initial"
@@ -179,7 +179,7 @@ export default function FaqPage() {
       </div>
 
       {/* Contact Form Section */}
-      <section className="py-20 lg:py-32 bg-white">
+      <section className="py-20  bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial="initial"
